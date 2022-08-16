@@ -53,9 +53,23 @@
 			color: var(--main-grey);
 		}
 	}
-	.documents {
+	&__documents {
 		width: 100%;
 		margin-top: 8px;
+	}
+	&__doc-pic {
+		width: 40px;
+		min-width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--icon-primary);
+		border-radius: 50%;
+		.icon {
+			font-size: 24px;
+			color: #ffffff;
+		}
 	}
 	&__document {
 		margin-bottom: 8px;
@@ -74,7 +88,6 @@
 				margin: 0;
 			}
 			.document-title {
-			
 				font-style: normal;
 				font-size: 16px;
 				line-height: 130%;
@@ -93,7 +106,7 @@
 		// font-family: 'roboto condensed';
 		table {
 			width: 100%;
-			border-left: 2px solid #0096EB;
+			border-left: 2px solid #0096eb;
 		}
 		font-style: normal;
 		font-weight: 400;
@@ -105,14 +118,16 @@
 		}
 		.name {
 			color: var(--main-grey);
-			width: 80%;
+			width: 196px;
+			max-width: 196px;
 		}
-		.header, .name {
+		.header,
+		.name {
 			padding-left: 8px;
 		}
 		.value {
 			font-weight: 700;
-			width: 20%;
+
 			text-align: right;
 		}
 	}
@@ -141,7 +156,7 @@
 				margin-right: 7px;
 			}
 			.request-body {
-				background-color: #56B9F2;
+				background-color: #56b9f2;
 			}
 			.request-date {
 				color: var(--heavy-blue);
@@ -149,7 +164,7 @@
 		}
 		&--solution {
 			.request-body {
-				background-color: #22C38E;
+				background-color: #22c38e;
 			}
 			.request-date {
 				color: var(--main-grey);
@@ -222,9 +237,37 @@
 		table {
 			width: 100%;
 			border-left: 2px solid var(--heavy-blue);
-			.info, .reply-message {
+			.info,
+			.reply-message {
 				padding-left: 8px;
 			}
 		}
+	}
+}
+
+.survey {
+	width: 100%;
+	&__progress-bar-wrap {
+		width: 100%;
+		height: 4px;
+		position: relative;
+	}
+	&__progress-bar-bg,
+	&__progress-bar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		border-radius: 4px;
+	}
+	&__progress-bar-bg {
+		z-index: 1;
+		width: 100%;
+		background-color: #ecf1f4;
+	}
+	&__progress-bar {
+		z-index: 2;
+		background-color: #0096eb;
+		transition-duration: 0.4s;
 	}
 }

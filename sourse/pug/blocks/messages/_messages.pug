@@ -1,4 +1,4 @@
-mixin message(status, text, date, document, table, my_request, another_request, terms, reply, reply_request, solution, solution_date, private)
+mixin message(status, text, date, document, table, my_request, another_request, terms, reply, reply_request, solution, solution_date, private,survey)
 	+b.message(class=(status=="incoming" ? "--incoming" : "--sent"))
 		+private-chat(private) 
 		+reply_request(reply_request, text)
@@ -6,13 +6,16 @@ mixin message(status, text, date, document, table, my_request, another_request, 
 		+request(my_request, another_request, terms)
 		+solution(solution, solution_date)
 		+e.content
-			span.text=text
+			span.text!=text
 			if document
 				+documents()
 			if table 
 				+table()
+			//- if survey
+			//- 	+survey(25)
 			.date-block
 				.date=date
+			
 
 mixin reply_request(reply_request, text)
 	if reply_request 
@@ -26,7 +29,7 @@ mixin reply_request(reply_request, text)
 							p.reply-to Оксана Иванова
 				tr 
 					td.reply-message
-						p=text
+						p!=text
 
 mixin reply(reply, text)
 	if reply 
@@ -60,18 +63,20 @@ mixin request(my_request, another_request, terms)
 mixin request_body(text)
 	.request-body 
 		+icon("arrow-down")
-		+icon("private")
+		//- +icon("private")
 		p=text
 
 mixin documents()
-	.documents
-		+e.document
-			+pic("file.png")
+	+e.documents
+		+e.document(href="#")
+			+e.doc-pic
+				+icon('file')
 			+e.document-info 
 				p.document-title Название файла.pdf
 				p.document-size 1.0 MB
-		+e.document
-			+pic("file.png")
+		+e.document(href="#")
+			+e.doc-pic
+				+icon('file')
 			+e.document-info 
 				p.document-title Название файла.pdf
 				p.document-size 1.0 MB
@@ -84,3 +89,15 @@ mixin table()
 			tr 
 				td.name Скорость откачки
 				td.value ~ 4.7 см3/с
+			tr 
+				td.name Давление отбора (депрессия на пласт 108 атм)
+				td.value ~ 4.7 см3/с
+			tr 
+				td.name Скорость откачки
+				td.value ~ 4.7 см3/с
+
+mixin survey(progress)
+	+b.survey
+		+e.progress-bar-wrap
+			+e.progress-bar-bg
+			+e.progress-bar(style=`width:${progress}%`)
