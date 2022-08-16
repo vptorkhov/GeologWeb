@@ -1,3 +1,16 @@
+:root {
+	--sent-message: #CFE8F7;
+	--main-grey: #667985;
+	--secondary-grey: #B3BCC2;
+	--main-black: #001A29;
+	--notify-blue: #56B9F2;
+	--heavy-blue: #0071B2;
+	--main-red: #EB3333;
+	// --light-blue: #0096EB;
+}
+
+
+
 .pixel-perfect {
 	top: 0;
 	display: block;
@@ -15,6 +28,9 @@
 body,
 html {
 	font-size: var(--bs-body-font-size);
+	p {
+		margin: 0;
+	}
 }
 html{
 	-webkit-text-size-adjust: 100%;

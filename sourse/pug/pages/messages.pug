@@ -9,4 +9,22 @@ block title
 	- let  title= index.head.title
 	title= title
 block pagecontent
-	+message("incoming", "laskdjalspOIpapso")
+	.p-5
+		.d-flex.flex-column.align-items-start
+			h3.mb-2 Входящие
+			h4.mt-2.mb-2 Короткое сообщение
+			+message("incomin", "Lorem ipsum dolor sit amet", "15.08.2022 14:48")
+			h4.mt-2.mb-2 Длинное сообщение
+			+message("incomin", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.", "15.08.2022 14:48")
+			h4.mt-2.mb-2 Сообщение с документом
+			+message("incomin", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.", "15.08.2022 14:48", true)
+			h4.mt-2.mb-2 Сообщение с таблицей
+			+message("incomin", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.", "15.08.2022 14:48", false, true)
+			h4.mt-2.mb-2 Сообщение my request
+			+message("incomin", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.", "15.08.2022 14:48", false, false, true, false, "До 14.09.2022")
+			h4.mt-2.mb-2 Сообщение another request
+			+message("incomin", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.", "15.08.2022 14:48", false, false, false, true, "До 14.09.2022")
+			h4.mt-2.mb-2 Ответ на запрос с решением
+			+message("incomin", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.", "15.08.2022 14:48", true, false, false, false, "До 14.09.2022", false, true, true, "14.09.2022")
+			h4.mt-2.mb-2 Ответ на сообщение
+			+message("incomin", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.", "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", true, false, false, "14.09.2022", true)
