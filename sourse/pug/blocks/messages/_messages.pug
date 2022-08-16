@@ -1,0 +1,8 @@
+mixin message(status, text)
+	if status=="incoming"
+		+b.message--incoming
+			+e.help
+				p=text
+	else 
+		+b.message.blue
+			p=text
