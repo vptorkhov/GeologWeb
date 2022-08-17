@@ -7,7 +7,7 @@
 	--heavy-blue: #0071b2;
 	--main-red: #eb3333;
 	--icon-primary: #264152;
-	--survey-blue: #0096EB;
+	--survey-blue: #0096eb;
 	// --light-blue: #0096EB;
 }
 
@@ -490,4 +490,56 @@ iframe {
 
 .fancybox__content :focus:not(.carousel__button.is-close) {
 	outline: none !important;
+}
+
+.form-check-input {
+	margin-left: 0;
+	margin-right: 11px;
+	margin-top: 0;
+	border-width: 2px;
+	&:checked {
+		background-color: #0096eb;
+		border-color: transparent;
+	}
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.form-check-input[type="checkbox"] {
+	border-radius: 2px;
+	&:checked {
+		background-image: url(../img/svg/check-bg.svg);
+		background-color: #ffffff;
+		background-size: contain;
+		border: none;
+	}
+}
+.btn {
+	// width: 100%;
+	// color: var(--survey-blue);
+	border-width: 2px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: calc(19 / 16);
+	padding: 15px;
+	&:active:focus {
+		border-color: var(--bs-btn-active-border-color);
+		color: var(--bs-btn-active-color);
+		background-color: var(--bs-btn-active-bg);
+	}
+}
+
+.btn-full-width {
+	width: 100%;
+}
+.btn-secondary {
+
+	background-color: transparent !important;
+	--bs-btn-color: var(--survey-blue);
+	--bs-btn-border-color: var(--survey-blue);
+	--bs-btn-hover-border-color: #14a9ff;
+	--bs-btn-hover-color: #14a9ff;
+	--bs-btn-active-border-color: #14a9ff;
+	--bs-btn-active-color: #14a9ff;
 }
