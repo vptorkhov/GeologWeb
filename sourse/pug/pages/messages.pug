@@ -5,14 +5,39 @@ block variables
 	- let  mainPage= null
 	- let  bg= null
 	- let bigtext = `<a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.`
-
+	- let question = 'Запакеровались на глубине 1754.2 м. Что делаем дальше?'
 block title
 	- let  title= index.head.title
 	title= title
 block pagecontent
 	.p-5
-		.d-flex.flex-column.align-items-start
+	.row
+		.col(style="background-color: grey")
 			h3.mb-2 Входящие
+			h4.mt-2.mb-2 Короткое сообщение
+			+message("incoming", "Lorem ipsum dolor sit amet", "15.08.2022 14:48")
+			h4.mt-2.mb-2 Длинное сообщение
+			+message("incoming", bigtext, "15.08.2022 14:48")
+			h4.mt-2.mb-2 Сообщение с документом
+			+message("incoming", bigtext, "15.08.2022 14:48", true)
+			h4.mt-2.mb-2 Сообщение с таблицей
+			+message("incoming", bigtext, "15.08.2022 14:48", false, true)
+			h4.mt-2.mb-2 Сообщение my request
+			+message("incoming", bigtext, "15.08.2022 14:48", false, false, true, false, "До 14.09.2022")
+			h4.mt-2.mb-2 Сообщение another request
+			+message("incoming", bigtext, "15.08.2022 14:48", false, false, false, true, "До 14.09.2022")
+			h4.mt-2.mb-2 Ответ на запрос с решением
+			+message("incoming", bigtext, "15.08.2022 14:48", true, false, false, false, "До 14.09.2022", false, true, true, "14.09.2022")
+			h4.mt-2.mb-2 Ответ на сообщение
+			+message("incoming", bigtext, "15.08.2022 14:48", true, false, false, false, "До 14.09.2022", false, true, true, "14.09.2022", true)
+			h4.mt-2.mb-2 Результаты опроса
+			+message("incoming", question, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", false, false, false, "14.09.2022", false, true)
+			h4.mt-2.mb-2 Опрос до выбора ответа
+			+message("incoming", question, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", false, false, false, "14.09.2022", false, false, true)
+			h4.mt-2.mb-2 Анонимный опрос с единственным вариантом ответа
+			+message("incoming", question, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", false, false, false, "14.09.2022", false, false, false, true)
+		.col
+			h3.mb-2 Исходящие
 			h4.mt-2.mb-2 Короткое сообщение
 			+message("incomin", "Lorem ipsum dolor sit amet", "15.08.2022 14:48")
 			h4.mt-2.mb-2 Длинное сообщение
@@ -28,5 +53,10 @@ block pagecontent
 			h4.mt-2.mb-2 Ответ на запрос с решением
 			+message("incomin", bigtext, "15.08.2022 14:48", true, false, false, false, "До 14.09.2022", false, true, true, "14.09.2022")
 			h4.mt-2.mb-2 Ответ на сообщение
-			+message("incomin", bigtext, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", true, false, false, "14.09.2022", true)
-			//- +message("incomin", bigtext, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", true, false, false, "14.09.2022", true,true)
+			+message("incomin", bigtext, "15.08.2022 14:48", true, false, false, false, "До 14.09.2022", false, true, true, "14.09.2022", true)
+			h4.mt-2.mb-2 Результаты опроса
+			+message("incomin", question, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", false, false, false, "14.09.2022", false, true)
+			h4.mt-2.mb-2 Опрос до выбора ответа
+			+message("incomin", question, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", false, false, false, "14.09.2022", false, false, true)
+			h4.mt-2.mb-2 Анонимный опрос с единственным вариантом ответа
+			+message("incomin", question, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", false, false, false, "14.09.2022", false, false, false, true)
