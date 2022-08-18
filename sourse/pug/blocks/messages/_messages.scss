@@ -237,6 +237,8 @@
 		}
 		&--private {
 			margin-bottom: 16px;
+			flex-wrap: wrap;
+			justify-content: space-between;
 			.chip-body {
 				background-color: #002033;
 			}
@@ -257,7 +259,6 @@
 				font-size: 16px;
 				line-height: 19px;
 				color: #0096eb;
-				margin-left: auto;
 			}
 		}
 	}
