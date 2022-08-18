@@ -17,6 +17,9 @@ mixin message(status, text, date, document, table, my_request, another_request, 
 			+in_private_chat(private)
 			.date-block
 				.date=date
+				if status!="incoming"
+					.message-seen
+						+icon("seen")
 			
 
 mixin survey-results(survey, total, until)

@@ -1,0 +1,12 @@
+include ../messages/_messages.pug
+
+mixin chat()
+	+b.chat
+		+e.messages
+			+message("incoming", bigtext, "15.08.2022 14:48", false, true)
+			+message("incoming", bigtext, "15.08.2022 14:48", false, true)
+			+message("incomin", bigtext, "15.08.2022 14:48", false, true)
+			+message("incomin", bigtext, "15.08.2022 14:48", false, true)
+		+e.typing-field 
+			.message-action-and-text
+				+icon("")
