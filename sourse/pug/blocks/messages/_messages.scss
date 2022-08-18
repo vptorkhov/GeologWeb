@@ -32,19 +32,32 @@
 	}
 	&--incoming {
 		background-color: white;
-		border-radius: 0 12px 12px 12px;
-		&::before {
-			left: 0;
-			background-image: url(../img/svg/message-in-bg.svg);
+		border-radius: 12px;
+		margin-bottom: 4px;
+		&:last-child {
+			margin-bottom: 16px;
+		}
+		&:first-child {
+			&::before {
+				left: 0;
+				background-image: url(../img/svg/message-in-bg.svg);
+			}
 		}
 	}
 	&--sent {
+		border-radius: 12px;
+		margin-bottom: 4px;
 		align-self: flex-end;
 		background-color: var(--sent-message);
-		border-radius: 12px 0 12px 12px;
-		&::before {
-			right: rem(-0.3);
-			background-image: url(../img/svg/message-sent-bg.svg);
+		border-radius: 12px;
+		&:last-child {
+			margin-bottom: 16px;
+		}
+		&:first-child {
+			&::before {
+				right: rem(-0.3);
+				background-image: url(../img/svg/message-sent-bg.svg);
+			}
 		}
 	}
 	.text {
@@ -71,7 +84,12 @@
 			margin-left: auto;
 			display: flex;
 			align-items: center;
-			
+			.icon {
+				fill: var(--survey-blue);
+				margin-left: 8px;
+				height: 13px;
+				width: 24px;
+			}
 		}
 		.date {
 			font-weight: 400;
@@ -80,12 +98,6 @@
 			margin-left: 16px;
 			margin-top: 3px;
 			color: var(--main-grey);
-		}
-		.icon {
-			fill: var(--survey-blue);
-			margin-left: 8px;
-			height: 13px;
-			width: 24px;
 		}
 	}
 	&__documents {

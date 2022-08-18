@@ -13,11 +13,20 @@
 	</head>
 	<body>
 		<div class="main-wrapper">
-			<div class="p-5">
-				<div class="row">
-					<div class="col-lg-6 p-2" style="background-color: grey; height: 100vh">
-						<div class="chat">
-							<div class="chat__messages">
+			<div class="container" style="background-color: var(--main-grey); height: 100vh;">
+				<div class="pt-3 pb-3" style="height: 100%">
+					<div class="chat">
+						<div class="chat__messages">
+							<p class="chat-date">20 января 2020</p>
+							<div class="sender"> 
+								<div class="sender__avatar"> <img src="/img/@2x/slide-25.jpg"/>
+								</div>
+								<div class="sender__name-and-position"> 
+									<p class="name">Антон Гаврилов</p>
+									<p class="position">Руководитель проекта</p>
+								</div>
+							</div>
+							<div class="chat__block-of-messages">
 								<div class="message message--incoming">
 									<div class="message__request message__request--none"> 
 										<div class="chip-body"> 
@@ -66,30 +75,64 @@
 									</div>
 									<div class="message__content">
 										<div class="text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.</div>
-										<div class="message__table">
-											<table> 
-												<tr> 
-													<th class="header">Текущие параметры:</th>
-												</tr>
-												<tr> 
-													<td class="name">Скорость откачки</td>
-													<td class="value">~ 4.7 см3/с</td>
-												</tr>
-												<tr> 
-													<td class="name">Давление отбора (депрессия на пласт 108 атм)</td>
-													<td class="value">~ 4.7 см3/с</td>
-												</tr>
-												<tr> 
-													<td class="name">Скорость откачки</td>
-													<td class="value">~ 4.7 см3/с</td>
-												</tr>
-											</table>
+										<div class="message__documents">
+											<a class="message__document" href="#">
+												<div class="message__doc-pic">
+													<svg class="icon icon-file ">
+														<use xlink:href="img/svg/sprite.svg#file"></use>
+													</svg>
+												</div>
+												<div class="message__document-info"> 
+													<p class="document-title">Название файла.pdf</p>
+													<p class="document-size">1.0 MB</p>
+												</div>
+											</a>
+											<a class="message__document" href="#">
+												<div class="message__doc-pic">
+													<svg class="icon icon-file ">
+														<use xlink:href="img/svg/sprite.svg#file"></use>
+													</svg>
+												</div>
+												<div class="message__document-info"> 
+													<p class="document-title">Название файла.pdf</p>
+													<p class="document-size">1.0 MB</p>
+												</div>
+											</a>
 										</div>
 										<div class="date-block">
 											<div class="date">15.08.2022 14:48</div>
 										</div>
 									</div>
 								</div>
+							</div>
+							<div class="sender"> 
+								<div class="sender__avatar"> <img src="/img/@2x/slide-25.jpg"/>
+								</div>
+								<div class="sender__name-and-position"> 
+									<p class="name">Антон Гаврилов</p>
+									<p class="position">Руководитель проекта</p>
+								</div>
+							</div>
+							<div class="chat__block-of-messages">
+								<div class="message message--incoming">
+									<div class="message__request message__request--none"> 
+										<div class="chip-body"> 
+											<svg class="icon icon-arrow-down ">
+												<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+											</svg>
+											<p>Запрос №1</p>
+										</div>
+										<p class="request-date"></p>
+									</div>
+									<div class="message__content">
+										<div class="text">Lorem ipsum dolor sit amet</div>
+										<div class="date-block">
+											<div class="date">15.08.2022 14:48</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="chat__block-of-messages">
 								<div class="message message--sent">
 									<div class="message__request message__request--none"> 
 										<div class="chip-body"> 
@@ -101,26 +144,7 @@
 										<p class="request-date"></p>
 									</div>
 									<div class="message__content">
-										<div class="text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.</div>
-										<div class="message__table">
-											<table> 
-												<tr> 
-													<th class="header">Текущие параметры:</th>
-												</tr>
-												<tr> 
-													<td class="name">Скорость откачки</td>
-													<td class="value">~ 4.7 см3/с</td>
-												</tr>
-												<tr> 
-													<td class="name">Давление отбора (депрессия на пласт 108 атм)</td>
-													<td class="value">~ 4.7 см3/с</td>
-												</tr>
-												<tr> 
-													<td class="name">Скорость откачки</td>
-													<td class="value">~ 4.7 см3/с</td>
-												</tr>
-											</table>
-										</div>
+										<div class="text">Lorem ipsum dolor sit amet</div>
 										<div class="date-block">
 											<div class="date">15.08.2022 14:48</div>
 											<svg class="icon icon-seen ">
@@ -141,24 +165,29 @@
 									</div>
 									<div class="message__content">
 										<div class="text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.</div>
-										<div class="message__table">
-											<table> 
-												<tr> 
-													<th class="header">Текущие параметры:</th>
-												</tr>
-												<tr> 
-													<td class="name">Скорость откачки</td>
-													<td class="value">~ 4.7 см3/с</td>
-												</tr>
-												<tr> 
-													<td class="name">Давление отбора (депрессия на пласт 108 атм)</td>
-													<td class="value">~ 4.7 см3/с</td>
-												</tr>
-												<tr> 
-													<td class="name">Скорость откачки</td>
-													<td class="value">~ 4.7 см3/с</td>
-												</tr>
-											</table>
+										<div class="message__documents">
+											<a class="message__document" href="#">
+												<div class="message__doc-pic">
+													<svg class="icon icon-file ">
+														<use xlink:href="img/svg/sprite.svg#file"></use>
+													</svg>
+												</div>
+												<div class="message__document-info"> 
+													<p class="document-title">Название файла.pdf</p>
+													<p class="document-size">1.0 MB</p>
+												</div>
+											</a>
+											<a class="message__document" href="#">
+												<div class="message__doc-pic">
+													<svg class="icon icon-file ">
+														<use xlink:href="img/svg/sprite.svg#file"></use>
+													</svg>
+												</div>
+												<div class="message__document-info"> 
+													<p class="document-title">Название файла.pdf</p>
+													<p class="document-size">1.0 MB</p>
+												</div>
+											</a>
 										</div>
 										<div class="date-block">
 											<div class="date">15.08.2022 14:48</div>
@@ -169,13 +198,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="chat__typing-field"> 
-								<div class="message-action-and-text">
-									<svg class="icon icon- ">
-										<use xlink:href="img/svg/sprite.svg#"></use>
-									</svg>
-								</div>
-							</div>
+						</div>
+						<div class="chat__chat-bar"> 
+							<button class="chat__menu btn"> <img src="/img/@2x/chat-menu.svg"/>
+							</button>
+							<input type="text" placeholder="Введите сообщение"/>
+							<button class="chat__voice-message btn"> <img src="/img/@2x/microphone.svg"/>
+							</button>
 						</div>
 					</div>
 				</div>

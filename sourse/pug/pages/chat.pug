@@ -10,7 +10,6 @@ block title
 	- let bigtext = `<a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.`
 	- let question = 'Запакеровались на глубине 1754.2 м. Что делаем дальше?'
 block pagecontent
-	.p-5
-		.row
-			.col-lg-6.p-2(style="background-color: grey; height: 100vh")
-				+chat()
+	.container(style="background-color: var(--main-grey); height: 100vh;")
+		.pt-3.pb-3(style="height: 100%")
+			+chat()
