@@ -71,12 +71,7 @@
 			margin-left: auto;
 			display: flex;
 			align-items: center;
-			// .icon {
-			// 	fill: var(--survey-blue);
-			// 	margin-left: 8px;
-			// 	height: 13px;
-			// 	width: 24px;
-			// }
+			
 		}
 		.date {
 			font-weight: 400;
@@ -85,6 +80,12 @@
 			margin-left: 16px;
 			margin-top: 3px;
 			color: var(--main-grey);
+		}
+		.icon {
+			fill: var(--survey-blue);
+			margin-left: 8px;
+			height: 13px;
+			width: 24px;
 		}
 	}
 	&__documents {
