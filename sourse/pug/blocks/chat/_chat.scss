@@ -10,7 +10,7 @@
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 16px;
-		color: #B2C6D2;
+		color: var(--pale-grey);
 		margin-bottom: 16px;
 	}
 	height: 100%;
@@ -45,6 +45,9 @@
 			padding-right: 16px;
 			padding-top: 4px;
 			padding-bottom: 4px;
+			&::placeholder {
+				color: var(--pale-grey);  
+			}
 			&:focus {
 				outline: none;
 			}
@@ -68,13 +71,13 @@
 	&__name-and-position {
 		margin-left: 8px;
 		font-style: normal;
-		.name {
+		.sender-name {
 			font-weight: 500;
 			font-size: 16px;
 			line-height: 19px;
 			margin-bottom: 1px;
 		}
-		.position {
+		.sender-position {
 			font-weight: 400;
 			font-size: 12px;
 			line-height: 14px;
