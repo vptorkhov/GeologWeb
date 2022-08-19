@@ -6,7 +6,7 @@ mixin message(status, text, date, document, table, my_request, another_request, 
 			+reply(reply, text)
 			+request(my_request, another_request, terms)
 			+solution(solution, solution_date)
-			.text(class=(survey_results || survey_before || survey_radio ? "survey-question" : ""))!=text
+			+e.text(class=(survey_results || survey_before || survey_radio ? "--survey-question" : ""))!=text
 			if document
 				+documents()
 			if table 
@@ -15,8 +15,7 @@ mixin message(status, text, date, document, table, my_request, another_request, 
 			+survey-checkbox(survey_before, 40)
 			+survey-radio(survey_radio, 40)
 			+in_private_chat(private)
-			.date-block
-				.date=date
+			+e.date=date
 				if status!="incoming"
 					+icon("seen")
 			
@@ -60,46 +59,46 @@ mixin reply_request(reply_request, text)
 			+e.request--another
 				+request_body("Запрос №1")
 				+icon("arrow-left")
-				p.reply-to Оксана Иванова
-			.reply-message
+				+e.P.reply-to--request Оксана Иванова
+			+e.reply-message
 				p!=text
 
 mixin reply(reply, text)
 	if reply 
 		+e.reply-request 
 			+e.request--another.reply
-				p.reply-to Оксана Иванова
-			.reply-message
+				+e.P.reply-to Оксана Иванова
+			+e.reply-message
 				p!=text
 
 mixin solution(solution, solution_date)
 	if solution 
 		+e.request--solution
 			+solution_body("Решение №15") 
-			p.request-date=solution_date 
+			+e.P.solution-date=solution_date 
 
 mixin private-chat(private)
 	if private 
 		+e.request--private 
 			+private_body("Приватный чат завершён") 
-			p.enter_chat Войти
+			+e.P.enter-chat Войти
 
 mixin request(my_request, another_request, terms)
 	+e.request(class=(my_request ? "--my" : another_request ? "--another" : "--none")) 
-		+request_body("Запрос №1") 
-		p.request-date=terms
+		+request_body("Запрос №1", my_request) 
+		+e.P.request-date(class=(my_request ? "--my" : another_request ? "--another" : "--none"))=terms
 
-mixin request_body(text)
-	.chip-body 
+mixin request_body(text, my_request)
+	+e.chip-body-request(class=(my_request ? "--my" : "--another")) 
 		+icon("arrow-down")
 		p=text
 
 mixin solution_body(text)
-	.chip-body 
+	+e.chip-body-solution
 		p=text
 
 mixin private_body(text)
-	.chip-body 
+	+e.chip-body-private 
 		+icon("private")
 		p=text
 
@@ -109,14 +108,14 @@ mixin documents()
 			+e.doc-pic
 				+icon('file')
 			+e.document-info 
-				p.document-title Название файла.pdf
-				p.document-size 1.0 MB
+				+e.P.document-title Название файла.pdf
+				+e.P.document-size 1.0 MB
 		+e.document(href="#")
 			+e.doc-pic
 				+icon('file')
 			+e.document-info 
-				p.document-title Название файла.pdf
-				p.document-size 1.0 MB
+				+e.P.document-title Название файла.pdf
+				+e.P.document-size 1.0 MB
 
 mixin table()
 	+e.table
@@ -146,8 +145,8 @@ mixin in_private_chat(private)
 
 
 mixin avatar()
-	.avatar 
-		+pic("slide-25.jpg")
+	+e.avatar 
+		img(src="/img/@2x/slide-25.jpg")
 
 mixin survey_vaiant(progress, answer, votes, most_popular)
 	+b.survey-variant
@@ -157,8 +156,8 @@ mixin survey_vaiant(progress, answer, votes, most_popular)
 			+e.progress-bar-bg
 			+e.progress-bar(style=`width:${progress}%`)
 		+e.votes-and-percents 
-			p.votes=`${votes} голосов`
-			.percents
+			+e.P.votes=`${votes} голосов`
+			+e.percents
 				if most_popular
 					+e.most-popular 
 						+icon("check")
