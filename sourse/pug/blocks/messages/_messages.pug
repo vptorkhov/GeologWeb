@@ -1,11 +1,11 @@
 mixin message(status, text, date, document, table, my_request, another_request, terms, reply, reply_request, solution, solution_date, private, survey_results, survey_before, survey_radio)
 	+b.message(class=(status=="incoming" ? "--incoming" : "--sent"))
-		+private-chat(private) 
-		+reply_request(reply_request, text)
-		+reply(reply, text)
-		+request(my_request, another_request, terms)
-		+solution(solution, solution_date)
 		+e.content
+			+private-chat(private) 
+			+reply_request(reply_request, text)
+			+reply(reply, text)
+			+request(my_request, another_request, terms)
+			+solution(solution, solution_date)
 			.text(class=(survey_results || survey_before || survey_radio ? "survey-question" : ""))!=text
 			if document
 				+documents()

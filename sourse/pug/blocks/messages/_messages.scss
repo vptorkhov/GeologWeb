@@ -1,5 +1,5 @@
 .message {
-	padding: 12px;
+	padding: 8px 12px;
 	border-radius: 0 12px 12px 12px;
 	max-width: 500px;
 	display: flex;
@@ -77,6 +77,10 @@
 		display: flex;
 		flex-flow: row wrap;
 		overflow-x: clip;
+		&>*{
+			margin-top: 4px;
+			margin-bottom: 4px;
+		}
 		.text {
 			max-width: 100%;
 		}
@@ -84,7 +88,6 @@
 			margin-left: auto;
 			display: flex;
 			align-items: center;
-			margin-top: 8px;
 			.icon {
 				fill: var(--survey-blue);
 				margin-left: 8px;
@@ -103,8 +106,8 @@
 	}
 	&__documents {
 		width: 100%;
-		margin-top: 8px;
-		margin-bottom: 8px;
+		// margin-top: 8px;
+		// margin-bottom: 8px;
 	}
 	&__doc-pic {
 		width: 40px;
@@ -150,9 +153,8 @@
 		}
 	}
 	&__table {
-		margin-top: 8px;
+		// margin-top: 8px;
 		width: 100%;
-		// font-family: 'roboto condensed';
 		table {
 			width: 100%;
 			border-left: 2px solid #0096eb;
@@ -192,7 +194,7 @@
 	}
 	&__request {
 		width: 100%;
-		margin-bottom: 8px;
+		// margin-bottom: 8px;
 		display: flex;
 		align-items: center;
 		.request-date {
@@ -257,7 +259,7 @@
 			}
 		}
 		&--private {
-			margin-bottom: 16px;
+			margin-bottom: 12px;
 			flex-wrap: wrap;
 			justify-content: space-between;
 			.chip-body {
@@ -285,7 +287,7 @@
 	}
 	&__reply-request {
 		width: 100%;
-		margin-bottom: 8px;
+		// margin-bottom: 8px;
 		padding-left: 8px;
 		border-left: 2px solid #0071b2;
 		.reply-message {
