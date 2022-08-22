@@ -1,0 +1,132 @@
+.side-sheet {
+	.document {
+		margin-bottom: 16px;
+	}
+	max-width: 468px;
+	height: 100%;
+	padding: 0 20px;
+	background-color: #ffffff;
+	overflow-y: scroll;
+	&::-webkit-scrollbar { 
+		width: 0; 
+	}
+	&__header {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: var(--main-grey);
+		text-transform: uppercase;
+		margin-bottom: 16px;
+	}
+	.message {
+		&--incoming {
+			background-color: #ECF1F4;
+			&:last-child {
+				margin-bottom: 26px;
+			}
+			&:first-child {
+				&::before {
+					left: 0;
+					background-image: url(../img/svg/message-sidesheet.svg);
+				}
+			}
+		}
+	}
+	&__privat-chats-block {
+		.message {
+			&__chip-body-private {
+				background-color: #536977;
+			}
+			&__chip-body-request--another {
+				color: var(--main-black);
+			}
+			&--incoming {
+				&:last-child {
+					margin-bottom: 32px;
+				}
+				&:first-child {
+					&::before {
+						left: 0;
+						background-image: url(../img/svg/message-sidesheet.svg);
+					}
+				}
+			}
+		}
+	}
+	&__chat-media {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 9px;
+	}
+	&__image {
+		overflow-x: hidden;
+		aspect-ratio: 1 / 1;
+		border-radius: 4px;
+		img {
+			height: 100%;
+		}
+	}
+}
+
+.side-sheet-top {
+	background-color: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 5px 32px 2px;
+	&__return, &__close {
+		border: none;
+		padding: 0;
+		background-color: transparent;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 28px;
+		font-style: normal;
+		color: var(--main-grey);
+	}
+}
+
+.project-info {
+	font-style: normal;
+	margin-bottom: 16px;
+	&:last-child {
+		margin-bottom: 32px;
+	}
+	&__category {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: var(--pale-grey);
+		margin-bottom: 4px;
+	}
+	&__info {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 23px;
+		color: var(--main-black);
+		&--ending {
+			color: #EB3333;
+		}
+	}
+	&__terms, &__description {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+
+	}
+	&__description {
+		max-width: 354px;
+	}
+}
+.chat-solutions {
+	&__solution {
+		border-bottom: 1px solid #DEE5E9;
+		margin-bottom: 26px;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
