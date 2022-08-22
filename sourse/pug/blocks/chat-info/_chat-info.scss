@@ -28,7 +28,7 @@
 			&:first-child {
 				&::before {
 					left: 0;
-					background-image: url(../img/svg/message-sidesheet.svg);
+					background-image: none !important;
 				}
 			}
 		}
