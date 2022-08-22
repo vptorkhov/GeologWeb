@@ -11,12 +11,12 @@ mixin sender(name, position)
 		+e.avatar 
 			img(src="/img/@2x/slide-25.jpg")
 		+e.name-and-position 
-			p.sender-name=name 
-			p.sender-position=position
+			+e.P.name=name 
+			+e.P.position=position
 
 mixin chat_window()
 	+e.messages
-		p.chat-date 20 января 2020
+		+e.P.date 20 января 2020
 		+sender('Антон Гаврилов', 'Руководитель проекта')
 		+e.block-of-messages
 			+message("incoming", bigtext, "15.08.2022 14:48", false, true)

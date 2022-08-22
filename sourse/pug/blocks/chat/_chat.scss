@@ -6,7 +6,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 	}
-	.chat-date {
+	&__date {
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 16px;
@@ -71,17 +71,17 @@
 	&__name-and-position {
 		margin-left: 8px;
 		font-style: normal;
-		.sender-name {
-			font-weight: 500;
-			font-size: 16px;
-			line-height: 19px;
-			margin-bottom: 1px;
-		}
-		.sender-position {
-			font-weight: 400;
-			font-size: 12px;
-			line-height: 14px;
-			color: var(--main-grey);
-		}
+	}
+	&__name {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		margin-bottom: 1px;
+	}
+	&__position {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		color: var(--main-grey);
 	}
 }

@@ -1,3 +1,5 @@
+include ../document/_document.pug
+
 mixin message(status, text, date, document, table, my_request, another_request, terms, reply, reply_request, solution, solution_date, private, survey_results, survey_before, survey_radio)
 	+b.message(class=(status=="incoming" ? "--incoming" : "--sent"))
 		+e.content
@@ -104,19 +106,8 @@ mixin private_body(text)
 
 mixin documents()
 	+e.documents
-		+e.document(href="#")
-			+e.doc-pic
-				+icon('file')
-			+e.document-info 
-				+e.P.document-title Название файла.pdf
-				+e.P.document-size 1.0 MB
-		+e.document(href="#")
-			+e.doc-pic
-				+icon('file')
-			+e.document-info 
-				+e.P.document-title Название файла.pdf
-				+e.P.document-size 1.0 MB
-
+		+document()
+		+document()
 mixin table()
 	+e.table
 		table 
