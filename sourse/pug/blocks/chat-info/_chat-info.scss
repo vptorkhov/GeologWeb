@@ -7,8 +7,8 @@
 	padding: 0 20px;
 	background-color: #ffffff;
 	overflow-y: scroll;
-	&::-webkit-scrollbar { 
-		width: 0; 
+	&::-webkit-scrollbar {
+		width: 0;
 	}
 	&__header {
 		font-style: normal;
@@ -21,7 +21,7 @@
 	}
 	.message {
 		&--incoming {
-			background-color: #ECF1F4;
+			background-color: #ecf1f4;
 			&:last-child {
 				margin-bottom: 26px;
 			}
@@ -40,6 +40,7 @@
 			}
 			&__chip-body-request--another {
 				color: var(--main-black);
+				background-color: #b3bcc2;
 			}
 			&--incoming {
 				&:last-child {
@@ -75,7 +76,8 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px 5px 32px 2px;
-	&__return, &__close {
+	&__return,
+	&__close {
 		border: none;
 		padding: 0;
 		background-color: transparent;
@@ -108,14 +110,14 @@
 		line-height: 23px;
 		color: var(--main-black);
 		&--ending {
-			color: #EB3333;
+			color: #eb3333;
 		}
 	}
-	&__terms, &__description {
+	&__terms,
+	&__description {
 		font-weight: 400;
 		font-size: 12px;
 		line-height: 14px;
-
 	}
 	&__description {
 		max-width: 354px;
@@ -123,7 +125,7 @@
 }
 .chat-solutions {
 	&__solution {
-		border-bottom: 1px solid #DEE5E9;
+		border-bottom: 1px solid #dee5e9;
 		margin-bottom: 26px;
 		&:last-child {
 			border-bottom: none;
