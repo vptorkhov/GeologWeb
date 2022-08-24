@@ -7,6 +7,10 @@
 	fill: currentColor;
 }
 
+.icon-active {
+	font-size:math.div(8,10)*1rem;
+	width: math.div(8,8)*1em;
+}
 .icon-arrow-down {
 	font-size:math.div(13,10)*1rem;
 	width: math.div(8,13)*1em;
@@ -43,9 +47,21 @@
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
 }
+.icon-key {
+	font-size:math.div(11,10)*1rem;
+	width: math.div(16,11)*1em;
+}
 .icon-link {
 	font-size:math.div(10,10)*1rem;
 	width: math.div(20,10)*1em;
+}
+.icon-lock {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-message {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
 }
 .icon-microphone {
 	font-size:math.div(30,10)*1rem;
