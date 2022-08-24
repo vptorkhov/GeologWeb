@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<div class="main-wrapper">
-			<div class="p-5" style="background-color: grey; height: 100vh; display: flex; justify-content: center;">
+			<div class="p-sm-5" style="background-color: grey; height: 100vh; display: flex; justify-content: center;">
 				<div class="tasks">
 					<div class="tasks-top"> 
 						<div class="tasks-top-text">
@@ -23,30 +23,32 @@
 								<div class="my-projects__text">Мои проекты
 								</div>
 							</div>
-							<div class="tasks-filter"><img src="/img/svg/filters.svg"/>
+							<button class="tasks-filter"><img src="/img/svg/filters.svg"/>
 								<p class="tasks-filter__text">Фильтр
 								</p>
-							</div>
+							</button>
 						</div>
 						<div class="tabs"> 
-							<div class="tabs__tab" tabindex="1">
+							<button class="tabs__tab" tabindex="1">
 								<p class="tabs__text">Все
 								</p>
-							</div>
-							<div class="tabs__tab" tabindex="1"> 
+							</button>
+							<button class="tabs__tab active" tabindex="1"> 
 								<p class="tabs__text">Активные
 								</p>
-							</div>
-							<div class="tabs__tab" tabindex="1"> 
+							</button>
+							<button class="tabs__tab" tabindex="1"> 
 								<p class="tabs__text">Черновики
 								</p>
-							</div>
-							<div class="tabs__tab" tabindex="1"> 
+							</button>
+							<button class="tabs__tab" tabindex="1"> 
 								<p class="tabs__text">Закрытые
 								</p>
-							</div>
+							</button>
 						</div>
-						<div class="tasks-search" tabindex="1"><img src="/img/svg/search.svg"/>
+						<div class="tasks-search" tabindex="1">
+							<button class="tasks-search__btn"><img src="/img/svg/search.svg"/>
+							</button>
 							<input type="text" placeholder="Поиск"/>
 						</div>
 					</div>
@@ -66,11 +68,11 @@
 									<p class="task-cell__datetime">13.07.2020 13:56
 									</p>
 								</div>
-								<div class="prb">
+								<div class="task-name">
 									<svg class="icon icon-lock ">
 										<use xlink:href="img/svg/sprite.svg#lock"></use>
 									</svg>
-									<p class="prb__text">ПРБ
+									<p class="task-name__text">ПРБ
 									</p>
 								</div>
 								<div class="cell-bottom"> 
@@ -86,7 +88,43 @@
 									</div>
 								</div>
 							</div>
-						</div><hr>
+						</div>
+						<div class="task-cell active"> 
+							<div class="task-wrap">
+								<div class="task-cell__info">
+									<div class="task-status task-status--success">
+										<svg class="icon icon-active ">
+											<use xlink:href="img/svg/sprite.svg#active"></use>
+										</svg>
+										<p class="task-status__text">Активна
+										</p>
+									</div>
+									<p class="task-cell__place">Чона
+									</p>
+									<p class="task-cell__datetime">13.07.2020 13:56
+									</p>
+								</div>
+								<div class="task-name">
+									<svg class="icon icon-lock ">
+										<use xlink:href="img/svg/sprite.svg#lock"></use>
+									</svg>
+									<p class="task-name__text">ПРБ
+									</p>
+								</div>
+								<div class="cell-bottom"> 
+									<p class="cell-bottom__text">Запакеровались на глубине 1754.2 м. Что делаем дальше?
+									</p>
+									<div class="counter-requests"><img src="/img/svg/arrow-down.svg"/>
+										<p class="counter-requests__num">7
+										</p>
+									</div>
+									<div class="counter-new-messages"><img src="/img/svg/message.svg"/>
+										<p class="counter-new-messages__num">2
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
 						<div class="task-cell"> 
 							<div class="task-wrap">
 								<div class="task-cell__info">
@@ -102,11 +140,11 @@
 									<p class="task-cell__datetime">13.07.2020 13:56
 									</p>
 								</div>
-								<div class="prb">
+								<div class="task-name">
 									<svg class="icon icon-key ">
 										<use xlink:href="img/svg/sprite.svg#key"></use>
 									</svg>
-									<p class="prb__text">ПРБ
+									<p class="task-name__text">ПРБ
 									</p>
 								</div>
 								<div class="cell-bottom"> <img src="/img/svg/excel.svg"/>
@@ -114,11 +152,11 @@
 										<p class="cell-solution__text">Решение №45449 
 										</p>
 									</div>
-									<p class="cell-bottom__text">Запакеровались на глубине 1754.2 м. Что делаем дальше?
+									<p class="cell-bottom__text"><span class="sender-person">Игорь Волин</span>: Запакеровались на глубине 1754.2 м. Что делаем дальше?
 									</p>
 								</div>
 							</div>
-						</div><hr>
+						</div>
 						<div class="task-cell task-cell--unread"> 
 							<div class="task-wrap">
 								<div class="task-cell__info">
@@ -134,8 +172,8 @@
 									<p class="task-cell__datetime">13.07.2020 13:56
 									</p>
 								</div>
-								<div class="prb">
-									<p class="prb__text">ПРБ
+								<div class="task-name">
+									<p class="task-name__text">ПРБ
 									</p>
 								</div>
 								<div class="cell-bottom"> <img src="/img/svg/poll.svg"/>
@@ -143,7 +181,7 @@
 										<p class="cell-request__text">Запрос №45449 
 										</p>
 									</div>
-									<p class="cell-bottom__text"><a href='#'>Игорь Волин:</a> consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.
+									<p class="cell-bottom__text"><span class="task-file">Gradulated.docx.</span> Подвижность по оценочному замеру составила 0.35 мД/сП. Приступили.
 									</p>
 									<div class="counter-new-messages"><img src="/img/svg/message.svg"/>
 										<p class="counter-new-messages__num">3
@@ -151,7 +189,57 @@
 									</div>
 								</div>
 							</div>
-						</div><hr>
+						</div>
+						<div class="task-cell task-cell--unread"> 
+							<div class="task-wrap">
+								<div class="task-cell__info">
+									<div class="task-status task-status--alert">
+										<svg class="icon icon-active ">
+											<use xlink:href="img/svg/sprite.svg#active"></use>
+										</svg>
+										<p class="task-status__text">Активна
+										</p>
+									</div>
+									<p class="task-cell__place">Чона
+									</p>
+									<p class="task-cell__datetime">13.07.2020 13:56
+									</p>
+								</div>
+								<div class="task-name">
+									<p class="task-name__text">ПРБ
+									</p>
+								</div>
+								<div class="cell-bottom"> <img src="/img/svg/poll.svg"/>
+									<p class="cell-bottom__text"><span class="task-file">Gradulated.docx.</span> Подвижность по оценочному замеру составила 0.35 мД/сП. Приступили.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="task-cell task-cell--unread"> 
+							<div class="task-wrap">
+								<div class="task-cell__info">
+									<div class="task-status task-status--alert">
+										<svg class="icon icon-active ">
+											<use xlink:href="img/svg/sprite.svg#active"></use>
+										</svg>
+										<p class="task-status__text">Активна
+										</p>
+									</div>
+									<p class="task-cell__place">Чона
+									</p>
+									<p class="task-cell__datetime">13.07.2020 13:56
+									</p>
+								</div>
+								<div class="task-name">
+									<p class="task-name__text">ПРБ
+									</p>
+								</div>
+								<div class="cell-bottom"> <img src="/img/svg/poll.svg"/>
+									<p class="cell-bottom__text"><span class="task-file">Gradulated.docx.</span> Подвижность по оценочному замеру составила 0.35 мД/сП. Приступили.
+									</p>
+								</div>
+							</div>
+						</div>
 						<div class="task-cell"> 
 							<div class="task-wrap">
 								<div class="task-cell__info">
@@ -167,8 +255,8 @@
 									<p class="task-cell__datetime">13.07.2020 13:56
 									</p>
 								</div>
-								<div class="prb">
-									<p class="prb__text">ПРБ
+								<div class="task-name">
+									<p class="task-name__text">ПРБ
 									</p>
 								</div>
 								<div class="cell-bottom"> 
@@ -176,7 +264,7 @@
 									</p>
 								</div>
 							</div>
-						</div><hr>
+						</div>
 						<div class="task-cell"> 
 							<div class="task-wrap">
 								<div class="task-cell__info">
@@ -192,11 +280,11 @@
 									<p class="task-cell__datetime">13.07.2020 13:56
 									</p>
 								</div>
-								<div class="prb">
+								<div class="task-name">
 									<svg class="icon icon-lock ">
 										<use xlink:href="img/svg/sprite.svg#lock"></use>
 									</svg>
-									<p class="prb__text">ПРБ
+									<p class="task-name__text">ПРБ
 									</p>
 								</div>
 								<div class="cell-bottom"> 
@@ -204,8 +292,8 @@
 									</p>
 								</div>
 							</div>
-						</div><hr>
-						<div class="task-cell"> 
+						</div>
+						<div class="task-cell disable"> 
 							<div class="task-wrap">
 								<div class="task-cell__info">
 									<div class="task-status task-status--unactive">
@@ -220,8 +308,8 @@
 									<p class="task-cell__datetime">13.07.2020 13:56
 									</p>
 								</div>
-								<div class="prb">
-									<p class="prb__text">ПРБ
+								<div class="task-name">
+									<p class="task-name__text">ПРБ
 									</p>
 								</div>
 								<div class="cell-bottom"> 
@@ -229,7 +317,7 @@
 									</p>
 								</div>
 							</div>
-						</div><hr>
+						</div>
 					</div>
 				</div>
 			</div>

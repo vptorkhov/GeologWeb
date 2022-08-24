@@ -6,18 +6,21 @@ mixin tasks()
 			+tasks_search()
 		+b.tasks-body 
 			+task_cell('read', 'Чона', '13.07.2020 13:56', '--success', 'Активна', "lock", false, false, false, 'Запакеровались на глубине 1754.2 м. Что делаем дальше?', 7, 2)
-			+task_cell('read', 'Чона', '13.07.2020 13:56', '--caution', 'Активна', "key", 'excel', false, true, 'Запакеровались на глубине 1754.2 м. Что делаем дальше?')
-			+task_cell('unread', 'Чона', '13.07.2020 13:56', '--alert', 'Активна', false, 'poll', true, false, text, false, 3)
+			+task_cell-active('read', 'Чона', '13.07.2020 13:56', '--success', 'Активна', "lock", false, false, false, 'Запакеровались на глубине 1754.2 м. Что делаем дальше?', 7, 2)
+			+task_cell('read', 'Чона', '13.07.2020 13:56', '--caution', 'Активна', "key", 'excel', false, true, '<span class="sender-person">Игорь Волин</span>: Запакеровались на глубине 1754.2 м. Что делаем дальше?')
+			+task_cell('unread', 'Чона', '13.07.2020 13:56', '--alert', 'Активна', false, 'poll', true, false, '<span class="task-file">Gradulated.docx.</span> Подвижность по оценочному замеру составила 0.35 мД/сП. Приступили.', false, 3)
+			+task_cell('unread', 'Чона', '13.07.2020 13:56', '--alert', 'Активна', false, 'poll', false, false, '<span class="task-file">Gradulated.docx.</span> Подвижность по оценочному замеру составила 0.35 мД/сП. Приступили.', false)
+			+task_cell('unread', 'Чона', '13.07.2020 13:56', '--alert', 'Активна', false, 'poll', false, false, '<span class="task-file">Gradulated.docx.</span> Подвижность по оценочному замеру составила 0.35 мД/сП. Приступили.', false)
 			+task_cell('read', 'Чона', '13.07.2020 13:56', '--draft', 'Черновик', false)
 			+task_cell('read', 'Чона', '13.07.2020 13:56', '--closed', 'Закрыта', "lock")
-			+task_cell('read', 'Чона', '13.07.2020 13:56', '--unactive', 'Неактивна', false)
+			+task_cell-disable('read', 'Чона', '13.07.2020 13:56', '--unactive', 'Неактивна', false)
 
 
 mixin tasks_top_text()
 	+b.tasks-top-text
 		+e.P.header Задачи
 		+my_projects()
-		+b.tasks-filter
+		+b.BUTTON.tasks-filter
 			img(src="/img/svg/filters.svg")
 			+e.P.text Фильтр
 
@@ -28,18 +31,19 @@ mixin my_projects()
 
 mixin tasks_tabs()
 	+b.tabs 
-		+e.tab(tabindex="1")
+		+e.BUTTON.tab(tabindex="1")
 			+e.P.text Все
-		+e.tab(tabindex="1") 
+		+e.BUTTON.tab.active(tabindex="1") 
 			+e.P.text Активные
-		+e.tab(tabindex="1") 
+		+e.BUTTON.tab(tabindex="1") 
 			+e.P.text Черновики
-		+e.tab(tabindex="1") 
+		+e.BUTTON.tab(tabindex="1") 
 			+e.P.text Закрытые
 
 mixin tasks_search()
 	+b.tasks-search(tabindex="1")
-		img(src="/img/svg/search.svg")
+		+e.BUTTON.btn
+			img(src="/img/svg/search.svg")
 		input(type="text", placeholder="Поиск")
 
 mixin task_cell(status, place, datetime, warning, warning_status, lock, icon, request, solution, text, num_requests, num_messages)
@@ -49,9 +53,28 @@ mixin task_cell(status, place, datetime, warning, warning_status, lock, icon, re
 				+task_status(warning, warning_status)
 				+e.P.place=place
 				+e.P.datetime=datetime
-			+prb(lock)
+			+task-name(lock)
 			+cell_bottom(icon, request, solution, text, num_requests, num_messages)
-	<hr>
+
+mixin task_cell-disable(status, place, datetime, warning, warning_status, lock, icon, request, solution, text, num_requests, num_messages)
+	+b.task-cell.disable(class=(status=="unread" ? "--unread" : "")) 
+		.task-wrap
+			+e.info
+				+task_status(warning, warning_status)
+				+e.P.place=place
+				+e.P.datetime=datetime
+			+task-name(lock)
+			+cell_bottom(icon, request, solution, text, num_requests, num_messages)
+
+mixin task_cell-active(status, place, datetime, warning, warning_status, lock, icon, request, solution, text, num_requests, num_messages)
+	+b.task-cell.active(class=(status=="unread" ? "--unread" : "")) 
+		.task-wrap
+			+e.info
+				+task_status(warning, warning_status)
+				+e.P.place=place
+				+e.P.datetime=datetime
+			+task-name(lock)
+			+cell_bottom(icon, request, solution, text, num_requests, num_messages)
 
 
 mixin task_status(warning, warning_status)
@@ -59,8 +82,8 @@ mixin task_status(warning, warning_status)
 		+icon('active')
 		+e.P.text=warning_status
 
-mixin prb(type)
-	+b.prb
+mixin task-name(type)
+	+b.task-name
 		if type
 			+icon(type)
 		+e.P.text ПРБ
