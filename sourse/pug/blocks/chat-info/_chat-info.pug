@@ -7,85 +7,97 @@ block variables
 
 mixin about_project()
 	+b.side-sheet 
-		+side-sheet-top("О проекте")
-		+e.P.header О проекте
-		+b
-			+project_info("Кластер", "Восточная сибирь")
-			+project_info("Проект", "Чона")
-			+project_info("Лицензионный участок", "Игнялинский, Южный")
-			+project_info("Скважина", "2И, ГИ")
-		+e.P.header КPI
-		+b
-			+project_info("Бюджет", "16 500 000 ₽ ")
-			+terms("25.01.2019", "25.11.2020")
-			+detailed_description("Качество", "Дельта разогрета. Смятые в складки осадочные породы в высокогорном плато заставляют предположить, что присоединение органического вещества ")
-			+detailed_description("HSE", "Дельта разогрета. Смятые в складки осадочные породы в высокогорном плато заставляют предположить, что присоединение органического вещества ")
+		.containers
+			+side-sheet-top("О проекте")
+		.containers
+			+e.P.header О проекте
+			+b
+				+project_info("Кластер", "Восточная сибирь")
+				+project_info("Проект", "Чона")
+				+project_info("Лицензионный участок", "Игнялинский, Южный")
+				+project_info("Скважина", "2И, ГИ")
+			+e.P.header КPI
+			+b
+				+project_info("Бюджет", "16 500 000 ₽ ")
+				+terms("25.01.2019", "25.11.2020")
+				+detailed_description("Качество", "Дельта разогрета. Смятые в складки осадочные породы в высокогорном плато заставляют предположить, что присоединение органического вещества ")
+				+detailed_description("HSE", "Дельта разогрета. Смятые в складки осадочные породы в высокогорном плато заставляют предположить, что присоединение органического вещества ")
 
 mixin solutions()
 	+b.side-sheet 
-		+side-sheet-top("Решения")
-		+e.P.header Последнее решение
-		+b.chat-solutions
-			+e.solution
-				+sender('Антон Гаврилов', 'Руководитель проекта')
-				+b.solution-block
-					+message("incoming", bigtext, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", false, false, true, "14.09.2022") 
-			+e.solution
-				+sender('Антон Гаврилов', 'Руководитель проекта')
-				+b.solution-block
-					+message("incoming", bigtext, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", false, false, true, "14.09.2022") 
-			+e.solution
-				+sender('Антон Гаврилов', 'Руководитель проекта')
-				+b.solution-block
-					+message("incoming", bigtext, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", false, false, true, "14.09.2022") 
+		.containers
+			+side-sheet-top("Решения")
+		.containers
+			+e.P.header Последнее решение
+			+b.chat-solutions
 				+e.solution
-				+sender('Антон Гаврилов', 'Руководитель проекта')
-				+b.solution-block
-					+message("incoming", bigtext, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", false, false, true, "14.09.2022") 
+					+sender('Антон Гаврилов', 'Руководитель проекта')
+					+b.solution-block
+						+message("incoming", bigtext, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", false, false, true, "14.09.2022") 
+				+e.solution
+					+sender('Антон Гаврилов', 'Руководитель проекта')
+					+b.solution-block
+						+message("incoming", bigtext, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", false, false, true, "14.09.2022") 
+				+e.solution
+					+sender('Антон Гаврилов', 'Руководитель проекта')
+					+b.solution-block
+						+message("incoming", bigtext, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", false, false, true, "14.09.2022") 
+					+e.solution
+					+sender('Антон Гаврилов', 'Руководитель проекта')
+					+b.solution-block
+						+message("incoming", bigtext, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", false, false, true, "14.09.2022") 
 
 mixin privat_chats()
 	+b.side-sheet 
-		+side-sheet-top("Приватные чаты")
-		+e.privat-chats-block 
-			+sender('Антон Гаврилов', 'Руководитель проекта')
-			+b.solution-block
-				+message("incoming", bigtext, "15.08.2022 14:48", true, false, false, false, "До 14.09.2022", false, true, true, "14.09.2022", true)
+		.containers
+			+side-sheet-top("Приватные чаты")
+		.containers
 			+e.privat-chats-block 
-			+sender('Антон Гаврилов', 'Руководитель проекта')
-			+b.solution-block
-				+message("incoming", bigtext, "15.08.2022 14:48", true, false, false, false, "До 14.09.2022", false, true, true, "14.09.2022", true)
+				+sender('Антон Гаврилов', 'Руководитель проекта')
+				+b.solution-block
+					+message("incoming", bigtext, "15.08.2022 14:48", true, false, false, false, "До 14.09.2022", false, true, true, "14.09.2022", true)
+				+e.privat-chats-block 
+				+sender('Антон Гаврилов', 'Руководитель проекта')
+				+b.solution-block
+					+message("incoming", bigtext, "15.08.2022 14:48", true, false, false, false, "До 14.09.2022", false, true, true, "14.09.2022", true)
 
 
 mixin media()
 	+b.side-sheet 
-		+side-sheet-top("Медиа")
-		+e.chat-media 
-			+e.image
-				img(src="/img/@2x/slide-25.jpg")
-			+e.image
-				img(src="/img/@2x/slide-25.jpg")
-			+e.image
-				img(src="/img/@2x/slide-25.jpg")
-			+e.image
-				img(src="/img/@2x/slide-25.jpg")
-			+e.image
-				img(src="/img/@2x/slide-25.jpg")
-			+e.image
-				img(src="/img/@2x/slide-25.jpg")
+		.containers
+			+side-sheet-top("Медиа")
+		.containers
+			+e.chat-media 
+				+e.image
+					img(src="/img/@2x/slide-25.jpg")
+				+e.image
+					img(src="/img/@2x/slide-25.jpg")
+				+e.image
+					img(src="/img/@2x/slide-25.jpg")
+				+e.image
+					img(src="/img/@2x/slide-25.jpg")
+				+e.image
+					img(src="/img/@2x/slide-25.jpg")
+				+e.image
+					img(src="/img/@2x/slide-25.jpg")
 
 mixin side_sheet_documents()
-	+b.side-sheet 
-		+side-sheet-top("Документы")
-		+document() 
-		+document()
-		+document()
+	+b.side-sheet
+		.containers 
+			+side-sheet-top("Документы")
+		.containers
+			+document() 
+			+document()
+			+document()
 
 mixin side_sheet_links()
 	+b.side-sheet 
-		+side-sheet-top("Сcылки")
-		+link("https://www.youtube.com/watch?v=5qKYrajRNwohttps://www.youtube.com/watch?v=5qKYrajRNwo") 
-		+link("https://www.youtube.com/watch?v=5qKYrajRNwo")
-		+link("https://www.youtube.com/watch?v=5qKYrajRNwo")
+		.containers
+			+side-sheet-top("Сcылки")
+		.containers
+			+link("https://www.youtube.com/watch?v=5qKYrajRNwohttps://www.youtube.com/watch?v=5qKYrajRNwo") 
+			+link("https://www.youtube.com/watch?v=5qKYrajRNwo")
+			+link("https://www.youtube.com/watch?v=5qKYrajRNwo")
 
 mixin side-sheet-top(title)
 	+b.side-sheet-top

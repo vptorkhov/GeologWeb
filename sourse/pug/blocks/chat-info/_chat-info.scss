@@ -2,9 +2,19 @@
 	.document {
 		margin-bottom: 16px;
 	}
+	.containers {
+		padding: 0 20px;
+		margin-bottom: 32px;
+		@media screen and (max-width: 744px) {
+			padding: 0 16px;
+			&:first-child {
+				border-bottom: 1px solid #ECF1F4;
+				margin-bottom: 16px;
+			}
+		}
+	}
 	max-width: 468px;
 	height: 100%;
-	padding: 0 20px;
 	background-color: #ffffff;
 	overflow-y: scroll;
 	&::-webkit-scrollbar {
@@ -59,6 +69,9 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 9px;
+		@media screen and (max-width: 744px) {
+			gap: 8px;
+		}
 	}
 	&__image {
 		overflow-x: hidden;
@@ -70,17 +83,40 @@
 	}
 }
 
+.containers {
+
+}
+
 .side-sheet-top {
 	background-color: #ffffff;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px 5px 32px 2px;
+	padding: 20px 5px 0px 2px;
+	@media screen and (max-width: 744px) {
+		justify-content: flex-start;
+		padding: 14px 0;
+	}
 	&__return,
 	&__close {
 		border: none;
 		padding: 0;
 		background-color: transparent;
+		display: flex;
+		align-items: center;
+	}
+	&__close {
+		@media screen and (max-width: 744px) {
+			display: none;
+		}
+	}
+	&__return {
+		@media screen and (max-width: 744px) {
+			margin-right: 15px;
+			img {
+				width: 15px;
+			}
+		}
 	}
 	&__title {
 		font-weight: 700;
@@ -88,14 +124,26 @@
 		line-height: 28px;
 		font-style: normal;
 		color: var(--main-grey);
+		@media screen and (max-width: 744px) {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 19px;
+			color: var(--main-black);
+		}
 	}
 }
 
 .project-info {
 	font-style: normal;
 	margin-bottom: 16px;
+	@media screen and (max-width: 744px) {
+		margin-bottom: 8px;
+	}
 	&:last-child {
 		margin-bottom: 32px;
+		@media screen and (max-width: 744px) {
+			margin-bottom: 20px;
+		}
 	}
 	&__category {
 		font-weight: 500;
@@ -103,6 +151,10 @@
 		line-height: 16px;
 		color: var(--pale-grey);
 		margin-bottom: 4px;
+		@media screen and (max-width: 744px) {
+			font-size: 12px;
+			line-height: 14px;
+		}
 	}
 	&__info {
 		font-weight: 700;
@@ -111,6 +163,10 @@
 		color: var(--main-black);
 		&--ending {
 			color: #eb3333;
+		}
+		@media screen and (max-width: 744px) {
+			font-size: 16px;
+			line-height: 19px;
 		}
 	}
 	&__terms,

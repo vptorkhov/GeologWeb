@@ -28,5 +28,11 @@
 		max-width: 81%;
 		overflow: hidden;
 		white-space: nowrap;
+		text-decoration-line: underline;
+		text-overflow: ellipsis;
+		@media screen and (max-width: 744px) {
+			white-space: normal;
+			max-width: 83%;
+		}
 	}
 }
