@@ -205,13 +205,20 @@
 	border-top: 1px solid #ccd9e0;
 	transition-duration: 0.4s;
 	padding-top: 8px;
+	min-height: 72px;
 }
 .task-cell {
 	padding: 0px 20px 10px;
 	background-color: #ffffff;
+	position: relative;
 	width: 100%;
 	transition-duration: 0.4s;
 	cursor: pointer;
+	// &::before {
+	// 	background-color: black;
+	// 	height: 100%;
+	// 	width: 20px;
+	// }
 	&:first-child {
 		.task-wrap {
 			border-color: transparent !important;
@@ -234,6 +241,17 @@
 	}
 	&.active {
 		background-color: #ecf1f4 !important;
+		&.privat-chat-opened {
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 10px;
+				height: 100%;
+				background-color: #264152;
+			}
+		}
 	}
 	&__place {
 		font-style: normal;
@@ -324,6 +342,9 @@
 .task-file {
 	color: var(--heavy-blue);
 }
+.message-draft {
+	color: var(--main-grey) !important;
+}
 .task-name {
 	display: flex;
 	align-items: center;
@@ -386,36 +407,6 @@
 }
 .cell-solution {
 	background-color: #22c38e;
-}
-
-.counter-requests,
-.counter-new-messages {
-	display: flex;
-	align-items: center;
-	padding: 5px;
-	border-radius: 7px;
-	font-weight: 500;
-	font-size: 12px;
-	line-height: 14px;
-	.icon {
-		margin-right: 5px;
-	}
-}
-.counter-requests {
-	background-color: #56b9f2;
-	color: #ffffff;
-	margin-right: 12px;
-	&:last-child {
-		margin-right: 0px;
-	}
-	.icon.icon-arrow-down {
-		stroke: #ffffff;
-		height: 16px;
-		width: 10px;
-	}
-}
-.counter-new-messages {
-	background-color: var(--grey-blue);
 }
 .counters {
 	display: flex;
