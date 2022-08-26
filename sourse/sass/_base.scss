@@ -521,11 +521,12 @@ iframe {
 .btn {
 	// width: 100%;
 	// color: var(--survey-blue);
-	border-width: 2px;
+	border-width: 1px;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: calc(19 / 16);
-	padding: 15px;
+	padding: 10px;
+	border-radius: 8px;
 	&:active:focus {
 		border-color: var(--bs-btn-active-border-color);
 		color: var(--bs-btn-active-color);

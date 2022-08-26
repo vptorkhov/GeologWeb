@@ -23,12 +23,12 @@ mixin task_card(activity_type, progress, status, start, end, work_type, work_nam
 				+counter_new_messages(new_messages)
 		if (activity_type=='draft')
 			+e.draft-options 
-				button.btn.btn-secondary Опубликовать
-				button 
+				button.btn.btn-secondary.btn-full-width Опубликовать
+				+e.BUTTON.delete-btn
 					img(src="/img/svg/delete.svg")
 		if (activity_type=='closed')
 			+e.closed-options 
-				button.btn.btn-secondary Возобновить работу
+				button.btn.btn-secondary.btn-full-width Возобновить работу
 
 mixin card_task_terms(activity_type, start, end)
 	+b.card-task-terms
