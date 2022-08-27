@@ -1,0 +1,141 @@
+.participants-search {
+	flex-grow: 1;
+	input {
+		border: none;
+		outline: none;
+		margin-bottom: 0 !important;
+		background-color: #f5f9fc;
+		border-radius: 8px;
+		width: 100%;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 130%;
+		padding: 10px 11px 9px 40px !important;
+		transition-duration: 0.4s;
+		border: 1px solid transparent;
+		caret-color: #0096EB;
+		&:focus {
+			border-color: #ccd9e0;
+		}
+		@media screen and (max-width: 744px) {
+			max-height: 32px;
+			font-size: 14px;
+			padding-right: 44px !important;
+		}
+	}
+	&__btn {
+		width: 24px;
+		height: 24px;
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		position: absolute;
+		left: 8px;
+		top: 50%;
+		transform: translateY(-50%);
+		@media screen and (max-width: 744px) {
+			left: 10px;
+			top: 10px;
+			width: 16px;
+			height: 16px;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&-block {
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 24px;
+		&__decline {
+			border: none;
+			background-color: transparent;
+			padding: 11px 0px 10px 8px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 19px;
+			color: #0096EB;
+		}
+		.cross {
+			display: none;
+		}
+		@media screen and (max-width: 744px) {
+			margin-top: 16px;
+			&__decline {
+				position: absolute;
+				top: 6px;
+				right: 8px;
+				p {
+					display: none;
+				}
+				padding: 0;
+			}
+			.cross {
+				display: block;
+			}
+		}
+	}
+}
+.privat-chat-added-people, .best-name-match-alphabet {
+	padding: 24px 0;
+	& + & {
+		border-bottom: none;
+	}
+	.sender {
+		margin: 0px !important;
+	}
+	&__letter {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 28px;
+		color: var(--main-black);
+		margin-bottom: 8px;
+	}
+	border-bottom: 1px solid #E5ECEF;
+	&__best-name-match-variant {
+		display: flex;
+		justify-content: space-between;
+		& + & {
+			margin-top: 24px;
+			@media screen and (max-width: 744px) {
+				margin-top: 16px;
+			}
+		}
+	}
+	@media screen and (max-width: 744px) {
+		padding: 16px 0;
+	}
+}
+.best-name-match-alphabet {
+	flex-grow: 1;
+	overflow-y: scroll;
+	.sender {
+		@media screen and (min-width: 744.99px) {
+			margin-left: 16px !important;
+		}
+	}
+}
+
+.private-chat-create-button {
+	padding: 28px 0;
+	border-top: 2px solid #F2F4F5;
+	@media screen and (max-width: 744px) {
+		padding: 16px 0;
+	}
+}
+
+.btn-normal {
+	padding: 15px 17px 14px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: #FFFFFF;
+	background: #0096EB;
+}

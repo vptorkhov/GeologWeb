@@ -215,18 +215,10 @@
 	transition-duration: 0.4s;
 	cursor: pointer;
 	color: var(--main-black);
-	// &::before {
-	// 	background-color: black;
-	// 	height: 100%;
-	// 	width: 20px;
-	// }
 	&:first-child {
 		.task-wrap {
 			border-color: transparent !important;
 		}
-		// &:focus {
-		// 	color: red !important;
-		// }
 	}
 	&--unread {
 		background-color: #def0fb !important;

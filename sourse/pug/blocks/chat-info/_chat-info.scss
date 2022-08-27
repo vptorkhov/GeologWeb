@@ -1,16 +1,99 @@
 .side-sheet {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	.document {
 		margin-bottom: 16px;
 	}
 	.containers {
 		padding: 0 20px;
 		margin-bottom: 32px;
+		&--private-chat {
+			margin-bottom: 24px;
+			padding: 0 20px;
+			display: flex;
+			flex-direction: column;
+			& + & {
+				flex-grow: 1;
+			}
+			textarea {
+				border: 1px solid #CCD9E0;
+				resize: none;
+				border-radius: 8px;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 16px;
+				color: var(--main-black);
+				padding: 8px 12px;
+				width: 100%;
+				margin-bottom: 24px;
+				@media screen and (max-width: 744px) {
+					margin-bottom: 16px;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			@media screen and (max-width: 744px) {
+				padding: 0 16px;
+				&:first-child {
+					border-bottom: 1px solid #ECF1F4;
+					margin-bottom: 16px;
+				}
+			}
+		}
 		@media screen and (max-width: 744px) {
 			padding: 0 16px;
 			&:first-child {
 				border-bottom: 1px solid #ECF1F4;
 				margin-bottom: 16px;
 			}
+		}
+	}
+	&__private-chat-topic-task, &__private-chat-topic-request {
+		margin-bottom: 4px;
+	}
+	&__private-chat-topic-task {
+		color: #4D5F69;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 18px;
+		@media screen and (min-width: 744.99px) {
+			font-size: 14px;
+		}
+	}
+	&__private-chat-topic-request {
+		color: #B2C6D2;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+	}
+	&__request-number {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 23px;
+		@media screen and (max-width: 744px) {
+			font-size: 16px;
+			line-height: 19px;
+			font-weight: 500;
+		}
+		color: var(--main-black);
+	}
+	&__text {
+		color: var(--main-black);
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 130%;
+		margin-bottom: 16px;
+		a {
+			@include mt;
+			color: #33B4FF;
+			text-decoration: none;
 		}
 	}
 	max-width: 468px;
@@ -82,9 +165,17 @@
 		}
 	}
 }
-
-.containers {
-
+.containers--private-chat {
+	max-height: calc(100% - 72px);
+	@media screen and (max-width: 744px) {
+		max-height: calc(100% - 64px);
+	}
+	& + & {
+		flex-grow: 1;
+	}
+	&:last-child {
+		margin-bottom: 0px;
+	}
 }
 
 .side-sheet-top {
@@ -115,6 +206,11 @@
 			margin-right: 15px;
 			img {
 				width: 15px;
+			}
+		}
+		&--private-chat {
+			@media screen and (min-width: 744px) {
+				display: none;
 			}
 		}
 	}
