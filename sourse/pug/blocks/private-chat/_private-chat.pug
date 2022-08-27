@@ -1,20 +1,13 @@
 include ../messages/_messages.pug
+include ../chat/_chat.pug
 
-mixin chat()
-	+b.chat
-		+chat_window()
+mixin private_chat()
+	+b.private-chat-block
+		+private_chat_topic("Необходимо что то решать. Или все пропало")
+		+private_chat_window()
 		+chat_bar()
 
-
-mixin sender(name, position)
-	+b.sender 
-		+e.avatar 
-			img(src="/img/@2x/slide-25.jpg")
-		+e.name-and-position 
-			+e.P.name=name 
-			+e.P.position=position
-
-mixin chat_window()
+mixin private_chat_window()
 	+e.messages
 		+e.P.date 20 января 2020
 		+sender('Антон Гаврилов', 'Руководитель проекта')
@@ -33,14 +26,6 @@ mixin chat_window()
 		+e.block-of-messages
 			+message("incoming", bigtext, "15.08.2022 14:48", false, true)
 
-mixin chat_bar()
-	+e.chat-bar 
-		+e.BUTTON.menu.btn 
-			img(src="/img/svg/chat-menu.svg")
-		textarea(type='text' placeholder="Введите сообщение")
-		//- +e.BUTTON.voice-message.btn 
-		//- 	img(src="/img/svg/microphone.svg")
-
-mixin new_messages_line()
-	+b.new-message-line 
-		+e.P.text Новые сообщения
+mixin private_chat_topic(topic)
+	+b.private-chat-topic
+		+e.P.text!=`<span>Тема:</span> ${topic}`

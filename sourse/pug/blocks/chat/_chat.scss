@@ -1,4 +1,4 @@
-.chat {
+.chat, .private-chat-block {
 	height: 100%;
 	&__block-of-messages {
 		width: 100%;
@@ -7,23 +7,40 @@
 		align-items: flex-start;
 	}
 	&__date {
+		align-self: center;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 16px;
 		color: var(--pale-grey);
 		margin-bottom: 16px;
+		background-color: #F5F9FC;
+		border-radius: 4px;
+		padding: 4px 6px;
 	}
 	height: 100%;
 	&__messages {
+		display: flex;
+		flex-direction: column;
 		background-color: var(--grey-blue);
-		padding: 40px 20px 0;
+		padding: 20px 20px 0;
 		overflow-y: scroll;
 		height: calc(100% - 64px);
 		&::-webkit-scrollbar { 
 			width: 0; 
 		}
+		@media screen and (max-width: 744px) {
+			padding: 20px 16px 0;
+			height: calc(100% - 40px);
+		}
 	}
 	&__chat-bar {
+		padding: 17px 20px;
+		@media screen and (max-width: 744px) {
+			padding: 8px 16px;
+			img {
+				width: 24px;
+			}
+		}
 		.btn {
 			padding: 0;
 			border: none;
@@ -51,10 +68,30 @@
 			&:focus {
 				outline: none;
 			}
+			@media screen and (max-width: 744px) {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 16px;
+				height: 24px;
+			}
 		}
 	}
 }
-
+.new-message-line {
+	padding-top: 4px;
+	.chat__date + & {
+		margin-top: -10px;
+	}
+	border-top: 1px solid var(--survey-blue);
+	&__text {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		text-align: center;
+		color: #33B4FF;
+	}
+}
 .sender {
 	display: flex;
 	margin-bottom: 11px;
