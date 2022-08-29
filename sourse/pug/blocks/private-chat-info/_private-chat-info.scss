@@ -28,7 +28,7 @@
 
 .privat-chat-participants-list {
 	flex-grow: 1;
-	overflow-y: scroll;
+	overflow-y: auto;
 	margin-top: 16px;
 }
 .privat-chat-participant {
