@@ -7,16 +7,18 @@ mixin privat_chat_creation(from)
 			.containers--private-chat
 				+privat-chat-side-sheet("Новый приватный чат")
 			.containers--private-chat
-				+e.P.private-chat-topic-task Тема приватного чата
-				textarea(type="text", rows=2,  placeholder="Введите название темы")
+				+e.container
+					+e.P.private-chat-topic-request Тема приватного чата
+					textarea(type="text", rows=2,  placeholder="Введите название темы")
 				+private_chat_creation_bottom() 
 		else 
 			.containers--private-chat
 				+privat-chat-side-sheet("Новый приватный чат из запроса")
 			.containers--private-chat
-				+e.P.private-chat-topic-request Тема (связанный запрос)
-				+e.request-number Запрос №12012
-				+e.P.text!=bigtext 
+				+e.container
+					+e.P.private-chat-topic-request Тема (связанный запрос)
+					+e.request-number Запрос №12012
+					+e.P.text!=bigtext 
 				+private_chat_creation_bottom() 
 			
 
@@ -34,8 +36,11 @@ mixin participants_search()
 			img(src="/img/svg/search.svg")
 		input(type="text", placeholder="Поиск")
 
-mixin private_chat_creation_bottom() 
-	+e.P.private-chat-topic-request УЧАСТНИКИ
+mixin private_chat_creation_bottom(participants_amount)
+	if participants_amount
+		+e.P.private-chat-participants=`УЧАСТНИКИ ${participants_amount}`
+	else
+		+e.P.private-chat-participants УЧАСТНИКИ
 	+b.participants-search-block
 		+participants_search()
 		+e.BUTTON.decline 
@@ -48,10 +53,10 @@ mixin private_chat_creation_bottom()
 
 mixin best_name_match()
 	+b.privat-chat-added-people
-		+e.best-name-match-variant
+		+e.best-name-match-variant-top
 			+sender('Антон Гаврилов', 'Руководитель проекта')
 			img(src="/img/svg/delete.svg")
-		+e.best-name-match-variant
+		+e.best-name-match-variant-top
 			+sender('Антон Гаврилов', 'Руководитель проекта')
 			img(src="/img/svg/delete.svg")
 
