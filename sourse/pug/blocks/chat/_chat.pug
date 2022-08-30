@@ -14,6 +14,16 @@ mixin sender(name, position)
 			+e.P.name=name 
 			+e.P.position=position
 
+mixin sender2(name, position)
+	+b.sender 
+		+e.avatar 
+			img(src="img/@2x/slide-25.jpg")
+		+e.name-and-position 
+			+e.P.name=name 
+			+e.P.position
+				span!=position
+				span!=position
+
 mixin chat_window()
 	+e.messages
 		+e.P.date 20 января 2020

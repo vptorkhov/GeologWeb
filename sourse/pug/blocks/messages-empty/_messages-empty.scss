@@ -29,10 +29,25 @@
 				line-height: 19px;
 				text-align: center;
 			}
-			svg, image {
-				width: 56px;
-				height: 56px;
-			}
+		}
+	}
+	&__btn{
+		width: 56px;
+		height: 56px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition-duration: 0.4s;
+		padding: 0;
+		background-color: var(--survey-blue);
+		border: none;
+		&:hover{
+			background-color: var(--heavy-blue);
+		}
+		.icon{
+			font-size: 18px;
+			color:#ffffff;
 		}
 	}
 }

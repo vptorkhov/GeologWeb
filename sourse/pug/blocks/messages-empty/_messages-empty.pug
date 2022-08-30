@@ -4,5 +4,5 @@ mixin messages_empty()
 			p Сообщения
 		+e.messages-empty 
 			p У вас пока нет<br>переписок, чтобы начать, нажмите “+”
-			svg 
-				image(xlink:href=`/img/svg/FAB.svg`)
+			+e.BUTTON.btn
+				+icon('plus')

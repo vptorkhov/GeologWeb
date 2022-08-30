@@ -8,5 +8,11 @@ block title
 	- let  title= index.head.title
 	title= title
 block pagecontent
-	.p-sm-5(style="background-color: grey; height: 100vh; display: flex; justify-content: center;")
-		+create_chat()
+	.p-sm-5(style="background-color: grey; height: 1000px; display: flex; justify-content: center;")
+		+create-chat-add-people()
+	.p-sm-5(style="background-color: grey; height: 500px; display: flex; justify-content: center;")
+		+create-chat-start
+	.p-sm-5(style="background-color: grey; height: 500px; display: flex; justify-content: center;")
+		+create-chat-start(true)
+	.p-sm-5(style="background-color: grey; height: 1200px; display: flex; justify-content: center;")
+		+create-chat-roles

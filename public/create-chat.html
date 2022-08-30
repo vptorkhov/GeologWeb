@@ -13,16 +13,18 @@
 	</head>
 	<body>
 		<div class="main-wrapper">
-			<div class="p-sm-5" style="background-color: grey; height: 100vh; display: flex; justify-content: center;">
-				<div class="create-chat-dialog"> 
-					<div class="create-chat-dialog__top"> 
-						<p class="create-chat-dialog__title">Создать чат
+			<div class="p-sm-5" style="background-color: grey; height: 1000px; display: flex; justify-content: center;">
+				<div class="create-chat create-chat--dialog"> 
+					<div class="create-chat__top"> 
+						<p class="create-chat__title">Создать чат
 						</p>
-						<svg> 
-							<image xlink:href="/img/svg/close-cross.svg"></image>
-						</svg>
+						<button class="create-chat__close">
+							<svg class="icon icon-close-cross ">
+								<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+							</svg>
+						</button>
 					</div>
-					<div class="create-chat-dialog__main-content">
+					<div class="create-chat__main-content scrollbar-vertical">
 						<div class="participants-search-block">
 							<div class="participants-search" tabindex="1">
 								<button class="participants-search__btn"><img src="img/svg/search.svg"/>
@@ -33,9 +35,9 @@
 								<p>Отмена</p>
 							</button>
 						</div>
-						<p class="create-chat-dialog__section">КОНТАКТЫ
+						<p class="create-chat__section">КОНТАКТЫ
 						</p>
-						<div class="create-chat-dialog__added-people"> 
+						<div class="create-chat__added-people"> 
 							<div class="sender"> 
 								<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
 								</div>
@@ -46,13 +48,13 @@
 									</p>
 								</div>
 							</div>
-							<button class="create-chat-dialog__delete btn">
+							<button class="create-chat__delete btn">
 								<svg class="icon icon-delete ">
 									<use xlink:href="img/svg/sprite.svg#delete"></use>
 								</svg>
 							</button>
 						</div>
-						<div class="create-chat-dialog__alphabet-list"> 
+						<div class="create-chat__alphabet-list scrollbar-vertical">
 							<div class="best-name-match-alphabet">
 								<p class="best-name-match-alphabet__letter">A
 								</p>
@@ -63,7 +65,7 @@
 										<div class="sender__name-and-position"> 
 											<p class="sender__name">Антон Гаврилов
 											</p>
-											<p class="sender__position">Руководитель проекта
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
 											</p>
 										</div>
 									</div>
@@ -75,33 +77,7 @@
 										<div class="sender__name-and-position"> 
 											<p class="sender__name">Антон Гаврилов
 											</p>
-											<p class="sender__position">Руководитель проекта
-											</p>
-										</div>
-									</div>
-								</div>
-								<p class="best-name-match-alphabet__letter">A
-								</p>
-								<div class="best-name-match-alphabet__best-name-match-variant">
-									<div class="sender"> 
-										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
-										</div>
-										<div class="sender__name-and-position"> 
-											<p class="sender__name">Антон Гаврилов
-											</p>
-											<p class="sender__position">Руководитель проекта
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="best-name-match-alphabet__best-name-match-variant">
-									<div class="sender"> 
-										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
-										</div>
-										<div class="sender__name-and-position"> 
-											<p class="sender__name">Антон Гаврилов
-											</p>
-											<p class="sender__position">Руководитель проекта
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
 											</p>
 										</div>
 									</div>
@@ -115,7 +91,7 @@
 										<div class="sender__name-and-position"> 
 											<p class="sender__name">Антон Гаврилов
 											</p>
-											<p class="sender__position">Руководитель проекта
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
 											</p>
 										</div>
 									</div>
@@ -127,33 +103,7 @@
 										<div class="sender__name-and-position"> 
 											<p class="sender__name">Антон Гаврилов
 											</p>
-											<p class="sender__position">Руководитель проекта
-											</p>
-										</div>
-									</div>
-								</div>
-								<p class="best-name-match-alphabet__letter">A
-								</p>
-								<div class="best-name-match-alphabet__best-name-match-variant">
-									<div class="sender"> 
-										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
-										</div>
-										<div class="sender__name-and-position"> 
-											<p class="sender__name">Антон Гаврилов
-											</p>
-											<p class="sender__position">Руководитель проекта
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="best-name-match-alphabet__best-name-match-variant">
-									<div class="sender"> 
-										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
-										</div>
-										<div class="sender__name-and-position"> 
-											<p class="sender__name">Антон Гаврилов
-											</p>
-											<p class="sender__position">Руководитель проекта
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
 											</p>
 										</div>
 									</div>
@@ -167,7 +117,7 @@
 										<div class="sender__name-and-position"> 
 											<p class="sender__name">Антон Гаврилов
 											</p>
-											<p class="sender__position">Руководитель проекта
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
 											</p>
 										</div>
 									</div>
@@ -179,17 +129,392 @@
 										<div class="sender__name-and-position"> 
 											<p class="sender__name">Антон Гаврилов
 											</p>
-											<p class="sender__position">Руководитель проекта
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<p class="best-name-match-alphabet__letter">A
+								</p>
+								<div class="best-name-match-alphabet__best-name-match-variant">
+									<div class="sender"> 
+										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
+										</div>
+										<div class="sender__name-and-position"> 
+											<p class="sender__name">Антон Гаврилов
+											</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="best-name-match-alphabet__best-name-match-variant">
+									<div class="sender"> 
+										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
+										</div>
+										<div class="sender__name-and-position"> 
+											<p class="sender__name">Антон Гаврилов
+											</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<p class="best-name-match-alphabet__letter">A
+								</p>
+								<div class="best-name-match-alphabet__best-name-match-variant">
+									<div class="sender"> 
+										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
+										</div>
+										<div class="sender__name-and-position"> 
+											<p class="sender__name">Антон Гаврилов
+											</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="best-name-match-alphabet__best-name-match-variant">
+									<div class="sender"> 
+										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
+										</div>
+										<div class="sender__name-and-position"> 
+											<p class="sender__name">Антон Гаврилов
+											</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
 											</p>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="create-chat-dialog__bottom-buttons"> 
-							<button class="create-chat-dialog__cancel btn-secondary btn">Назад
+						<div class="create-chat__bottom-buttons"> 
+							<button class="create-chat__cancel btn-secondary btn">Назад
 							</button>
-							<button class="create-chat-dialog__next btn-fill btn">Далее
+							<button class="create-chat__next btn-fill btn">Далее
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="p-sm-5" style="background-color: grey; height: 500px; display: flex; justify-content: center;">
+				<div class="create-chat create-chat--start">
+					<div class="create-chat__top"> 
+						<p class="create-chat__title">Создать чат
+						</p>
+						<button class="create-chat__close">
+							<svg class="icon icon-close-cross ">
+								<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="create-chat__main-content scrollbar-vertical">
+						<div class="create-chat__info-wrap">
+							<div class="create-chat__img-block">
+								<button class="create-chat__chat-pic-change">
+									<svg class="icon icon-plus ">
+										<use xlink:href="img/svg/sprite.svg#plus"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="create-chat__name-block">
+								<div class="create-chat__input-wrap form-group">
+									<label><span class="create-chat__input-title">Название группы <span class="requiry-star">*</span></span>
+										<input class="create-chat__input form-control" name="text" type="text" placeholder="Введите название"/>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="create-chat__bottom-buttons"> 
+							<button class="create-chat__cancel btn-secondary btn">Назад
+							</button>
+							<button class="create-chat__next btn-fill btn disabled">Далее
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="p-sm-5" style="background-color: grey; height: 500px; display: flex; justify-content: center;">
+				<div class="create-chat create-chat--start">
+					<div class="create-chat__top"> 
+						<p class="create-chat__title">Создать чат
+						</p>
+						<button class="create-chat__close">
+							<svg class="icon icon-close-cross ">
+								<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="create-chat__main-content scrollbar-vertical">
+						<div class="create-chat__info-wrap">
+							<div class="create-chat__img-block">
+								<button class="create-chat__chat-pic-change create-chat__chat-pic-change--with-pic"><img src="img/chat-pic.png" alt=""/>
+								</button>
+							</div>
+							<div class="create-chat__name-block">
+								<div class="create-chat__input-wrap form-group">
+									<label><span class="create-chat__input-title">Название группы <span class="requiry-star">*</span></span>
+										<input class="create-chat__input form-control" name="text" type="text" placeholder="Введите название"/>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="create-chat__bottom-buttons"> 
+							<button class="create-chat__cancel btn-secondary btn">Назад
+							</button>
+							<button class="create-chat__next btn-fill btn">Далее
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="p-sm-5" style="background-color: grey; height: 1200px; display: flex; justify-content: center;">
+				<div class="create-chat create-chat--dialog">
+					<div class="create-chat__top"> 
+						<p class="create-chat__title">Создать чат
+						</p>
+						<button class="create-chat__close">
+							<svg class="icon icon-close-cross ">
+								<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="create-chat__main-content scrollbar-vertical">
+						<div class="create-chat__roles">
+							<div class="create-chat__roles-title">РОЛИ УЧАСТНИКОВ
+							</div>
+							<div class="create-chat__role-person">
+								<div class="create-chat__added-people">
+									<div class="sender">
+										<div class="sender__avatar"><img src="img/@2x/slide-25.jpg"/></div>
+										<div class="sender__name-and-position">
+											<p class="sender__name">Антон Гаврилов</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span></p>
+										</div>
+									</div>
+									<button class="create-chat__delete btn">
+										<svg class="icon icon-delete">
+											<use xlink:href="img/svg/sprite.svg#delete"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="create-chat__input-wrap form-group">
+									<label>
+										<div class="create-chat__role-select-head"><span class="create-chat__input-title">Роль</span>
+											<a class="create-chat__role-select-reset" href="#">Сбросить
+											</a>
+										</div>
+										<select class="create-chat__input form-select" name="select">
+											<option value="Администратор">Администратор</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</label>
+								</div>
+							</div>
+							<div class="create-chat__role-person">
+								<div class="create-chat__added-people">
+									<div class="sender">
+										<div class="sender__avatar"><img src="img/@2x/slide-25.jpg"/></div>
+										<div class="sender__name-and-position">
+											<p class="sender__name">Антон Гаврилов</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span></p>
+										</div>
+									</div>
+									<button class="create-chat__delete btn">
+										<svg class="icon icon-delete">
+											<use xlink:href="img/svg/sprite.svg#delete"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="create-chat__input-wrap form-group">
+									<label>
+										<div class="create-chat__role-select-head"><span class="create-chat__input-title">Роль</span>
+											<a class="create-chat__role-select-reset" href="#">Сбросить
+											</a>
+										</div>
+										<select class="create-chat__input form-select" name="select">
+											<option value="Администратор">Администратор</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</label>
+								</div>
+							</div>
+							<div class="create-chat__role-person">
+								<div class="create-chat__added-people">
+									<div class="sender">
+										<div class="sender__avatar"><img src="img/@2x/slide-25.jpg"/></div>
+										<div class="sender__name-and-position">
+											<p class="sender__name">Антон Гаврилов</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span></p>
+										</div>
+									</div>
+									<button class="create-chat__delete btn">
+										<svg class="icon icon-delete">
+											<use xlink:href="img/svg/sprite.svg#delete"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="create-chat__input-wrap form-group">
+									<label>
+										<div class="create-chat__role-select-head"><span class="create-chat__input-title">Роль</span>
+											<a class="create-chat__role-select-reset" href="#">Сбросить
+											</a>
+										</div>
+										<select class="create-chat__input form-select" name="select">
+											<option value="Администратор">Администратор</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="create-chat__alphabet-list">
+							<div class="best-name-match-alphabet">
+								<p class="best-name-match-alphabet__letter">A
+								</p>
+								<div class="best-name-match-alphabet__best-name-match-variant">
+									<div class="sender"> 
+										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
+										</div>
+										<div class="sender__name-and-position"> 
+											<p class="sender__name">Антон Гаврилов
+											</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="best-name-match-alphabet__best-name-match-variant">
+									<div class="sender"> 
+										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
+										</div>
+										<div class="sender__name-and-position"> 
+											<p class="sender__name">Антон Гаврилов
+											</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<p class="best-name-match-alphabet__letter">A
+								</p>
+								<div class="best-name-match-alphabet__best-name-match-variant">
+									<div class="sender"> 
+										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
+										</div>
+										<div class="sender__name-and-position"> 
+											<p class="sender__name">Антон Гаврилов
+											</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="best-name-match-alphabet__best-name-match-variant">
+									<div class="sender"> 
+										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
+										</div>
+										<div class="sender__name-and-position"> 
+											<p class="sender__name">Антон Гаврилов
+											</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<p class="best-name-match-alphabet__letter">A
+								</p>
+								<div class="best-name-match-alphabet__best-name-match-variant">
+									<div class="sender"> 
+										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
+										</div>
+										<div class="sender__name-and-position"> 
+											<p class="sender__name">Антон Гаврилов
+											</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="best-name-match-alphabet__best-name-match-variant">
+									<div class="sender"> 
+										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
+										</div>
+										<div class="sender__name-and-position"> 
+											<p class="sender__name">Антон Гаврилов
+											</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<p class="best-name-match-alphabet__letter">A
+								</p>
+								<div class="best-name-match-alphabet__best-name-match-variant">
+									<div class="sender"> 
+										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
+										</div>
+										<div class="sender__name-and-position"> 
+											<p class="sender__name">Антон Гаврилов
+											</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="best-name-match-alphabet__best-name-match-variant">
+									<div class="sender"> 
+										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
+										</div>
+										<div class="sender__name-and-position"> 
+											<p class="sender__name">Антон Гаврилов
+											</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<p class="best-name-match-alphabet__letter">A
+								</p>
+								<div class="best-name-match-alphabet__best-name-match-variant">
+									<div class="sender"> 
+										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
+										</div>
+										<div class="sender__name-and-position"> 
+											<p class="sender__name">Антон Гаврилов
+											</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="best-name-match-alphabet__best-name-match-variant">
+									<div class="sender"> 
+										<div class="sender__avatar"> <img src="img/@2x/slide-25.jpg"/>
+										</div>
+										<div class="sender__name-and-position"> 
+											<p class="sender__name">Антон Гаврилов
+											</p>
+											<p class="sender__position"><span>Руководитель проекта</span><span>Руководитель проекта</span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="create-chat__bottom-buttons"> 
+							<button class="create-chat__cancel btn-secondary btn">Назад
+							</button>
+							<button class="create-chat__next btn-fill btn">Далее
 							</button>
 						</div>
 					</div>

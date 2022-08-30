@@ -2,15 +2,15 @@
 	--sent-message: #cfe8f7;
 	--main-grey: #667985;
 	--secondary-grey: #b3bcc2;
-	--grey-blue: #ECF1F4;
-	--pale-grey: #B2C6D2;
+	--grey-blue: #ecf1f4;
+	--pale-grey: #b2c6d2;
 	--main-black: #001a29;
 	--notify-blue: #56b9f2;
 	--heavy-blue: #0071b2;
 	--main-red: #eb3333;
 	--icon-primary: #264152;
 	--survey-blue: #0096eb;
-	--main-black: #001A29;
+	--main-black: #001a29;
 	// --light-blue: #0096EB;
 }
 
@@ -398,7 +398,7 @@ a {
 	text-decoration: none;
 }
 .private-chat-create {
-	color: #33B4FF;
+	color: #33b4ff;
 }
 
 img.img-bg,
@@ -535,13 +535,15 @@ iframe {
 		color: var(--bs-btn-active-color);
 		background-color: var(--bs-btn-active-bg);
 	}
+	&.disabled {
+		pointer-events: none;
+	}
 }
 
 .btn-full-width {
 	width: 100%;
 }
 .btn-secondary {
-
 	background-color: transparent !important;
 	--bs-btn-color: var(--survey-blue);
 	--bs-btn-border-color: var(--survey-blue);
@@ -552,7 +554,6 @@ iframe {
 }
 
 .btn-fill {
-
 	background-color: var(--survey-blue) !important;
 	--bs-btn-color: #ffffff;
 	--bs-btn-border-color: var(--survey-blue);
@@ -562,4 +563,35 @@ iframe {
 	--bs-btn-active-border-color: #14a9ff;
 	--bs-btn-active-bg: #14a9ff;
 	--bs-btn-active-color: #ffffff;
+	&.disabled {
+		color: #b3bcc2 !important;
+		border-color: #f0f2f3 !important;
+		background-color: #f0f2f3 !important;
+	}
+}
+
+.scrollbar-horizontal::-webkit-scrollbar {
+	height: 7px;
+}
+.scrollbar-horizontal::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+.scrollbar-horizontal::-webkit-scrollbar-thumb {
+	background-color: #b6b7bf;
+	/* цвет плашки */
+	border-radius: 16px;
+	/* закругления плашки */
+}
+
+.scrollbar-vertical::-webkit-scrollbar {
+	width: 7px;
+}
+.scrollbar-vertical::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+.scrollbar-vertical::-webkit-scrollbar-thumb {
+	background-color: #b6b7bf;
+	/* цвет плашки */
+	border-radius: 16px;
+	/* закругления плашки */
 }
