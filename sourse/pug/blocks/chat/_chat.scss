@@ -9,9 +9,9 @@
 	&__date {
 		align-self: center;
 		font-weight: 400;
-		font-size: 14px;
-		line-height: 16px;
-		color: var(--pale-grey);
+		font-size: 12px;
+		line-height: 14px;
+		color: var(--main-grey);
 		margin-bottom: 16px;
 		background-color: #F5F9FC;
 		border-radius: 4px;
@@ -80,7 +80,7 @@
 }
 .new-message-line {
 	padding-top: 4px;
-	.chat__date + & {
+	.chat__date + &, .private-chat-block__date + & {
 		margin-top: -10px;
 	}
 	border-top: 1px solid var(--survey-blue);
