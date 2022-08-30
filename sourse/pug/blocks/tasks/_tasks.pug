@@ -25,12 +25,12 @@ mixin tasks_top_text()
 		+e.P.header Задачи
 		+my_projects()
 		+b.BUTTON.tasks-filter
-			img(src="/img/svg/filters.svg")
+			img(src="img/svg/filters.svg")
 			+e.P.text Фильтр
 
 mixin my_projects()
 	+b.my-projects
-		img(src="/img/svg/my-projects-check.svg")
+		img(src="img/svg/my-projects-check.svg")
 		+e.text Мои проекты
 
 mixin tasks_tabs()
@@ -47,7 +47,7 @@ mixin tasks_tabs()
 mixin tasks_search()
 	+b.tasks-search(tabindex="1")
 		+e.BUTTON.btn
-			img(src="/img/svg/search.svg")
+			img(src="img/svg/search.svg")
 		input(type="text", placeholder="Поиск")
 
 mixin task_cell(status, place, datetime, warning, warning_status, lock, icon, request, solution, text, num_requests, num_messages)
@@ -117,11 +117,11 @@ mixin cell_solution(solution)
 //- mixin counter_requests(num)
 //- 	if num
 //- 		+b.counter-requests
-//- 			img(src="/img/svg/arrow-down.svg")
+//- 			img(src="img/svg/arrow-down.svg")
 //- 			+e.P.num=num
 
 //- mixin counter_new_messages(num)
 //- 	if num
 //- 		+b.counter-new-messages
-//- 			img(src="/img/svg/message.svg")
+//- 			img(src="img/svg/message.svg")
 //- 			+e.P.num=num
