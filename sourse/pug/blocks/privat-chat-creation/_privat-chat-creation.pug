@@ -25,15 +25,15 @@ mixin privat_chat_creation(from)
 mixin privat-chat-side-sheet(title)
 	+b.side-sheet-top
 		+e.BUTTON.return--private-chat
-			img(src="/img/svg/side-sheet-arrow.svg")
+			img(src="img/svg/side-sheet-arrow.svg")
 		+e.P.title=title 
 		+e.BUTTON.close
-			img(src="/img/svg/close-cross.svg")
+			img(src="img/svg/close-cross.svg")
 
 mixin participants_search()
 	+b.participants-search(tabindex="1")
 		+e.BUTTON.btn
-			img(src="/img/svg/search.svg")
+			img(src="img/svg/search.svg")
 		input(type="text", placeholder="Поиск")
 
 mixin private_chat_creation_bottom(participants_amount)
@@ -45,7 +45,7 @@ mixin private_chat_creation_bottom(participants_amount)
 		+participants_search()
 		+e.BUTTON.decline 
 			p Отмена
-			img.cross(src="/img/svg/blue-cross.svg")
+			img.cross(src="img/svg/blue-cross.svg")
 	+best_name_match()
 	+letter_name_match('A')
 	+b.private-chat-create-button 

@@ -9,7 +9,7 @@ mixin chat()
 mixin sender(name, position)
 	+b.sender 
 		+e.avatar 
-			img(src="/img/@2x/slide-25.jpg")
+			img(src="img/@2x/slide-25.jpg")
 		+e.name-and-position 
 			+e.P.name=name 
 			+e.P.position=position
@@ -36,10 +36,10 @@ mixin chat_window()
 mixin chat_bar()
 	+e.chat-bar 
 		+e.BUTTON.menu.btn 
-			img(src="/img/svg/chat-menu.svg")
+			img(src="img/svg/chat-menu.svg")
 		textarea(type='text' placeholder="Введите сообщение")
 		//- +e.BUTTON.voice-message.btn 
-		//- 	img(src="/img/svg/microphone.svg")
+		//- 	img(src="img/svg/microphone.svg")
 
 mixin new_messages_line()
 	+b.new-message-line 

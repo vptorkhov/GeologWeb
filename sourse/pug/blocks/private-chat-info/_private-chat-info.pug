@@ -32,11 +32,11 @@ mixin privat_chat_info(from)
 mixin privat-chat-info-title(title)
 	+b.side-sheet-top
 		+e.BUTTON.return--private-chat
-			img(src="/img/svg/side-sheet-arrow.svg")
+			img(src="img/svg/side-sheet-arrow.svg")
 		+e.P.title=title 
 		+e.P.text ПРИВАТНЫЙ ЧАТ
 		+e.BUTTON.close
-			img(src="/img/svg/close-cross.svg")
+			img(src="img/svg/close-cross.svg")
 
 mixin project_terms_info(start, end)
 	+b.project-info
@@ -100,7 +100,7 @@ mixin privat_chat_participant(notadmin)
 	+b.privat-chat-participant
 		+sender('Антон Гаврилов', 'Руководитель проекта')
 		+e.BUTTON.add-chat.btn
-			img(src="/img/svg/add-chat.svg")
+			img(src="img/svg/add-chat.svg")
 		if notadmin
 			+e.BUTTON.delete.btn
 				+icon("delete")
