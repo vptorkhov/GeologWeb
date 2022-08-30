@@ -1,0 +1,23 @@
+include ../privat-chat-creation/_privat-chat-creation.pug
+
+mixin create_chat()
+	+b.create-chat-dialog 
+		+e.top 
+			+e.P.title Создать чат
+			svg 
+				image(xlink:href=`/img/svg/close-cross.svg`)
+		+e.main-content
+			+b.participants-search-block
+				+participants_search()
+				+e.BUTTON.decline 
+					p Отмена
+			+e.P.section КОНТАКТЫ
+			+e.added-people 
+				+sender('Антон Гаврилов', 'Руководитель проекта')
+				+e.BUTTON.delete.btn
+					+icon("delete")
+			+e.alphabet-list 
+				+letter_name_match('A')
+			+e.bottom-buttons 
+				+e.BUTTON.cancel.btn-secondary.btn Назад
+				+e.BUTTON.next.btn-fill.btn Далее

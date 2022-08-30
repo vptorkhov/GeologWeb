@@ -1,0 +1,114 @@
+.create-chat-dialog {
+	background-color: #ffffff;
+	border-radius: 16px;
+	width: 540px;
+	height: 700px;
+	display: flex;
+	flex-direction: column;
+	&__top {
+		padding: 12px 20px;
+		border-bottom: 1px solid #F2F4F5;
+		position: relative;
+		svg {
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			top: 12px;
+			right: 20px;
+			padding: 5px 0 0 5px;
+		}
+	}
+	&__title {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		color: var(--main-black);
+		text-align: center;
+	}
+	&__main-content {
+		padding: 0 24px;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
+	&__section {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: #B3BCC2;
+		padding: 24px 0 16px;
+	}
+	&__added-people {
+		padding: 24px 0px;
+	}
+	&__alphabet-list {
+		overflow-y: auto;
+		// max-height: 348px;
+		border-bottom: 1px solid #CCD9E0;
+		border-top: 1px solid #CCD9E0;
+		flex-grow: 1;
+	}
+	&__added-people {
+		display: flex;
+		justify-content: space-between;
+		.btn {
+			border: none;
+			padding: 0;
+		}
+		.icon {
+			fill: var(--main-red);
+			width: 24px;
+			height: 24px;
+		}
+		& + & {
+			margin-bottom: 24px;
+		}
+	} 
+	&__bottom-buttons  {
+		padding: 24px 0;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__cancel, &__next {
+		width: 48%;
+	}
+	.btn {
+		border-width: 2px;
+		padding: 15px 0px 14px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+	}
+}
+.participants-search-block {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 24px;
+	&__decline {
+		border: none;
+		background-color: transparent;
+		padding: 11px 0px 10px 8px;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		color: #0096eb;
+	}
+	.cross {
+		display: none;
+	}
+	@media screen and (max-width: 744px) {
+		margin-top: 16px;
+		&__decline {
+			position: absolute;
+			top: 6px;
+			right: 8px;
+			padding: 0;
+		}
+	}
+}

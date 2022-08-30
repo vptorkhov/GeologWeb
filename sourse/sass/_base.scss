@@ -550,3 +550,16 @@ iframe {
 	--bs-btn-active-border-color: #14a9ff;
 	--bs-btn-active-color: #14a9ff;
 }
+
+.btn-fill {
+
+	background-color: var(--survey-blue) !important;
+	--bs-btn-color: #ffffff;
+	--bs-btn-border-color: var(--survey-blue);
+	--bs-btn-hover-border-color: #14a9ff;
+	--bs-btn-hover-bg: #14a9ff;
+	--bs-btn-hover-color: #ffffff;
+	--bs-btn-active-border-color: #14a9ff;
+	--bs-btn-active-bg: #14a9ff;
+	--bs-btn-active-color: #ffffff;
+}
