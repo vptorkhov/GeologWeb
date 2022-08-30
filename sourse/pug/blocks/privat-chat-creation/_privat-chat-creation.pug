@@ -55,10 +55,12 @@ mixin best_name_match()
 	+b.privat-chat-added-people
 		+e.best-name-match-variant-top
 			+sender('Антон Гаврилов', 'Руководитель проекта')
-			img(src="/img/svg/delete.svg")
+			+e.BUTTON.delete.btn
+				+icon("delete")
 		+e.best-name-match-variant-top
 			+sender('Антон Гаврилов', 'Руководитель проекта')
-			img(src="/img/svg/delete.svg")
+			+e.BUTTON.delete.btn
+				+icon("delete")
 
 mixin letter_name_match(letter)
 	+b.best-name-match-alphabet

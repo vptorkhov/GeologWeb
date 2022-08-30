@@ -89,6 +89,17 @@
 	& + & {
 		border-bottom: none;
 	}
+	.btn {
+		border: none;
+		padding: 0;
+	}
+	&__delete {
+		.icon {
+			fill: #EB3333;
+			height: 24px;
+			width: 24px;
+		}
+	}
 	.sender {
 		margin: 0px !important;
 	}

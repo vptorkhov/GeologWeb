@@ -99,6 +99,8 @@ mixin privat_chat_participants_list()
 mixin privat_chat_participant(notadmin)
 	+b.privat-chat-participant
 		+sender('Антон Гаврилов', 'Руководитель проекта')
-		img(src="/img/svg/add-chat.svg")
+		+e.BUTTON.add-chat.btn
+			img(src="/img/svg/add-chat.svg")
 		if notadmin
-			img(src="/img/svg/delete.svg")
+			+e.BUTTON.delete.btn
+				+icon("delete")

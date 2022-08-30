@@ -38,10 +38,19 @@
 	.sender {
 		margin: 0 !important;
 	}
-	img + img {
+	.btn {
+		padding: 0;
+		border: none;
+	}
+	.icon {
+		fill: #EB3333;
+		width: 24px;
+		height: 24px;
+	}
+	&__delete{
 		margin-left: 16px;
 	}
-	img:first-of-type {
+	&__add-chat {
 		margin-left: auto;
 	}
 }

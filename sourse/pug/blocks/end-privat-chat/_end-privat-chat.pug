@@ -4,7 +4,7 @@ mixin end_privat_chat()
 	+b.side-sheet
 		.containers
 			+privat-chat-side-sheet("Добавить решение")
-		.containers--private-chat
+		.containers-end-chat
 			+e.P.solution-header!=`Текст решения <span>*</span>`
 			textarea(type="text", rows=6, placeholder="Введите текст решения")
 			+e.BUTTON.add-file 
