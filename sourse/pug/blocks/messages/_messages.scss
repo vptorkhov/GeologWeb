@@ -44,11 +44,12 @@
 	&--sent, &--incoming {
 		border-radius: 12px;
 		margin-bottom: 4px;
+		// & + 
 	}
 	&--incoming {
 		background-color: #ffffff;
 		&:last-child {
-			margin-bottom: 16px;
+			margin-bottom: 0px;
 		}
 		&:first-child {
 			&::before {
@@ -61,7 +62,7 @@
 		align-self: flex-end;
 		background-color: var(--sent-message);
 		&:last-child {
-			margin-bottom: 16px;
+			margin-bottom: 0px;
 		}
 		&:first-child {
 			&::before {
@@ -209,16 +210,11 @@
 			margin-bottom: 12px;
 			flex-wrap: wrap;
 			justify-content: space-between;
-			.icon {
-				&-private {
-					display: block;
-					stroke: white;
-					width: 12px;
-					height: 10px;
-					stroke-width: 2px;
-					stroke-linecap: round;
-					margin-right: 5px;
-				}
+			img {
+				display: block;
+				width: 14px;
+				height: 12px;
+				margin-right: 5px;
 			}
 		}
 	}

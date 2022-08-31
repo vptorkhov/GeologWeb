@@ -28,7 +28,7 @@ mixin task_card(activity_type, progress, status, start, end, work_type, work_nam
 					img(src="img/svg/delete.svg")
 		if (activity_type=='closed')
 			+e.closed-options 
-				button.btn.btn-secondary.btn-full-width Возобновить работу
+				button.btn.btn-secondary.btn-full-width Вернуть в работу
 
 mixin card_task_terms(activity_type, start, end)
 	+b.card-task-terms
@@ -37,7 +37,7 @@ mixin card_task_terms(activity_type, start, end)
 			+e.P.start-date=start
 		img(src="img/svg/arrow-right.svg")
 		+e.card-task-terms-end
-			+e.P.end Конец
+			+e.P.end Окончание
 			+e.P.end-date(class=activity_type)=end
 
 mixin card_task_avatar(more)

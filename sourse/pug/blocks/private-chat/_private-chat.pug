@@ -8,21 +8,24 @@ mixin private_chat()
 		+chat_bar()
 
 mixin private_chat_window()
-	+e.messages
+	+e.messages.scrollbar-vertical
 		+e.P.date 20 января 2020
-		+sender('Антон Гаврилов', 'Руководитель проекта')
+		+e.sender-wrap
+			+sender('Антон Гаврилов', 'Руководитель проекта')
 		+e.block-of-messages
 			+message("incoming", bigtext, "15.08.2022 14:48", false, true)
 			+message("incoming", bigtext, "15.08.2022 14:48", true)
-		+sender('Антон Гаврилов', 'Руководитель проекта')
-		+e.block-of-messages
+		+e.sender-wrap
+			+sender('Антон Гаврилов', 'Руководитель проекта')
+		+e.block-of-messages--last
 			+message("incoming", "Lorem ipsum dolor sit amet", "15.08.2022 14:48")
-		+e.block-of-messages
+		+e.block-of-messages--last
 			+message("incomin", "Lorem ipsum dolor sit amet", "15.08.2022 14:48")
 			+message("incomin", bigtext, "15.08.2022 14:48", true)
 		+e.P.date 20 января 2020
 		+new_messages_line()
-		+sender('Антон Гаврилов', 'Руководитель проекта')
+		+e.sender-wrap
+			+sender('Антон Гаврилов', 'Руководитель проекта')
 		+e.block-of-messages
 			+message("incoming", bigtext, "15.08.2022 14:48", false, true)
 

@@ -6,7 +6,7 @@ mixin tasks()
 			+tasks_top_text()
 			+tasks_tabs()
 			+tasks_search()
-		+b.tasks-body 
+		+b.tasks-body.scrollbar-vertical 
 			+task_cell('read', 'Чона', '13.07.2020 13:56', '--success', 'Активна', "lock", false, false, false, 'Запакеровались на глубине 1754.2 м. Что делаем дальше?', 7, 2)
 			+task_cell-active('read', 'Чона', '13.07.2020 13:56', '--success', 'Активна', "key", false, false, false, 'Запакеровались на глубине 1754.2 м. Что делаем дальше?', 7, 2)
 			+task_cell-active('read', 'Чона', '13.07.2020 13:56', '--success', 'Активна', "lock", false, false, false, 'Запакеровались на глубине 1754.2 м. Что делаем дальше?', 7, 2)

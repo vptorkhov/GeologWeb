@@ -6,6 +6,13 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		margin-bottom: 16px;
+		& + .chat__date {
+			margin-top: -8px;
+		}
+		&--last {
+			margin-bottom: 24px;
+		}
 	}
 	&__date {
 		align-self: center;
@@ -26,13 +33,13 @@
 		padding: 20px 20px 0;
 		overflow-y: scroll;
 		height: calc(100% - 64px);
-		&::-webkit-scrollbar {
-			width: 0;
-		}
 		@media screen and (max-width: 744px) {
 			padding: 20px 16px 0;
 			height: calc(100% - 40px);
 		}
+	}
+	&__sender-wrap {
+		margin-bottom: 11px;
 	}
 	&__chat-bar {
 		padding: 17px 20px;
@@ -81,6 +88,7 @@
 }
 .new-message-line {
 	padding-top: 4px;
+	margin-bottom: 16px;
 	.chat__date + &,
 	.private-chat-block__date + & {
 		margin-top: -10px;

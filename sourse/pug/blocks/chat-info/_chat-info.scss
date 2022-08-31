@@ -136,6 +136,11 @@
 		.message {
 			&__chip-body-private {
 				background-color: #536977;
+				// img {
+				// 	width: 18px !important;
+				// 	height: 16px;
+				// 	margin-right: 5px;
+				// }
 			}
 			&__chip-body-request--another {
 				color: var(--main-black);
