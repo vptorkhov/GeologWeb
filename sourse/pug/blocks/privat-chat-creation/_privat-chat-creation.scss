@@ -170,12 +170,17 @@
 		width: 24px;
 		margin-right: 12px;
 	}
-	&__name {
+	&__name, &__delete {
 		font-style: normal;
 		font-weight: 700;
 		font-size: 20px;
 		line-height: 23px;
+	}
+	&__name {
 		color: var(--main-grey);
+	}
+	&__delete {
+		color: var(--main-red);
 	}
 	&__amount {
 		font-weight: 500;

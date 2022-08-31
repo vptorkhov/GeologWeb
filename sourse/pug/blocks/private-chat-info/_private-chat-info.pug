@@ -66,6 +66,10 @@ mixin attachments_position(icon, name, amount)
 		+e.P.name=name
 		+e.P.amount=amount
 	
+mixin attachments_position_delete()
+	+b.attachments-position
+		img(src=`/img/svg/delete.svg`)
+		+e.P.delete Удалить
 
 mixin private_chat_info_bottom(participants_amount)
 	if participants_amount
