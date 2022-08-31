@@ -17,8 +17,9 @@ mixin person_info_sidebar()
 				+e.request-number Начальник отдела ИТАТ ООО “ГПН-ГЕО”
 			+e.container-notifs
 				//- тут switch
-				img(src="img/svg/switch-on.svg")
-				+e.request-number Уведомления
+				//- img(src="img/svg/switch-on.svg")
+				//- +e.request-number Уведомления
+				+Switch('Уведомления')
 			+person_attachments()
 
 mixin chat_info_sidebar()
@@ -34,8 +35,7 @@ mixin chat_info_sidebar()
 					+e.P.online 6 участников
 			+e.container-notifs
 				//- тут switch
-				img(src="img/svg/switch-on.svg")
-				+e.request-number Уведомления
+				+Switch('Уведомления')
 			+chat_attachments()
 			+chat_info_bottom(300)
 

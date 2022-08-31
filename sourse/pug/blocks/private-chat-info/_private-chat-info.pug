@@ -61,13 +61,13 @@ mixin attachments()
 		+attachments_position("clip", "Ссылки", 8)
 
 mixin attachments_position(icon, name, amount)
-	+b.attachments-position
+	+b.attachments-position(href="#")
 		img(src=`/img/svg/${icon}.svg`)
 		+e.P.name=name
 		+e.P.amount=amount
 	
 mixin attachments_position_delete()
-	+b.attachments-position
+	+b.attachments-position(href="#")
 		img(src=`/img/svg/delete.svg`)
 		+e.P.delete Удалить
 

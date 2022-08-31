@@ -45,3 +45,10 @@ mixin page-head(t,...items)
 			+breadcrumb('Главная',...items)
 
 			h1= t
+
+
+mixin Switch(caption)
+	+b.LABEL.switch
+		input(type="checkbox" name="name")
+		+e.caption!=caption
+			
