@@ -13,9 +13,8 @@
 			padding: 0 20px;
 			display: flex;
 			flex-direction: column;
-			// flex-grow: 1;
-			& + & {
-				// flex-grow: 1;
+			&:first-child {
+				margin-bottom: 32px;
 			}
 			textarea {
 				border: 1px solid #CCD9E0;
@@ -109,7 +108,7 @@
 	&::-webkit-scrollbar {
 		width: 0;
 	}
-	&__header {
+	&__header, &__header-mb16 {
 		font-style: normal;
 		font-weight: 500;
 		font-size: 14px;
@@ -118,11 +117,22 @@
 		text-transform: uppercase;
 		margin-bottom: 16px;
 	}
+	@media screen and (max-width: 744px) {
+		&__header {
+			margin-bottom: 8px;
+		}
+		// &__header-mb16 {
+		// 	margin-bottom: 16px;
+		// }
+	}
 	.message {
 		&--incoming {
 			background-color: #ecf1f4;
 			&:last-child {
 				margin-bottom: 26px;
+				@media screen and (max-width: 744px) {
+					margin-bottom: 16px;
+				}
 			}
 			&:first-child {
 				&::before {
@@ -278,10 +288,14 @@
 		}
 	}
 	&__terms,
-	&__description {
+	&__description, &__terms-mb4 {
 		font-weight: 400;
 		font-size: 12px;
 		line-height: 14px;
+	}
+	&__terms-mb4 {
+		margin-bottom: 4px;
+		color: var(--main-grey);
 	}
 	&__description {
 		max-width: 354px;
@@ -291,8 +305,14 @@
 	&__solution {
 		border-bottom: 1px solid #dee5e9;
 		margin-bottom: 26px;
+		@media screen and (max-width: 744px) {
+			margin-bottom: 16px;
+		}
 		&:last-child {
 			border-bottom: none;
 		}
 	}
+}
+.solution-block {
+	margin-top: 11px;
 }

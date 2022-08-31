@@ -11,7 +11,8 @@ mixin privat_chat_info(from)
 					+e.P.private-chat-topic-request Тема
 					+e.request-number Тема приватного чата
 				+e.container
-					+e.P.private-chat-topic-request Автор
+					.wrap-pb4
+						+e.P.private-chat-topic-request Автор
 					+sender("Оксана Иванова", "Исполнитель")
 				+project_terms_info("25.01.2019", false)
 				+attachments()
@@ -43,10 +44,10 @@ mixin project_terms_info(start, end)
 		+e.P.category Сроки
 		.row 
 			.col 
-				+e.P.terms Открыт
+				+e.P.terms-mb4 Открыт
 				+e.P.info=start
 			.col
-				+e.P.terms Закрыт
+				+e.P.terms-mb4 Закрыт
 				if end
 					+e.P.info=end
 				else 
@@ -72,10 +73,14 @@ mixin attachments_position_delete()
 		+e.P.delete Удалить
 
 mixin private_chat_info_bottom(participants_amount)
-	if participants_amount
-		+e.P.private-chat-participants=`УЧАСТНИКИ ${participants_amount}`
-	else
-		+e.P.private-chat-participants УЧАСТНИКИ
+	+e.participants
+		if participants_amount
+			+e.P.private-chat-participants=`УЧАСТНИКИ ${participants_amount}`
+		else
+			+e.P.private-chat-participants УЧАСТНИКИ
+		+e.BUTTON.add.btn 
+			img(src="img/svg/add-circle.svg")
+			p Добавить
 	+privat_chat_participants_list()
 
 mixin privat_chat_participants_list()
@@ -103,8 +108,8 @@ mixin privat_chat_participants_list()
 mixin privat_chat_participant(notadmin)
 	+b.privat-chat-participant
 		+sender('Антон Гаврилов', 'Руководитель проекта')
-		+e.BUTTON.add-chat.btn
-			img(src="img/svg/add-chat.svg")
-		if notadmin
-			+e.BUTTON.delete.btn
-				+icon("delete")
+		//- +e.BUTTON.add-chat.btn
+		//- 	img(src="img/svg/add-chat.svg")
+		//- if notadmin
+		//- 	+e.BUTTON.delete.btn
+		//- 		+icon("delete")

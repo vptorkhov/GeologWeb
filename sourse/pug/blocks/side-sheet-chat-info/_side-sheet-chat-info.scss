@@ -9,13 +9,13 @@
 		line-height: 19px;
 		color: #FFFFFF;
 		margin-left: 12px;
-		// @media screen and (max-width: 744px) {
-		// 	margin-left: auto;
-		// 	font-weight: 500;
-		// 	font-size: 12px;
-		// 	line-height: 14px;
-		// 	padding: 1px 4px;
-		// }
+		@media screen and (max-width: 744px) {
+			margin-left: auto;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 14px;
+			padding: 1px 4px;
+		}
 	}
 	&__circle {
 		width: 12px;
@@ -24,6 +24,11 @@
 		background-color: var(--main-red);
 		margin-left: 12px;
 		margin-right: auto;
+		@media screen and (max-width: 744px) {
+			width: 8px;
+			height: 8px;
+			margin-right: 0;
+		}
 	}
 }
 

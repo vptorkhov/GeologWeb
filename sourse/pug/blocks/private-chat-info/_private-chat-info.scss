@@ -24,6 +24,12 @@
 	&__container {
 		margin-bottom: 16px;
 	}
+	&__container-mb24 {
+		margin-bottom: 24px;
+		@media screen and (max-width: 744px) {
+			margin-bottom: 16px;
+		}
+	}
 }
 
 .privat-chat-participants-list {
@@ -34,6 +40,9 @@
 		padding-right:5px;
 		padding-left: 5px;
 	}
+}
+.wrap-pb4 {
+	padding-bottom: 4px;
 }
 .privat-chat-participant {
 	display: flex;
