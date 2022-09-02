@@ -24,8 +24,9 @@ mixin assignment_line_ready(icon, status, task_name, solution, needs_solution, d
 				+e.P.bold Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отображения контента в несколько строк
 				+e.name(class=`--${status}`)
 					if status
-						+icon('active')
-						+e.P.task-name=task_name
+						+e.name-status
+							+icon('active')
+							+e.P.task-name=task_name
 					if solution
 						+e.P.solution Есть решение
 					if needs_solution
@@ -38,15 +39,17 @@ mixin assignment_line_ready(icon, status, task_name, solution, needs_solution, d
 						if circle
 							img(src="img/svg/arrow-circle.svg")
 					+e.P.terms 14:00  18.08.2022 - 14:00  19.08.2022
-				+e.fio 
-					+e.title Автор
-					p Смирнова О.В.
-				+e.status 
-					+e.title Статус
-					+assignment_ready()
+				+e.fio-status
+					+e.fio 
+						+e.title Автор
+						p Смирнова О.В.
+					+e.status 
+						+e.title Статус
+						+assignment_ready()
 			+e.title Теги
 			+e.tags
-				+assignment_tag('Тэг')
+				- for(var x = 0; x<2;x++)
+					+assignment_tag('Тэг')
 				+assignment_more(15)
 				+assignment_add()
 		+b.BUTTON.menu-button.btn
@@ -62,8 +65,9 @@ mixin assignment_line_closed(icon, status, task_name, solution, needs_solution, 
 				+e.P.bold Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отображения контента в несколько строк
 				+e.name(class=`--${status}`)
 					if status
-						+icon('active')
-						+e.P.task-name=task_name
+						+e.name-status
+							+icon('active')
+							+e.P.task-name=task_name
 					if solution
 						+e.P.solution Есть решение
 					if needs_solution
@@ -76,12 +80,13 @@ mixin assignment_line_closed(icon, status, task_name, solution, needs_solution, 
 						if circle
 							img(src="img/svg/arrow-circle.svg")
 					+e.P.terms 14:00  18.08.2022 - 14:00  19.08.2022
-				+e.fio 
-					+e.title Автор
-					p Смирнова О.В.
-				+e.status 
-					+e.title Статус
-					+assignment_closed()
+				+e.fio-status
+					+e.fio 
+						+e.title Автор
+						p Смирнова О.В.
+					+e.status 
+						+e.title Статус
+						+assignment_closed()
 			+e.title Теги
 			+e.tags
 				+assignment_tag('Тэг')

@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<div class="main-wrapper">
-			<div class="p-sm-5" style="background-color: grey; height: 100vh;">
+			<div class="p-sm-5" style="background-color: grey; min-height: 100vh;">
 				<div class="assignments-list">
 					<div class="assignment-line">
 						<div class="assignment-line__icon"> <img src="img/svg/not-urgent.svg"/>
@@ -23,11 +23,13 @@
 								<p class="main-content__bold">Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отображения контента в несколько строк
 								</p>
 								<div class="main-content__name main-content__name--success">
-									<svg class="icon icon-active ">
-										<use xlink:href="img/svg/sprite.svg#active"></use>
-									</svg>
-									<p class="main-content__task-name">Длинное название задачи в супермного букв длинное название задачи
-									</p>
+									<div class="main-content__name-status">
+										<svg class="icon icon-active ">
+											<use xlink:href="img/svg/sprite.svg#active"></use>
+										</svg>
+										<p class="main-content__task-name">Длинное название задачи в супермного букв длинное название задачи
+										</p>
+									</div>
 									<p class="main-content__solution main-content__solution--need">Требуется решение
 									</p>
 								</div>
@@ -43,25 +45,33 @@
 									<p class="main-content__terms">14:00  18.08.2022 - 14:00  19.08.2022
 									</p>
 								</div>
-								<div class="main-content__fio"> 
-									<div class="main-content__title">Автор
+								<div class="main-content__fio-status">
+									<div class="main-content__fio"> 
+										<div class="main-content__title">Автор
+										</div>
+										<p>Смирнова О.В.</p>
 									</div>
-									<p>Смирнова О.В.</p>
-								</div>
-								<div class="main-content__status"> 
-									<div class="main-content__title">Статус
-									</div>
-									<div class="assignment-status assignment-status--ready"> 
-										<p>Готов</p>
-										<svg class="icon icon-status ">
-											<use xlink:href="img/svg/sprite.svg#status"></use>
-										</svg>
+									<div class="main-content__status"> 
+										<div class="main-content__title">Статус
+										</div>
+										<div class="assignment-status assignment-status--ready"> 
+											<p>Готов</p>
+											<svg class="icon icon-status ">
+												<use xlink:href="img/svg/sprite.svg#status"></use>
+											</svg>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="main-content__title">Теги
 							</div>
 							<div class="main-content__tags">
+								<div class="assignment-tag">
+									<p>Тэг</p>
+									<svg class="icon icon-close-cross ">
+										<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+									</svg>
+								</div>
 								<div class="assignment-tag">
 									<p>Тэг</p>
 									<svg class="icon icon-close-cross ">
@@ -89,11 +99,13 @@
 								<p class="main-content__bold">Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отображения контента в несколько строк
 								</p>
 								<div class="main-content__name main-content__name--alert">
-									<svg class="icon icon-active ">
-										<use xlink:href="img/svg/sprite.svg#active"></use>
-									</svg>
-									<p class="main-content__task-name">Короткое описание поручения
-									</p>
+									<div class="main-content__name-status">
+										<svg class="icon icon-active ">
+											<use xlink:href="img/svg/sprite.svg#active"></use>
+										</svg>
+										<p class="main-content__task-name">Короткое описание поручения
+										</p>
+									</div>
 									<p class="main-content__solution">Есть решение
 									</p>
 								</div>
@@ -109,19 +121,21 @@
 									<p class="main-content__terms">14:00  18.08.2022 - 14:00  19.08.2022
 									</p>
 								</div>
-								<div class="main-content__fio"> 
-									<div class="main-content__title">Автор
+								<div class="main-content__fio-status">
+									<div class="main-content__fio"> 
+										<div class="main-content__title">Автор
+										</div>
+										<p>Смирнова О.В.</p>
 									</div>
-									<p>Смирнова О.В.</p>
-								</div>
-								<div class="main-content__status"> 
-									<div class="main-content__title">Статус
-									</div>
-									<div class="assignment-status assignment-status--closed">
-										<p>Закрыт</p>
-										<svg class="icon icon-status ">
-											<use xlink:href="img/svg/sprite.svg#status"></use>
-										</svg>
+									<div class="main-content__status"> 
+										<div class="main-content__title">Статус
+										</div>
+										<div class="assignment-status assignment-status--closed">
+											<p>Закрыт</p>
+											<svg class="icon icon-status ">
+												<use xlink:href="img/svg/sprite.svg#status"></use>
+											</svg>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -158,11 +172,13 @@
 								<p class="main-content__bold">Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отображения контента в несколько строк
 								</p>
 								<div class="main-content__name main-content__name--caution">
-									<svg class="icon icon-active ">
-										<use xlink:href="img/svg/sprite.svg#active"></use>
-									</svg>
-									<p class="main-content__task-name">Длинное название задачи в супермного букв длинное название задачи
-									</p>
+									<div class="main-content__name-status">
+										<svg class="icon icon-active ">
+											<use xlink:href="img/svg/sprite.svg#active"></use>
+										</svg>
+										<p class="main-content__task-name">Длинное название задачи в супермного букв длинное название задачи
+										</p>
+									</div>
 								</div>
 							</div>
 							<div class="main-content__date-name-status">
@@ -176,25 +192,33 @@
 									<p class="main-content__terms">14:00  18.08.2022 - 14:00  19.08.2022
 									</p>
 								</div>
-								<div class="main-content__fio"> 
-									<div class="main-content__title">Автор
+								<div class="main-content__fio-status">
+									<div class="main-content__fio"> 
+										<div class="main-content__title">Автор
+										</div>
+										<p>Смирнова О.В.</p>
 									</div>
-									<p>Смирнова О.В.</p>
-								</div>
-								<div class="main-content__status"> 
-									<div class="main-content__title">Статус
-									</div>
-									<div class="assignment-status assignment-status--ready"> 
-										<p>Готов</p>
-										<svg class="icon icon-status ">
-											<use xlink:href="img/svg/sprite.svg#status"></use>
-										</svg>
+									<div class="main-content__status"> 
+										<div class="main-content__title">Статус
+										</div>
+										<div class="assignment-status assignment-status--ready"> 
+											<p>Готов</p>
+											<svg class="icon icon-status ">
+												<use xlink:href="img/svg/sprite.svg#status"></use>
+											</svg>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="main-content__title">Теги
 							</div>
 							<div class="main-content__tags">
+								<div class="assignment-tag">
+									<p>Тэг</p>
+									<svg class="icon icon-close-cross ">
+										<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+									</svg>
+								</div>
 								<div class="assignment-tag">
 									<p>Тэг</p>
 									<svg class="icon icon-close-cross ">
@@ -237,25 +261,33 @@
 									<p class="main-content__terms">14:00  18.08.2022 - 14:00  19.08.2022
 									</p>
 								</div>
-								<div class="main-content__fio"> 
-									<div class="main-content__title">Автор
+								<div class="main-content__fio-status">
+									<div class="main-content__fio"> 
+										<div class="main-content__title">Автор
+										</div>
+										<p>Смирнова О.В.</p>
 									</div>
-									<p>Смирнова О.В.</p>
-								</div>
-								<div class="main-content__status"> 
-									<div class="main-content__title">Статус
-									</div>
-									<div class="assignment-status assignment-status--ready"> 
-										<p>Готов</p>
-										<svg class="icon icon-status ">
-											<use xlink:href="img/svg/sprite.svg#status"></use>
-										</svg>
+									<div class="main-content__status"> 
+										<div class="main-content__title">Статус
+										</div>
+										<div class="assignment-status assignment-status--ready"> 
+											<p>Готов</p>
+											<svg class="icon icon-status ">
+												<use xlink:href="img/svg/sprite.svg#status"></use>
+											</svg>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="main-content__title">Теги
 							</div>
 							<div class="main-content__tags">
+								<div class="assignment-tag">
+									<p>Тэг</p>
+									<svg class="icon icon-close-cross ">
+										<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+									</svg>
+								</div>
 								<div class="assignment-tag">
 									<p>Тэг</p>
 									<svg class="icon icon-close-cross ">
