@@ -3,11 +3,35 @@
 	// align-items: center;
 	width: 100%;
 }
-.assignment-line {
+.assignment-line, .assignments-top {
 	padding: 16px 24px;
-
+	&--headers {
+		padding: 12px 40px;
+		@media screen and (max-width: 1140px) {
+			display: none;
+		}
+		.icon {
+			min-width: 24px;
+			min-height: 24px;
+			max-width: 24px;
+			max-height: 24px;
+			margin-right: 8px;
+			color: var(--pale-grey);
+			@media screen and (max-width: 1040px) {
+				min-width: 20px;
+				min-height: 20px;
+				max-width: 20px;
+				max-height: 20px;
+				margin-right: 4px;
+			}
+		}
+	}
 	width: 100%;
 	background-color: #ffffff;
+	transition-duration: 0.4s;
+	&:hover {
+		background-color: #DEF0FB;
+	}
 	display: flex;
 	@media screen and (min-width: 1140.99px) {
 		align-items: center;
@@ -62,6 +86,28 @@
 		padding: 0 25px 0 16px;
 		margin-bottom: 0px;
 	}
+	&__headers-wrap {
+		display: flex;
+		align-items: center;
+	}
+	&--headers {
+		@media screen and (min-width: 1140.99px) {
+			width: 100% !important;
+			max-width: none;
+		}
+	}
+	&__header {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 14px;
+		color: var(--main-grey);
+	}
+	&__plan {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		color: var(--main-grey);
+	}
 	&__fio-status {
 		display: flex;
 		@media (min-width: 1140px) {
@@ -76,6 +122,7 @@
 		}
 		@media (min-width: 744px) {
 			width: 66%;
+			justify-content: space-between;
 		}
 		@media (max-width: 743.98px) {
 			justify-content: space-between;
@@ -88,6 +135,9 @@
 		line-height: 14px;
 		color: var(--main-grey);
 		margin-bottom: 8px;
+		span {
+			font-weight: 400;
+		}
 		@media screen and (min-width: 1140.99px) {
 			display: none;
 		}
@@ -97,7 +147,6 @@
 	justify-content: space-between;
 	&__description-and-name {
 		width: 37%;
-		flex-shrink: 3;
 		@media screen and (max-width: 1140px) {
 			margin-bottom: 12px;
 		}
@@ -117,6 +166,11 @@
 		@media screen and (max-width: 1140px) {
 			font-size: 14px;
 			line-height: 16px;
+		}
+	}
+	&__fio {
+		@media screen and (max-width: 1140.99px) and (min-width: 744.99px) {
+			margin-left: 30px;
 		}
 	}
 	&__date-name-status {
@@ -143,7 +197,7 @@
 		@media (min-width: 1140px) {
 			width: 202px;
 		}
-		@media screen and (max-width: 656px) {
+		@media screen and (max-width: 744px) {
 			width: 100%;
 			margin-bottom: 12px;
 		}
@@ -156,11 +210,13 @@
 		@media screen and (min-width: 1140.99px) {
 			width: 103px;
 		}
+		@media screen and (max-width: 1140px) {
+			white-space: nowrap;
+		}
 	}
 	&__name {
 		display: flex;
 		.icon {
-			width: 8px;
 			margin-right: 8px;
 		}
 		@media screen and (max-width: 1140px) {
@@ -176,16 +232,22 @@
 		&--success {
 			.icon {
 				color: #09b37b;
+				min-width: 8px;
+				max-width: 8px;
 			}
 		}
 		&--caution {
 			.icon {
 				color: #ffa10a;
+				min-width: 8px;
+				max-width: 8px;
 			}
 		}
 		&--alert {
 			.icon {
 				color: #eb3333;
+				min-width: 8px;
+				max-width: 8px;
 			}
 		}
 		@media screen and (min-width: 744.99px) {
@@ -223,15 +285,18 @@
 	&__name-status {
 		display: flex;
 		align-items: center;
+		@media (min-width: 1140px) {
+			max-width: calc(100% - 137px);
+		}
+		@media (max-width: 744px) {
+			margin-bottom: 2px;
+		}
 	}
 	&__tags {
 		display: flex;
 		// gap: 8px;
 		align-items: center;
 		width: 24%;
-		@media (min-width: 1140px) {
-			width: 320px;
-		}
 		@media screen and (max-width: 744px) {
 			flex-wrap: wrap;
 		}
@@ -243,6 +308,20 @@
 			&:last-child {
 				margin-right: 0;
 			}
+		}
+	}
+	&__status {
+		// width: 94px;
+		@media screen and (min-width: 1140.99px) {
+			display: flex;
+			align-items: center;
+			padding-right: 24px;
+		}
+		@media screen and (max-width: 1140.99px) and (min-width: 744.99px) {
+			margin-left: auto;
+		}
+		&--header {
+			padding-right: 48px !important;
 		}
 	}
 	&__description-and-name,
@@ -262,6 +341,9 @@
 		}
 		&--alert {
 			color: #eb3333;
+		}
+		@media screen and (min-width: 1140px) {
+			max-width: 95%;
 		}
 	}
 	&__task-name,
@@ -300,4 +382,28 @@
 .task-name-block {
 	display: flex;
 	max-width: 40%;
+}
+.assignments-top {
+	padding: 12px 65px 12px 56px;
+	&__description-and-name-header, &__date-name-status-header, &__date, &__author, &__status  {
+		display: flex;
+		align-items: center;
+	}
+	&__description-and-name-header {
+		width: 37%;
+	}
+	&__date-name-status-header {
+		width: 39%;
+	}
+	&__date {
+		width: 34%;
+	}
+	&__fio-status {
+		width: 61%;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__author {
+		width: 57%;
+	}
 }

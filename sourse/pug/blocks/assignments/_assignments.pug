@@ -9,6 +9,9 @@ include ../assignment-statuses/_assignment-statuses.pug
 
 mixin assignments_list()
 	+b.assignments-list
+		//- +tasks_search()
+		+assignments_tabs()
+		+assignments_top()
 		+assignment_line_ready("not-urgent", "success", "Длинное название задачи в супермного букв длинное название задачи", false, true, "alert", true)
 		+assignment_line_closed("critical", "alert", "Короткое описание поручения", true, false, "caution")
 		+assignment_line_ready("desirable", "caution", "Длинное название задачи в супермного букв длинное название задачи", false, false)
@@ -33,7 +36,7 @@ mixin assignment_line_ready(icon, status, task_name, solution, needs_solution, d
 						+e.P.solution--need Требуется решение
 			+e.date-name-status
 				+e.date 
-					+e.title Крайний срок (План)
+					+e.title!=`Крайний срок <span>(План)</span>`
 					.flex-row
 						+e.P.bold(class=`--${date_mark}`) 19.06.2022
 						if circle
@@ -74,7 +77,7 @@ mixin assignment_line_closed(icon, status, task_name, solution, needs_solution, 
 						+e.P.solution--need Требуется решение
 			+e.date-name-status
 				+e.date 
-					+e.title Крайний срок (План)
+					+e.title!=`Крайний срок <span>(План)</span>`
 					.flex-row
 						+e.P.bold(class=`--${date_mark}`) 19.06.2022
 						if circle
@@ -95,3 +98,55 @@ mixin assignment_line_closed(icon, status, task_name, solution, needs_solution, 
 		+b.BUTTON.menu-button.btn
 			img(src="img/svg/menu.svg")
 
+mixin assignments_top()
+	+b.assignment-line--headers
+		+b.main-content--headers 
+			+e.description-and-name
+				+e.headers-wrap
+					+icon('three')
+					+e.P.header Запросы
+			+e.date-name-status
+				+e.date 
+					+e.headers-wrap
+						+icon('three')
+						+e.header-plan 
+							+e.header Крайний срок 
+							+e.plan План
+				+e.fio-status
+					+e.fio 
+						+e.headers-wrap
+							+icon('three')
+							+e.header Автор
+					+e.status--header 
+						+icon('three')
+						+e.header Статус
+			+e.tags
+				+e.header Тэги
+
+mixin assignments_tabs()
+	+b.assignments-tabs
+		+active_closed_tabs()
+		+incoming_sent_tabs()
+
+
+mixin active_closed_tabs()
+	+b.tabs 
+		+e.BUTTON.tab--assignment(tabindex="1")
+			+e.P.text Все
+		+e.BUTTON.tab--assignment(tabindex="1") 
+			+e.P.text Закрытые
+		+e.BUTTON.tab--assignment.active(tabindex="1") 
+			+e.P.text Активные
+
+mixin incoming_sent_tabs()
+	+b.tabs 
+		+e.BUTTON.tab--assignment.active(tabindex="1")
+			+e.P.text Входящие
+		+e.BUTTON.tab--assignment(tabindex="1") 
+			+e.P.text Исходящие
+
+//- mixin tasks_search()
+//- 	+b.tasks-search(tabindex="1")
+//- 		+e.BUTTON.btn
+//- 			img(src="img/svg/search.svg")
+//- 		input(type="text", placeholder="Поиск")

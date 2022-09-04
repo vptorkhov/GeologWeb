@@ -15,6 +15,82 @@
 		<div class="main-wrapper">
 			<div class="p-sm-5" style="background-color: grey; min-height: 100vh;">
 				<div class="assignments-list">
+					<div class="assignments-tabs">
+						<div class="tabs"> 
+							<button class="tabs__tab tabs__tab--assignment" tabindex="1">
+								<p class="tabs__text">Все
+								</p>
+							</button>
+							<button class="tabs__tab tabs__tab--assignment" tabindex="1"> 
+								<p class="tabs__text">Закрытые
+								</p>
+							</button>
+							<button class="tabs__tab tabs__tab--assignment active" tabindex="1"> 
+								<p class="tabs__text">Активные
+								</p>
+							</button>
+						</div>
+						<div class="tabs"> 
+							<button class="tabs__tab tabs__tab--assignment active" tabindex="1">
+								<p class="tabs__text">Входящие
+								</p>
+							</button>
+							<button class="tabs__tab tabs__tab--assignment" tabindex="1"> 
+								<p class="tabs__text">Исходящие
+								</p>
+							</button>
+						</div>
+					</div>
+					<div class="assignment-line assignment-line--headers">
+						<div class="main-content main-content--headers"> 
+							<div class="main-content__description-and-name">
+								<div class="main-content__headers-wrap">
+									<svg class="icon icon-three ">
+										<use xlink:href="img/svg/sprite.svg#three"></use>
+									</svg>
+									<p class="main-content__header">Запросы
+									</p>
+								</div>
+							</div>
+							<div class="main-content__date-name-status">
+								<div class="main-content__date"> 
+									<div class="main-content__headers-wrap">
+										<svg class="icon icon-three ">
+											<use xlink:href="img/svg/sprite.svg#three"></use>
+										</svg>
+										<div class="main-content__header-plan"> 
+											<div class="main-content__header">Крайний срок 
+											</div>
+											<div class="main-content__plan">План
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="main-content__fio-status">
+									<div class="main-content__fio"> 
+										<div class="main-content__headers-wrap">
+											<svg class="icon icon-three ">
+												<use xlink:href="img/svg/sprite.svg#three"></use>
+											</svg>
+											<div class="main-content__header">Автор
+											</div>
+										</div>
+									</div>
+									<div class="main-content__status main-content__status--header"> 
+										<svg class="icon icon-three ">
+											<use xlink:href="img/svg/sprite.svg#three"></use>
+										</svg>
+										<div class="main-content__header">Статус
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="main-content__tags">
+								<div class="main-content__header">Тэги
+								</div>
+							</div>
+						</div>
+					</div>
 					<div class="assignment-line">
 						<div class="assignment-line__icon"> <img src="img/svg/not-urgent.svg"/>
 						</div>
@@ -36,7 +112,7 @@
 							</div>
 							<div class="main-content__date-name-status">
 								<div class="main-content__date"> 
-									<div class="main-content__title">Крайний срок (План)
+									<div class="main-content__title">Крайний срок <span>(План)</span>
 									</div>
 									<div class="flex-row">
 										<p class="main-content__bold main-content__bold--alert">19.06.2022
@@ -112,7 +188,7 @@
 							</div>
 							<div class="main-content__date-name-status">
 								<div class="main-content__date"> 
-									<div class="main-content__title">Крайний срок (План)
+									<div class="main-content__title">Крайний срок <span>(План)</span>
 									</div>
 									<div class="flex-row">
 										<p class="main-content__bold main-content__bold--caution">19.06.2022
@@ -183,7 +259,7 @@
 							</div>
 							<div class="main-content__date-name-status">
 								<div class="main-content__date"> 
-									<div class="main-content__title">Крайний срок (План)
+									<div class="main-content__title">Крайний срок <span>(План)</span>
 									</div>
 									<div class="flex-row">
 										<p class="main-content__bold main-content__bold--undefined">19.06.2022
@@ -252,7 +328,7 @@
 							</div>
 							<div class="main-content__date-name-status">
 								<div class="main-content__date"> 
-									<div class="main-content__title">Крайний срок (План)
+									<div class="main-content__title">Крайний срок <span>(План)</span>
 									</div>
 									<div class="flex-row">
 										<p class="main-content__bold main-content__bold--undefined">19.06.2022

@@ -109,6 +109,9 @@
 		border: none;
 		border-right: 1px solid #ccd9e0;
 		background-color: #ffffff;
+		&--assignment {
+			background-color:  #ECF1F4;
+		}
 		transition-duration: 0.4s;
 		&:first-child {
 			border-radius: 8px 0px 0px 8px;
