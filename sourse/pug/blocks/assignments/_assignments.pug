@@ -9,7 +9,6 @@ include ../assignment-statuses/_assignment-statuses.pug
 
 mixin assignments_list()
 	+b.assignments-list
-		//- +tasks_search()
 		+assignments_tabs()
 		+assignments_top()
 		+assignment_line_ready("not-urgent", "success", "Длинное название задачи в супермного букв длинное название задачи", false, true, "alert", true)
@@ -125,28 +124,35 @@ mixin assignments_top()
 
 mixin assignments_tabs()
 	+b.assignments-tabs
-		+active_closed_tabs()
-		+incoming_sent_tabs()
+		+e.search
+			+assignments_search()
+		+e.tabs
+			+e.active-closed
+				+active_closed_tabs()
+			+e.incoming-sent
+				+incoming_sent_tabs()
+		+e.BUTTON.filters.btn
+			img(src="img/svg/filters.svg")
 
 
 mixin active_closed_tabs()
 	+b.tabs 
 		+e.BUTTON.tab--assignment(tabindex="1")
-			+e.P.text Все
+			+e.P.text--assignment Все
 		+e.BUTTON.tab--assignment(tabindex="1") 
-			+e.P.text Закрытые
+			+e.P.text--assignment Закрытые
 		+e.BUTTON.tab--assignment.active(tabindex="1") 
-			+e.P.text Активные
+			+e.P.text--assignment Активные
 
 mixin incoming_sent_tabs()
-	+b.tabs 
+	+b.tabs--incoming-sent
 		+e.BUTTON.tab--assignment.active(tabindex="1")
-			+e.P.text Входящие
+			+e.P.text--assignment Входящие
 		+e.BUTTON.tab--assignment(tabindex="1") 
-			+e.P.text Исходящие
+			+e.P.text--assignment Исходящие
 
-//- mixin tasks_search()
-//- 	+b.tasks-search(tabindex="1")
-//- 		+e.BUTTON.btn
-//- 			img(src="img/svg/search.svg")
-//- 		input(type="text", placeholder="Поиск")
+mixin assignments_search()
+	+b.assignments_search(tabindex="1")
+		+e.BUTTON.btn
+			img(src="img/svg/search.svg")
+		input(type="text", placeholder="Поиск")

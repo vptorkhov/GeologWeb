@@ -16,30 +16,45 @@
 			<div class="p-sm-5" style="background-color: grey; min-height: 100vh;">
 				<div class="assignments-list">
 					<div class="assignments-tabs">
-						<div class="tabs"> 
-							<button class="tabs__tab tabs__tab--assignment" tabindex="1">
-								<p class="tabs__text">Все
-								</p>
-							</button>
-							<button class="tabs__tab tabs__tab--assignment" tabindex="1"> 
-								<p class="tabs__text">Закрытые
-								</p>
-							</button>
-							<button class="tabs__tab tabs__tab--assignment active" tabindex="1"> 
-								<p class="tabs__text">Активные
-								</p>
-							</button>
+						<div class="assignments-tabs__search">
+							<div class="assignments_search" tabindex="1">
+								<button class="assignments_search__btn"><img src="img/svg/search.svg"/>
+								</button>
+								<input type="text" placeholder="Поиск"/>
+							</div>
 						</div>
-						<div class="tabs"> 
-							<button class="tabs__tab tabs__tab--assignment active" tabindex="1">
-								<p class="tabs__text">Входящие
-								</p>
-							</button>
-							<button class="tabs__tab tabs__tab--assignment" tabindex="1"> 
-								<p class="tabs__text">Исходящие
-								</p>
-							</button>
+						<div class="assignments-tabs__tabs">
+							<div class="assignments-tabs__active-closed">
+								<div class="tabs"> 
+									<button class="tabs__tab tabs__tab--assignment" tabindex="1">
+										<p class="tabs__text tabs__text--assignment">Все
+										</p>
+									</button>
+									<button class="tabs__tab tabs__tab--assignment" tabindex="1"> 
+										<p class="tabs__text tabs__text--assignment">Закрытые
+										</p>
+									</button>
+									<button class="tabs__tab tabs__tab--assignment active" tabindex="1"> 
+										<p class="tabs__text tabs__text--assignment">Активные
+										</p>
+									</button>
+								</div>
+							</div>
+							<div class="assignments-tabs__incoming-sent">
+								<div class="tabs tabs--incoming-sent">
+									<button class="tabs__tab tabs__tab--assignment active" tabindex="1">
+										<p class="tabs__text tabs__text--assignment">Входящие
+										</p>
+									</button>
+									<button class="tabs__tab tabs__tab--assignment" tabindex="1"> 
+										<p class="tabs__text tabs__text--assignment">Исходящие
+										</p>
+									</button>
+								</div>
+							</div>
 						</div>
+						<button class="assignments-tabs__filters btn"><img src="img/svg/filters.svg"/>
+						</button>
 					</div>
 					<div class="assignment-line assignment-line--headers">
 						<div class="main-content main-content--headers"> 
