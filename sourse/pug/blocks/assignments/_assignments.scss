@@ -411,10 +411,23 @@
 .assignments-tabs {
 	background-color: #ECF1F4;
 	padding: 16px;
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
+	&__filters-count {
+		position: absolute;
+		top: 16px;
+		right: 8px;
+		padding: 2px 4px;
+		font-weight: 400;
+		font-size: 10px;
+		line-height: 12px;
+		color: #000000;
+		background-color: #ffffff;
+		border-radius: 4px;
+	}
 	&__filter-chips {
 		display: flex;
 		overflow-x: auto;
