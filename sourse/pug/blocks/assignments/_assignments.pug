@@ -134,29 +134,11 @@ mixin assignments_tabs(filters)
 				+incoming_sent_tabs()
 		+e.BUTTON.filters.btn
 			img(src="img/svg/filters.svg")
-		+e.filter-chips 
-			+e.filter-chip-wrap 
-				+filter_chip("Тест")
-			+e.filter-chip-wrap 
-				+filter_chip("Тест")
-			+e.filter-chip-wrap 
-				+filter_chip("Тест")
-			+e.filter-chip-wrap 
-				+filter_chip("Тест")
-			+e.filter-chip-wrap 
-				+filter_chip("Тест")
-			+e.filter-chip-wrap 
-				+filter_chip("Тест тест тест тест тест")
-			+e.filter-chip-wrap 
-				+filter_chip("Тест тест тест тест тест")
-			+e.filter-chip-wrap 
-				+filter_chip("Тест тест тест тест тест")
-			+e.filter-chip-wrap 
-				+filter_chip("Тест тест тест тест тест")
-			+e.filter-chip-wrap 
-				+filter_chip("Тест тест тест тест тест")
-			+e.filter-chip-wrap 
-				+filter_chip("Тест тест тест тест тест")
+		if filters
+			+e.filter-chips 
+				- for(var x = 0; x<filters;x++)
+					+e.filter-chip-wrap 
+						+filter_chip("Тест тест")
 
 
 mixin active_closed_tabs()
