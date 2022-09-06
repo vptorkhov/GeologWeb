@@ -555,6 +555,16 @@ iframe {
 	--bs-btn-active-color: #14a9ff;
 }
 
+.btn-fill-blue {
+	background-color: var(--survey-blue) !important;
+	--bs-btn-color: #ffffff;
+	--bs-btn-border-color: var(--survey-blue);
+	--bs-btn-hover-border-color: var(--survey-blue);
+	--bs-btn-hover-color: #ffffff;
+	--bs-btn-active-border-color: var(--survey-blue);
+	--bs-btn-active-color: #ffffff;
+}
+
 .btn-fill {
 	background-color: var(--survey-blue) !important;
 	--bs-btn-color: #ffffff;
@@ -570,6 +580,15 @@ iframe {
 		border-color: #f0f2f3 !important;
 		background-color: #f0f2f3 !important;
 	}
+}
+.btn-grey {
+	background-color: var(--main-grey) !important;
+	--bs-btn-color: #ffffff;
+	--bs-btn-border-color: var(--main-grey);
+	--bs-btn-hover-border-color: var(--main-grey);
+	--bs-btn-hover-color: #ffffff;
+	--bs-btn-active-border-color: var(--main-grey);
+	--bs-btn-active-color: #ffffff;
 }
 
 .scrollbar-horizontal::-webkit-scrollbar {

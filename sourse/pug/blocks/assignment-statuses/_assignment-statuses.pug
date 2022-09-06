@@ -30,3 +30,9 @@ mixin assignment_add()
 mixin assignment_more(number)
 	+b.assignment-tag
 		p=`Еще ${number}`
+
+mixin filter_chip(filter)
+	+b.filter-chip
+		+e.P.filter-name=filter
+		+e.BUTTON.delete.btn 
+			+icon("close-cross")

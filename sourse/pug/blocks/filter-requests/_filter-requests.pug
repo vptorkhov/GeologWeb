@@ -1,0 +1,75 @@
+include ../assignment-statuses/_assignment-statuses.pug
+
+mixin filter-requests() 
+	+b.filter-requests 
+		+filter_requests_top_nav("Фильтр по запросам")
+		+e.content.scrollbar-vertical
+			+e.filter-position-wrap
+				+filter-position("Кластер")
+			+e.filter-position-wrap
+				+filter-position("Проект")
+			+e.filter-position-wrap
+				+filter-position("Задача", ["Скважина 2И", "Скважина 3И", "Скважина 4И", "Скважина 5И"])
+			+e.filter-position-wrap
+				+filter-position("Проект")
+			+e.filter-position-wrap
+				+filter-position("Проект")
+			+e.filter-position-wrap
+				+filter-position("Проект")
+			+e.filter-position-wrap
+				+filter-position("Проект")
+		+e.bottom-buttons 
+			+e.buttons-wrap
+				+e.BUTTON.reset.btn-grey.btn Сбросить
+				+e.BUTTON.apply.btn-fill-blue.btn Применить
+
+mixin filter-requests-window() 
+	+b.filter-requests--window 
+		+filter_requests_top_nav_window("Фильтр по запросам")
+		+e.content--window.scrollbar-vertical
+			+e.filter-position-wrap
+				+filter-position("Кластер")
+			+e.filter-position-wrap
+				+filter-position("Проект")
+			+e.filter-position-wrap
+				+filter-position("Задача", ["Скважина 2И", "Скважина 3И", "Скважина 4И", "Скважина 5И"])
+			+e.filter-position-wrap
+				+filter-position("Проект")
+			+e.filter-position-wrap
+				+filter-position("Проект")
+			+e.filter-position-wrap
+				+filter-position("Проект")
+			+e.filter-position-wrap
+				+filter-position("Проект")
+		+e.bottom-buttons--window 
+			+e.buttons-wrap--window
+				+e.BUTTON.reset.btn-grey.btn Сбросить
+				+e.BUTTON.apply.btn-fill-blue.btn Применить
+
+
+mixin filter_requests_top_nav(title)
+	+b.filter-requests-top-nav
+		+e.BUTTON.return.btn
+			img(src="img/svg/side-sheet-arrow.svg")
+		+e.P.title=title 
+		+e.BUTTON.close.btn
+			img(src="img/svg/close-cross.svg")
+
+mixin filter_requests_top_nav_window(title)
+	+b.filter-requests-top-nav--window
+		+e.P.title=title 
+		+e.BUTTON.close--window.btn
+			img(src="img/svg/close-cross.svg")
+
+mixin filter-position(name, filters)
+	+b.filter-position
+		+e.top 
+			+e.name=name
+			+e.BUTTON.reset.btn
+				p Сбросить
+		+input("Выберите", 'select')
+		if filters
+			+e.choosen-filters 
+				each filter in filters
+					+e.filters
+						+filter_chip(filter)

@@ -1,0 +1,19 @@
+extends ../layout/main.pug
+include ../blocks/filter-requests/_filter-requests.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+block title
+	- let  title= index.head.title
+	title= title
+	- let bigtext = `<a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.`
+	- let question = 'Запакеровались на глубине 1754.2 м. Что делаем дальше?'
+block pagecontent
+	.container(style="background-color: var(--main-grey); width: 100vw; overflow-y: auto")
+		.row(style="height: 100vh;")
+			.pt-3.pb-3(style="height: 100%")
+				+filter-requests() 
+		.row(style="height: 100vh;")
+			.pt-3.pb-3(style="height: 100%")
+				+filter-requests-window()

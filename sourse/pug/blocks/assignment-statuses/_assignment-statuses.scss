@@ -80,3 +80,41 @@
 		height: 16px !important;
 	}
 }
+
+.filter-chip {
+	background-color: var(--heavy-blue);
+	padding: 6px 8px 6px 7px;
+	// height: 24px;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	width: max-content;
+	&__filter-name {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		color: #ffffff;
+		margin-right: 5px;
+	}
+	.btn {
+		padding: 0;
+		border: none;
+	}
+	.icon {
+		color: var(--heavy-blue);
+		stroke: var(--heavy-blue);
+		width: 7px;
+		height: 7px;
+	}
+	&__delete {
+		background-color: #ffffff;
+		border-radius: 50%;
+		min-width: 14px;
+		min-height: 14px;
+		max-width: 14px;
+		max-height: 14px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

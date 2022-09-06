@@ -411,13 +411,42 @@
 .assignments-tabs {
 	background-color: #ECF1F4;
 	padding: 16px;
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	// @media screen and (max-width: 1140px) {
-	// 	padding-bottom: 0;
-	// }
+	&__filters-count {
+		position: absolute;
+		top: 16px;
+		right: 8px;
+		padding: 2px 4px;
+		font-weight: 400;
+		font-size: 10px;
+		line-height: 12px;
+		color: #000000;
+		background-color: #ffffff;
+		border-radius: 4px;
+	}
+	&__filter-chips {
+		display: flex;
+		overflow-x: auto;
+		width: 100%;
+		margin-top: 12px;
+		&::-webkit-scrollbar {
+			height: 0;
+		}
+		@media screen and (min-width: 1140.99px) {
+			width: calc(100% + 16px);
+		}
+		@media screen and (max-width: 744px) {
+			margin-top: 16px;
+		}
+	}
+	&__filter-chip-wrap  {
+		height: min-content;
+		margin-right: 8px;
+	}
 	@media screen and (max-width: 744px) {
 		padding-bottom: 35px;
 		position: relative;

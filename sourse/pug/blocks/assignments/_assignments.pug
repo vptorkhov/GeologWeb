@@ -9,7 +9,7 @@ include ../assignment-statuses/_assignment-statuses.pug
 
 mixin assignments_list()
 	+b.assignments-list
-		+assignments_tabs()
+		+assignments_tabs(12)
 		+assignments_top()
 		+assignment_line_ready("not-urgent", "success", "Длинное название задачи в супермного букв длинное название задачи", false, true, "alert", true)
 		+assignment_line_closed("critical", "alert", "Короткое описание поручения", true, false, "caution")
@@ -63,7 +63,6 @@ mixin assignment_line_closed(icon, status, task_name, solution, needs_solution, 
 			img(src=`img/svg/${icon}.svg`)
 		+b.main-content 
 			+e.description-and-name
-
 				+e.P.bold Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отображения контента в несколько строк
 				+e.name(class=`--${status}`)
 					if status
@@ -122,8 +121,10 @@ mixin assignments_top()
 			+e.tags
 				+e.header Тэги
 
-mixin assignments_tabs()
+mixin assignments_tabs(filters)
 	+b.assignments-tabs
+		if filters 
+			+e.filters-count=filters
 		+e.search
 			+assignments_search()
 		+e.tabs
@@ -133,6 +134,29 @@ mixin assignments_tabs()
 				+incoming_sent_tabs()
 		+e.BUTTON.filters.btn
 			img(src="img/svg/filters.svg")
+		+e.filter-chips 
+			+e.filter-chip-wrap 
+				+filter_chip("Тест")
+			+e.filter-chip-wrap 
+				+filter_chip("Тест")
+			+e.filter-chip-wrap 
+				+filter_chip("Тест")
+			+e.filter-chip-wrap 
+				+filter_chip("Тест")
+			+e.filter-chip-wrap 
+				+filter_chip("Тест")
+			+e.filter-chip-wrap 
+				+filter_chip("Тест тест тест тест тест")
+			+e.filter-chip-wrap 
+				+filter_chip("Тест тест тест тест тест")
+			+e.filter-chip-wrap 
+				+filter_chip("Тест тест тест тест тест")
+			+e.filter-chip-wrap 
+				+filter_chip("Тест тест тест тест тест")
+			+e.filter-chip-wrap 
+				+filter_chip("Тест тест тест тест тест")
+			+e.filter-chip-wrap 
+				+filter_chip("Тест тест тест тест тест")
 
 
 mixin active_closed_tabs()
