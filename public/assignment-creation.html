@@ -62,11 +62,11 @@
 									<div class="assignment-creation-content__header">
 										<p>Крайний срок</p>
 									</div>
-									<div class="assignment-creation-content__input">
+									<div class="input">
 										<input class="form-control--deadline" placeholder="ДД.MM.ГГГГ" type="text"/>
-										<button class="assignment-creation-content__calendar"> <img src="img/svg/calendar.svg"/>
+										<button class="input__calendar"> <img src="img/svg/calendar.svg"/>
 										</button>
-										<button class="assignment-creation-content__close"> <img src="img/svg/close-cross.svg"/>
+										<button class="input__close"> <img src="img/svg/close-cross.svg"/>
 										</button>
 									</div>
 								</div>
@@ -75,15 +75,15 @@
 										<p>Планируемые сроки</p>
 										<p>*</p>
 									</div>
-									<div class="assignment-creation-content__input">
-										<div class="assignment-creation-content__plannes-terms">
+									<div class="input">
+										<div class="input__planned-terms">
 											<input placeholder="ДД.ММ.ГГГ ЧЧ:ММ" type="text"/>
 											<div class="dash"></div>
 											<input placeholder="ДД.ММ.ГГГ ЧЧ:ММ" type="text"/>
 										</div>
-										<button class="assignment-creation-content__calendar"> <img src="img/svg/calendar.svg"/>
+										<button class="input__calendar"> <img src="img/svg/calendar.svg"/>
 										</button>
-										<button class="assignment-creation-content__close"> <img src="img/svg/close-cross.svg"/>
+										<button class="input__close"> <img src="img/svg/close-cross.svg"/>
 										</button>
 									</div>
 								</div>
@@ -125,10 +125,10 @@
 								</div>
 								<div class="assignment-creation-content__wrap"> 
 									<div class="assignment-creation-content__header">
-										<p>Выберите Тэги</p>
+										<p>Выберите тэги</p>
 									</div>
-									<div class="assignment-creation-content__input">
-										<div class="assignment-creation-content__tags">
+									<div class="input">
+										<div class="input__tags">
 											<div class="assignment-tag">
 												<p>Тэг</p>
 												<svg class="icon icon-close-cross ">
@@ -183,7 +183,637 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6 p-sm-4" style="height: 100vh"></div>
+					<div class="col-lg-6 p-sm-4" style="height: 100vh">
+						<div class="assignment-creation">
+							<div class="assignment-creation-top">
+								<p class="assignment-creation-top__title">Новый запрос
+								</p>
+								<button class="assignment-creation-top__close btn"><img src="img/svg/close-cross.svg"/>
+								</button>
+							</div>
+							<div class="assignment-creation-content">
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Исполнитель</p>
+										<p>*</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group">
+										<select class="assignment-creation-content__input form-select" name="select">
+											<option value="!!!">!!!</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+									<button class="assignment-creation-content__assign">Назначить на меня
+									</button>
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Заголовок</p>
+										<p>*</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group"><input class="assignment-creation-content__input form-control" name="text" type="text" placeholder="Text"/>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Содержание запроса</p>
+										<p>*</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group"><textarea class="assignment-creation-content__input form-control" name="textarea" placeholder="Text"></textarea>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Крайний срок</p>
+									</div>
+									<div class="input">
+										<input class="form-control--deadline" placeholder="ДД.MM.ГГГГ" type="text"/>
+										<button class="input__calendar"> <img src="img/svg/calendar.svg"/>
+										</button>
+										<button class="input__close"> <img src="img/svg/close-cross.svg"/>
+										</button>
+									</div>
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Планируемые сроки</p>
+										<p>*</p>
+									</div>
+									<div class="input">
+										<div class="input__planned-terms">
+											<input placeholder="ДД.ММ.ГГГ ЧЧ:ММ" type="text"/>
+											<div class="dash"></div>
+											<input placeholder="ДД.ММ.ГГГ ЧЧ:ММ" type="text"/>
+										</div>
+										<button class="input__calendar"> <img src="img/svg/calendar.svg"/>
+										</button>
+										<button class="input__close"> <img src="img/svg/close-cross.svg"/>
+										</button>
+									</div>
+								</div>
+								<div class="assignment-creation-content__needs-solution"> 
+									<label class="switch">
+										<input type="checkbox" name="name"/><span class="switch__caption">Требует решения</span>
+									</label>
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Задача</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group">
+										<select class="assignment-creation-content__input form-select" name="select">
+											<option value="Выберите">Выберите</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Приоритет</p>
+										<p>*</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group">
+										<select class="assignment-creation-content__input form-select" name="select">
+											<option value="Выберите">Выберите</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Выберите тэги</p>
+									</div>
+									<div class="input">
+										<div class="input__tags">
+											<div class="assignment-tag">
+												<p>Тэг</p>
+												<svg class="icon icon-close-cross ">
+													<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+												</svg>
+											</div>
+											<div class="assignment-tag">
+												<p>Тэг</p>
+												<svg class="icon icon-close-cross ">
+													<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+												</svg>
+											</div>
+											<div class="assignment-tag">
+												<p>Тэгдлинный</p>
+												<svg class="icon icon-close-cross ">
+													<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+												</svg>
+											</div>
+											<button class="assignment-add">
+												<svg class="icon icon-plus ">
+													<use xlink:href="img/svg/sprite.svg#plus"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Повторять</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group">
+										<select class="assignment-creation-content__input form-select" name="select">
+											<option value="Выберите">Выберите</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="frequency"> 
+									<div class="frequency__checkboxes">
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Пн</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Вт</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Ср</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Чт</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Пт</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Сб</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Вс</span>
+										</label>
+									</div>
+									<div class="frequency__repeat"> 
+										<p>Повторять до</p>
+										<div class="input">
+											<input class="form-control--deadline" placeholder="ДД.MM.ГГГГ" type="text"/>
+											<button class="input__calendar"> <img src="img/svg/calendar.svg"/>
+											</button>
+											<button class="input__close"> <img src="img/svg/close-cross.svg"/>
+											</button>
+										</div>
+									</div>
+									<div class="frequency__repeat-info"> <img src="img/svg/clock.svg"/>
+										<p>Запрос будет повторяться каждый вторник, среду до 18.08.2022</p>
+									</div>
+								</div>
+								<div class="assignment-creation-content__check-list"> 
+									<p>Чек-лист</p>
+									<button class="assignment-creation-content__add btn"> <img src="img/svg/add-circle.svg"/>
+										<p>Добавить пункт чек-листа</p>
+									</button>
+								</div>
+							</div>
+							<div class="assignment-creation-bottom">
+								<button class="assignment-creation-bottom__active btn btn-fill-blue btn-full-width">Активная
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 p-sm-4" style="height: 100vh">
+						<div class="assignment-creation">
+							<div class="assignment-creation-top">
+								<p class="assignment-creation-top__title">Новый запрос
+								</p>
+								<button class="assignment-creation-top__close btn"><img src="img/svg/close-cross.svg"/>
+								</button>
+							</div>
+							<div class="assignment-creation-content">
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Исполнитель</p>
+										<p>*</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group">
+										<select class="assignment-creation-content__input form-select" name="select">
+											<option value="!!!">!!!</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+									<button class="assignment-creation-content__assign">Назначить на меня
+									</button>
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Заголовок</p>
+										<p>*</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group"><input class="assignment-creation-content__input form-control" name="text" type="text" placeholder="Text"/>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Содержание запроса</p>
+										<p>*</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group"><textarea class="assignment-creation-content__input form-control" name="textarea" placeholder="Text"></textarea>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Крайний срок</p>
+									</div>
+									<div class="input">
+										<input class="form-control--deadline" placeholder="ДД.MM.ГГГГ" type="text"/>
+										<button class="input__calendar"> <img src="img/svg/calendar.svg"/>
+										</button>
+										<button class="input__close"> <img src="img/svg/close-cross.svg"/>
+										</button>
+									</div>
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Планируемые сроки</p>
+										<p>*</p>
+									</div>
+									<div class="input">
+										<div class="input__planned-terms">
+											<input placeholder="ДД.ММ.ГГГ ЧЧ:ММ" type="text"/>
+											<div class="dash"></div>
+											<input placeholder="ДД.ММ.ГГГ ЧЧ:ММ" type="text"/>
+										</div>
+										<button class="input__calendar"> <img src="img/svg/calendar.svg"/>
+										</button>
+										<button class="input__close"> <img src="img/svg/close-cross.svg"/>
+										</button>
+									</div>
+								</div>
+								<div class="assignment-creation-content__needs-solution"> 
+									<label class="switch">
+										<input type="checkbox" name="name"/><span class="switch__caption">Требует решения</span>
+									</label>
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Задача</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group">
+										<select class="assignment-creation-content__input form-select" name="select">
+											<option value="Выберите">Выберите</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Приоритет</p>
+										<p>*</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group">
+										<select class="assignment-creation-content__input form-select" name="select">
+											<option value="Выберите">Выберите</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Выберите тэги</p>
+									</div>
+									<div class="input">
+										<div class="input__tags">
+											<div class="assignment-tag">
+												<p>Тэг</p>
+												<svg class="icon icon-close-cross ">
+													<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+												</svg>
+											</div>
+											<div class="assignment-tag">
+												<p>Тэг</p>
+												<svg class="icon icon-close-cross ">
+													<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+												</svg>
+											</div>
+											<div class="assignment-tag">
+												<p>Тэгдлинный</p>
+												<svg class="icon icon-close-cross ">
+													<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+												</svg>
+											</div>
+											<button class="assignment-add">
+												<svg class="icon icon-plus ">
+													<use xlink:href="img/svg/sprite.svg#plus"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Повторять</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group">
+										<select class="assignment-creation-content__input form-select" name="select">
+											<option value="Выберите">Выберите</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="frequency"> 
+									<div class="frequency__repeat"> 
+										<p>Каждую</p>
+										<div class="frequency__counter">
+											<div class="frequency__input-wrap form-group"><input class="frequency__input form-control" name="text" type="text" t="text"/>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<p>Неделю</p>
+									</div>
+									<div class="frequency__checkboxes">
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Пн</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Вт</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Ср</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Чт</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Пт</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Сб</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Вс</span>
+										</label>
+									</div>
+									<div class="frequency__repeat"> 
+										<p>Повторять до</p>
+										<div class="input">
+											<input class="form-control--deadline" placeholder="ДД.MM.ГГГГ" type="text"/>
+											<button class="input__calendar"> <img src="img/svg/calendar.svg"/>
+											</button>
+											<button class="input__close"> <img src="img/svg/close-cross.svg"/>
+											</button>
+										</div>
+									</div>
+									<div class="frequency__repeat-info"> <img src="img/svg/clock.svg"/>
+										<p>Запрос будет повторяться каждый вторник, среду до 18.08.2022</p>
+									</div>
+								</div>
+								<div class="assignment-creation-content__check-list"> 
+									<p>Чек-лист</p>
+									<button class="assignment-creation-content__add btn"> <img src="img/svg/add-circle.svg"/>
+										<p>Добавить пункт чек-листа</p>
+									</button>
+								</div>
+							</div>
+							<div class="assignment-creation-bottom">
+								<button class="assignment-creation-bottom__active btn btn-fill-blue btn-full-width">Активная
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 p-sm-4" style="height: 100vh">
+						<div class="assignment-creation">
+							<div class="assignment-creation-top">
+								<p class="assignment-creation-top__title">Новый запрос
+								</p>
+								<button class="assignment-creation-top__close btn"><img src="img/svg/close-cross.svg"/>
+								</button>
+							</div>
+							<div class="assignment-creation-content">
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Исполнитель</p>
+										<p>*</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group">
+										<select class="assignment-creation-content__input form-select" name="select">
+											<option value="!!!">!!!</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+									<button class="assignment-creation-content__assign">Назначить на меня
+									</button>
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Заголовок</p>
+										<p>*</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group"><input class="assignment-creation-content__input form-control" name="text" type="text" placeholder="Text"/>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Содержание запроса</p>
+										<p>*</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group"><textarea class="assignment-creation-content__input form-control" name="textarea" placeholder="Text"></textarea>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Крайний срок</p>
+									</div>
+									<div class="input">
+										<input class="form-control--deadline" placeholder="ДД.MM.ГГГГ" type="text"/>
+										<button class="input__calendar"> <img src="img/svg/calendar.svg"/>
+										</button>
+										<button class="input__close"> <img src="img/svg/close-cross.svg"/>
+										</button>
+									</div>
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Планируемые сроки</p>
+										<p>*</p>
+									</div>
+									<div class="input">
+										<div class="input__planned-terms">
+											<input placeholder="ДД.ММ.ГГГ ЧЧ:ММ" type="text"/>
+											<div class="dash"></div>
+											<input placeholder="ДД.ММ.ГГГ ЧЧ:ММ" type="text"/>
+										</div>
+										<button class="input__calendar"> <img src="img/svg/calendar.svg"/>
+										</button>
+										<button class="input__close"> <img src="img/svg/close-cross.svg"/>
+										</button>
+									</div>
+								</div>
+								<div class="assignment-creation-content__needs-solution"> 
+									<label class="switch">
+										<input type="checkbox" name="name"/><span class="switch__caption">Требует решения</span>
+									</label>
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Задача</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group">
+										<select class="assignment-creation-content__input form-select" name="select">
+											<option value="Выберите">Выберите</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Приоритет</p>
+										<p>*</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group">
+										<select class="assignment-creation-content__input form-select" name="select">
+											<option value="Выберите">Выберите</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Выберите тэги</p>
+									</div>
+									<div class="input">
+										<div class="input__tags">
+											<div class="assignment-tag">
+												<p>Тэг</p>
+												<svg class="icon icon-close-cross ">
+													<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+												</svg>
+											</div>
+											<div class="assignment-tag">
+												<p>Тэг</p>
+												<svg class="icon icon-close-cross ">
+													<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+												</svg>
+											</div>
+											<div class="assignment-tag">
+												<p>Тэгдлинный</p>
+												<svg class="icon icon-close-cross ">
+													<use xlink:href="img/svg/sprite.svg#close-cross"></use>
+												</svg>
+											</div>
+											<button class="assignment-add">
+												<svg class="icon icon-plus ">
+													<use xlink:href="img/svg/sprite.svg#plus"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="assignment-creation-content__wrap"> 
+									<div class="assignment-creation-content__header">
+										<p>Повторять</p>
+									</div>
+									<div class="assignment-creation-content__input-wrap form-group">
+										<select class="assignment-creation-content__input form-select" name="select">
+											<option value="Выберите">Выберите</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="frequency"> 
+									<div class="frequency__repeat"> 
+										<p>Каждого</p>
+										<div class="frequency__counter">
+											<div class="frequency__input-wrap form-group"><input class="frequency__input form-control" name="text" type="text" t="text"/>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<p>Числа</p>
+									</div>
+									<div class="frequency__checkboxes">
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Янв</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Фев</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Мар</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Апр</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Май</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Июн</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Июл</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Авг</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Сен</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Окт</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Ноя</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Дек</span>
+										</label>
+									</div>
+									<div class="frequency__repeat"> 
+										<p>Повторять до</p>
+										<div class="input">
+											<input class="form-control--deadline" placeholder="ДД.MM.ГГГГ" type="text"/>
+											<button class="input__calendar"> <img src="img/svg/calendar.svg"/>
+											</button>
+											<button class="input__close"> <img src="img/svg/close-cross.svg"/>
+											</button>
+										</div>
+									</div>
+									<div class="frequency__repeat-info"> <img src="img/svg/clock.svg"/>
+										<p>Запрос будет повторяться каждый вторник, среду до 18.08.2022</p>
+									</div>
+								</div>
+								<div class="assignment-creation-content__check-list"> 
+									<p>Чек-лист</p>
+									<button class="assignment-creation-content__add btn"> <img src="img/svg/add-circle.svg"/>
+										<p>Добавить пункт чек-листа</p>
+									</button>
+								</div>
+							</div>
+							<div class="assignment-creation-bottom">
+								<button class="assignment-creation-bottom__active btn btn-fill-blue btn-full-width">Активная
+								</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -13,5 +13,10 @@ block pagecontent
 	.p-sm-5
 		.row(style="background-color: grey")
 			.col-lg-6.p-sm-4(style="height: 100vh")
-				+assignment_creation()
+				+assignment_creation(true)
 			.col-lg-6.p-sm-4(style="height: 100vh")
+				+assignment_creation(false, "days")
+			.col-lg-6.p-sm-4(style="height: 100vh")
+				+assignment_creation(false, "weeks")
+			.col-lg-6.p-sm-4(style="height: 100vh")
+				+assignment_creation(false, "months")

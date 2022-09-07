@@ -1,9 +1,9 @@
 include ../assignment-statuses/_assignment-statuses.pug
 
-mixin assignment_creation()
+mixin assignment_creation(my, frequency)
 	+b.assignment-creation
 		+assignment_creation_top()
-		+assignment_creation_content()
+		+assignment_creation_content(my, frequency)
 		+assignment_creation_bottom()
 
 mixin assignment_creation_top()
@@ -12,38 +12,31 @@ mixin assignment_creation_top()
 		+e.BUTTON.close.btn
 			img(src="img/svg/close-cross.svg")
 
-mixin assignment_creation_content()
+mixin assignment_creation_content(my, frequency)
 	+b.assignment-creation-content
 		+e.wrap 
-			+e.header
-				p Исполнитель
-				p *
+			+header("Исполнитель", true)
 			+input("!!!", 'select')
+			if !my
+				+e.BUTTON.assign Назначить на меня
 		+e.wrap 
-			+e.header
-				p Заголовок
-				p *
+			+header("Заголовок", true)
 			+input("Text", 'text')
 		+e.wrap 
-			+e.header
-				p Содержание запроса
-				p *
+			+header("Содержание запроса", true)
 			+input("Text", 'textarea')
 		+e.wrap 
-			+e.header
-				p Крайний срок
-			+e.input
+			+header("Крайний срок", false)
+			+b.input
 				input(placeholder="ДД.MM.ГГГГ", type='text', class="form-control--deadline")
 				+e.BUTTON.calendar 
 					img(src="img/svg/calendar.svg")
 				+e.BUTTON.close 
 					img(src="img/svg/close-cross.svg")
 		+e.wrap 
-			+e.header
-				p Планируемые сроки
-				p *
-			+e.input
-				+e.plannes-terms
+			+header("Планируемые сроки", true)
+			+b.input
+				+e.planned-terms
 					input(placeholder="ДД.ММ.ГГГ ЧЧ:ММ", type='text')
 					.dash
 					input(placeholder="ДД.ММ.ГГГ ЧЧ:ММ", type='text')
@@ -54,27 +47,70 @@ mixin assignment_creation_content()
 		+e.needs-solution 
 			+Switch('Требует решения')
 		+e.wrap 
-			+e.header
-				p Задача
+			+header("Задача", false)
 			+input("Выберите", 'select')
 		+e.wrap 
-			+e.header
-				p Приоритет
-				p *
+			+header("Приоритет", true)
 			+input("Выберите", 'select')
 		+e.wrap 
-			+e.header
-				p Выберите Тэги
-			+e.input
+			+header("Выберите тэги", false)
+			+b.input
 				+e.tags
 					+assignment_tag("Тэг")
 					+assignment_tag("Тэг")
 					+assignment_tag("Тэгдлинный")
 					+assignment_add()
 		+e.wrap 
-			+e.header
-				p Повторять
+			+header("Повторять", false)
 			+input("Выберите", 'select')
+		if frequency
+			+b.frequency 
+				if frequency=="weeks"
+					+e.repeat 
+						p Каждую
+						+e.counter
+							+input(t="text")
+						p Неделю
+				if frequency=="months"
+					+e.repeat 
+						p Каждого
+						+e.counter
+							+input(t="text")
+						p Числа
+				if (frequency=='days')||(frequency=='weeks')
+					+e.checkboxes
+						+in-c("checkbox", "Пн")
+						+in-c("checkbox", "Вт")
+						+in-c("checkbox", "Ср")
+						+in-c("checkbox", "Чт")
+						+in-c("checkbox", "Пт")
+						+in-c("checkbox", "Сб")
+						+in-c("checkbox", "Вс")
+				else 
+					+e.checkboxes
+						+in-c("checkbox", "Янв")
+						+in-c("checkbox", "Фев")
+						+in-c("checkbox", "Мар")
+						+in-c("checkbox", "Апр")
+						+in-c("checkbox", "Май")
+						+in-c("checkbox", "Июн")
+						+in-c("checkbox", "Июл")
+						+in-c("checkbox", "Авг")
+						+in-c("checkbox", "Сен")
+						+in-c("checkbox", "Окт")
+						+in-c("checkbox", "Ноя")
+						+in-c("checkbox", "Дек")
+				+e.repeat 
+					p Повторять до
+					+b.input
+						input(placeholder="ДД.MM.ГГГГ", type='text', class="form-control--deadline")
+						+e.BUTTON.calendar 
+							img(src="img/svg/calendar.svg")
+						+e.BUTTON.close 
+							img(src="img/svg/close-cross.svg")
+				+e.repeat-info 
+					img(src="img/svg/clock.svg")
+					p Запрос будет повторяться каждый вторник, среду до 18.08.2022
 		+e.check-list 
 			p Чек-лист
 			+e.BUTTON.add.btn 
@@ -84,3 +120,9 @@ mixin assignment_creation_content()
 mixin assignment_creation_bottom()
 	+b.assignment-creation-bottom
 		+e.BUTTON.active.btn.btn-fill-blue.btn-full-width Активная
+
+mixin header(title, star)
+	+e.header
+		p=title
+		if star
+			p *
