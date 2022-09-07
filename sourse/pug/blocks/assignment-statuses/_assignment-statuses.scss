@@ -99,6 +99,7 @@
 	.btn {
 		padding: 0;
 		border: none;
+
 	}
 	.icon {
 		color: var(--heavy-blue);
@@ -116,5 +117,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		&:hover, &:focus, &:active {
+			background-color: #ffffff !important;
+		}
 	}
 }

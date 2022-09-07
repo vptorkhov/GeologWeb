@@ -367,10 +367,10 @@
 		max-width: 100%;
 	}
 }
-.btn {
-	padding: 0;
-	border: none;
-}
+// .btn {
+// 	padding: 0;
+// 	border: none;
+// }
 .flex-row {
 	display: flex;
 	align-items: center;
@@ -495,6 +495,8 @@
 		}
 	}
 	&__filters {
+		padding: 0;
+		border: none;
 		img {
 			width: 16px;
 			height: 16px;
