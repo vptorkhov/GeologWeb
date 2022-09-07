@@ -1,0 +1,86 @@
+include ../assignment-statuses/_assignment-statuses.pug
+
+mixin assignment_creation()
+	+b.assignment-creation
+		+assignment_creation_top()
+		+assignment_creation_content()
+		+assignment_creation_bottom()
+
+mixin assignment_creation_top()
+	+b.assignment-creation-top
+		+e.P.title Новый запрос
+		+e.BUTTON.close.btn
+			img(src="img/svg/close-cross.svg")
+
+mixin assignment_creation_content()
+	+b.assignment-creation-content
+		+e.wrap 
+			+e.header
+				p Исполнитель
+				p *
+			+input("!!!", 'select')
+		+e.wrap 
+			+e.header
+				p Заголовок
+				p *
+			+input("Text", 'text')
+		+e.wrap 
+			+e.header
+				p Содержание запроса
+				p *
+			+input("Text", 'textarea')
+		+e.wrap 
+			+e.header
+				p Крайний срок
+			+e.input
+				input(placeholder="ДД.MM.ГГГГ", type='text', class="form-control--deadline")
+				+e.BUTTON.calendar 
+					img(src="img/svg/calendar.svg")
+				+e.BUTTON.close 
+					img(src="img/svg/close-cross.svg")
+		+e.wrap 
+			+e.header
+				p Планируемые сроки
+				p *
+			+e.input
+				+e.plannes-terms
+					input(placeholder="ДД.ММ.ГГГ ЧЧ:ММ", type='text')
+					.dash
+					input(placeholder="ДД.ММ.ГГГ ЧЧ:ММ", type='text')
+				+e.BUTTON.calendar 
+					img(src="img/svg/calendar.svg")
+				+e.BUTTON.close 
+					img(src="img/svg/close-cross.svg")
+		+e.needs-solution 
+			+Switch('Требует решения')
+		+e.wrap 
+			+e.header
+				p Задача
+			+input("Выберите", 'select')
+		+e.wrap 
+			+e.header
+				p Приоритет
+				p *
+			+input("Выберите", 'select')
+		+e.wrap 
+			+e.header
+				p Выберите Тэги
+			+e.input
+				+e.tags
+					+assignment_tag("Тэг")
+					+assignment_tag("Тэг")
+					+assignment_tag("Тэгдлинный")
+					+assignment_add()
+		+e.wrap 
+			+e.header
+				p Повторять
+			+input("Выберите", 'select')
+		+e.check-list 
+			p Чек-лист
+			+e.BUTTON.add.btn 
+				img(src="img/svg/add-circle.svg")
+				p Добавить пункт чек-листа
+
+mixin assignment_creation_bottom()
+	+b.assignment-creation-bottom
+		+e.BUTTON.active.btn.btn-fill-blue.btn-full-width Активная

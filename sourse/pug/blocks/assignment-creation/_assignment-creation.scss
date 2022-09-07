@@ -1,0 +1,188 @@
+.assignment-creation {
+	background-color: #ffffff;
+	border-radius: 16px;
+	height: 100%;
+	max-width: 541px;
+	display: flex;
+	flex-direction: column;
+}
+
+.assignment-creation-top {
+	padding: 12px 25px 12px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	border-bottom: 1px solid #F2F4F5;
+	&__title {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+	}
+	&__close {
+		position: absolute;
+		right: 25px;
+	}
+	.btn {
+		padding: 0px;
+		border: none;
+	}
+}
+.assignment-creation-content {
+	padding: 24px 24px 0;
+	flex-grow: 1;
+	overflow-y: auto;
+	& > * {
+		margin-bottom: 24px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__header {
+		display: flex;
+		align-items: center;
+		padding: 2px 0;
+		margin-bottom: 4px;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		color: #4D5F69;
+		p + p {
+			font-size: 13px;
+			line-height: 18px;
+			letter-spacing: -0.08px;
+			color: var(--main-red);
+			margin-left: 2px;
+		}
+	}
+	.form-select {
+		border: 1px solid #CCD9E0;
+		padding: 12px 2.25rem 12px 12px;
+		border-radius: 8px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 18px;
+		color: var(--main-black);
+	}
+	.form-control {
+		&, &--deadline {
+			border: 1px solid #CCD9E0;
+			padding: 12px;
+			border-radius: 8px;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 18px;
+			color: var(--main-grey);
+		}
+		&--deadline {
+			text-align: center;
+			width: 100%;
+			position: relative;
+			&:active, &:focus {
+				outline: none !important;
+			} 
+		}
+	}
+	.form-control[name="textarea"] {
+		height: 76px !important;
+		resize: none !important;
+	}
+	&__close, &__calendar {
+		padding: 0;
+		border: none;
+		background-color: transparent;
+	}
+	&__calendar {
+		position: absolute;
+		top: 8px;
+		left: 12px;
+	}
+	&__close{
+		position: absolute;
+		top: 9px;
+		right: 15px;
+		img {
+			width: 10px;
+			height: 10px;
+		}
+	}
+	&__input {
+		position: relative;
+	}
+	&__plannes-terms {
+		padding: 12px 12.5%;
+		justify-content: space-between;
+		align-items: center;
+		input {
+			border: none;
+			width: 145px;
+			&:active, &:focus {
+				outline: none !important;
+			} 
+		}
+	}
+	&__tags, &__plannes-terms {
+		display: flex;
+		border: 1px solid #CCD9E0;
+		padding: 12px 12.5%;
+		border-radius: 8px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 18px;
+	}
+	&__tags {
+		flex-wrap: wrap;
+		padding: 12px 12px 8px;
+		& > * {
+			margin-right: 4px;
+			margin-bottom: 4px;
+		}
+	}
+	&__needs-solution  {
+		padding: 10px 0px;
+		.switch {
+			align-items: center;
+			&__caption {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+			}
+		}
+	}
+	&__check-list  {
+		padding: 4px 0;
+		p:first-child {
+			margin-bottom: 16px;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 23px;
+			color: var(--main-black);
+		}
+	}
+	&__add {
+		display: flex;
+		color: var(--survey-blue);
+		padding: 0;
+		border: none;
+		--bs-btn-active-color: var(--survey-blue);
+		--bs-btn-color: var(--survey-blue);
+		--bs-btn-hover-color: var(--survey-blue);
+		p {
+			margin-left: 12px;
+		}
+	}
+}
+
+.assignment-creation-bottom {
+	padding: 24px;
+	.btn {
+		padding: 15px 0;
+	}
+}
+
+.dash {
+	width: 11px;
+	height: 1px;
+	background-color: var(--main-grey);
+}
