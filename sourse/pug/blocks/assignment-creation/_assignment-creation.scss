@@ -32,11 +32,21 @@
 	padding: 24px 24px 0;
 	flex-grow: 1;
 	overflow-y: auto;
+	&__head {
+		margin-bottom: 16px;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 23px;
+		color: var(--main-black);
+	}
 	& > * {
 		margin-bottom: 24px;
 		&:last-child {
 			margin-bottom: 0;
 		}
+	}
+	&__work-time {
+		width: 47%;
 	}
 	&__header {
 		display: flex;
@@ -78,6 +88,7 @@
 			text-align: center;
 			width: 100%;
 			position: relative;
+			background-color: transparent;
 			&:active, &:focus {
 				outline: none !important;
 			} 
@@ -86,6 +97,10 @@
 			background-color: #ECF1F4;
 			pointer-events: none;
 		}
+	}
+	.disabled {
+		background-color: #ECF1F4;
+		pointer-events: none;
 	}
 	.form-control[name="textarea"] {
 		height: 76px !important;
@@ -111,6 +126,12 @@
 	}
 	&__needs-solution  {
 		padding: 10px 0px;
+		&.disabled {
+			.switch {
+				opacity: 0.3;
+			}
+			background-color: transparent;
+		}
 		.switch {
 			align-items: center;
 			&__caption {
@@ -123,13 +144,6 @@
 	}
 	&__check-list  {
 		padding: 4px 0;
-		p:first-child {
-			margin-bottom: 16px;
-			font-weight: 700;
-			font-size: 20px;
-			line-height: 23px;
-			color: var(--main-black);
-		}
 	}
 	&__add {
 		display: flex;
@@ -158,8 +172,12 @@
 }
 
 .input {
+	&.disabled {
+		background-color: #ECF1F4;
+		pointer-events: none;
+	}
 	position: relative;
-	&__close, &__calendar {
+	&__close, &__calendar, &__clock  {
 		padding: 0;
 		border: none;
 		background-color: transparent;
@@ -168,6 +186,15 @@
 		position: absolute;
 		top: 8px;
 		left: 12px;
+	}
+	&__clock {
+		position: absolute;
+		top: 8px;
+		left: 12px;
+		img {
+			width: 16px;
+			height: 16px;
+		}
 	}
 	&__close{
 		position: absolute;
@@ -201,6 +228,7 @@
 		input {
 			border: none;
 			width: 145px;
+			background-color: transparent;
 			&:active, &:focus {
 				outline: none !important;
 			} 

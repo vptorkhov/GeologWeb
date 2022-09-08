@@ -1,8 +1,6 @@
-.filter-requests {
+.filter-requests, .assignment-edit-bottom {
 	display: flex;
 	flex-direction: column;
-	overflow-x: hidden;
-	height: 100%;
 	align-items: center;
 	background-color: #ffffff;
 	&--window {
@@ -51,6 +49,11 @@
 			width: 45%;
 		}
 	}
+}
+
+.filter-requests {
+	overflow-x: hidden;
+	height: 100%;
 }
 
 .filter-requests-top-nav{
