@@ -119,6 +119,14 @@ mixin checkbox-line(text, date)
 		+e.BUTTON.menu 
 			img(src="img/svg/menu-small.svg")
 
+mixin checkbox-line-unchange(text, date) 
+	+b.checkbox-line
+		+checkbox-square()
+		+e.text
+			+e.check-list-text=text
+			if date 
+				+e.date=date
+
 mixin checkbox-line-edit() 
 	+b.checkbox-line
 		+checkbox-square()

@@ -234,6 +234,30 @@
 			} 
 		}
 	}
+	.form-control {
+		&, &--deadline {
+			border: 1px solid #CCD9E0;
+			padding: 12px;
+			border-radius: 8px;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 18px;
+			color: var(--main-grey);
+		}
+		&--deadline {
+			text-align: center;
+			width: 100%;
+			position: relative;
+			background-color: transparent;
+			&:active, &:focus {
+				outline: none !important;
+			} 
+		}
+		&:disabled {
+			background-color: #ECF1F4;
+			pointer-events: none;
+		}
+	}
 }
 
 .frequency {
