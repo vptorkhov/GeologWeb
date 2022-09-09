@@ -1,0 +1,108 @@
+include ../assignment-statuses/_assignment-statuses.pug
+include ../edit-assignment/_edit-assignment.pug
+include ../messages/_messages.pug
+include ../chat/_chat.pug
+
+mixin assignment_card(role, start, end, needs_solution, solution)
+	+b.assignment-card
+		+assignment_card_top("not-urgent")
+		+e.requests-solutions
+			+e.request-info
+				+e.creator-wrap
+					+e.creator
+						+creator("Викторовский Валентин Георгиевич", "Участник", "Эксперт", "Отдел автоматизации производства в условиях крайнего севера")
+					+e.BUTTON.add-chat.clean-btn
+						img(src="img/svg/add-chat.svg")
+				+message("incoming", bigtext, "15.08.2022 14:48", false, false, true, false, "До 14.09.2022")
+				if (role=="author")&&(solution)
+					+message("incoming", bigtext, "15.08.2022 14:48", false, false, false, false, "До 14.09.2022", false, false, true, "14.09.2022") 
+					+e.decision
+						+e.BUTTON.decline.btn-grey.btn Отклонить
+						+e.BUTTON.decline.btn-fill-blue.btn Принять
+		if (role=="executer")&&(needs_solution)
+			+e.needs-solution
+				+header("Текст решения:", true)
+				input(type='textarea', class="form-control")
+				+e.BUTTON.send.btn-fill-blue.btn.btn-full-width Отправить решение
+		+e.planned-terms!=`<span>Планируемые сроки:</span> ${start}  - ${end}` 
+		+real_labor_costs(3, 4)
+		+check_list2()
+		if role=="executer"
+			+b.prolong
+				+header("Запрос на продление крайнего срока:")
+				+e.wrap
+					+date-field()
+					+e.BUTTON.send.btn-fill-blue.btn Отправить
+		+e.tags 
+			+assignment_tag("ТЕГ1")
+			+assignment_tag("ТЕГ1")
+			+assignment_tag("ТЕГДЛИННЫЙ")
+			+assignment_tag("ТЕГДЛИННЫЙ")
+			+assignment_tag("ТЕГ1")
+			+assignment_tag("ТЕГ1")
+			+assignment_add()
+		+e.progress-circles progress
+
+mixin date-field()
+	+b.input
+		input(placeholder="ДД.MM.ГГГГ", type='text', class="form-control--deadline")
+		+e.BUTTON.calendar 
+			img(src="img/svg/calendar.svg") 
+
+mixin assignment_card_top(priority)
+	+b.assignment-card-top
+		+e.info 
+			+e.IMG.icon(src=`img/svg/arrow-circle.svg`)
+			+e.status
+				+assignment_opened()
+			+assignment_priority(priority)
+			+e.buttons 
+				+e.BUTTON.menu 
+					img(src="img/svg/menu.svg")
+				+e.BUTTON.close 
+					img(src="img/svg/close-cross.svg")
+		+e.name
+			+icon("active")
+			+e.P.text Название проекты в несколько строк проекты в несколько строк 
+
+mixin assignment_priority(priority)
+	+b.priority-block
+		+e.IMG.icon(src=`img/svg/${priority}.svg`)
+		+e.P.text=(priority=="not-urgent" ? "Незначительный" : "Другое")
+
+mixin creator(name, role, position, department)
+	+b.creator 
+		+e.avatar 
+			img(src="img/@2x/slide-25.jpg")
+		+e.name-and-position 
+			+e.P.name=name
+			+e.info 
+				+e.SPAN.role=`${role}`
+				+e.SPAN.position=`${position}`
+				+e.SPAN.department=`${department}`
+
+mixin check_list2()
+	+b.check-list 
+		+checkbox-line-unchange("Сформировать ЧТЗ", "12.08.2022")
+		+checkbox-line-unchange("Составить договор")
+		+checkbox-line-unchange("Согласовать текст договора с юристом, передать новому прожект менеджеру для ознакомления")
+		+checkbox-line-unchange("Отправить всем участникам")
+		+checkbox-line-unchange("Сформировать ЧТЗ")
+
+mixin real_labor_costs(num, max, width=num/max*100)
+	+b.real-labor-costs 
+		+e.top
+			+e.planned-terms!=`<span>Фактические трудозатраты:</span> 54 ч. 40 мин` 
+			+e.BUTTON.show.clean-btn 
+				+icon('status')
+		- for (i=0; i<num; i++)
+			+e.person
+				+sender("Гаврилов Антон Анатолиевич", "Эксперт")
+				+e.P.time 2ч
+		+b.progress-bar 
+			+e.scale 
+				+e.progress(style=`width: ${width}%`)
+			+e.P.amount=`${num}/${max}`
+			+e.BUTTON.show.clean-btn 
+				+icon('status')
+

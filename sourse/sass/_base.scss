@@ -591,6 +591,12 @@ iframe {
 	--bs-btn-active-color: #ffffff;
 }
 
+.clean-btn {
+	padding: 0;
+	border: none;
+	background-color: transparent;
+}
+
 .scrollbar-horizontal::-webkit-scrollbar {
 	height: 7px;
 }
