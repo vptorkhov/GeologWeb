@@ -79,6 +79,7 @@
 			border: 1px solid #CCD9E0;
 			padding: 12px;
 			border-radius: 8px;
+			height: 48px;
 			font-weight: 400;
 			font-size: 16px;
 			line-height: 18px;
@@ -184,7 +185,7 @@
 	}
 	&__calendar {
 		position: absolute;
-		top: 8px;
+		top: 11px;
 		left: 12px;
 	}
 	&__clock {

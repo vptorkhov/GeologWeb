@@ -1,12 +1,12 @@
 include ../document/_document.pug
 
-mixin message(status, text, date, document, table, my_request, another_request, terms, reply, reply_request, solution, solution_date, private, survey_results, survey_before, survey_radio)
+mixin message(status, text, date, document, table, my_request, another_request, terms, reply, reply_request, solution, solution_date, private, survey_results, survey_before, survey_radio, request_status)
 	+b.message(class=(status=="incoming" ? "--incoming" : "--sent"))
 		+e.content
 			+private-chat(private) 
 			+reply_request(reply_request, text)
 			+reply(reply, text)
-			+request(my_request, another_request, terms)
+			+request(my_request, another_request, terms, request_status)
 			+solution(solution, solution_date)
 			+e.text(class=(survey_results || survey_before || survey_radio ? "--survey-question" : ""))!=text
 			if document
@@ -73,11 +73,15 @@ mixin reply(reply, text)
 			+e.reply-message
 				p!=text
 
-mixin solution(solution, solution_date)
+mixin solution(solution, solution_date, edit)
 	if solution 
 		+e.request--solution
 			+solution_body("Решение №15") 
-			+e.P.solution-date=solution_date 
+			if solution_date
+				+e.P.solution-date=solution_date 
+			if edit
+				+e.solution-date
+					img(src="img/svg/edit.svg")
 
 mixin private-chat(private)
 	if private 
@@ -85,10 +89,14 @@ mixin private-chat(private)
 			+private_body("Приватный чат завершён") 
 			+e.P.enter-chat Войти
 
-mixin request(my_request, another_request, terms)
+mixin request(my_request, another_request, terms, status, prolong_status)
 	+e.request(class=(my_request ? "--my" : another_request ? "--another" : "--none")) 
 		+request_body("Запрос №1", my_request) 
-		+e.P.request-date(class=(my_request ? "--my" : another_request ? "--another" : "--none"))=terms
+		+e.right
+			if prolong_status
+				+e.IMG.prolong(src=`img/svg/${prolong_status}.svg`)
+			if terms
+				+e.P.request-date(class=(status=="has-solution" ? "--has-solution" : status=="no-solution" ? "--no-solution" : status=="two-days" ? "--two-days" : status=="deadline" ? "--deadline" : "--closed"))=`До ${terms}`
 
 mixin request_body(text, my_request)
 	+e.chip-body-request(class=(my_request ? "--my" : "--another")) 

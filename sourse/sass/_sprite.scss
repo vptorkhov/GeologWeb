@@ -7,6 +7,10 @@
 	fill: currentColor;
 }
 
+.icon-accept {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
 .icon-active {
 	font-size:math.div(8,10)*1rem;
 	width: math.div(8,8)*1em;
@@ -86,6 +90,18 @@
 .icon-private {
 	font-size:math.div(12,10)*1rem;
 	width: math.div(14,12)*1em;
+}
+.icon-prolong {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-prolong-accept {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-prolong-decline {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
 }
 .icon-seen {
 	font-size:math.div(14,10)*1rem;

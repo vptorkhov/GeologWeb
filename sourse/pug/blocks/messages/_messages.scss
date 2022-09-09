@@ -16,6 +16,18 @@
 		background-repeat: no-repeat;
 		z-index: 2;
 	}
+	&__description {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		padding-top: 24px;
+		color: var(--main-grey);
+		&::after {
+			content: "подробнее...";
+			color: var(--heavy-blue);
+			display: block;
+		}
+	}
 	&__chip-body {
 		&-solution, &-private, &-request {
 		display: flex;
@@ -155,17 +167,38 @@
 		}
 	}
 	&__request-date, &__solution-date {
-		margin-left: auto;
 		font-style: normal;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 16px;
-		&--my {
-			color: var(--heavy-blue);
+		&--has-solution {
+			color: var(--main-black);
 		}
-		&--another {
+		&--no-solution {
+			color: var(--main-green);
+		}
+		&--two-days {
+			color: var(--main-orange);
+		}
+		&--deadline {
 			color: var(--main-red);
 		}
+		&--closed {
+			color: var(--main-grey);
+			text-decoration: line-through;
+		}	
+	}
+	&__solution-date, &__right  {
+		margin-left: auto;
+	}
+	&__right  {
+		display: flex;
+		align-items: center;
+	}
+	&__prolong {
+		width: 24px;
+		height: 24px;
+		margin-right: 8px;
 	}
 	&__enter-chat {
 		font-style: normal;

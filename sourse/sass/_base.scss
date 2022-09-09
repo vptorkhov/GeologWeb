@@ -10,6 +10,7 @@
 	--main-red: #eb3333;
 	--main-green: #09B37B;
 	--main-orange: #FFA10A;
+	--dark-orange: #EB6D00;
 	--icon-primary: #264152;
 	--survey-blue: #0096eb;
 	--main-black: #001a29;
@@ -562,6 +563,16 @@ iframe {
 	--bs-btn-hover-border-color: var(--survey-blue);
 	--bs-btn-hover-color: #ffffff;
 	--bs-btn-active-border-color: var(--survey-blue);
+	--bs-btn-active-color: #ffffff;
+}
+
+.btn-fill-red {
+	background-color: #EB5757 !important;
+	--bs-btn-color: #ffffff;
+	--bs-btn-border-color: #EB5757;
+	--bs-btn-hover-border-color: #EB5757;
+	--bs-btn-hover-color: #ffffff;
+	--bs-btn-active-border-color: #EB5757;
 	--bs-btn-active-color: #ffffff;
 }
 
