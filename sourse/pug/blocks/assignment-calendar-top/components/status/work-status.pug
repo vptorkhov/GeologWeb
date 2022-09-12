@@ -1,0 +1,12 @@
+include ../../../assignment-statuses/_assignment-statuses.pug
+
+mixin work_status(work_status)
+	+b.status 
+		if work_status=="opened"
+			+assignment_opened(changeble)
+		else if work_status=="closed"
+			+assignment_closed(changeble)
+		else if work_status=="ready"
+			+assignment_ready(changeble)
+		else 
+			+assignment_in-process(change)

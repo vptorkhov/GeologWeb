@@ -1,0 +1,16 @@
+.calendar-solution, .calendar-revision {
+	padding: 5.5px 5px;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 14px;
+	color: #FFFFFF;
+	border-radius: 7px;
+}
+
+.calendar-revision {
+	background-color: var(--main-orange);
+}
+
+.calendar-solution {
+	background-color: #22C38E;
+}
