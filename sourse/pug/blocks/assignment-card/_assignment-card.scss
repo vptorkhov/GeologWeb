@@ -56,6 +56,27 @@
 			width: 47%;
 		}
 	}
+	&__prolongue-sent {
+		padding: 8px 17px;
+		background-color: #ECF1F4;
+		border-radius: 12px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: var(--main-grey);
+		text-align: center;
+	}
+	&__progress-circles {
+		display: flex;
+		justify-content: space-between;
+		align-items: top;
+	}
+	&__circle {
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background-color: var(--survey-blue);
+	}
 }
 
 .assignment-card-top {
@@ -227,6 +248,18 @@
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 16px;
+		&--not-urgent {
+			color: var(--main-green);
+		}
+		&--critical {
+			color: var(--main-red);
+		}
+		&--desirable {
+			color: var(--main-orange);
+		}
+		&--important {
+			color: var(--dark-orange);
+		}
 	}
 }
 
@@ -282,6 +315,24 @@
 		& > * {
 			width: 47%;
 		}
+		&--accept {
+			& > * {
+				&:first-child {
+					width: 68%;
+				}
+			}
+			.icon-accept {
+				width: 24px;
+				height: 24px;
+			}
+			.icon-close-cross {
+				width: 14px;
+			}
+		}
+	}
+	&__accept, &__decline {
+		width: 48px;
+		border: none;
 	}
 	&__header {
 		display: flex;
