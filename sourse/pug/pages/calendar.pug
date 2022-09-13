@@ -1,5 +1,5 @@
 extends ../layout/main.pug
-include ../blocks/assignment-calendar-top/_assignment-calendar-top.pug
+include ../blocks/calendar/calendar-day/_calendar-day.pug
 
 block variables
 	- let  mainPage= null
@@ -10,19 +10,5 @@ block title
 	- let bigtext = `<a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.`
 	- let question = 'Запакеровались на глубине 1754.2 м. Что делаем дальше?'
 block pagecontent
-	.container(style="background-color: var(--main-grey); height: 100vh; overflow: auto")
-		.pt-3.pb-3(style="height: 100%; display: flex; flex-direction: column; gap: 10px")
-			+assignment_calendar_top(true, "not-urgent", "opened", "has", bigtext, true)
-			+assignment_calendar_top(false, "desirable", "closed", "no", question, true)
-			+assignment_calendar_top(false, "important", "in-process", "deadline", bigtext)
-			+assignment_calendar_top(true, "critical", "ready", "has", bigtext)
-			.wrap(style="height: 300px")
-				+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, true, "15")
-			.wrap(style="height: 300px")
-				+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, false, "revision")
-			.wrap(style="height: 300px")
-				+assignment_calendar_on-board(true, "critical", "ready", "no", bigtext, false, "15", true)
-			.wrap(style="height: 300px; width: 211px")
-				+assignment_calendar_on-board(true, "critical", "ready", "no", bigtext, true, "revision", true)
-			.wrap(style="height: 300px")
-				+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, false, undefined)
+	.p-2(style="background-color: var(--main-grey); height: 100vh; overflow: auto")
+		+calendar_day(20, 22, `Вторник`, `Вт`, "Декабря", 5)
