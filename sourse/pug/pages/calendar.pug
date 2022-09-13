@@ -11,7 +11,7 @@ block title
 	- let question = 'Запакеровались на глубине 1754.2 м. Что делаем дальше?'
 block pagecontent
 	.container(style="background-color: var(--main-grey); height: 100vh; overflow: auto")
-		.pt-2.pb-2(style="height: 100%; display: flex; flex-direction: column; gap: 10px")
+		.pt-3.pb-3(style="height: 100%; display: flex; flex-direction: column; gap: 10px")
 			+assignment_calendar_top(true, "not-urgent", "opened", "has", bigtext, true)
 			+assignment_calendar_top(false, "desirable", "closed", "no", question, true)
 			+assignment_calendar_top(false, "important", "in-process", "deadline", bigtext)
@@ -22,7 +22,7 @@ block pagecontent
 				+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, false, "revision")
 			.wrap(style="height: 300px")
 				+assignment_calendar_on-board(true, "critical", "ready", "no", bigtext, false, "15", true)
-			.wrap(style="height: 300px")
+			.wrap(style="height: 300px; width: 211px")
 				+assignment_calendar_on-board(true, "critical", "ready", "no", bigtext, true, "revision", true)
 			.wrap(style="height: 300px")
 				+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, false, undefined)

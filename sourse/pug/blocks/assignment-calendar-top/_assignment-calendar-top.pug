@@ -27,7 +27,8 @@ mixin assignment_calendar_on-board(rework, priority, work_status, solution_statu
 					+e.SVG.refresh
 						image(href=`img/svg/arrow-circle.svg`)
 				+assignment_calendar_priority(priority)
-				+work_status(work_status)
+				+e.work-status
+					+work_status(work_status)
 				+e.name(class=`--${solution_status}`)
 					+icon("active")
 					+e.P.text Название задачи Название задачи

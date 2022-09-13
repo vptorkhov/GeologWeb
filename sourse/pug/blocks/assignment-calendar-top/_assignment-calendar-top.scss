@@ -1,7 +1,6 @@
 .assignment-calendar-top, .assignment-calendar-on-board {
 	display: flex;
 	width: 100%;
-	min-width: 216px;
 	background-color: #ECF1F4;
 	border-radius: 6px;
 	cursor: pointer;
@@ -50,7 +49,6 @@
 		}
 	}
 	&__text {
-		max-width: 98px;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -102,6 +100,7 @@
 	}
 }
 .assignment-calendar-top {
+	min-width: 264px;
 	padding: 4px 8px;
 	align-items: center;
 	min-width: 150px;
@@ -140,6 +139,7 @@
 	padding: 8px;
 	height: 100%;
 	width: 100%;
+	min-width: 130px;
 	flex-direction: column;
 	&__main {
 		display: flex;
@@ -161,11 +161,12 @@
 	}
 	&__name, &__text {
 		flex-grow: 1;
-		max-width: none;
+		min-width: 0;
 	}
 	&__line-start {
 		display: flex;
 		flex-grow: 1;
+		min-width: 0;
 		align-items: center;
 		margin-right: auto !important;
 		& > * {
@@ -178,9 +179,11 @@
 			}
 		}
 	}
-	// &__name {
-	// 	margin-right: auto;
-	// }
+	&__work-status, &__name, &__number-and-terms, &__bottom {
+		@media screen and (max-width: 744px) {
+			display: none;
+		}
+	}
 	&__assignment-text {
 		width: 100%;
 		white-space: normal;
