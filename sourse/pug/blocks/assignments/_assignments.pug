@@ -47,13 +47,13 @@ mixin assignment_line_ready(icon, status, task_name, solution, needs_solution, d
 						p Смирнова О.В.
 					+e.status 
 						+e.title Статус
-						+assignment_ready()
+						+assignment_ready("allowed")
 			+e.title Теги
 			+e.tags
 				- for(var x = 0; x<2;x++)
 					+assignment_tag('Тэг')
 				+assignment_more(15)
-				+assignment_add()
+				+assignment_add("allowed")
 		+b.BUTTON.menu-button.btn
 			img(src="img/svg/menu.svg")
 
@@ -87,7 +87,7 @@ mixin assignment_line_closed(icon, status, task_name, solution, needs_solution, 
 						p Смирнова О.В.
 					+e.status 
 						+e.title Статус
-						+assignment_closed()
+						+assignment_closed("allowed")
 			+e.title Теги
 			+e.tags
 				+assignment_tag('Тэг')

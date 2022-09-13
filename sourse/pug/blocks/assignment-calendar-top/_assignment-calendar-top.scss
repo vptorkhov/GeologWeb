@@ -1,0 +1,201 @@
+.assignment-calendar-top, .assignment-calendar-on-board {
+	display: flex;
+	width: 100%;
+	min-width: 216px;
+	background-color: #ECF1F4;
+	border-radius: 6px;
+	cursor: pointer;
+	&:hover {
+		background-color: #DEF0FB;
+	}
+	&__top {
+		display: flex;
+		align-items: center;
+		& > * {
+			margin-right: 8px;
+			&:first-child {
+				margin-right: 9px;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	&__name {
+		display: flex;
+		align-items: center;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		color: var(--heavy-blue);
+		&--has {
+			.icon {
+				color: var(--main-green);
+			}
+		}
+		&--no {
+			.icon {
+				color: var(--main-orange);
+			}
+		}
+		&--deadline {
+			.icon {
+				color: var(--main-red);
+			}
+		}
+		.icon {
+			font-size: 6px;
+			min-width: 6px;
+			margin-right: 7px;
+		}
+	}
+	&__text {
+		max-width: 98px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	&__refresh {
+		min-width: 13px;
+		max-width: 13px;
+		height: 11px;
+		min-width: 8px;
+		image {
+			width: 13px;
+			height: 11px;
+		}
+	}
+	&__number-and-terms {
+		font-weight: 400;
+		font-size: 10px;
+		line-height: 12px;
+		min-width: 89px;
+		color: var(--maiin-black);
+		overflow: hidden;
+		white-space: nowrap;
+		&--needs {
+			min-width: 188px;
+			&::after {
+				content: "Требуется решение";
+				color: var(--main-grey);
+				padding-left: 4px;
+				margin-left: 4px;
+				border-left: 1px solid var(--pale-grey);
+			}
+		}
+		&.deadline, &--needs.deadline {
+			color: var(--main-red) !important;
+			&::after {
+				color: var(--main-red);
+				border-left: 1px solid var(--main-red);
+			}
+		}
+	}
+	&__assignment-text {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		flex-grow: 1;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+.assignment-calendar-top {
+	padding: 4px 8px;
+	align-items: center;
+	min-width: 150px;
+	& > * {
+		margin-right: 8px;
+		&:first-child {
+			margin-right: 9px;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__top {
+		@media screen and (max-width: 744px){
+			margin-right: 0 !important;
+		}
+	}
+	@media screen and (max-width: 744px) {
+		padding: 0px 8px;
+	}
+	&__adaptive-hide {
+		& > * {
+			margin-right: 8px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		display: flex;
+		align-items: center;
+		@media screen and (max-width: 744px) {
+			display: none;
+		}
+	}
+}
+.assignment-calendar-on-board {
+	padding: 8px;
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	&__main {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		flex-wrap: wrap;
+		flex-grow: 1;
+		align-content: flex-start;
+		& > * {
+			margin-bottom: 8px;
+			margin-right: 8px;
+			&:first-child {
+				margin-right: 9px;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	&__name, &__text {
+		flex-grow: 1;
+		max-width: none;
+	}
+	&__line-start {
+		display: flex;
+		flex-grow: 1;
+		align-items: center;
+		margin-right: auto !important;
+		& > * {
+			margin-right: 8px;
+			&:first-child {
+				margin-right: 9px;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	// &__name {
+	// 	margin-right: auto;
+	// }
+	&__assignment-text {
+		width: 100%;
+		white-space: normal;
+	}
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 8px;
+		border-top: 1px solid #CCD9E0;
+	}
+	&__overdue {
+		color: var(--main-red);
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+	}
+}

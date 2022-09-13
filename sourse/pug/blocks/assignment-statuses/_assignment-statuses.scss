@@ -8,6 +8,7 @@
 	border-radius: 4px;
 	font-style: normal;
 	font-weight: 500;
+	white-space: nowrap;
 	font-size: 14px;
 	line-height: 16px;
 	@media screen and (max-width: 1040px) {
@@ -33,6 +34,7 @@
 		color: transparent;
 		width: 16px !important;
 		height: 16px !important;
+		margin-left: 4px;
 	}
 }
 .assignment-tag {
