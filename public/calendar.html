@@ -13,127 +13,176 @@
 	</head>
 	<body>
 		<div class="main-wrapper">
-			<div class="container" style="background-color: var(--main-grey); height: 100vh; overflow: auto">
-				<div class="pt-2 pb-2" style="height: 100%; display: flex; flex-direction: column; gap: 10px">
-					<div class="assignment-calendar-top">
-						<div class="assignment-calendar-top__top">
-							<svg class="assignment-calendar-top__refresh">
-								<image href="img/svg/arrow-circle.svg"></image>
-							</svg>
-							<div class="assignment-calendar-priority">
-								<svg class="assignment-calendar-priority__priority">
-									<image href="img/svg/not-urgent.svg"></image>
+			<div class="p-2" style="background-color: var(--main-grey); height: 100vh; overflow: auto">
+				<div class="calendar-day">
+					<div class="calendar-day__calendar-navigation"> 
+						<div class="calendar-day__day-slider">
+							<button class="calendar-day__nav-left clean-btn"> 
+								<svg> 
+									<image href="img/svg/nav-left.svg"></image>
 								</svg>
-							</div>
-							<div class="assignment-calendar-top__adaptive-hide">
-								<div class="status"> 
-									<div class="assignment-status assignment-status--opened">
-										<p>Открыт</p>
-									</div>
+							</button>
+							<div class="calendar-day__date">
+								<div class="calendar-day__date-info">20 Декабря 2022
 								</div>
-								<div class="assignment-calendar-top__name assignment-calendar-top__name--has">
-									<svg class="icon icon-active ">
-										<use xlink:href="img/svg/sprite.svg#active"></use>
-									</svg>
-									<p class="assignment-calendar-top__text">Название задачи
-									</p>
+								<div class="calendar-day__date-full">Вт, 20 Декабря 2022
 								</div>
-								<p class="assignment-calendar-top__number-and-terms deadline">№12 до 21.12.2022
-								</p>
+								<div class="calendar-day__week-day">Вторник
+								</div>
 							</div>
-						</div>
-						<div class="assignment-calendar-top__assignment-text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.
-						</div>
-					</div>
-					<div class="assignment-calendar-top">
-						<div class="assignment-calendar-top__top">
-							<div class="assignment-calendar-priority">
-								<svg class="assignment-calendar-priority__priority">
-									<image href="img/svg/desirable.svg"></image>
+							<button class="calendar-day__nav-right clean-btn"> 
+								<svg> 
+									<image href="img/svg/nav-right.svg"></image>
 								</svg>
-							</div>
-							<div class="assignment-calendar-top__adaptive-hide">
-								<div class="status"> 
-									<div class="assignment-status assignment-status--closed">
-										<p>Закрыт</p>
-									</div>
-								</div>
-								<div class="assignment-calendar-top__name assignment-calendar-top__name--no">
-									<svg class="icon icon-active ">
-										<use xlink:href="img/svg/sprite.svg#active"></use>
-									</svg>
-									<p class="assignment-calendar-top__text">Название задачи
-									</p>
-								</div>
-								<p class="assignment-calendar-top__number-and-terms assignment-calendar-top__number-and-terms--needs deadline">№12 до 21.12.2022
-								</p>
-							</div>
+							</button>
 						</div>
-						<div class="assignment-calendar-top__assignment-text">Запакеровались на глубине 1754.2 м. Что делаем дальше?
+						<div class="calendar-day__nav-buttons">
+							<button class="calendar-day__today btn-secondary btn">Сегодня
+							</button>
+							<div class="calendar-day__switch">
+								<div class="tabs">
+									<button class="tabs__tab active">
+										<p class="tabs__text">День
+										</p>
+									</button>
+									<button class="tabs__tab">
+										<p class="tabs__text">Неделя
+										</p>
+									</button>
+									<button class="tabs__tab">
+										<p class="tabs__text">Месяц
+										</p>
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="assignment-calendar-top">
-						<div class="assignment-calendar-top__top">
-							<div class="assignment-calendar-priority">
-								<svg class="assignment-calendar-priority__priority">
-									<image href="img/svg/important.svg"></image>
+					<div class="calendar-day__assignments"> 
+						<div class="calendar-day__overflow-button">
+							<button class="calendar-day__nav-down clean-btn"> 
+								<svg> 
+									<image href="img/svg/nav-down.svg"></image>
 								</svg>
-							</div>
-							<div class="assignment-calendar-top__adaptive-hide">
-								<div class="status"> 
-									<div class="assignment-status assignment-status--in-process">
-										<p>В работе</p>
+							</button>
+						</div>
+						<div class="calendar-day__assignments-list">
+							<div class="assignment-calendar-top">
+								<div class="assignment-calendar-top__top">
+									<svg class="assignment-calendar-top__refresh">
+										<image href="img/svg/arrow-circle.svg"></image>
+									</svg>
+									<div class="assignment-calendar-priority">
+										<svg class="assignment-calendar-priority__priority">
+											<image href="img/svg/not-urgent.svg"></image>
+										</svg>
+									</div>
+									<div class="assignment-calendar-top__adaptive-hide">
+										<div class="status"> 
+											<div class="assignment-status assignment-status--opened">
+												<p>Открыт</p>
+											</div>
+										</div>
+										<div class="assignment-calendar-top__name assignment-calendar-top__name--has">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="assignment-calendar-top__text">Название задачи
+											</p>
+										</div>
+										<p class="assignment-calendar-top__number-and-terms deadline">№12 до 21.12.2022
+										</p>
 									</div>
 								</div>
-								<div class="assignment-calendar-top__name assignment-calendar-top__name--deadline">
-									<svg class="icon icon-active ">
-										<use xlink:href="img/svg/sprite.svg#active"></use>
-									</svg>
-									<p class="assignment-calendar-top__text">Название задачи
-									</p>
+								<div class="assignment-calendar-top__assignment-text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.
 								</div>
-								<p class="assignment-calendar-top__number-and-terms assignment-calendar-top__number-and-terms--needs">№12 до 21.12.2022
-								</p>
 							</div>
-						</div>
-						<div class="assignment-calendar-top__assignment-text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.
-						</div>
-					</div>
-					<div class="assignment-calendar-top">
-						<div class="assignment-calendar-top__top">
-							<svg class="assignment-calendar-top__refresh">
-								<image href="img/svg/arrow-circle.svg"></image>
-							</svg>
-							<div class="assignment-calendar-priority">
-								<svg class="assignment-calendar-priority__priority">
-									<image href="img/svg/critical.svg"></image>
-								</svg>
-							</div>
-							<div class="assignment-calendar-top__adaptive-hide">
-								<div class="status"> 
-									<div class="assignment-status assignment-status--ready"> 
-										<p>Готов</p>
+							<div class="assignment-calendar-top">
+								<div class="assignment-calendar-top__top">
+									<svg class="assignment-calendar-top__refresh">
+										<image href="img/svg/arrow-circle.svg"></image>
+									</svg>
+									<div class="assignment-calendar-priority">
+										<svg class="assignment-calendar-priority__priority">
+											<image href="img/svg/not-urgent.svg"></image>
+										</svg>
+									</div>
+									<div class="assignment-calendar-top__adaptive-hide">
+										<div class="status"> 
+											<div class="assignment-status assignment-status--opened">
+												<p>Открыт</p>
+											</div>
+										</div>
+										<div class="assignment-calendar-top__name assignment-calendar-top__name--has">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="assignment-calendar-top__text">Название задачи
+											</p>
+										</div>
+										<p class="assignment-calendar-top__number-and-terms deadline">№12 до 21.12.2022
+										</p>
 									</div>
 								</div>
-								<div class="assignment-calendar-top__name assignment-calendar-top__name--has">
-									<svg class="icon icon-active ">
-										<use xlink:href="img/svg/sprite.svg#active"></use>
-									</svg>
-									<p class="assignment-calendar-top__text">Название задачи
-									</p>
+								<div class="assignment-calendar-top__assignment-text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.
 								</div>
-								<p class="assignment-calendar-top__number-and-terms">№12 до 21.12.2022
-								</p>
 							</div>
-						</div>
-						<div class="assignment-calendar-top__assignment-text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.
-						</div>
-					</div>
-					<div class="wrap" style="height: 300px">
-						<div class="assignment-calendar-on-board">
-							<div class="assignment-calendar-on-board__main">
-								<div class="assignment-calendar-on-board__line-start">
-									<svg class="assignment-calendar-on-board__refresh">
+							<div class="assignment-calendar-top">
+								<div class="assignment-calendar-top__top">
+									<div class="assignment-calendar-priority">
+										<svg class="assignment-calendar-priority__priority">
+											<image href="img/svg/desirable.svg"></image>
+										</svg>
+									</div>
+									<div class="assignment-calendar-top__adaptive-hide">
+										<div class="status"> 
+											<div class="assignment-status assignment-status--closed">
+												<p>Закрыт</p>
+											</div>
+										</div>
+										<div class="assignment-calendar-top__name assignment-calendar-top__name--no">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="assignment-calendar-top__text">Название задачи
+											</p>
+										</div>
+										<p class="assignment-calendar-top__number-and-terms assignment-calendar-top__number-and-terms--needs deadline">№12 до 21.12.2022
+										</p>
+									</div>
+								</div>
+								<div class="assignment-calendar-top__assignment-text">Запакеровались на глубине 1754.2 м. Что делаем дальше?
+								</div>
+							</div>
+							<div class="assignment-calendar-top">
+								<div class="assignment-calendar-top__top">
+									<div class="assignment-calendar-priority">
+										<svg class="assignment-calendar-priority__priority">
+											<image href="img/svg/important.svg"></image>
+										</svg>
+									</div>
+									<div class="assignment-calendar-top__adaptive-hide">
+										<div class="status"> 
+											<div class="assignment-status assignment-status--in-process">
+												<p>В работе</p>
+											</div>
+										</div>
+										<div class="assignment-calendar-top__name assignment-calendar-top__name--deadline">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="assignment-calendar-top__text">Название задачи
+											</p>
+										</div>
+										<p class="assignment-calendar-top__number-and-terms assignment-calendar-top__number-and-terms--needs">№12 до 21.12.2022
+										</p>
+									</div>
+								</div>
+								<div class="assignment-calendar-top__assignment-text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.
+								</div>
+							</div>
+							<div class="assignment-calendar-top">
+								<div class="assignment-calendar-top__top">
+									<svg class="assignment-calendar-top__refresh">
 										<image href="img/svg/arrow-circle.svg"></image>
 									</svg>
 									<div class="assignment-calendar-priority">
@@ -141,178 +190,232 @@
 											<image href="img/svg/critical.svg"></image>
 										</svg>
 									</div>
-									<div class="status"> 
-										<div class="assignment-status assignment-status--ready"> 
-											<p>Готов</p>
+									<div class="assignment-calendar-top__adaptive-hide">
+										<div class="status"> 
+											<div class="assignment-status assignment-status--ready"> 
+												<p>Готов</p>
+											</div>
 										</div>
-									</div>
-									<div class="assignment-calendar-on-board__name assignment-calendar-on-board__name--has">
-										<svg class="icon icon-active ">
-											<use xlink:href="img/svg/sprite.svg#active"></use>
-										</svg>
-										<p class="assignment-calendar-on-board__text">Название задачи Название задачи
+										<div class="assignment-calendar-top__name assignment-calendar-top__name--has">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="assignment-calendar-top__text">Название задачи
+											</p>
+										</div>
+										<p class="assignment-calendar-top__number-and-terms">№12 до 21.12.2022
 										</p>
 									</div>
 								</div>
-								<p class="assignment-calendar-on-board__number-and-terms deadline">№12 до 21.12.2022
-								</p>
-								<div class="assignment-calendar-on-board__assignment-text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.
+								<div class="assignment-calendar-top__assignment-text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.
 								</div>
 							</div>
-							<div class="assignment-calendar-on-board__bottom">
-								<div class="calendar-solution">
-									<p class="calendar-solution__text">Решение №15
-									</p>
-								</div>
-							</div>
+							<p class="calendar-day__full-list">Ещё 4
+							</p>
 						</div>
 					</div>
-					<div class="wrap" style="height: 300px">
-						<div class="assignment-calendar-on-board">
-							<div class="assignment-calendar-on-board__main">
-								<div class="assignment-calendar-on-board__line-start">
-									<svg class="assignment-calendar-on-board__refresh">
-										<image href="img/svg/arrow-circle.svg"></image>
-									</svg>
-									<div class="assignment-calendar-priority">
-										<svg class="assignment-calendar-priority__priority">
-											<image href="img/svg/critical.svg"></image>
-										</svg>
-									</div>
-									<div class="status"> 
-										<div class="assignment-status assignment-status--ready"> 
-											<p>Готов</p>
+					<div class="calendar-day__time-board"> 
+						<div class="calendar-day__timeline"> 
+							<div class="calendar-day__vertical-line">
+							</div>
+							<div class="calendar-day__time">
+								<p>00:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>01:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>02:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>03:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>04:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>05:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>06:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>07:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>08:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>09:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>10:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>11:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>12:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>13:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>14:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>15:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>16:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>17:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>18:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>19:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>20:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>21:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>22:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__time">
+								<p>23:00</p>
+								<div class="calendar-day__line">
+								</div>
+							</div>
+							<div class="calendar-day__big"> 
+								<div class="assignment-calendar-on-board">
+									<div class="assignment-calendar-on-board__main">
+										<div class="assignment-calendar-on-board__line-start">
+											<svg class="assignment-calendar-on-board__refresh">
+												<image href="img/svg/arrow-circle.svg"></image>
+											</svg>
+											<div class="assignment-calendar-priority">
+												<svg class="assignment-calendar-priority__priority">
+													<image href="img/svg/critical.svg"></image>
+												</svg>
+											</div>
+											<div class="assignment-calendar-on-board__work-status">
+												<div class="status"> 
+													<div class="assignment-status assignment-status--ready"> 
+														<p>Готов</p>
+													</div>
+												</div>
+											</div>
+											<div class="assignment-calendar-on-board__name assignment-calendar-on-board__name--has">
+												<svg class="icon icon-active ">
+													<use xlink:href="img/svg/sprite.svg#active"></use>
+												</svg>
+												<p class="assignment-calendar-on-board__text">Название задачи Название задачи
+												</p>
+											</div>
+										</div>
+										<p class="assignment-calendar-on-board__number-and-terms deadline">№12 до 21.12.2022
+										</p>
+										<div class="assignment-calendar-on-board__assignment-text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.
 										</div>
 									</div>
-									<div class="assignment-calendar-on-board__name assignment-calendar-on-board__name--has">
-										<svg class="icon icon-active ">
-											<use xlink:href="img/svg/sprite.svg#active"></use>
-										</svg>
-										<p class="assignment-calendar-on-board__text">Название задачи Название задачи
-										</p>
-									</div>
-								</div>
-								<p class="assignment-calendar-on-board__number-and-terms">№12 до 21.12.2022
-								</p>
-								<div class="assignment-calendar-on-board__assignment-text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.
-								</div>
-							</div>
-							<div class="assignment-calendar-on-board__bottom">
-								<div class="calendar-revision">
-									<p class="calendar-revision__text">Доработка
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="wrap" style="height: 300px">
-						<div class="assignment-calendar-on-board">
-							<div class="assignment-calendar-on-board__main">
-								<div class="assignment-calendar-on-board__line-start">
-									<svg class="assignment-calendar-on-board__refresh">
-										<image href="img/svg/arrow-circle.svg"></image>
-									</svg>
-									<div class="assignment-calendar-priority">
-										<svg class="assignment-calendar-priority__priority">
-											<image href="img/svg/critical.svg"></image>
-										</svg>
-									</div>
-									<div class="status"> 
-										<div class="assignment-status assignment-status--ready"> 
-											<p>Готов</p>
+									<div class="assignment-calendar-on-board__bottom">
+										<div class="calendar-solution">
+											<p class="calendar-solution__text">Решение №15
+											</p>
 										</div>
 									</div>
-									<div class="assignment-calendar-on-board__name assignment-calendar-on-board__name--no">
-										<svg class="icon icon-active ">
-											<use xlink:href="img/svg/sprite.svg#active"></use>
-										</svg>
-										<p class="assignment-calendar-on-board__text">Название задачи Название задачи
+								</div>
+							</div>
+							<div class="calendar-day__small">
+								<div class="assignment-calendar-on-board">
+									<div class="assignment-calendar-on-board__main">
+										<div class="assignment-calendar-on-board__line-start">
+											<svg class="assignment-calendar-on-board__refresh">
+												<image href="img/svg/arrow-circle.svg"></image>
+											</svg>
+											<div class="assignment-calendar-priority">
+												<svg class="assignment-calendar-priority__priority">
+													<image href="img/svg/critical.svg"></image>
+												</svg>
+											</div>
+											<div class="assignment-calendar-on-board__work-status">
+												<div class="status"> 
+													<div class="assignment-status assignment-status--ready"> 
+														<p>Готов</p>
+													</div>
+												</div>
+											</div>
+											<div class="assignment-calendar-on-board__name assignment-calendar-on-board__name--has">
+												<svg class="icon icon-active ">
+													<use xlink:href="img/svg/sprite.svg#active"></use>
+												</svg>
+												<p class="assignment-calendar-on-board__text">Название задачи Название задачи
+												</p>
+											</div>
+										</div>
+										<p class="assignment-calendar-on-board__number-and-terms">№12 до 21.12.2022
 										</p>
-									</div>
-								</div>
-								<p class="assignment-calendar-on-board__number-and-terms assignment-calendar-on-board__number-and-terms--needs">№12 до 21.12.2022
-								</p>
-								<div class="assignment-calendar-on-board__assignment-text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.
-								</div>
-							</div>
-							<div class="assignment-calendar-on-board__bottom">
-								<div class="calendar-solution">
-									<p class="calendar-solution__text">Решение №15
-									</p>
-								</div>
-								<p class="assignment-calendar-on-board__overdue">Просрочен
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="wrap" style="height: 300px">
-						<div class="assignment-calendar-on-board">
-							<div class="assignment-calendar-on-board__main">
-								<div class="assignment-calendar-on-board__line-start">
-									<svg class="assignment-calendar-on-board__refresh">
-										<image href="img/svg/arrow-circle.svg"></image>
-									</svg>
-									<div class="assignment-calendar-priority">
-										<svg class="assignment-calendar-priority__priority">
-											<image href="img/svg/critical.svg"></image>
-										</svg>
-									</div>
-									<div class="status"> 
-										<div class="assignment-status assignment-status--ready"> 
-											<p>Готов</p>
+										<div class="assignment-calendar-on-board__assignment-text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.
 										</div>
 									</div>
-									<div class="assignment-calendar-on-board__name assignment-calendar-on-board__name--no">
-										<svg class="icon icon-active ">
-											<use xlink:href="img/svg/sprite.svg#active"></use>
-										</svg>
-										<p class="assignment-calendar-on-board__text">Название задачи Название задачи
-										</p>
-									</div>
-								</div>
-								<p class="assignment-calendar-on-board__number-and-terms assignment-calendar-on-board__number-and-terms--needs deadline">№12 до 21.12.2022
-								</p>
-								<div class="assignment-calendar-on-board__assignment-text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.
-								</div>
-							</div>
-							<div class="assignment-calendar-on-board__bottom">
-								<div class="calendar-revision">
-									<p class="calendar-revision__text">Доработка
-									</p>
-								</div>
-								<p class="assignment-calendar-on-board__overdue">Просрочен
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="wrap" style="height: 300px">
-						<div class="assignment-calendar-on-board">
-							<div class="assignment-calendar-on-board__main">
-								<div class="assignment-calendar-on-board__line-start">
-									<svg class="assignment-calendar-on-board__refresh">
-										<image href="img/svg/arrow-circle.svg"></image>
-									</svg>
-									<div class="assignment-calendar-priority">
-										<svg class="assignment-calendar-priority__priority">
-											<image href="img/svg/critical.svg"></image>
-										</svg>
-									</div>
-									<div class="status"> 
-										<div class="assignment-status assignment-status--ready"> 
-											<p>Готов</p>
+									<div class="assignment-calendar-on-board__bottom">
+										<div class="calendar-revision">
+											<p class="calendar-revision__text">Доработка
+											</p>
 										</div>
 									</div>
-									<div class="assignment-calendar-on-board__name assignment-calendar-on-board__name--has">
-										<svg class="icon icon-active ">
-											<use xlink:href="img/svg/sprite.svg#active"></use>
-										</svg>
-										<p class="assignment-calendar-on-board__text">Название задачи Название задачи
-										</p>
-									</div>
-								</div>
-								<p class="assignment-calendar-on-board__number-and-terms">№12 до 21.12.2022
-								</p>
-								<div class="assignment-calendar-on-board__assignment-text"><a href='#'>@Пользователь</a>, consectetur adipiscing elit. Morbi vel mi gravida, tincidunt nulla nec, porttitor libero. Vestibulum ut libero vel nunc hendrerit ullamcorper id eu lacus. Curabitur id eleifend nibh.
 								</div>
 							</div>
 						</div>

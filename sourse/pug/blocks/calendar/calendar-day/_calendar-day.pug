@@ -1,0 +1,68 @@
+//- +assignment_calendar_top(true, "not-urgent", "opened", "has", bigtext, true)
+//- +assignment_calendar_top(false, "desirable", "closed", "no", question, true)
+//- +assignment_calendar_top(false, "important", "in-process", "deadline", bigtext)
+//- +assignment_calendar_top(true, "critical", "ready", "has", bigtext)
+//- .wrap(style="height: 300px")
+//- 	+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, true, "15")
+//- .wrap(style="height: 300px")
+//- 	+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, false, "revision")
+//- .wrap(style="height: 300px")
+//- 	+assignment_calendar_on-board(true, "critical", "ready", "no", bigtext, false, "15", true)
+//- .wrap(style="height: 300px; width: 211px")
+//- 	+assignment_calendar_on-board(true, "critical", "ready", "no", bigtext, true, "revision", true)
+//- .wrap(style="height: 300px")
+//- 	+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, false, undefined)
+//- +assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, false, undefined)
+include ../../assignment-calendar-top/_assignment-calendar-top.pug
+
+mixin calendar_day(day, year, week_day, week_day_short, month, n)
+	+b.calendar-day
+		+e.calendar-navigation 
+			+e.day-slider
+				+e.BUTTON.nav-left.clean-btn 
+					svg 
+						image(href="img/svg/nav-left.svg")
+				+e.date
+					+e.date-info=`${day} ${month} 20${year}`
+					+e.date-full=`${week_day_short}, ${day} ${month} 20${year}`
+					+e.week-day=`${week_day}`
+				+e.BUTTON.nav-right.clean-btn 
+					svg 
+						image(href="img/svg/nav-right.svg")
+			+e.nav-buttons
+				+e.BUTTON.today.btn-secondary.btn Сегодня
+				+e.switch
+					+b.tabs
+						+e.BUTTON.tab.active
+							+e.P.text День
+						+e.BUTTON.tab
+							+e.P.text Неделя
+						+e.BUTTON.tab
+							+e.P.text Месяц
+		+e.assignments 
+			+e.overflow-button
+				+e.BUTTON.nav-down.clean-btn 
+					svg 
+						image(href="img/svg/nav-down.svg")
+			+e.assignments-list
+				+assignment_calendar_top(true, "not-urgent", "opened", "has", bigtext, true)
+				+assignment_calendar_top(true, "not-urgent", "opened", "has", bigtext, true)
+				+assignment_calendar_top(false, "desirable", "closed", "no", question, true)
+				+assignment_calendar_top(false, "important", "in-process", "deadline", bigtext)
+				+assignment_calendar_top(true, "critical", "ready", "has", bigtext)
+				+e.P.full-list=`Ещё ${n-1}`
+		+e.time-board 
+			+e.timeline 
+				+e.vertical-line
+				- for (i=0; i<10; i++)
+					+e.time
+						p=`0${i}:00`
+						+e.line
+				- for (i=10; i<24; i++)
+					+e.time
+						p=`${i}:00`
+						+e.line
+				+e.big 
+					+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, true, "15")
+				+e.small
+					+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, false, "revision")
