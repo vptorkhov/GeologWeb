@@ -1,0 +1,19 @@
+.current-time {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: -2px;
+	z-index: 2;
+	&__circle  {
+		border-radius: 50%;
+		width: 5px;
+		height: 5px;
+		background-color: var(--survey-blue);
+	}
+	&__line {
+		flex-grow: 1;
+		height: 1px;
+		background-color: var(--survey-blue);
+	}
+}
