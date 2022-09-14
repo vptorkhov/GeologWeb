@@ -1,0 +1,25 @@
+mixin calendar_navigation(show_weekends, day, month, year, week_day, week_day_short) 
+	+b.calendar-navigation 
+		+e.day-slider
+			+e.BUTTON.nav-left.clean-btn 
+				svg 
+					image(href="img/svg/nav-left.svg")
+			+e.date
+				+e.date-info=`${day} ${month} 20${year}`
+				+e.date-full=`${week_day_short}, ${day} ${month} 20${year}`
+				+e.week-day=`${week_day}`
+			+e.BUTTON.nav-right.clean-btn 
+				svg 
+					image(href="img/svg/nav-right.svg")
+		+e.nav-buttons
+			+e.BUTTON.today.btn-secondary.btn Сегодня
+			+e.switch
+				if show_weekends
+					+Switch("Показывать выходные")
+				+b.tabs
+					+e.BUTTON.tab.active
+						+e.P.text День
+					+e.BUTTON.tab
+						+e.P.text Неделя
+					+e.BUTTON.tab
+						+e.P.text Месяц

@@ -1,0 +1,19 @@
+include ../../../assignment-calendar-top/_assignment-calendar-top.pug
+
+mixin week_day(num, day)
+	+b.week-day
+		+e.day 
+			+e.number=num
+			+e.name=day
+		+e.assignments
+			+e.wrap
+				+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, true, "15")
+
+mixin week_day-today(num, day)
+	+b.week-day.today
+		+e.day 
+			+e.number=num
+			+e.name=day
+		+e.assignments
+			+e.wrap
+				+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, true, "15")

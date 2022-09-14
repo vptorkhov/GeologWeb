@@ -1,0 +1,29 @@
+.month-day {
+	display: flex;
+	flex-direction: row-reverse;
+	width: 100%;
+	height: 100%;
+	&__day {
+		height: 31px;
+		padding: 6px;
+		border-radius: 0px 0px 0px 8px;;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		color: var(--main-grey);
+	}
+	&.another-month {
+		background-color: #F5F9FC;
+		color: var(--secondary-grey);
+	}
+	&.today {
+		.month-day__day {
+			background-color: var(--heavy-blue);
+			color: #ffffff;
+		}
+	}
+	&.weekends {
+		color: var(--secondary-grey);
+	}
+	
+}

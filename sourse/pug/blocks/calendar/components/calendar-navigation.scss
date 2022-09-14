@@ -1,0 +1,95 @@
+.calendar-navigation {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #ECF1F4;
+	&__day-slider {
+		width: 360px;
+		padding: 8px 10px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media screen and (max-width: 744px) {
+			width: 100%;
+		}
+	}
+	&__nav-left, &__nav-right {
+		svg, image {
+			width: 24px;
+			height: 24px;
+		}
+	}
+	&__date {
+		text-align: center;
+		width: 264px;
+	}
+	&__date-info, &__date-full {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px
+	}
+	&__date-info, &__week-day {
+		@media screen and (max-width: 744px) {
+			display: none;
+		}
+	}
+	&__date-full {
+		@media screen and (min-width: 745px) {
+			display: none;
+		}
+	}
+	&__week-day {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		color: var(--main-grey);
+	}
+	&__nav-buttons {
+		display: flex;
+		flex-grow: 1;
+		justify-content: space-between;
+		align-items: center;
+		padding: 8px 8px 8px 16px;
+		border-left: 1px solid #ECF1F4;
+		@media screen and (max-width: 744px) {
+			padding: 0;
+			border: none;
+		}
+	}
+	&__today {
+		padding: 10px 24px;
+		background-color: #ffffff !important;
+		@media screen and (max-width: 1040px) {
+			margin-left: auto;
+		}
+		@media screen and (max-width: 744px) {
+			position: absolute;
+			z-index: 2;
+			bottom: 16px;
+			right: calc(50% - 55px);
+		}
+	}
+	&__switch {
+		display: flex;
+		align-items: center;
+		.switch {
+			margin-right: 56px;
+			align-items: center;
+			&__caption {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 130%;
+			}
+			input {
+				border: 1px solid var(--survey-blue);
+				background-image: url(../img/svg/blue-switch.svg);
+				&:checked {
+					background-color: var(--survey-blue);
+					border-color: var(--survey-blue);
+			}
+			}
+		}
+		@media screen and (max-width: 1040px) {
+			display: none;
+		}
+	}
+}

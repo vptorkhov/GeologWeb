@@ -1,5 +1,7 @@
 extends ../layout/main.pug
 include ../blocks/calendar/calendar-day/_calendar-day.pug
+include ../blocks/calendar/calendar-week/_calendar-week.pug
+include ../blocks/calendar/calendar-month/_calendar-month.pug
 
 block variables
 	- let  mainPage= null
@@ -12,3 +14,7 @@ block title
 block pagecontent
 	.p-2(style="background-color: var(--main-grey); height: 100vh; overflow: auto")
 		+calendar_day(20, 22, `Вторник`, `Вт`, "Декабря", 5)
+	.p-2(style="background-color: var(--main-grey); height: 100vh; overflow: auto")
+		+calendar_week("19-23", 22, `34 неделя`, `Вт`, "Декабря", 5)
+	.p-2(style="background-color: var(--main-grey); height: 100vh; overflow: auto")
+		+calendar_month("", 22, ``, ``, "Декабрь", 5)

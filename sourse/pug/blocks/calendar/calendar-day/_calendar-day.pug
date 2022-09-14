@@ -15,31 +15,11 @@
 //- +assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, false, undefined)
 include ../../assignment-calendar-top/_assignment-calendar-top.pug
 include ./components/current-time.pug
+include ../components/calendar-navigation.pug
 
 mixin calendar_day(day, year, week_day, week_day_short, month, n)
 	+b.calendar-day
-		+e.calendar-navigation 
-			+e.day-slider
-				+e.BUTTON.nav-left.clean-btn 
-					svg 
-						image(href="img/svg/nav-left.svg")
-				+e.date
-					+e.date-info=`${day} ${month} 20${year}`
-					+e.date-full=`${week_day_short}, ${day} ${month} 20${year}`
-					+e.week-day=`${week_day}`
-				+e.BUTTON.nav-right.clean-btn 
-					svg 
-						image(href="img/svg/nav-right.svg")
-			+e.nav-buttons
-				+e.BUTTON.today.btn-secondary.btn Сегодня
-				+e.switch
-					+b.tabs
-						+e.BUTTON.tab.active
-							+e.P.text День
-						+e.BUTTON.tab
-							+e.P.text Неделя
-						+e.BUTTON.tab
-							+e.P.text Месяц
+		+calendar_navigation(false, day, month, year, week_day, week_day_short)
 		+e.assignments 
 			+e.overflow-button
 				+e.BUTTON.nav-down.clean-btn 

@@ -1,0 +1,51 @@
+.calendar-week {
+	&__tasks {
+		padding: 8px 8px 4px;
+		width: 100%;
+		& > * {
+			margin-bottom: 4px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		border-bottom: 1px solid #CCD9E0;
+	}
+	&__tuesday {
+		margin-left: 20%;
+	}
+	&__wednesday {
+		margin-left: 40%;
+	}
+	&__thursday {
+		margin-left: 60%;
+	}
+	&__friday {
+		margin-left: 80%;
+	}
+	&__days {
+		flex-grow: 1;
+		width: 100%;
+		display: flex;
+	}
+	&__close {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		color: var(--survey-blue);
+	}
+}
+.days-1 {
+	width: 20%;
+}
+.days-2 {
+	width: 40%;
+}
+.days-3 {
+	width: 60%;
+}
+.days-4 {
+	width: 80%;
+}
+.days-5 {
+	width: 100%;
+}

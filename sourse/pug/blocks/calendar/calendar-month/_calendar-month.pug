@@ -1,0 +1,12 @@
+include ../../assignment-calendar-top/_assignment-calendar-top.pug
+include ../components/calendar-navigation.pug
+include ./components/month-day.pug
+
+mixin calendar_month(day, year, week_day, week_day_short, month, n)
+	+b.calendar-month
+		+calendar_navigation(true, day, month, year, week_day, week_day_short)
+		+e.month
+			+month_day(1)
+			+month_day(2, "another-month")
+			+month_day(3, "today")
+			+month_day(4, "weekends")

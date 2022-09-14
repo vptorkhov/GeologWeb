@@ -1,0 +1,7 @@
+.calendar-month {
+	&__month {
+		flex-grow: 1;
+		display: grid;
+		grid-template: repeat(5, 1fr) / repeat(7, 1fr);
+	}
+}
