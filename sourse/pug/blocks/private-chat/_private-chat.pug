@@ -31,4 +31,7 @@ mixin private_chat_window()
 
 mixin private_chat_topic(topic)
 	+b.private-chat-topic
+		+b.counter-requests
+			img(src="img/svg/arrow-down.svg")
+			+e.P.num Запрос №551
 		+e.P.text!=`<span>Тема:</span> ${topic}`
