@@ -51,18 +51,18 @@ mixin calendar_day(day, year, week_day, week_day_short, month, n)
 				+assignment_calendar_top(false, "important", "in-process", "deadline", bigtext)
 				+assignment_calendar_top(true, "critical", "ready", "has", bigtext)
 				+e.P.full-list=`Ещё ${n-1}`
-		+e.time-board 
+		+e.time-board.scrollbar-vertical
 			+e.timeline 
 				+e.vertical-line
 				- for (i=0; i<10; i++)
-					+e.time
-						p=`0${i}:00`
-						+e.line
+					+e.P.time=`0${i}:00`
 				- for (i=10; i<24; i++)
-					+e.time
-						p=`${i}:00`
+					+e.P.time=`${i}:00`
+			+e.calendar-board
+				+e.board.scrollbar-horizontal
+					- for (i=0; i<24; i++)
 						+e.line
-				+e.big 
-					+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, true, "15")
-				+e.small
-					+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, false, "revision")
+					+e.big 
+						+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, true, "15")
+					+e.small
+						+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, false, "revision")

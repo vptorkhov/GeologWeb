@@ -3,7 +3,6 @@ module.exports = () => {
 		const processors = [  
 			$.autoprefixer(),
 			$.nested(),
-			$.cssnano(),
 			$.gcmq(),
 		];
 		return $.gulp.src($.sourse + '/sass/main.scss')

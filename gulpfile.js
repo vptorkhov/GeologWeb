@@ -127,7 +127,6 @@ function styles() {
     const processors = [
         autoprefixer(),
         nested(),
-        cssnano(),
         gcmq(),
     ];
     return src(sourse + '/sass/main.scss')
