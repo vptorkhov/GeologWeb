@@ -5,6 +5,14 @@ include ./components/month-day.pug
 mixin calendar_month(day, year, week_day, week_day_short, month, n)
 	+b.calendar-month
 		+calendar_navigation(true, day, month, year, week_day, week_day_short)
+		+e.week-days 
+			+e.day-name Пн
+			+e.day-name Вт
+			+e.day-name Ср
+			+e.day-name Чт
+			+e.day-name Пт
+			+e.day-name--weekend Сб
+			+e.day-name--weekend Вс
 		+e.month
 			+month_day(1)
 			+month_day(2, "another-month")

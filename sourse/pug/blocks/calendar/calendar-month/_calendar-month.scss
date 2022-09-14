@@ -4,4 +4,21 @@
 		display: grid;
 		grid-template: repeat(5, 1fr) / repeat(7, 1fr);
 	}
+	&__week-days {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+	}
+	&__day-name {
+		padding: 12px 16px;
+		// border: 1px solid #ECF1F4;
+		width: 100%;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 23px;
+		border-bottom: 1px solid #ECF1F4;
+		border-right: 1px solid #ECF1F4;
+		&--weekend {
+			color: var(--secondary-grey);
+		}
+	}
 }
