@@ -143,6 +143,15 @@
 	width: 100%;
 	min-width: 130px;
 	flex-direction: column;
+	border: 1px solid transparent;
+	&:focus, &:active {
+		border: 1px solid var(--survey-blue);
+	}
+	&--overdue {
+		&:focus, &:active {
+			border: 1px solid var(--main-red);
+		}
+	}
 	&__main {
 		display: flex;
 		width: 100%;

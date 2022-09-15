@@ -5,15 +5,27 @@ mixin week_day(num, day)
 		+e.day 
 			+e.number=num
 			+e.name=day
-		+e.assignments
+		+e.assignments.scrollbar-vertical
 			+e.wrap
 				+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, true, "15")
+			+e.wrap
+				+assignment_calendar_on-board(true, "not-urgent", "ready", "has", bigtext, false, "revision")
+			+e.wrap
+				+assignment_calendar_on-board(true, "desirable", "ready", "no", bigtext, false, "15", true)
+			+e.wrap
+				+assignment_calendar_on-board(true, "important", "ready", "no", bigtext, true, "revision", true)
+			+e.wrap
+				+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, false, undefined)
 
 mixin week_day-today(num, day)
 	+b.week-day.today
 		+e.day 
 			+e.number=num
 			+e.name=day
-		+e.assignments
+		+e.assignments.scrollbar-vertical
 			+e.wrap
 				+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, true, "15")
+			+e.wrap
+				+assignment_calendar_on-board(true, "important", "ready", "no", bigtext, true, "revision", true)
+			+e.wrap
+				+assignment_calendar_on-board(true, "critical", "ready", "has", bigtext, false, undefined)

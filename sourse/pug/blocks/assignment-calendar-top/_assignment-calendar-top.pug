@@ -20,7 +20,7 @@ mixin assignment_calendar_top(rework, priority, work_status, solution_status, te
 		+e.assignment-text!=text
 
 mixin assignment_calendar_on-board(rework, priority, work_status, solution_status, text, deadline, solution_revision, overdue)
-	+b.assignment-calendar-on-board
+	+b.assignment-calendar-on-board(tabindex=1, class=(overdue ? "--overdue" : ''))
 		+e.main
 			+e.line-start
 				if rework

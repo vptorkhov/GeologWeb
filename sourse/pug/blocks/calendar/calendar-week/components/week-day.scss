@@ -1,6 +1,8 @@
 .week-day {
 	height: 100%;
 	width: 20%;
+	display: flex;
+	flex-direction: column;
 	border-right: 1px solid #ECF1F4;
 	&:last-child {
 		border-right: none;
@@ -29,6 +31,11 @@
 		line-height: 14px;
 	}
 	&__assignments {
-		padding: 64px 8px 0px;
+		padding: 8px 8px 0px;
+		overflow: auto;
+		flex-grow: 1;
+		& > * {
+			margin-bottom: 8px;
+		}
 	}
 }

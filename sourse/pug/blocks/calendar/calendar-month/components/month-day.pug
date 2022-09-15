@@ -1,3 +1,26 @@
-mixin month_day(day, type)
-	+b.month-day(class=type)
-		+e.day=day
+include ./month-calendar-assignment.pug
+
+mixin month_day(day)
+	+b.month-day
+		+e.day-number 
+			+e.day=day
+		+e.assignments
+			+month_calendar_assignment(true, 'not-urgent', "apodposapospoispoaispoaspoaspoasipaos")
+
+mixin month_day-another-month(day)
+	+b.month-day.another-month
+		+e.day-number 
+			+e.day=day
+		+e.assignments
+
+mixin month_day-today(day)
+	+b.month-day.today
+		+e.day-number 
+			+e.day=day
+		+e.assignments
+
+mixin month_day-weekends(day)
+	+b.month-day.weekends
+		+e.day-number 
+			+e.day=day
+		+e.assignments

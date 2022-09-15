@@ -1,0 +1,8 @@
+mixin month_calendar_assignment(rework, priority, text)
+	+b.month-calendar-assignment
+		+e.top
+			if rework
+				+e.SVG.refresh
+					image(href=`img/svg/arrow-circle.svg`)
+			+assignment_calendar_priority(priority)
+		+e.assignment-text!=text

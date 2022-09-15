@@ -1,10 +1,15 @@
 .month-day {
-	display: flex;
-	flex-direction: row-reverse;
 	width: 100%;
+	min-width: 100%;
 	height: 100%;
 	border-bottom: 1px solid #ECF1F4;
 		border-right: 1px solid #ECF1F4;
+	&__day-number {
+		display: flex;
+		flex-direction: row-reverse;
+		margin-bottom: 2px;
+
+	}
 	&__day {
 		height: 31px;
 		padding: 6px;
@@ -14,9 +19,15 @@
 		line-height: 19px;
 		color: var(--main-grey);
 	}
+	&__assignments {
+		margin-bottom: 4px;
+		padding: 0 6px;
+	}
 	&.another-month {
 		background-color: #F5F9FC;
-		color: var(--secondary-grey);
+		.month-day__day {
+			color: var(--secondary-grey);
+		}
 	}
 	&.today {
 		.month-day__day {
@@ -25,7 +36,9 @@
 		}
 	}
 	&.weekends {
-		color: var(--secondary-grey);
+		.month-day__day {
+			color: var(--secondary-grey);
+		}
 	}
 	
 }

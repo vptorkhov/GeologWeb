@@ -26,6 +26,7 @@
 		flex-grow: 1;
 		width: 100%;
 		display: flex;
+		overflow: hidden;
 	}
 	&__close {
 		font-weight: 400;
