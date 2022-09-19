@@ -6,7 +6,7 @@
 .assignment-line, .assignments-top {
 	padding: 16px 24px;
 	&--headers {
-		padding: 12px 40px;
+		padding: 12px 68px 12px 44px;
 		@media screen and (max-width: 1140px) {
 			display: none;
 		}
@@ -85,6 +85,7 @@
 		display: flex;
 		padding: 0 25px 0 16px;
 		margin-bottom: 0px;
+		min-width: 0;
 	}
 	&__headers-wrap {
 		display: flex;
@@ -111,10 +112,11 @@
 	&__fio-status {
 		display: flex;
 		@media (min-width: 1140px) {
-			width: 320px;
+			// width: 320px;
+			width: 62%;
 			justify-content: space-between;
 			& > * {
-				margin-right: 48px;
+				margin-right: 8px;
 				&:last-child {
 					margin-right: 0;
 				}
@@ -188,14 +190,15 @@
 			justify-content: flex-start;
 		}
 	}
-	&__date {
-		@media screen and (max-width: 1140px) {
-			width: 33%;
-		}
-	}
+	// &__date {
+	// 	@media screen and (max-width: 1140px) {
+	// 		width: 33%;
+	// 	}
+	// }
 	&__date {
 		@media (min-width: 1140px) {
-			width: 202px;
+			// width: 202px;
+			width: 32%;
 		}
 		@media screen and (max-width: 744px) {
 			width: 100%;
