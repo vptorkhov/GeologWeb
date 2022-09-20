@@ -4,7 +4,7 @@ include ../messages/_messages.pug
 include ../chat/_chat.pug
 
 mixin assignment_card(days, work_status, prioity, role, start, end, solution_status, prolong, request_terms, changeble)
-	+b.assignment-card
+	+b.assignment-card.scrollbar-vertical
 		+assignment_card_top(prioity, work_status, changeble)
 		if (role=="author")&&(prolong=="prolong")
 			+b.prolong
