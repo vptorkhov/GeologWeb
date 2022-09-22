@@ -9,7 +9,7 @@ mixin about_project()
 	+b.side-sheet 
 		.containers
 			+side-sheet-top("О проекте")
-		.containers
+		.containers.scrollbar-vertical
 			+e.P.header О проекте
 			+b
 				+project_info("Кластер", "Восточная сибирь")
@@ -27,7 +27,7 @@ mixin solutions()
 	+b.side-sheet 
 		.containers
 			+side-sheet-top("Решения")
-		.containers
+		.containers.scrollbar-vertical
 			+e.P.header-mb16 Последнее решение
 			+b.chat-solutions
 				+e.solution
@@ -51,7 +51,7 @@ mixin privat_chats()
 	+b.side-sheet 
 		.containers
 			+side-sheet-top("Приватные чаты")
-		.containers
+		.containers.scrollbar-vertical
 			+e.privat-chats-block 
 				+sender('Антон Гаврилов', 'Руководитель проекта')
 				+b.solution-block
@@ -66,7 +66,7 @@ mixin media()
 	+b.side-sheet 
 		.containers
 			+side-sheet-top("Медиа")
-		.containers
+		.containers.scrollbar-vertical
 			+e.chat-media 
 				+e.image
 					img(src="img/@2x/slide-25.jpg")
@@ -85,7 +85,7 @@ mixin side_sheet_documents()
 	+b.side-sheet
 		.containers 
 			+side-sheet-top("Документы")
-		.containers
+		.containers.scrollbar-vertical
 			+document() 
 			+document()
 			+document()
@@ -94,7 +94,7 @@ mixin side_sheet_links()
 	+b.side-sheet 
 		.containers
 			+side-sheet-top("Сcылки")
-		.containers
+		.containers.scrollbar-vertical
 			+link("https://www.youtube.com/watch?v=5qKYrajRNwohttps://www.youtube.com/watch?v=5qKYrajRNwo") 
 			+link("https://www.youtube.com/watch?v=5qKYrajRNwo")
 			+link("https://www.youtube.com/watch?v=5qKYrajRNwo")

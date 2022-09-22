@@ -7,6 +7,10 @@
 	padding: 16px 24px;
 	&--headers {
 		padding: 12px 68px 12px 44px;
+		cursor: default;
+		&:hover {
+			background-color: #ffffff !important;
+		}
 		@media screen and (max-width: 1040px) {
 			display: none;
 		}

@@ -80,14 +80,14 @@ mixin solution(solution, solution_date, edit)
 			if solution_date
 				+e.P.solution-date=solution_date 
 			if edit
-				+e.solution-date
+				+e.BUTTON.solution-date.clean-btn
 					img(src="img/svg/edit.svg")
 
 mixin private-chat(private)
 	if private 
 		+e.request--private 
 			+private_body("Приватный чат завершён") 
-			+e.P.enter-chat Войти
+			+e.BUTTON.enter-chat.clean-btn Войти
 
 mixin request(my_request, another_request, terms, status, prolong_status)
 	+e.request(class=(my_request ? "--my" : another_request ? "--another" : "--none")) 

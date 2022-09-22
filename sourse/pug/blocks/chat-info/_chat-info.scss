@@ -8,6 +8,10 @@
 	.containers {
 		padding: 0 20px;
 		margin-bottom: 32px;
+		&:last-child {
+			flex-grow: 1;
+			overflow: auto;
+		}
 		&--private-chat {
 			margin-bottom: 24px;
 			padding: 0 20px;
@@ -187,7 +191,7 @@
 	}
 }
 .containers--private-chat {
-	max-height: calc(100% - 72px);
+	max-height: calc(100% - 80px);
 	@media screen and (max-width: 744px) {
 		max-height: calc(100% - 64px);
 	}

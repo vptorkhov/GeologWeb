@@ -106,6 +106,13 @@
 	.form-control[name="textarea"] {
 		height: 76px !important;
 		resize: none !important;
+		&::-webkit-scrollbar {
+			width: 7px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: #b6b7bf;
+			border-radius: 16px;
+		}
 	}
 	.form-check {
 		display: flex;
@@ -216,6 +223,7 @@
 	}
 	&__tags {
 		flex-wrap: wrap;
+		align-items: center;
 		padding: 12px 12px 8px;
 		& > * {
 			margin-right: 4px;

@@ -7,7 +7,7 @@ mixin assignment_edit(my, frequency)
 		+assignment_edit_bottom()
 
 mixin assignment_edit_content(role)
-	+b.assignment-creation-content
+	+b.assignment-creation-content.scrollbar-vertical
 		+e.wrap 
 			+header("Номер запроса", true)
 			+input2("256", 'select', true)

@@ -51,6 +51,9 @@
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 16px;
+	&__close {
+		margin-top: -4px;
+	}
 	P {
 		text-transform: uppercase;
 	}

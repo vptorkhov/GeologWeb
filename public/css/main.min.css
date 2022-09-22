@@ -4296,6 +4296,7 @@ iframe {
 .assignment-card__tags {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin-bottom: 8px !important;
 }
 .assignment-card__tags > * {
@@ -4726,6 +4727,13 @@ iframe {
   height: 76px !important;
   resize: none !important;
 }
+.assignment-creation-content .form-control[name=textarea]::-webkit-scrollbar {
+  width: 7px;
+}
+.assignment-creation-content .form-control[name=textarea]::-webkit-scrollbar-thumb {
+  background-color: #b6b7bf;
+  border-radius: 16px;
+}
 .assignment-creation-content .form-check {
   display: flex;
   flex-direction: column;
@@ -4835,6 +4843,7 @@ iframe {
 }
 .input__tags {
   flex-wrap: wrap;
+  align-items: center;
   padding: 12px 12px 8px;
 }
 .input__tags > * {
@@ -4985,6 +4994,9 @@ iframe {
   font-size: 14px;
   line-height: 16px;
 }
+.assignment-tag__close {
+  margin-top: -4px;
+}
 .assignment-tag P {
   text-transform: uppercase;
 }
@@ -5069,6 +5081,10 @@ iframe {
 }
 .assignment-line--headers, .assignments-top--headers {
   padding: 12px 68px 12px 44px;
+  cursor: default;
+}
+.assignment-line--headers:hover, .assignments-top--headers:hover {
+  background-color: #ffffff !important;
 }
 .assignment-line--headers .icon, .assignments-top--headers .icon {
   min-width: 24px;
@@ -5760,6 +5776,10 @@ iframe {
   padding: 0 20px;
   margin-bottom: 32px;
 }
+.side-sheet .containers:last-child {
+  flex-grow: 1;
+  overflow: auto;
+}
 .side-sheet .containers--private-chat {
   margin-bottom: 24px;
   padding: 0 20px;
@@ -5877,7 +5897,7 @@ iframe {
 }
 
 .containers--private-chat {
-  max-height: calc(100% - 72px);
+  max-height: calc(100% - 80px);
 }
 .containers--private-chat + .containers--private-chat {
   flex-grow: 1;
@@ -6128,6 +6148,7 @@ iframe {
   background-color: #56b9f2;
   color: #ffffff;
   margin-right: 12px;
+  white-space: nowrap;
 }
 .counter-requests:last-child {
   margin-right: 0px;
@@ -6907,7 +6928,7 @@ input::-webkit-inner-spin-button {
   font-size: 14px;
   line-height: 16px;
   color: var(--main-grey);
-  text-overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -7910,6 +7931,9 @@ a {
   flex-grow: 1;
   overflow-y: auto;
 }
+.best-name-match-alphabet .sender__avatar {
+  min-width: 35px;
+}
 
 .private-chat-create-button {
   padding: 28px 0;
@@ -8108,6 +8132,7 @@ a {
 
 .private-chat-topic {
   display: flex;
+  align-items: center;
   background-color: #002033;
   border-radius: 0px 0px 7px 7px;
   padding: 12px 20px;
@@ -12566,6 +12591,7 @@ a {
   .message__table td {
     padding-top: 4px;
     padding-bottom: 4px;
+    min-width: 80px;
   }
   .message__table .name {
     width: 196px;
