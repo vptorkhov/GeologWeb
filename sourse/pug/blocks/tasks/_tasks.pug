@@ -7,17 +7,25 @@ mixin tasks()
 			+tasks_tabs()
 			+tasks_search()
 		+b.tasks-body.scrollbar-vertical 
-			+task_cell('read', 'Чона', '13.07.2020 13:56', '--success', 'Активна', "lock", false, false, false, 'Запакеровались на глубине 1754.2 м. Что делаем дальше?', 7, 2)
-			+task_cell-active('read', 'Чона', '13.07.2020 13:56', '--success', 'Активна', "key", false, false, false, 'Запакеровались на глубине 1754.2 м. Что делаем дальше?', 7, 2)
-			+task_cell-active('read', 'Чона', '13.07.2020 13:56', '--success', 'Активна', "lock", false, false, false, 'Запакеровались на глубине 1754.2 м. Что делаем дальше?', 7, 2)
-			+task_cell('unread', 'Чона', '13.07.2020 13:56', '--caution', 'Активна', "key", 'excel', false, true, '<span class="sender-person">Игорь Волин</span>: Запакеровались на глубине 1754.2 м. Что делаем дальше?')
-			+task_cell('unread', 'Чона', '13.07.2020 13:56', '--alert', 'Активна', false, 'poll', true, false, '<span class="task-file">Gradulated.docx.</span> Подвижность по оценочному замеру составила 0.35 мД/сП. Приступили.', false, 3)
-			+task_cell('unread', 'Чона', '13.07.2020 13:56', '--alert', 'Активна', false, 'poll', false, false, '<span class="task-file">Gradulated.docx.</span> Подвижность по оценочному замеру составила 0.35 мД/сП. Приступили.', false)
-			+task_cell('unread', 'Чона', '13.07.2020 13:56', '--alert', 'Активна', false, 'poll', false, false, '<span class="task-file">Gradulated.docx.</span> Подвижность по оценочному замеру составила 0.35 мД/сП. Приступили.', false)
-			+task_cell('unread', 'Чона', '13.07.2020 13:56', '--alert', 'Активна', false, 'poll', false, false, '<span class="message-draft">Черновик:</span> Подвижность по оценочному замеру составила 0.35 мД/сП. Приступили.', false)
-			+task_cell('read', 'Чона', '13.07.2020 13:56', '--draft', 'Черновик', false)
-			+task_cell('read', 'Чона', '13.07.2020 13:56', '--closed', 'Закрыта', "lock")
-			+task_cell-disable('read', 'Чона', '13.07.2020 13:56', '--unactive', 'Неактивна', false)
+			+task_cell(false, "ПРБ", "task",'read', 'Чона', '13.07.2020 13:56', '--success', 'Активна', "lock", false, false, false, 'Запакеровались на глубине 1754.2 м. Что делаем дальше?', 7, 2)
+			+task_cell-active(false, "ПРБ", "task", 'read', 'Чона', '13.07.2020 13:56', '--success', 'Активна', "key", false, false, false, 'Запакеровались на глубине 1754.2 м. Что делаем дальше?', 7, 2)
+			+task_cell-active(false, "ПРБ", "task", 'read', 'Чона', '13.07.2020 13:56', '--success', 'Активна', "lock", false, false, false, 'Запакеровались на глубине 1754.2 м. Что делаем дальше?', 7, 2)
+			+task_cell(false, "ПРБ", "task",'unread', 'Чона', '13.07.2020 13:56', '--caution', 'Активна', "key", 'excel', false, true, '<span class="sender-person">Игорь Волин</span>: Запакеровались на глубине 1754.2 м. Что делаем дальше?')
+			+task_cell(false, "ПРБ", "task",'unread', 'Чона', '13.07.2020 13:56', '--alert', 'Активна', false, 'poll', true, false, '<span class="task-file">Gradulated.docx.</span> Подвижность по оценочному замеру составила 0.35 мД/сП. Приступили.', false, 3)
+			+task_cell(false, "ПРБ", "task",'unread', 'Чона', '13.07.2020 13:56', '--alert', 'Активна', false, 'poll', false, false, '<span class="task-file">Gradulated.docx.</span> Подвижность по оценочному замеру составила 0.35 мД/сП. Приступили.', false)
+			+task_cell(false, "ПРБ", "task",'unread', 'Чона', '13.07.2020 13:56', '--alert', 'Активна', false, 'poll', false, false, '<span class="task-file">Gradulated.docx.</span> Подвижность по оценочному замеру составила 0.35 мД/сП. Приступили.', false)
+			+task_cell(false, "ПРБ", "task",'unread', 'Чона', '13.07.2020 13:56', '--alert', 'Активна', false, 'poll', false, false, '<span class="message-draft">Черновик:</span> Подвижность по оценочному замеру составила 0.35 мД/сП. Приступили.', false)
+			+task_cell(false, "ПРБ", "task",'read', 'Чона', '13.07.2020 13:56', '--draft', 'Черновик', false)
+			+task_cell(false, "ПРБ", "task",'read', 'Чона', '13.07.2020 13:56', '--closed', 'Закрыта', "lock")
+			+task_cell-disable(false, "ПРБ", "task", 'read', 'Чона', '13.07.2020 13:56', '--unactive', 'Неактивна', false)
+			//- сообщения
+			+task_cell("Руководитель проекта", "Денис Лачугин", "correspondence",'read', 'Чона', '13.07.2020 13:56', '--success', 'Активна', false, false, false, false, 'Запакеровались на глубине 1754.2 м. Что делаем дальше?', false, 2)
+			+task_cell("Руководитель проекта", "Групповой чат", "group",'read', 'Чона', '13.07.2020 13:56', '--success', 'Активна', false, false, false, false, '<span class="sender-person">Игорь Волин</span>: Запакеровались на глубине 1754.2 м. Что делаем дальше?', false, 2)
+			+task_cell-active("Руководитель проекта", "Денис Лачугин", "correspondence",'read', 'Чона', '13.07.2020 13:56', '--success', 'Активна', false, false, false, false, 'Запакеровались на глубине 1754.2 м. Что делаем дальше?', false, 2)
+			+task_cell-active("Руководитель проекта", "Групповой чат", "group",'read', 'Чона', '13.07.2020 13:56', '--success', 'Активна', false, false, false, false, '<span class="sender-person">Игорь Волин</span>: Запакеровались на глубине 1754.2 м. Что делаем дальше?', false, 2)
+			+task_cell("Руководитель проекта", "Денис Лачугин", "correspondence",'unread', 'Чона', '13.07.2020 13:56', '--success', 'Активна', false, false, false, false, 'Запакеровались на глубине 1754.2 м. Что делаем дальше?', false, 2)
+			+task_cell("Руководитель проекта", "Групповой чат", "group",'unread', 'Чона', '13.07.2020 13:56', '--success', 'Активна', false, false, false, false, '<span class="sender-person">Игорь Волин</span>: Запакеровались на глубине 1754.2 м. Что делаем дальше?', false, 2)
+			
 
 
 mixin tasks_top_text()
@@ -50,35 +58,65 @@ mixin tasks_search()
 			img(src="img/svg/search.svg")
 		input(type="text", placeholder="Поиск")
 
-mixin task_cell(status, place, datetime, warning, warning_status, lock, icon, request, solution, text, num_requests, num_messages)
+mixin task_cell(position, task_name, type, status, place, datetime, warning, warning_status, lock, icon, request, solution, text, num_requests, num_messages)
 	+b.task-cell(class=(status=="unread" ? "--unread" : "" ) + (lock=="key" ? " privat-chat-opened" : ''))
-		.task-wrap
-			+e.info
-				+task_status(warning, warning_status)
-				+e.P.place=place
-				+e.P.datetime=datetime
-			+task-name(lock)
-			+cell_bottom(icon, request, solution, text, num_requests, num_messages)
+		+e.wrapper
+			if type=="correspondence"
+				+e.avatar
+					img(src="img/@2x/slide-25.jpg")
+			if type=="group"
+				+e.group
+					img(src="img/svg/group.svg")
+			.task-wrap
+				+e.info
+					if type=="task"
+						+task_status(warning, warning_status)
+						+e.P.place=place
+					+e.P.datetime=datetime
+				+task-name(lock, task_name)
+				if position
+					+e.position!=position
+				+cell_bottom(icon, request, solution, text, num_requests, num_messages)
 
-mixin task_cell-disable(status, place, datetime, warning, warning_status, lock, icon, request, solution, text, num_requests, num_messages)
+mixin task_cell-disable(position, task_name, type, status, place, datetime, warning, warning_status, lock, icon, request, solution, text, num_requests, num_messages)
 	+b.task-cell.disable(class=(status=="unread" ? "--unread" : "" ) + (lock=="key" ? " privat-chat-opened" : ''))
-		.task-wrap
-			+e.info
-				+task_status(warning, warning_status)
-				+e.P.place=place
-				+e.P.datetime=datetime
-			+task-name(lock)
-			+cell_bottom(icon, request, solution, text, num_requests, num_messages)
+		+e.wrapper
+			if type=="correspondence"
+				+e.avatar
+					img(src="img/@2x/slide-25.jpg")
+			if type=="group"
+				+e.group
+					img(src="img/svg/group.svg")
+			.task-wrap
+				+e.info
+					if type=="task"
+						+task_status(warning, warning_status)
+						+e.P.place=place
+					+e.P.datetime=datetime
+				+task-name(lock, task_name)
+				if position
+					+e.position!=position
+				+cell_bottom(icon, request, solution, text, num_requests, num_messages)
 
-mixin task_cell-active(status, place, datetime, warning, warning_status, lock, icon, request, solution, text, num_requests, num_messages)
+mixin task_cell-active(position, task_name, type, status, place, datetime, warning, warning_status, lock, icon, request, solution, text, num_requests, num_messages)
 	+b.task-cell.active(class=(status=="unread" ? "--unread" : "" ) + (lock=="key" ? " privat-chat-opened" : ''))
-		.task-wrap
-			+e.info
-				+task_status(warning, warning_status)
-				+e.P.place=place
-				+e.P.datetime=datetime
-			+task-name(lock)
-			+cell_bottom(icon, request, solution, text, num_requests, num_messages)
+		+e.wrapper
+			if type=="correspondence"
+				+e.avatar
+					img(src="img/@2x/slide-25.jpg")
+			if type=="group"
+				+e.group
+					img(src="img/svg/group.svg")
+			.task-wrap
+				+e.info
+					if type=="task"
+						+task_status(warning, warning_status)
+						+e.P.place=place
+					+e.P.datetime=datetime
+				+task-name(lock, task_name)
+				if position
+					+e.position!=position
+				+cell_bottom(icon, request, solution, text, num_requests, num_messages)
 
 
 mixin task_status(warning, warning_status)
@@ -86,11 +124,11 @@ mixin task_status(warning, warning_status)
 		+icon('active')
 		+e.P.text=warning_status
 
-mixin task-name(type)
+mixin task-name(type, task_name)
 	+b.task-name
 		if type
 			+icon(type)
-		+e.P.text ПРБ
+		+e.P.text!=task_name
 
 mixin cell_bottom(icon, request, solution, text, num_requests, num_messages)
 	+b.cell-bottom 

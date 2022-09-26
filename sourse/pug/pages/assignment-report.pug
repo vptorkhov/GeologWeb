@@ -1,0 +1,14 @@
+extends ../layout/main.pug
+include ../blocks/assignment-report/_assignment-report.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+	- let bigtext = `<a class='private-chat-create' href='#'>@Андрей Паин</a>, необходимо прикрепить файлы по итогам проведенного исследования `
+	- let question = 'Запакеровались на глубине 1754.2 м. Что делаем дальше?'
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	.p-sm-5
+		
