@@ -1,0 +1,20 @@
+mixin assignment_report_top()
+	+b.assignment-report-top
+		+e.navigation
+			+e.BUTTON.back.clean-btn
+				+icon("side-sheet-arrow")
+			+e.P.reports Отчеты
+		+e.settings 
+			+b.tabs 
+				+e.BUTTON.tab.active
+					+e.P.text По поручениям
+				+e.BUTTON.tab
+					+e.P.text По затраченному времени
+			+e.BUTTON.download-excel.clean-btn  
+				+e.SVG.document
+					image(href="/img/svg/documents.svg")
+					+e.P.text Выгрузить отчет в Excel
+			+e.BUTTON.filter.clean-btn 
+				+e.SVG.document 
+					image(href="/img/svg/filters.svg")
+					+e.P.text Фильтр

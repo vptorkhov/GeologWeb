@@ -1,0 +1,29 @@
+include ../../../../assignment-calendar-top/components/status/work-status.pug
+
+mixin table_assignment(icon, creation_date, text, status, task_name, deadline_date, start_day, end_day, working_hours, author, executer, work_status)
+	+b.table-assignment
+		+e.SVG.icon 
+			image(href=`img/svg/${icon}.svg`)
+		+e.info
+			+e.creation-date
+				+e.date=creation_date
+			+e.requests 
+				+e.P.bold-text=text
+				+e.name-status(class=`--${status}`)
+					+icon("active")
+					+e.P.task-name=task_name
+			+e.deadline
+				+e.date=deadline_date
+				+e.deadline-dates=`${start_day} - ${end_day}`
+			+e.working-hours 
+				+e.P.working-hours-text=working_hours
+			+e.author 
+				+e.IMG.avatar(src='img/@2x/slide-25.jpg')
+				+e.P.bold-text=author
+			+e.executer 
+				+e.IMG.avatar(src='img/@2x/slide-25.jpg')
+				+e.P.bold-text=executer
+			+e.status 
+				+e.wrap
+					+work_status(work_status)
+

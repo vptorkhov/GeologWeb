@@ -1,2 +1,7 @@
-mixin assignment_report()
-	
+include ./components/assignment-report-top/assignment-report-top.pug
+include ./components/assignment-report-table/assignment-report-table.pug
+
+mixin assignment_report(text, task_name)
+	+b.assignment-report-window
+		+assignment_report_top()
+		+assignment_report_table(text, task_name)

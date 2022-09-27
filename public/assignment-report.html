@@ -13,7 +13,703 @@
 	</head>
 	<body>
 		<div class="main-wrapper">
-			<div class="p-sm-5"></div>
+			<div class="p-sm-5" style="background-color: grey; height: 100vh;">
+				<div class="assignment-report-window">
+					<div class="assignment-report-top">
+						<div class="assignment-report-top__navigation">
+							<button class="assignment-report-top__back clean-btn">
+								<svg class="icon icon-side-sheet-arrow ">
+									<use xlink:href="img/svg/sprite.svg#side-sheet-arrow"></use>
+								</svg>
+							</button>
+							<p class="assignment-report-top__reports">Отчеты
+							</p>
+						</div>
+						<div class="assignment-report-top__settings"> 
+							<div class="tabs"> 
+								<button class="tabs__tab active">
+									<p class="tabs__text">По поручениям
+									</p>
+								</button>
+								<button class="tabs__tab">
+									<p class="tabs__text">По затраченному времени
+									</p>
+								</button>
+							</div>
+							<button class="assignment-report-top__download-excel clean-btn"> 
+								<svg class="assignment-report-top__document">
+									<image href="/img/svg/documents.svg"></image>
+									<p class="assignment-report-top__text">Выгрузить отчет в Excel
+									</p>
+								</svg>
+							</button>
+							<button class="assignment-report-top__filter clean-btn"> 
+								<svg class="assignment-report-top__document"> 
+									<image href="/img/svg/filters.svg"></image>
+									<p class="assignment-report-top__text">Фильтр
+									</p>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="assignment-report-table">
+						<div class="assignment-report-table__table-top">
+							<div class="assignment-report-table__creation-date"> 
+								<svg class="icon icon-three ">
+									<use xlink:href="img/svg/sprite.svg#three"></use>
+								</svg>
+								<div class="assignment-report-table__header-wrap">
+									<p class="assignment-report-table__header">Дата создания
+									</p>
+								</div>
+							</div>
+							<div class="assignment-report-table__requests"> 
+								<svg class="icon icon-three ">
+									<use xlink:href="img/svg/sprite.svg#three"></use>
+								</svg>
+								<div class="assignment-report-table__header-wrap">
+									<p class="assignment-report-table__header">Запросы
+									</p>
+								</div>
+							</div>
+							<div class="assignment-report-table__deadline"> 
+								<svg class="icon icon-three ">
+									<use xlink:href="img/svg/sprite.svg#three"></use>
+								</svg>
+								<div class="assignment-report-table__header-wrap">
+									<p class="assignment-report-table__header">Крайний срок
+									</p>
+									<div class="assignment-report-table__sub-header">План
+									</div>
+								</div>
+							</div>
+							<div class="assignment-report-table__working-hours"> 
+								<svg class="icon icon-three ">
+									<use xlink:href="img/svg/sprite.svg#three"></use>
+								</svg>
+								<div class="assignment-report-table__header-wrap">
+									<p class="assignment-report-table__header">Фактические трудозатраты
+									</p>
+								</div>
+							</div>
+							<div class="assignment-report-table__author"> 
+								<svg class="icon icon-three ">
+									<use xlink:href="img/svg/sprite.svg#three"></use>
+								</svg>
+								<div class="assignment-report-table__header-wrap">
+									<p class="assignment-report-table__header">Автор
+									</p>
+								</div>
+							</div>
+							<div class="assignment-report-table__executer"> 
+								<svg class="icon icon-three ">
+									<use xlink:href="img/svg/sprite.svg#three"></use>
+								</svg>
+								<div class="assignment-report-table__header-wrap">
+									<p class="assignment-report-table__header">Исполнитель
+									</p>
+								</div>
+							</div>
+							<div class="assignment-report-table__status"> 
+								<div class="assignment-report-table__header-wrap">
+									<p class="assignment-report-table__header">Статус
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="assignment-report-table__assignments scrollbar-vertical"> 
+							<div class="table-assignment">
+								<svg class="table-assignment__icon"> 
+									<image href="img/svg/not-urgent.svg"></image>
+								</svg>
+								<div class="table-assignment__info">
+									<div class="table-assignment__creation-date">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+									</div>
+									<div class="table-assignment__requests"> 
+										<p class="table-assignment__bold-text">Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отобра жения контента в несколлько строк
+										</p>
+										<div class="table-assignment__name-status table-assignment__name-status--success">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="table-assignment__task-name">Длинное название задачи в супермного букв длинное название задачи
+											</p>
+										</div>
+									</div>
+									<div class="table-assignment__deadline">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+										<div class="table-assignment__deadline-dates">18.08 14:00 - 19.08 14:00
+										</div>
+									</div>
+									<div class="table-assignment__working-hours"> 
+										<p class="table-assignment__working-hours-text">12:50
+										</p>
+									</div>
+									<div class="table-assignment__author"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Смирнова О.В.
+										</p>
+									</div>
+									<div class="table-assignment__executer"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Сорокина С.А.
+										</p>
+									</div>
+									<div class="table-assignment__status"> 
+										<div class="table-assignment__wrap">
+											<div class="status"> 
+												<div class="assignment-status assignment-status--opened">
+													<p>Открыт</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-assignment">
+								<svg class="table-assignment__icon"> 
+									<image href="img/svg/critical.svg"></image>
+								</svg>
+								<div class="table-assignment__info">
+									<div class="table-assignment__creation-date">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+									</div>
+									<div class="table-assignment__requests"> 
+										<p class="table-assignment__bold-text">Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отобра жения контента в несколлько строк
+										</p>
+										<div class="table-assignment__name-status table-assignment__name-status--alert">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="table-assignment__task-name">Длинное название задачи в супермного букв длинное название задачи
+											</p>
+										</div>
+									</div>
+									<div class="table-assignment__deadline">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+										<div class="table-assignment__deadline-dates">18.08 14:00 - 19.08 14:00
+										</div>
+									</div>
+									<div class="table-assignment__working-hours"> 
+										<p class="table-assignment__working-hours-text">12:50
+										</p>
+									</div>
+									<div class="table-assignment__author"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Смирнова О.В.
+										</p>
+									</div>
+									<div class="table-assignment__executer"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Сорокина С.А.
+										</p>
+									</div>
+									<div class="table-assignment__status"> 
+										<div class="table-assignment__wrap">
+											<div class="status"> 
+												<div class="assignment-status assignment-status--closed">
+													<p>Закрыт</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-assignment">
+								<svg class="table-assignment__icon"> 
+									<image href="img/svg/desirable.svg"></image>
+								</svg>
+								<div class="table-assignment__info">
+									<div class="table-assignment__creation-date">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+									</div>
+									<div class="table-assignment__requests"> 
+										<p class="table-assignment__bold-text">Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отобра жения контента в несколлько строк
+										</p>
+										<div class="table-assignment__name-status table-assignment__name-status--caution">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="table-assignment__task-name">Длинное название задачи в супермного букв длинное название задачи
+											</p>
+										</div>
+									</div>
+									<div class="table-assignment__deadline">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+										<div class="table-assignment__deadline-dates">18.08 14:00 - 19.08 14:00
+										</div>
+									</div>
+									<div class="table-assignment__working-hours"> 
+										<p class="table-assignment__working-hours-text">12:50
+										</p>
+									</div>
+									<div class="table-assignment__author"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Смирнова О.В.
+										</p>
+									</div>
+									<div class="table-assignment__executer"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Сорокина С.А.
+										</p>
+									</div>
+									<div class="table-assignment__status"> 
+										<div class="table-assignment__wrap">
+											<div class="status"> 
+												<div class="assignment-status assignment-status--ready"> 
+													<p>Готов</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-assignment">
+								<svg class="table-assignment__icon"> 
+									<image href="img/svg/important.svg"></image>
+								</svg>
+								<div class="table-assignment__info">
+									<div class="table-assignment__creation-date">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+									</div>
+									<div class="table-assignment__requests"> 
+										<p class="table-assignment__bold-text">Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отобра жения контента в несколлько строк
+										</p>
+										<div class="table-assignment__name-status table-assignment__name-status--caution">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="table-assignment__task-name">Длинное название задачи в супермного букв длинное название задачи
+											</p>
+										</div>
+									</div>
+									<div class="table-assignment__deadline">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+										<div class="table-assignment__deadline-dates">18.08 14:00 - 19.08 14:00
+										</div>
+									</div>
+									<div class="table-assignment__working-hours"> 
+										<p class="table-assignment__working-hours-text">12:50
+										</p>
+									</div>
+									<div class="table-assignment__author"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Смирнова О.В.
+										</p>
+									</div>
+									<div class="table-assignment__executer"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Сорокина С.А.
+										</p>
+									</div>
+									<div class="table-assignment__status"> 
+										<div class="table-assignment__wrap">
+											<div class="status"> 
+												<div class="assignment-status assignment-status--in-process">
+													<p>В работе</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-assignment">
+								<svg class="table-assignment__icon"> 
+									<image href="img/svg/not-urgent.svg"></image>
+								</svg>
+								<div class="table-assignment__info">
+									<div class="table-assignment__creation-date">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+									</div>
+									<div class="table-assignment__requests"> 
+										<p class="table-assignment__bold-text">Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отобра жения контента в несколлько строк
+										</p>
+										<div class="table-assignment__name-status table-assignment__name-status--success">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="table-assignment__task-name">Длинное название задачи в супермного букв длинное название задачи
+											</p>
+										</div>
+									</div>
+									<div class="table-assignment__deadline">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+										<div class="table-assignment__deadline-dates">18.08 14:00 - 19.08 14:00
+										</div>
+									</div>
+									<div class="table-assignment__working-hours"> 
+										<p class="table-assignment__working-hours-text">12:50
+										</p>
+									</div>
+									<div class="table-assignment__author"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Смирнова О.В.
+										</p>
+									</div>
+									<div class="table-assignment__executer"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Сорокина С.А.
+										</p>
+									</div>
+									<div class="table-assignment__status"> 
+										<div class="table-assignment__wrap">
+											<div class="status"> 
+												<div class="assignment-status assignment-status--opened">
+													<p>Открыт</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-assignment">
+								<svg class="table-assignment__icon"> 
+									<image href="img/svg/critical.svg"></image>
+								</svg>
+								<div class="table-assignment__info">
+									<div class="table-assignment__creation-date">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+									</div>
+									<div class="table-assignment__requests"> 
+										<p class="table-assignment__bold-text">Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отобра жения контента в несколлько строк
+										</p>
+										<div class="table-assignment__name-status table-assignment__name-status--alert">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="table-assignment__task-name">Длинное название задачи в супермного букв длинное название задачи
+											</p>
+										</div>
+									</div>
+									<div class="table-assignment__deadline">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+										<div class="table-assignment__deadline-dates">18.08 14:00 - 19.08 14:00
+										</div>
+									</div>
+									<div class="table-assignment__working-hours"> 
+										<p class="table-assignment__working-hours-text">12:50
+										</p>
+									</div>
+									<div class="table-assignment__author"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Смирнова О.В.
+										</p>
+									</div>
+									<div class="table-assignment__executer"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Сорокина С.А.
+										</p>
+									</div>
+									<div class="table-assignment__status"> 
+										<div class="table-assignment__wrap">
+											<div class="status"> 
+												<div class="assignment-status assignment-status--closed">
+													<p>Закрыт</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-assignment">
+								<svg class="table-assignment__icon"> 
+									<image href="img/svg/desirable.svg"></image>
+								</svg>
+								<div class="table-assignment__info">
+									<div class="table-assignment__creation-date">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+									</div>
+									<div class="table-assignment__requests"> 
+										<p class="table-assignment__bold-text">Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отобра жения контента в несколлько строк
+										</p>
+										<div class="table-assignment__name-status table-assignment__name-status--caution">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="table-assignment__task-name">Длинное название задачи в супермного букв длинное название задачи
+											</p>
+										</div>
+									</div>
+									<div class="table-assignment__deadline">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+										<div class="table-assignment__deadline-dates">18.08 14:00 - 19.08 14:00
+										</div>
+									</div>
+									<div class="table-assignment__working-hours"> 
+										<p class="table-assignment__working-hours-text">12:50
+										</p>
+									</div>
+									<div class="table-assignment__author"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Смирнова О.В.
+										</p>
+									</div>
+									<div class="table-assignment__executer"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Сорокина С.А.
+										</p>
+									</div>
+									<div class="table-assignment__status"> 
+										<div class="table-assignment__wrap">
+											<div class="status"> 
+												<div class="assignment-status assignment-status--ready"> 
+													<p>Готов</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-assignment">
+								<svg class="table-assignment__icon"> 
+									<image href="img/svg/important.svg"></image>
+								</svg>
+								<div class="table-assignment__info">
+									<div class="table-assignment__creation-date">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+									</div>
+									<div class="table-assignment__requests"> 
+										<p class="table-assignment__bold-text">Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отобра жения контента в несколлько строк
+										</p>
+										<div class="table-assignment__name-status table-assignment__name-status--caution">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="table-assignment__task-name">Длинное название задачи в супермного букв длинное название задачи
+											</p>
+										</div>
+									</div>
+									<div class="table-assignment__deadline">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+										<div class="table-assignment__deadline-dates">18.08 14:00 - 19.08 14:00
+										</div>
+									</div>
+									<div class="table-assignment__working-hours"> 
+										<p class="table-assignment__working-hours-text">12:50
+										</p>
+									</div>
+									<div class="table-assignment__author"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Смирнова О.В.
+										</p>
+									</div>
+									<div class="table-assignment__executer"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Сорокина С.А.
+										</p>
+									</div>
+									<div class="table-assignment__status"> 
+										<div class="table-assignment__wrap">
+											<div class="status"> 
+												<div class="assignment-status assignment-status--in-process">
+													<p>В работе</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-assignment">
+								<svg class="table-assignment__icon"> 
+									<image href="img/svg/not-urgent.svg"></image>
+								</svg>
+								<div class="table-assignment__info">
+									<div class="table-assignment__creation-date">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+									</div>
+									<div class="table-assignment__requests"> 
+										<p class="table-assignment__bold-text">Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отобра жения контента в несколлько строк
+										</p>
+										<div class="table-assignment__name-status table-assignment__name-status--success">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="table-assignment__task-name">Длинное название задачи в супермного букв длинное название задачи
+											</p>
+										</div>
+									</div>
+									<div class="table-assignment__deadline">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+										<div class="table-assignment__deadline-dates">18.08 14:00 - 19.08 14:00
+										</div>
+									</div>
+									<div class="table-assignment__working-hours"> 
+										<p class="table-assignment__working-hours-text">12:50
+										</p>
+									</div>
+									<div class="table-assignment__author"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Смирнова О.В.
+										</p>
+									</div>
+									<div class="table-assignment__executer"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Сорокина С.А.
+										</p>
+									</div>
+									<div class="table-assignment__status"> 
+										<div class="table-assignment__wrap">
+											<div class="status"> 
+												<div class="assignment-status assignment-status--opened">
+													<p>Открыт</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-assignment">
+								<svg class="table-assignment__icon"> 
+									<image href="img/svg/critical.svg"></image>
+								</svg>
+								<div class="table-assignment__info">
+									<div class="table-assignment__creation-date">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+									</div>
+									<div class="table-assignment__requests"> 
+										<p class="table-assignment__bold-text">Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отобра жения контента в несколлько строк
+										</p>
+										<div class="table-assignment__name-status table-assignment__name-status--alert">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="table-assignment__task-name">Длинное название задачи в супермного букв длинное название задачи
+											</p>
+										</div>
+									</div>
+									<div class="table-assignment__deadline">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+										<div class="table-assignment__deadline-dates">18.08 14:00 - 19.08 14:00
+										</div>
+									</div>
+									<div class="table-assignment__working-hours"> 
+										<p class="table-assignment__working-hours-text">12:50
+										</p>
+									</div>
+									<div class="table-assignment__author"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Смирнова О.В.
+										</p>
+									</div>
+									<div class="table-assignment__executer"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Сорокина С.А.
+										</p>
+									</div>
+									<div class="table-assignment__status"> 
+										<div class="table-assignment__wrap">
+											<div class="status"> 
+												<div class="assignment-status assignment-status--closed">
+													<p>Закрыт</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-assignment">
+								<svg class="table-assignment__icon"> 
+									<image href="img/svg/desirable.svg"></image>
+								</svg>
+								<div class="table-assignment__info">
+									<div class="table-assignment__creation-date">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+									</div>
+									<div class="table-assignment__requests"> 
+										<p class="table-assignment__bold-text">Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отобра жения контента в несколлько строк
+										</p>
+										<div class="table-assignment__name-status table-assignment__name-status--caution">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="table-assignment__task-name">Длинное название задачи в супермного букв длинное название задачи
+											</p>
+										</div>
+									</div>
+									<div class="table-assignment__deadline">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+										<div class="table-assignment__deadline-dates">18.08 14:00 - 19.08 14:00
+										</div>
+									</div>
+									<div class="table-assignment__working-hours"> 
+										<p class="table-assignment__working-hours-text">12:50
+										</p>
+									</div>
+									<div class="table-assignment__author"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Смирнова О.В.
+										</p>
+									</div>
+									<div class="table-assignment__executer"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Сорокина С.А.
+										</p>
+									</div>
+									<div class="table-assignment__status"> 
+										<div class="table-assignment__wrap">
+											<div class="status"> 
+												<div class="assignment-status assignment-status--ready"> 
+													<p>Готов</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-assignment">
+								<svg class="table-assignment__icon"> 
+									<image href="img/svg/important.svg"></image>
+								</svg>
+								<div class="table-assignment__info">
+									<div class="table-assignment__creation-date">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+									</div>
+									<div class="table-assignment__requests"> 
+										<p class="table-assignment__bold-text">Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отобра жения контента в несколлько строк
+										</p>
+										<div class="table-assignment__name-status table-assignment__name-status--caution">
+											<svg class="icon icon-active ">
+												<use xlink:href="img/svg/sprite.svg#active"></use>
+											</svg>
+											<p class="table-assignment__task-name">Длинное название задачи в супермного букв длинное название задачи
+											</p>
+										</div>
+									</div>
+									<div class="table-assignment__deadline">
+										<div class="table-assignment__date">21.06.2022
+										</div>
+										<div class="table-assignment__deadline-dates">18.08 14:00 - 19.08 14:00
+										</div>
+									</div>
+									<div class="table-assignment__working-hours"> 
+										<p class="table-assignment__working-hours-text">12:50
+										</p>
+									</div>
+									<div class="table-assignment__author"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Смирнова О.В.
+										</p>
+									</div>
+									<div class="table-assignment__executer"> <img class="table-assignment__avatar" src="img/@2x/slide-25.jpg" alt="" role="presentation"/>
+										<p class="table-assignment__bold-text">Сорокина С.А.
+										</p>
+									</div>
+									<div class="table-assignment__status"> 
+										<div class="table-assignment__wrap">
+											<div class="status"> 
+												<div class="assignment-status assignment-status--in-process">
+													<p>В работе</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<!--  start modals-->
 		<div id="modal-call" style="display: none">

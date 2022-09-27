@@ -1,0 +1,47 @@
+include ./components/table-assignment.pug
+
+
+mixin assignment_report_table(text, task_name)
+	+b.assignment-report-table
+		+e.table-top
+			+e.creation-date 
+				+icon("three")
+				+e.header-wrap
+					+e.P.header Дата создания
+			+e.requests 
+				+icon("three")
+				+e.header-wrap
+					+e.P.header Запросы
+			+e.deadline 
+				+icon("three")
+				+e.header-wrap
+					+e.P.header Крайний срок
+					+e.sub-header План
+			+e.working-hours 
+				+icon("three")
+				+e.header-wrap
+					+e.P.header Фактические трудозатраты
+			+e.author 
+				+icon("three")
+				+e.header-wrap
+					+e.P.header Автор
+			+e.executer 
+				+icon("three")
+				+e.header-wrap
+					+e.P.header Исполнитель
+			+e.status 
+				+e.header-wrap
+					+e.P.header Статус
+		+e.assignments.scrollbar-vertical 
+			+table_assignment("not-urgent", "21.06.2022", text, "success", task_name, "21.06.2022", "18.08 14:00", "19.08 14:00", "12:50", "Смирнова О.В.", "Сорокина С.А.", "opened")
+			+table_assignment("critical", "21.06.2022", text, "alert", task_name, "21.06.2022", "18.08 14:00", "19.08 14:00", "12:50", "Смирнова О.В.", "Сорокина С.А.", "closed")
+			+table_assignment("desirable", "21.06.2022", text, "caution", task_name, "21.06.2022", "18.08 14:00", "19.08 14:00", "12:50", "Смирнова О.В.", "Сорокина С.А.", "ready")
+			+table_assignment("important", "21.06.2022", text, "caution", task_name, "21.06.2022", "18.08 14:00", "19.08 14:00", "12:50", "Смирнова О.В.", "Сорокина С.А.", "in-process")
+			+table_assignment("not-urgent", "21.06.2022", text, "success", task_name, "21.06.2022", "18.08 14:00", "19.08 14:00", "12:50", "Смирнова О.В.", "Сорокина С.А.", "opened")
+			+table_assignment("critical", "21.06.2022", text, "alert", task_name, "21.06.2022", "18.08 14:00", "19.08 14:00", "12:50", "Смирнова О.В.", "Сорокина С.А.", "closed")
+			+table_assignment("desirable", "21.06.2022", text, "caution", task_name, "21.06.2022", "18.08 14:00", "19.08 14:00", "12:50", "Смирнова О.В.", "Сорокина С.А.", "ready")
+			+table_assignment("important", "21.06.2022", text, "caution", task_name, "21.06.2022", "18.08 14:00", "19.08 14:00", "12:50", "Смирнова О.В.", "Сорокина С.А.", "in-process")
+			+table_assignment("not-urgent", "21.06.2022", text, "success", task_name, "21.06.2022", "18.08 14:00", "19.08 14:00", "12:50", "Смирнова О.В.", "Сорокина С.А.", "opened")
+			+table_assignment("critical", "21.06.2022", text, "alert", task_name, "21.06.2022", "18.08 14:00", "19.08 14:00", "12:50", "Смирнова О.В.", "Сорокина С.А.", "closed")
+			+table_assignment("desirable", "21.06.2022", text, "caution", task_name, "21.06.2022", "18.08 14:00", "19.08 14:00", "12:50", "Смирнова О.В.", "Сорокина С.А.", "ready")
+			+table_assignment("important", "21.06.2022", text, "caution", task_name, "21.06.2022", "18.08 14:00", "19.08 14:00", "12:50", "Смирнова О.В.", "Сорокина С.А.", "in-process")

@@ -1,0 +1,70 @@
+.assignment-report-table {
+	width: 100%;
+	min-width: 0;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+	border-radius: 8px;
+	overflow: auto;
+	&__table-top {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		padding-left: 40px;
+		padding-right: 7px;
+		border-bottom: 2px solid #CCD9E0;
+		.icon {
+			min-width: 24px;
+			min-height: 24px;
+			max-width: 24px;
+			max-height: 24px;
+			fill: var(--pale-grey);
+		}
+	}
+	&__creation-date, &__requests, &__deadline, &__working-hours, &__author, &__executer, &__status {
+		display: flex;
+		align-items: center;
+		padding: 12px 24px 12px 24px;
+	}
+	&__creation-date {
+		width: 9%;
+	}
+	&__requests {
+		width: 32%;
+	}
+	&__deadline {
+		width: 12%;
+	}
+	&__working-hours {
+		width: 11%;
+	}
+	&__author {
+		width: 15%;
+	}
+	&__executer {
+		width: 15%;
+	}
+	&__status {
+		width: 8%;
+	}
+	&__header {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: var(--main-grey);
+	}
+	&__sub-header {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		color: var(--main-grey);
+	}
+	&__header-wrap {
+		margin-left: 10px;
+	}
+	&__assignments {
+		overflow: auto;
+		flex-grow: 1;
+	}
+}
