@@ -1,0 +1,39 @@
+mixin report_executer(name, department, position, requests_total, working_hours)
+	+b.report-executer
+		+e.BUTTON.accordeon-control.clean-btn
+			+icon("accordeon-arrow")
+		+e.info 
+			+e.executers 
+				+e.avatar 
+					img(src="/img/@2x/slide-25.jpg")
+				+e.executer-info
+					+e.name=name
+					+e.department-position
+						+e.department=department
+						+e.position=position
+			+e.requests-total
+				p=requests_total
+			+e.working-hours
+				p=working_hours
+			+e.blank-1 
+			+e.blank-2 
+
+mixin report_executer-active(name, department, position, requests_total, working_hours)
+	+b.report-executer.active
+		+e.BUTTON.accordeon-control.clean-btn
+			+icon("accordeon-arrow")
+		+e.info 
+			+e.executers 
+				+e.avatar 
+					img(src="/img/@2x/slide-25.jpg")
+				+e.executer-info
+					+e.name=name
+					+e.department-position
+						+e.department=department
+						+e.position=position
+			+e.requests-total
+				p=requests_total
+			+e.working-hours
+				p=working_hours
+			+e.blank-1 
+			+e.blank-2 

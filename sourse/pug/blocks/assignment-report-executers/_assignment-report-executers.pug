@@ -1,0 +1,7 @@
+include ../assignment-report/components/assignment-report-top/assignment-report-top.pug
+include ./components/assignment-report-executers-table/assignment-report-executers-table.pug
+
+mixin assignment_report_executers(text, task_name)
+	+b.assignment-report-window
+		+assignment_report_top(12)
+		+assignment_report_executers_table(text, task_name)

@@ -1,0 +1,105 @@
+.report-executer, .accordeon-assignment {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #DEF0FB;
+	// padding-right: 7px;
+	&.active {
+		background-color: #CFE8F7;
+		.icon {
+			transform: rotate(90deg);
+		}
+	}
+	&__accordeon-control {
+		background: #DEE5E9;
+		border-radius: 4px;
+		width: 24px;
+		min-width: 24px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0px 8px;
+		.icon {
+			height: 12px;
+			min-height: 12px;
+			fill: var(--survey-blue);
+		}
+	}
+	&__executers, &__requests-total, &__working-hours, &__blank-1, &__blank-2, &__author, &__status {
+		display: flex;
+		align-items: center;
+		padding: 12px 24px 12px 24px;
+	}
+	&__info {
+		display: flex;
+		align-items: center;
+		flex-grow: 1;
+		min-width: 0;
+	}
+	&__executer-info {
+		min-width: 0;
+	}
+	&__executers {
+		width: 55%;
+		display: flex;
+		align-items: center;
+	}
+	&__working-hours, &__requests-total {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		p {
+			width: 100%;
+		}
+	}
+	&__requests-total {
+		min-width: 208px;
+		width: 12%;
+	}
+	&__working-hours {
+		min-width: 208px;
+		width: 12%;
+	}
+	&__blank-1, &__author {
+		width: 15%;
+		min-width: 208px;
+	}
+	&__blank-2, &__status {
+		width: 21%;
+	}
+	&__avatar {
+		width: 40px;
+		height: 40px;
+		min-width: 40px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-right: 10px;
+		img {
+			height: 40px;
+		}
+	}
+	&__name {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		margin-bottom: 4px;
+	}
+	&__department-position {
+		display: flex;
+		align-items: center;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		color: var(--main-grey);
+		flex-wrap: wrap;
+	}
+	&__department, &__position {
+		white-space: nowrap;
+	}
+	&__department {
+		padding-right: 9px;
+		margin-right: 9px;
+		border-right: 2px solid #B2C6D2;
+	}
+}

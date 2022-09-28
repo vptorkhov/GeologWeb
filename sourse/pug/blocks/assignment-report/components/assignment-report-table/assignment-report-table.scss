@@ -1,4 +1,4 @@
-.assignment-report-table {
+.assignment-report-table, .assignment-report-executers-table  {
 	width: 100%;
 	min-width: 0;
 	flex-grow: 1;
@@ -22,6 +22,21 @@
 			fill: var(--pale-grey);
 		}
 	}
+	&__header-wrap {
+		margin-left: 10px;
+	}
+	&__header {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: var(--main-grey);
+	}
+	&__assignments {
+		overflow: auto;
+		flex-grow: 1;
+	}
+}
+.assignment-report-table {
 	&__creation-date, &__requests, &__deadline, &__working-hours, &__author, &__executer, &__status {
 		display: flex;
 		align-items: center;
@@ -48,23 +63,10 @@
 	&__status {
 		width: 8%;
 	}
-	&__header {
-		font-weight: 500;
-		font-size: 14px;
-		line-height: 16px;
-		color: var(--main-grey);
-	}
 	&__sub-header {
 		font-weight: 400;
 		font-size: 12px;
 		line-height: 14px;
 		color: var(--main-grey);
-	}
-	&__header-wrap {
-		margin-left: 10px;
-	}
-	&__assignments {
-		overflow: auto;
-		flex-grow: 1;
 	}
 }

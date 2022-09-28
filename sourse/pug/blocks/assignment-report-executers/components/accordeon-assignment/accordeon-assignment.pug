@@ -1,0 +1,21 @@
+include ../../../assignment-calendar-top/components/status/work-status.pug
+
+mixin accordeon_assignment(icon, text, status, task_name, working_hours, author, work_status)
+	+b.accordeon-assignment
+		+e.info 
+			+e.executers 
+				+e.SVG.icon 
+					image(href=`img/svg/${icon}.svg`)
+				+e.P.bold-text=text
+				+e.name-status(class=`--${status}`)
+					+icon("active")
+					+e.P.task-name=task_name
+			+e.requests-total
+			+e.working-hours
+				p=working_hours
+			+e.author
+				+e.IMG.avatar(src='img/@2x/slide-25.jpg')
+				+e.P.bold-text=author
+			+e.status
+				+e.wrap
+					+work_status(work_status)

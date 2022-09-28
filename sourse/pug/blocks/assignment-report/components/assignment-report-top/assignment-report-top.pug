@@ -1,20 +1,34 @@
-mixin assignment_report_top()
+include ../../../assignment-statuses/_assignment-statuses.pug
+
+mixin assignment_report_top(filters)
+	- let filter = 0;
 	+b.assignment-report-top
-		+e.navigation
-			+e.BUTTON.back.clean-btn
-				+icon("side-sheet-arrow")
-			+e.P.reports Отчеты
-		+e.settings 
-			+b.tabs 
-				+e.BUTTON.tab.active
-					+e.P.text По поручениям
-				+e.BUTTON.tab
-					+e.P.text По затраченному времени
-			+e.BUTTON.download-excel.clean-btn  
-				+e.SVG.document
-					image(href="/img/svg/documents.svg")
-					+e.P.text Выгрузить отчет в Excel
-			+e.BUTTON.filter.clean-btn 
-				+e.SVG.document 
-					image(href="/img/svg/filters.svg")
-					+e.P.text Фильтр
+		+e.wrap
+			+e.navigation
+				+e.BUTTON.back.clean-btn
+					+icon("side-sheet-arrow")
+				+e.P.reports Отчеты
+			+e.settings 
+				+b.tabs 
+					+e.BUTTON.tab.active
+						+e.P.text По поручениям
+					+e.BUTTON.tab
+						+e.P.text По затраченному времени
+				+e.BUTTON.download-excel.clean-btn  
+					+e.SVG.document
+						image(href="/img/svg/documents.svg")
+						+e.P.text Скачать отчет
+				+e.BUTTON.filter.clean-btn 
+					+e.SVG.document 
+						image(href="/img/svg/filters.svg")
+						+e.P.text Фильтр
+				if filters
+					+e.filters-counter 
+						+e.counter=filters
+						+e.BUTTON.clean.clean-btn 
+							+icon('close-cross')
+		if filters
+			+e.filters 
+				while filter < filters
+					+filter_chip("Скважина 4и")
+					- filter += 1;

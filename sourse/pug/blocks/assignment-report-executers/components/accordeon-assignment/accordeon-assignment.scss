@@ -1,0 +1,73 @@
+.accordeon-assignment {
+	display: flex;
+	align-items: center;
+	border-bottom:  1px solid #DEF0FB;
+	padding-left: 40px;
+	&__executers {
+		padding-left: 56px !important;
+		position: relative;
+		display: block !important;
+		min-width: 0;
+	}
+	&__bold-text {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	&__icon {
+		&, image {
+			min-width: 16px;
+			min-height: 16px;
+			width: 16px;
+			height: 16px;
+		}
+		position: absolute;
+		left: 8px;
+		top: calc(50% - 8px);
+	}
+	&__task-name {
+		color: #33b4ff;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 100%;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+	}
+	&__name-status {
+		display: flex;
+		align-items: center;
+		margin-top: 4px;
+		.icon {
+			min-width: 9px;
+			min-height: 9px;
+			max-width: 9px;
+			max-height: 9px;
+			margin-right: 10px;
+		}
+		&--success {
+			.icon {
+				fill: var(--main-green);
+			}
+		}
+		&--alert {
+			.icon {
+				fill: var(--main-red);
+			}
+		}
+		&--caution {
+			.icon {
+				fill: var(--main-orange);
+			}
+		}
+	}
+	&__status {
+		min-width: 122px;
+	}
+}

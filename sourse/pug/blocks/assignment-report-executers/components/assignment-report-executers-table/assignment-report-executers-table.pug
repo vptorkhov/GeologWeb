@@ -1,0 +1,41 @@
+include ../assignment-report-executer/assignment-report-executer.pug
+include ../accordeon-assignment/accordeon-assignment.pug
+
+mixin assignment_report_executers_table(text, task_name)
+	+b.assignment-report-executers-table
+		+e.table-top
+			+e.executers 
+				+icon("three")
+				+e.header-wrap
+					+e.P.header Исполнители
+			+e.requests-total 
+				+icon("three")
+				+e.header-wrap
+					+e.P.header Общее количество запросов
+			+e.working-hours 
+				+icon("three")
+				+e.header-wrap
+					+e.P.header Фактические трудозатратыты
+			+e.author 
+				+e.header-wrap
+					+e.P.header Автор
+			+e.status 
+				+e.header-wrap
+					+e.P.header Статус
+		+e.assignments.scrollbar-vertical 
+			+report_executer("Соколов  Игорь Эдуардович", "Наименование отдела", "Начальник участка", 3, "12:50")
+			+report_executer-active("Соколов  Игорь Эдуардович", "Наименование отдела", "Начальник участка", 3, "12:50")
+			+e.assignments-wrap
+				+accordeon_assignment('not-urgent', text, 'success', task_name, '02:50', "Смирнова О.В.", "ready")
+				+accordeon_assignment('critical', text, 'alert', task_name, "06:50", "Смирнова О.В.", 'opened')
+				+accordeon_assignment('desirable', text, 'caution', task_name, "05:50", "Смирнова О.В.", "closed")
+				+accordeon_assignment('important', text, 'success', task_name, "05:50", "Смирнова О.В.", "in-process")
+			+report_executer("Соколов  Игорь Эдуардович", "Наименование отдела", "Начальник участка", 3, "12:50")
+			+report_executer("Соколов  Игорь Эдуардович", "Наименование отдела", "Начальник участка", 3, "12:50")
+			+report_executer("Соколов  Игорь Эдуардович", "Наименование отдела", "Начальник участка", 3, "12:50")
+			+report_executer("Соколов  Игорь Эдуардович", "Наименование отдела", "Начальник участка", 3, "12:50")
+			+report_executer("Соколов  Игорь Эдуардович", "Наименование отдела", "Начальник участка", 3, "12:50")
+			+report_executer("Соколов  Игорь Эдуардович", "Наименование отдела", "Начальник участка", 3, "12:50")
+			+report_executer("Соколов  Игорь Эдуардович", "Наименование отдела", "Начальник участка", 3, "12:50")
+			+report_executer("Соколов  Игорь Эдуардович", "Наименование отдела", "Начальник участка", 3, "12:50")
+			+report_executer("Соколов  Игорь Эдуардович", "Наименование отдела", "Начальник участка", 3, "12:50")

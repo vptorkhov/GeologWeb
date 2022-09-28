@@ -1,0 +1,14 @@
+extends ../layout/main.pug
+include ../blocks/assignment-report-executers/_assignment-report-executers.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+	- let task_name=`Длинное название задачи в супермного букв длинное название задачи`
+	- let text = `Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отобра жения контента в несколлько строк`
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	.p-sm-5(style="background-color: grey; height: 100vh;")
+		+assignment_report_executers(text, task_name)

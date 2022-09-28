@@ -1,0 +1,27 @@
+.assignment-report-executers-table {
+	&__executers, &__requests-total, &__working-hours, &__author, &__status {
+		display: flex;
+		align-items: center;
+		padding: 12px 24px 12px 24px;
+	}
+	&__executers {
+		width: 55%;
+	}
+	&__requests-total {
+		min-width: 208px;
+		width: 12%;
+	}
+	&__working-hours {
+		width: 12%;
+		min-width: 208px;
+	}
+	&__author {
+		width: 15%;
+	}
+	&__status {
+		width: 21%;
+	}
+	&__assignments-wrap {
+		width: 100%;
+	}
+}

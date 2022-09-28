@@ -12,6 +12,11 @@
   width: 1em;
 }
 
+.icon-accordeon-arrow {
+  font-size: 1.2rem;
+  width: 0.6666666667em;
+}
+
 .icon-active {
   font-size: 0.8rem;
   width: 1em;
@@ -4945,6 +4950,205 @@ iframe {
   background-color: var(--main-grey);
 }
 
+.accordeon-assignment {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #DEF0FB;
+  padding-left: 40px;
+}
+.accordeon-assignment__executers {
+  padding-left: 56px !important;
+  position: relative;
+  display: block !important;
+  min-width: 0;
+}
+.accordeon-assignment__bold-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.accordeon-assignment__icon {
+  position: absolute;
+  left: 8px;
+  top: calc(50% - 8px);
+}
+.accordeon-assignment__icon, .accordeon-assignment__icon image {
+  min-width: 16px;
+  min-height: 16px;
+  width: 16px;
+  height: 16px;
+}
+.accordeon-assignment__task-name {
+  color: #33b4ff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+.accordeon-assignment__name-status {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+.accordeon-assignment__name-status .icon {
+  min-width: 9px;
+  min-height: 9px;
+  max-width: 9px;
+  max-height: 9px;
+  margin-right: 10px;
+}
+.accordeon-assignment__name-status--success .icon {
+  fill: var(--main-green);
+}
+.accordeon-assignment__name-status--alert .icon {
+  fill: var(--main-red);
+}
+.accordeon-assignment__name-status--caution .icon {
+  fill: var(--main-orange);
+}
+.accordeon-assignment__status {
+  min-width: 122px;
+}
+
+.report-executer, .accordeon-assignment {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #DEF0FB;
+}
+.report-executer.active, .accordeon-assignment.active {
+  background-color: #CFE8F7;
+}
+.report-executer.active .icon, .accordeon-assignment.active .icon {
+  transform: rotate(90deg);
+}
+.report-executer__accordeon-control, .accordeon-assignment__accordeon-control {
+  background: #DEE5E9;
+  border-radius: 4px;
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 8px;
+}
+.report-executer__accordeon-control .icon, .accordeon-assignment__accordeon-control .icon {
+  height: 12px;
+  min-height: 12px;
+  fill: var(--survey-blue);
+}
+.report-executer__executers, .report-executer__requests-total, .report-executer__working-hours, .report-executer__blank-1, .report-executer__blank-2, .report-executer__author, .report-executer__status, .accordeon-assignment__executers, .accordeon-assignment__requests-total, .accordeon-assignment__working-hours, .accordeon-assignment__blank-1, .accordeon-assignment__blank-2, .accordeon-assignment__author, .accordeon-assignment__status {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px 12px 24px;
+}
+.report-executer__info, .accordeon-assignment__info {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  min-width: 0;
+}
+.report-executer__executer-info, .accordeon-assignment__executer-info {
+  min-width: 0;
+}
+.report-executer__executers, .accordeon-assignment__executers {
+  width: 55%;
+  display: flex;
+  align-items: center;
+}
+.report-executer__working-hours, .report-executer__requests-total, .accordeon-assignment__working-hours, .accordeon-assignment__requests-total {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+}
+.report-executer__working-hours p, .report-executer__requests-total p, .accordeon-assignment__working-hours p, .accordeon-assignment__requests-total p {
+  width: 100%;
+}
+.report-executer__requests-total, .accordeon-assignment__requests-total {
+  min-width: 208px;
+  width: 12%;
+}
+.report-executer__working-hours, .accordeon-assignment__working-hours {
+  min-width: 208px;
+  width: 12%;
+}
+.report-executer__blank-1, .report-executer__author, .accordeon-assignment__blank-1, .accordeon-assignment__author {
+  width: 15%;
+  min-width: 208px;
+}
+.report-executer__blank-2, .report-executer__status, .accordeon-assignment__blank-2, .accordeon-assignment__status {
+  width: 21%;
+}
+.report-executer__avatar, .accordeon-assignment__avatar {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.report-executer__avatar img, .accordeon-assignment__avatar img {
+  height: 40px;
+}
+.report-executer__name, .accordeon-assignment__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 4px;
+}
+.report-executer__department-position, .accordeon-assignment__department-position {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--main-grey);
+  flex-wrap: wrap;
+}
+.report-executer__department, .report-executer__position, .accordeon-assignment__department, .accordeon-assignment__position {
+  white-space: nowrap;
+}
+.report-executer__department, .accordeon-assignment__department {
+  padding-right: 9px;
+  margin-right: 9px;
+  border-right: 2px solid #B2C6D2;
+}
+
+.assignment-report-executers-table__executers, .assignment-report-executers-table__requests-total, .assignment-report-executers-table__working-hours, .assignment-report-executers-table__author, .assignment-report-executers-table__status {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px 12px 24px;
+}
+.assignment-report-executers-table__executers {
+  width: 55%;
+}
+.assignment-report-executers-table__requests-total {
+  min-width: 208px;
+  width: 12%;
+}
+.assignment-report-executers-table__working-hours {
+  width: 12%;
+  min-width: 208px;
+}
+.assignment-report-executers-table__author {
+  width: 15%;
+}
+.assignment-report-executers-table__status {
+  width: 21%;
+}
+.assignment-report-executers-table__assignments-wrap {
+  width: 100%;
+}
+
 .assignment-report-window {
   padding: 0 20px;
   background-color: #F5F9FC;
@@ -4954,7 +5158,7 @@ iframe {
   height: 100%;
 }
 
-.assignment-report-table {
+.assignment-report-table, .assignment-report-executers-table {
   width: 100%;
   min-width: 0;
   flex-grow: 1;
@@ -4964,7 +5168,7 @@ iframe {
   border-radius: 8px;
   overflow: auto;
 }
-.assignment-report-table__table-top {
+.assignment-report-table__table-top, .assignment-report-executers-table__table-top {
   display: flex;
   align-items: center;
   width: 100%;
@@ -4972,13 +5176,27 @@ iframe {
   padding-right: 7px;
   border-bottom: 2px solid #CCD9E0;
 }
-.assignment-report-table__table-top .icon {
+.assignment-report-table__table-top .icon, .assignment-report-executers-table__table-top .icon {
   min-width: 24px;
   min-height: 24px;
   max-width: 24px;
   max-height: 24px;
   fill: var(--pale-grey);
 }
+.assignment-report-table__header-wrap, .assignment-report-executers-table__header-wrap {
+  margin-left: 10px;
+}
+.assignment-report-table__header, .assignment-report-executers-table__header {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--main-grey);
+}
+.assignment-report-table__assignments, .assignment-report-executers-table__assignments {
+  overflow: auto;
+  flex-grow: 1;
+}
+
 .assignment-report-table__creation-date, .assignment-report-table__requests, .assignment-report-table__deadline, .assignment-report-table__working-hours, .assignment-report-table__author, .assignment-report-table__executer, .assignment-report-table__status {
   display: flex;
   align-items: center;
@@ -5005,24 +5223,11 @@ iframe {
 .assignment-report-table__status {
   width: 8%;
 }
-.assignment-report-table__header {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  color: var(--main-grey);
-}
 .assignment-report-table__sub-header {
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
   color: var(--main-grey);
-}
-.assignment-report-table__header-wrap {
-  margin-left: 10px;
-}
-.assignment-report-table__assignments {
-  overflow: auto;
-  flex-grow: 1;
 }
 
 .table-assignment {
@@ -5151,10 +5356,12 @@ iframe {
 }
 
 .assignment-report-top {
+  padding: 16px 0;
+}
+.assignment-report-top__wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
 }
 .assignment-report-top__navigation {
   display: flex;
@@ -5202,6 +5409,51 @@ iframe {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+}
+.assignment-report-top__filters {
+  display: flex;
+  margin-top: 16px;
+  overflow-x: scroll;
+  width: 100%;
+  box-sizing: content-box;
+  height: 43px;
+  margin-bottom: -16px;
+}
+.assignment-report-top__filters::-webkit-scrollbar {
+  width: 0;
+}
+.assignment-report-top__filters > * {
+  margin-right: 8px;
+}
+.assignment-report-top__filters-counter {
+  display: flex;
+  align-items: center;
+  margin: 0 -10px 0 8px;
+}
+.assignment-report-top__counter {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.015em;
+  background: #DEF0FB;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin-right: 10px;
+}
+.assignment-report-top__clean {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-grey);
+}
+.assignment-report-top__clean .icon {
+  width: 12px;
+  height: 12px;
+  fill: #ffffff;
+  margin-right: 0;
 }
 
 .assignment-status {
@@ -5299,6 +5551,7 @@ iframe {
   line-height: 14px;
   color: #ffffff;
   margin-right: 5px;
+  white-space: nowrap;
 }
 .filter-chip .btn {
   padding: 0;
