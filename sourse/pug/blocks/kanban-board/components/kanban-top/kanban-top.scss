@@ -1,0 +1,126 @@
+.kanban-top {
+	padding: 16px 20px;
+	&__top-line {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__name {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 28px;
+	}
+	&__filters-block {
+		display: flex;
+		align-items: center;
+	}
+	&__settings {
+		display: flex;
+		align-items: center;
+		margin-left: 16px;
+		svg, img {
+			width: 24px;
+			height: 24px;
+		}
+		svg {
+			margin-right: 8px;
+		}
+	}
+	&__filter {
+		display: flex;
+		align-items: center;
+		margin-left: 32px;
+		svg, img {
+			width: 16px;
+			height: 10px;
+		}
+		svg {
+			margin-right: 12px;
+		}
+
+	}
+	&__filters-counter {
+		display: flex;
+		align-items: center;
+		margin: 0 -10px 0 8px;
+	}
+	&__counter {
+		font-weight: 400;
+		font-size: 10px;
+		line-height: 12px;
+		letter-spacing: 0.015em;
+		background: #DEF0FB;
+		border-radius: 4px;
+		padding: 2px 4px;
+		margin-right: 10px;
+	}
+	&__bold {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+	}
+	&__clean {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		width: 20px;
+		height: 20px;
+		background-color: var(--main-grey);
+		.icon {
+			width: 12px;
+			height: 12px;
+			fill: #ffffff;
+			margin-right: 0;
+		}
+	}
+	&__filters {
+		display: flex;
+		margin-top: 16px;
+		overflow-x: scroll;
+		width: 100%;
+		height: 43px;
+		& > * {
+			margin-right: 8px;
+		}
+		height: min-content;
+		&::-webkit-scrollbar {
+			height: 0px;
+		}
+	}
+
+}
+.kanban-search {
+	width: 250px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	background: #FFFFFF;
+	border: 1px solid #CCD9E0;
+	border-radius: 8px;
+	padding: 0 8px;
+	&__field {
+		width: calc(100% - 36px);
+		&::placeholder {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+			color: var(--main-grey);
+		}
+		&:active, &:focus {
+			padding: 0;
+			outline: none;
+		}
+		padding: 0;
+		border: none;
+	}
+	&__icon {
+		.icon {
+			width: 24px;
+			height: 24px;
+			fill: var(--main-grey);
+		}
+		margin-right: 12px;
+	}
+
+}

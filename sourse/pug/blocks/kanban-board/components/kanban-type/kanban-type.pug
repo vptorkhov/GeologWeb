@@ -1,0 +1,27 @@
+mixin kanban_type(type, amount, title, column)
+	+b.kanban-type
+		+e.type(class=`--${type}`)
+		+e.body 
+			+e.title-amount 
+				+e.title=title
+				+e.amount=amount
+			+e.buttons 
+				+e.BUTTON.menu.clean-btn
+					+icon("menu")
+				if column
+					+e.BUTTON.open.clean-btn
+						+icon('accordeon-arrow')
+
+mixin kanban_type-active(type, amount, title, column)
+	+b.kanban-type.active
+		+e.type(class=`--${type}`)
+		+e.body 
+			+e.title-amount 
+				+e.title=title
+				+e.amount=amount
+			+e.buttons 
+				+e.BUTTON.menu.clean-btn
+					+icon("menu")
+				if column
+					+e.BUTTON.open.clean-btn
+						+icon('accordeon-arrow')

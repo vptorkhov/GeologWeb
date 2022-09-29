@@ -1,0 +1,32 @@
+include ../kanban-type/kanban-type.pug
+include ../kanban-line/kanban-line.pug
+include ../kanban-card/kanban-card.pug
+
+mixin kanban_content(bigtext)
+	+b.kanban-content
+		+e.wrap
+			+e.statuses
+				+e.column
+					+kanban_type-active("opened", 2, 'Открытые', true)
+				+e.sub-column
+					+kanban_type("opened", 2, 'Лушче выполнить')
+				+e.column
+					+kanban_type("in-process", 2, 'В работе', true)
+				//- +e.sub-column
+					+kanban_type("in-process", 2, 'Важные')
+				+e.column
+					+kanban_type("ready", 2, 'Готовые', true)
+				//- +e.sub-column
+					+kanban_type("ready", 2, 'Сделать отчет')
+				+e.column
+					+kanban_type("closed", 2, 'Закрытые', true)
+				//- +e.sub-column
+					+kanban_type("closed", 2, 'Проверить')
+			+kanban_line("Название дорожки с запросами", 25)
+			+kanban_line-active("Название дорожки с запросами", 25)
+			+e.requests 
+				+kanban_card("no-solution",  "not-urgent", "КРС", "Викторовский В.А.", "Эксперт", 15, 7)
+				+kanban_card("two-days", "critical", "КРС", "Викторовский В.А.", "Эксперт", 30, 25)
+				+kanban_card("has-solution", "desirable", "КРС", "Викторовский В.А.", "Эксперт", 15, 10)
+				+kanban_card("closed", "important", "КРС", "Викторовский В.А.", "Эксперт", 15, 5)
+				+kanban_card("deadline", "not-urgent", "КРС", "Викторовский В.А.", "Эксперт", 15, 2)

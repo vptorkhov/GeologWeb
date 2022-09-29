@@ -1,0 +1,83 @@
+.kanban-type {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	box-sizing: border-box;
+	border-radius: 8px;
+	background-color: #ffffff;
+	overflow: hidden;
+	&.active & {
+		&__open {
+			.icon {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	&__type {
+		width: 8px;
+		height: 100%;
+		opacity: 0.5;
+		&--opened {
+			background-color: var(--survey-blue);
+		}
+		&--in-process {
+			background-color: var(--main-orange);
+		}
+		&--ready {
+			background-color: var(--main-green);
+		}
+		&--closed {
+			background-color: var(--pale-grey);
+		}
+	}
+	&__body {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+		padding: 11.5px 8px;
+	}
+	&__title-amount {
+		display: flex;
+		align-items: center;
+	}
+	&__title {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+	}
+	&__amount {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		margin-left: 8px;
+		color: #33B4FF;
+	}
+	&__buttons {
+		display: flex;
+		align-items: center;
+	}
+	&__menu {
+		.icon {
+			fill: var(--heavy-blue);
+			width: 24px;
+		}
+	}
+	&__open {
+		background: #DEE5E9;
+		border-radius: 4px;
+		width: 24px;
+		min-width: 24px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0px 8px;
+		.icon {
+			height: 12px;
+			min-height: 12px;
+			fill: var(--survey-blue);
+		}
+	}
+}

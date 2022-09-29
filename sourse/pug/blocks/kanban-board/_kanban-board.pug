@@ -1,0 +1,7 @@
+include ./components/kanban-top/kanban-top.pug
+include ./components/kanban-content/kanban-content.pug
+
+mixin kanban_board()
+	+b.kanban-board
+		+kanban_top("Название доски в одну строку", 12)
+		+kanban_content()

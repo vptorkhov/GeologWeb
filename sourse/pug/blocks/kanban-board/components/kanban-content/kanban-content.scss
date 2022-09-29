@@ -1,0 +1,26 @@
+.kanban-content {
+	flex-grow: 1;
+	padding: 20px;
+	background-color: #ECF1F4;
+	overflow: auto;
+	&__wrap {
+		width: max-content;
+		min-width: 100%;
+	}
+	&__statuses {
+		display: flex;
+		align-items: baseline;
+	}
+	&__column, &__sub-column {
+		width: 284px;
+		min-width: 284px;
+	}
+	&__column {
+		margin-right: 20px;
+		height: 40px;
+	}
+	&__sub-column {
+		margin: 0 20px 0 -12px;
+		height: 26px;
+	}
+}

@@ -1,0 +1,30 @@
+include ../../../assignment-statuses/_assignment-statuses.pug
+
+mixin kanban_top(name, filters)
+	- let filter = 0
+	+b.kanban-top
+		+e.top-line
+			+e.name=name
+			+e.filters-block
+				+b.kanban-search 
+					+e.BUTTON.icon.clean-btn
+						+icon("search")
+					+e.INPUT.field(placeholder="Поиск")
+				+e.settings 
+					svg
+						image(href='/img/svg/settings.svg')
+					+e.bold Настроить доску
+				+e.filter 
+					svg
+						image(href='/img/svg/filters.svg')
+					+e.bold Фильтр
+				if filters 
+					+e.filters-counter
+						+e.counter=filters
+						+e.BUTTON.clean.clean-btn
+							+icon('close-cross')
+		if filters
+			+e.filters 
+				while filter < filters
+					+filter_chip("Скважина 4и")
+					- filter += 1;

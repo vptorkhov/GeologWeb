@@ -1,0 +1,48 @@
+.kanban-line {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin: 16px 0 20px 0;
+	&.active & {
+		&__open{
+			.icon {
+				transform: rotate(90deg);
+			}
+		}
+	}
+	&__open {
+		background: #DEE5E9;
+		border-radius: 4px;
+		width: 24px;
+		min-width: 24px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0px 8px;
+		margin-right: 20px;
+		.icon {
+			height: 12px;
+			min-height: 12px;
+			fill: var(--survey-blue);
+		}
+	}
+	&__name {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 140%;
+		margin-right: 8px;
+	}
+	&__total {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 140%;
+		color: #33B4FF;
+		margin-right: 24px;
+	}
+	&__line {
+		height: 1px;
+		flex-grow: 1;
+		background-color: #CCD9E0;
+	}
+}

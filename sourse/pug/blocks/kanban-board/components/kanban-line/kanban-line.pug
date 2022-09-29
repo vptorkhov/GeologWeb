@@ -1,0 +1,16 @@
+mixin kanban_line(name, total)
+	+b.kanban-line
+		+e.BUTTON.open.clean-btn
+			+icon('accordeon-arrow')
+		+e.name=name
+		+e.total=total
+		+e.line
+
+mixin kanban_line-active(name, total)
+	+b.kanban-line.active
+		+e.BUTTON.open.clean-btn
+			+icon('accordeon-arrow')
+		+e.name=name
+		+e.total=total
+		+e.line
+

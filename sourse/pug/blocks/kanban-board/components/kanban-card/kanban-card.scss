@@ -1,0 +1,92 @@
+.kanban-card {
+	background-color: #ffffff;
+	width: 284px;
+	border-radius: 8px;
+	padding: 20px;
+	&__request-info  {
+		display: flex;
+		align-items: center;
+		margin-bottom: 8px;
+	}
+	.message {
+		background-color: #ECF1F4;
+		&::before {
+			background-image: url(../img/svg/message-sidesheet.svg) !important;
+			left: 0;
+		}
+	}
+	&__ptiority {
+		display: flex;
+		margin-left: 16px;
+	}
+	&__icon {
+		width: 16px;
+		height: 16px;
+		margin-right: 8px;
+	}
+	&__text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		&--not-urgent {
+			color: var(--main-green);
+		}
+		&--critical {
+			color: var(--main-red);
+		}
+		&--desirable {
+			color: var(--main-orange);
+		}
+		&--important {
+			color: var(--dark-orange);
+		}
+	}
+	&__name {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		margin-bottom: 16px;
+		.icon {
+			font-size: 8px;
+			min-width: 8px;
+			margin-right: 7px;
+			color: var(--main-red);
+		}
+	}
+	&__request-name {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		color: var(--heavy-blue);
+		max-width: 250px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	&__sender-wrap {
+		margin-bottom: 11px;
+	}
+	&__progress-circles {
+		display: flex;
+		justify-content: space-between;
+		align-items: top;
+		margin-top: 16px;
+	}
+	&__circle {
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background-color: var(--survey-blue);
+	}
+	&__progress-bar {
+		width: 100%;
+		position: relative;
+	}
+	&__cover {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 4px;
+		background-color: #ffffff;
+	}
+}
