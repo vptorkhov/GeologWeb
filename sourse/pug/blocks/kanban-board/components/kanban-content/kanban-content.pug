@@ -9,7 +9,9 @@ mixin kanban_content(bigtext)
 				+e.column
 					+kanban_type-active("opened", 2, 'Открытые', true)
 				+e.sub-column
-					+kanban_type("opened", 2, 'Лушче выполнить')
+					+kanban_type("opened", 1, 'Лучше выполнить')
+				+e.sub-column
+					+kanban_type("opened", 1, 'Ещё один')
 				+e.column
 					+kanban_type("in-process", 2, 'В работе', true)
 				//- +e.sub-column
@@ -23,10 +25,20 @@ mixin kanban_content(bigtext)
 				//- +e.sub-column
 					+kanban_type("closed", 2, 'Проверить')
 			+kanban_line("Название дорожки с запросами", 25)
-			+kanban_line-active("Название дорожки с запросами", 25)
-			+e.requests 
-				+kanban_card("no-solution",  "not-urgent", "КРС", "Викторовский В.А.", "Эксперт", 15, 7)
-				+kanban_card("two-days", "critical", "КРС", "Викторовский В.А.", "Эксперт", 30, 25)
-				+kanban_card("has-solution", "desirable", "КРС", "Викторовский В.А.", "Эксперт", 15, 10)
-				+kanban_card("closed", "important", "КРС", "Викторовский В.А.", "Эксперт", 15, 5)
-				+kanban_card("deadline", "not-urgent", "КРС", "Викторовский В.А.", "Эксперт", 15, 2)
+			+kanban_line-active("Название дорожки с запросами", 14)
+			+e.requests
+				+e.column-card 
+					+kanban_card('opened', "no-solution",  "not-urgent", "КРС", "Викторовский В.А.", "Эксперт", 15, 7)
+					+kanban_card('opened', "two-days", "critical", "КРС", "Викторовский В.А.", "Эксперт", 30, 25)
+				+e.sub-column-card
+					+kanban_card('opened', "has-solution", "desirable", "КРС", "Викторовский В.А.", "Эксперт", 15, 10)
+				+e.sub-column-card
+					+kanban_card('opened', "closed", "important", "КРС", "Викторовский В.А.", "Эксперт", 15, 5)
+					+kanban_card('opened', "has-solution", "desirable", "КРС", "Викторовский В.А.", "Эксперт", 15, 10)
+				+e.column-card
+					+kanban_card('in-process', "deadline", "not-urgent", "КРС", "Викторовский В.А.", "Эксперт", 15, 2)
+				+e.column-card
+					+kanban_card('ready', "deadline", "not-urgent", "КРС", "Викторовский В.А.", "Эксперт", 15, 2)
+				+e.column-placeholder
+			+kanban_line("Дорожка с запросами", 55)
+			+kanban_line("Название дорожки с запросами", 25)

@@ -2,10 +2,10 @@ include ../../../assignment-card/_assignment-card.pug
 include ../../../chat/_chat.pug
 include ../../../assignment-calendar-top/components/status/work-status.pug
 
-mixin kanban_card(request_status, priority, request_name, name, position, days, day)
+mixin kanban_card(work_status, request_status, priority, request_name, name, position, days, day)
 	+b.kanban-card
 		+e.request-info 
-			+work_status("opened")
+			+work_status(work_status)
 			+e.ptiority 
 				+e.IMG.icon(src=`img/svg/${priority}.svg`)
 				+e.P.text(class=`--${priority}`)=(priority=="not-urgent" ? "Незначительный" : "Другое")
@@ -15,9 +15,8 @@ mixin kanban_card(request_status, priority, request_name, name, position, days, 
 		+e.sender-wrap
 			+sender(name, position)
 		+assignment-request("incoming", "@Андрей Паин, необходимо прикрепить файлы по итогам проведенного исследования", "15.08.2022 14:48", true, false, "14.09.2022", request_status, false, false)
-		- let a = (days-day)/days*100
-		+e.progress-bar
+		- let a = day/days*100
+		+e.progress-bar(style=`width: ${a}%`)
 			+e.progress-circles 
-				- for (i = 0; i < days; i++)
+				- for (i = 0; i < day; i++)
 					+e.circle(style=`opacity: calc( (${i} + 1) / ${days});`)
-			+e.cover(style=`width: calc((${a}% + 4px)`)

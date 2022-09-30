@@ -10,11 +10,11 @@ mixin kanban_top(name, filters)
 					+e.BUTTON.icon.clean-btn
 						+icon("search")
 					+e.INPUT.field(placeholder="Поиск")
-				+e.settings 
+				+e.BUTTON.settings.clean-btn 
 					svg
 						image(href='/img/svg/settings.svg')
 					+e.bold Настроить доску
-				+e.filter 
+				+e.BUTTON.filter.clean-btn
 					svg
 						image(href='/img/svg/filters.svg')
 					+e.bold Фильтр

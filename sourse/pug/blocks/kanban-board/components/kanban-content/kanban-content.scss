@@ -22,5 +22,41 @@
 	&__sub-column {
 		margin: 0 20px 0 -12px;
 		height: 26px;
+		& + & {
+			margin-right: 8px;
+		}
+		& + .kanban-content__column {
+			margin-left: 12px;
+		}
+	}
+	&__column-card, &__column-placeholder  {
+		margin-right: 20px;
+	}
+	&__column-card, &__sub-column-card {
+		& > * {
+			margin-bottom: 16px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__sub-column-card {
+		margin: 0 20px 0 -12px;
+		& + & {
+			margin-right: 8px;
+		}
+		& + .kanban-content__column-card {
+			margin-left: 12px;
+		}
+	}
+	&__requests {
+		display: flex;
+		align-items: stretch;
+	}
+	&__column-placeholder {
+		background: #CFE8F7;
+		border-radius: 8px;
+		min-height: 310px;
+		width: 284px;
 	}
 }
