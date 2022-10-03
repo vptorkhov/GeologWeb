@@ -3,7 +3,7 @@ include ../kanban-line/kanban-line.pug
 include ../kanban-card/kanban-card.pug
 
 mixin kanban_content(bigtext)
-	+b.kanban-content
+	+b.kanban-content.scrollbar-vertical.scrollbar-horisontal
 		+e.wrap
 			+e.statuses
 				+e.column

@@ -5425,12 +5425,12 @@ iframe {
   margin-top: 16px;
   overflow-x: scroll;
   width: 100%;
-  box-sizing: content-box;
-  height: 43px;
-  margin-bottom: -16px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
 }
 .assignment-report-top__filters::-webkit-scrollbar {
-  width: 0;
+  height: 0;
 }
 .assignment-report-top__filters > * {
   margin-right: 8px;
