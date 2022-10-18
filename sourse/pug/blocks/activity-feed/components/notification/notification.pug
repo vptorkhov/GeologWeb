@@ -1,0 +1,19 @@
+mixin notification(task, name, text, time, header, position, department, details) 
+	+b.notification
+		+e.avatar
+			if task
+				svg 
+					image(href='/img/svg/task-avatar.svg')
+			else 
+				img(src='/img/@2x/slide-25.jpg')
+		+e.info
+			+e.name=name
+			if !task
+				+e.position-and-department.centered-v 
+					+e.P.position=position
+					+e.P.department=department
+			+e.P.header=header 
+			+e.P.text!=text
+			if details 
+				+e.P.details=details
+			+e.time=time

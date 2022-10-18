@@ -3465,6 +3465,7 @@ textarea.form-control-lg {
   --icon-primary: #264152;
   --survey-blue: #0096eb;
   --main-black: #001a29;
+  --link-minor: #206C97;
 }
 
 .pixel-perfect {
@@ -4043,6 +4044,199 @@ iframe {
   /* цвет плашки */
   border-radius: 16px;
   /* закругления плашки */
+}
+
+.centered-v {
+  display: flex;
+  align-items: center;
+}
+
+.activity-feed {
+  background-color: #ffffff;
+  width: 488px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.activity-feed__menu {
+  padding: 16px;
+  justify-content: space-between;
+  border-bottom: 1px solid #CCD9E0;
+}
+.activity-feed__name-icon {
+  justify-content: space-between;
+}
+.activity-feed__notif, .activity-feed__select {
+  width: 24px;
+  height: 24px;
+}
+.activity-feed__name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--main-grey);
+  padding-left: 10px;
+}
+.activity-feed .form-select, .activity-feed .select2-container--default .select2-selection--single, .select2-container--default .activity-feed .select2-selection--single {
+  background-image: url(/img/svg/select.svg);
+  background-size: 12px;
+  padding: 0;
+}
+.activity-feed__filter {
+  display: flex;
+}
+.activity-feed__filter p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--main-grey);
+  margin-right: 12px;
+}
+.activity-feed__side-menu {
+  margin-left: 16px;
+}
+.activity-feed__side-menu svg {
+  width: 24px;
+  height: 24px;
+}
+.activity-feed__notifications {
+  padding: 32px 16px;
+  flex-grow: 1;
+  overflow: auto;
+}
+.activity-feed__notifications-block > * {
+  margin-bottom: 16px;
+}
+.activity-feed__time {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--main-grey);
+  margin-bottom: 32px;
+}
+
+.clean-feed {
+  display: flex;
+  align-items: center;
+  padding: 23px 19px 23px 15px;
+  background-color: #ffffff;
+  border: 1px solid #F2F4F5;
+  box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+.clean-feed svg {
+  width: 14px;
+  height: 14px;
+}
+.clean-feed p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  margin-left: 13px;
+}
+
+.notification {
+  display: flex;
+}
+.notification:last-child {
+  margin-bottom: 32px;
+}
+.notification__avatar {
+  height: 40px;
+  width: 40px;
+  min-width: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+.notification__avatar svg, .notification__avatar img {
+  height: 40px;
+  width: 40px;
+}
+.notification__info {
+  flex-grow: 1;
+  border-bottom: 1px solid #F2F4F5;
+}
+.notification__header, .notification__name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--link-minor);
+  margin-bottom: 4px;
+}
+.notification__header {
+  font-weight: 400;
+  line-height: 130%;
+}
+.notification__name {
+  font-weight: 500;
+  line-height: 19px;
+}
+.notification__position-and-department {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--main-grey);
+}
+.notification__position {
+  padding-right: 8px;
+}
+.notification__department {
+  padding-left: 8px;
+  border-left: 1px solid #CCD9E0;
+}
+.notification__text {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+}
+.notification__details, .notification__time {
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--main-grey);
+}
+.notification__details {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.notification__time {
+  font-size: 12px;
+  margin-bottom: 7px;
+}
+
+.select-filter {
+  width: 343px;
+  padding: 8px 0;
+  background-color: #ffffff;
+  border: 1px solid #F2F4F5;
+  box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+.select-filter__options {
+  padding: 15px 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  width: 100%;
+  position: relative;
+  transition-duration: 0.4s;
+  text-align: left;
+}
+.select-filter__options:hover {
+  background-color: #F2F4F5;
+}
+.select-filter__options.selected::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("/img/svg/delivered.svg");
+  background-size: 24px;
+  position: absolute;
+  right: 15px;
+  top: 13px;
 }
 
 .assignment-calendar-top, .assignment-calendar-on-board {

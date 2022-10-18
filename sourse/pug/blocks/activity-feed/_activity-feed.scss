@@ -1,0 +1,66 @@
+.activity-feed {
+	background-color: #ffffff;
+	width: 488px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	&__menu {
+		padding: 16px;
+		justify-content: space-between;
+		border-bottom: 1px solid #CCD9E0;
+	}
+	&__name-icon {
+		justify-content: space-between;
+	}
+	&__notif, &__select {
+		width: 24px;
+		height: 24px;
+	}
+	&__name {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: var(--main-grey);
+		padding-left: 10px;
+	}
+	.form-select {
+		background-image: url(/img/svg/select.svg);
+		background-size: 12px;
+		padding: 0;
+	}
+	&__filter {
+		display: flex;
+		p {
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 19px;
+			color: var(--main-grey);
+			margin-right: 12px;
+		}
+	}
+	&__side-menu {
+		margin-left: 16px;
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+	}
+	&__notifications {
+		padding: 32px 16px;
+		flex-grow: 1;
+		overflow: auto;
+	}
+	&__notifications-block {
+		& > * {
+			margin-bottom: 16px;
+		}
+	}
+	&__time {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		color: var(--main-grey);
+		margin-bottom: 32px;
+	}
+}

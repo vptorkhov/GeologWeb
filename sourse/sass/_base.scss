@@ -15,6 +15,7 @@
 	--survey-blue: #0096eb;
 	--main-black: #001a29;
 	// --light-blue: #0096EB;
+	--link-minor: #206C97;
 }
 
 .pixel-perfect {
@@ -632,5 +633,10 @@ iframe {
 	/* цвет плашки */
 	border-radius: 16px;
 	/* закругления плашки */
+}
+
+.centered-v {
+	display: flex;
+	align-items: center;
 }
 

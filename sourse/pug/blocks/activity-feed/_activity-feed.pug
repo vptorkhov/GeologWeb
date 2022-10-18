@@ -1,0 +1,35 @@
+include ./components/notification/notification.pug
+include ./components/select/select.pug
+include ./components/clean-feed/clean-feed.pug
+
+
+mixin activity_feed(text, details)
+	+b.activity-feed
+		+e.menu.centered-v
+			+e.name-icon.centered-v
+				+e.SVG.notif
+					image(href='/img/svg/notif.svg')
+				+e.P.name Лента активности
+			+e.right.centered-v
+				+e.BUTTON.filter.clean-btn.centered-v
+					p Все чаты
+					+e.SVG.select
+						image(href='/img/svg/select.svg')
+				+e.BUTTON.side-menu.clean-btn
+					svg
+						image(href='/img/svg/dots-vertical.svg')
+		+e.notifications.scrollbar-vertical
+			+select_filter()
+			+clean_feed()
+			+e.notifications-block
+				+e.P.time Сегодня
+				+notification(false, 'Антон Гаврилов', 'Отправил файл...', 'в 17:45', 'ПРБ ЧОНА Чат', 'Руководитель проекта', 'Автоматизация производства')
+				+notification(true, 'Мобильный офис', 'Истек срок завершения запроса', 'в 17:45', 'Запрос №12', '', '',details)
+				+notification(false, 'Антон Гаврилов', 'Отправил файл...', 'в 17:45', 'ПРБ ЧОНА Чат', 'Руководитель проекта', 'Автоматизация производства')
+			+e.notifications-block
+				+e.P.time 09 июля 2020
+				+notification(false, 'Антон Гаврилов', 'создал(а) задачу ', '09.07.2020 в 17:45', 'ПРБ ЧОНА Чат', 'Руководитель проекта', 'Автоматизация производства')
+				+notification(false, 'Антон Гаврилов', 'создал(а) задачу ', '09.07.2020 в 17:45', 'ПРБ ЧОНА Чат', 'Руководитель проекта', 'Автоматизация производства')
+				+notification(false, 'Антон Гаврилов', 'создал(а) задачу ', '09.07.2020 в 17:45', 'ПРБ ЧОНА Чат', 'Руководитель проекта', 'Автоматизация производства')
+				+notification(false, 'Антон Гаврилов', 'создал(а) задачу ', '09.07.2020 в 17:45', 'ПРБ ЧОНА Чат', 'Руководитель проекта', 'Автоматизация производства')
+				+notification(false, 'Антон Гаврилов', 'создал(а) задачу ', '09.07.2020 в 17:45', 'ПРБ ЧОНА Чат', 'Руководитель проекта', 'Автоматизация производства')
