@@ -28,7 +28,8 @@ mixin assignment_in-process(change)
 
 mixin assignment_tag(name)
 	+b.assignment-tag
-		p=name
+		+e.name=name
+			+e.title=name
 		+e.BUTTON.close.clean-btn
 			+icon('close-cross')
 

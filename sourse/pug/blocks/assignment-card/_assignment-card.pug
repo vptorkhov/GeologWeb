@@ -3,62 +3,75 @@ include ../edit-assignment/_edit-assignment.pug
 include ../messages/_messages.pug
 include ../chat/_chat.pug
 
-mixin assignment_card(days, work_status, prioity, role, start, end, solution_status, prolong, request_terms, changeble)
-	+b.assignment-card.scrollbar-vertical
+mixin assignment_card(day, days, work_status, prioity, role, start, end, solution_status, prolong, request_terms, changeble)
+	+b.assignment-card
 		+assignment_card_top(prioity, work_status, changeble)
-		if (role=="author")&&(prolong=="prolong")
-			+b.prolong
-				+header("Запрос на продление крайнего срока:")
-				+e.wrap--accept
-					+date-field()
-					+e.BUTTON.accept.btn-fill-blue.btn 
-						+icon("accept")
-					+e.BUTTON.decline.btn-fill-red.btn
-						+icon("close-cross")
-		+e.requests-solutions
-			+e.request-info
-				+e.creator-wrap
-					+e.creator
-						+creator("Викторовский Валентин Георгиевич", "Участник", "Эксперт", "Отдел автоматизации производства в условиях крайнего севера")
-					+e.BUTTON.add-chat.clean-btn
-						img(src="img/svg/add-chat.svg")
-				+assignment-request("incoming", bigtext, "15.08.2022 14:48", true, false, "14.09.2022", request_terms, bigtext, prolong)
-				if (role=="author")&&((solution_status=="waits")||(solution_status=="accepted"))||(role=="executer")&&(solution_status=="accepted")
-					+assignment-solution("incoming", bigtext, "15.08.2022 14:48", true, false)
-					if (role=="author")&&(solution_status=="waits")
-						+e.decision
-							+e.BUTTON.decline.btn-grey.btn Отклонить
-							+e.BUTTON.decline.btn-fill-blue.btn Принять
-				if (role=="executer")&&(solution_status=="sent")
-					+assignment-solution("incoming", bigtext, "15.08.2022 14:48", true, true)
-		if (role=="executer")&&((solution_status=="needs")||(solution_status=="decline-edit"))
-			+e.needs-solution
-				+header("Текст решения:", true)
-				input(type='textarea', class="form-control")
-				+e.BUTTON.send.btn-fill-blue.btn.btn-full-width Отправить решение
-		+e.planned-terms!=`<span>Планируемые сроки:</span> ${start}  - ${end}` 
-		+real_labor_costs(3, 4)
-		+check_list2()
-		if (role=="executer")&&((!prolong)||(prolong=="prolong-accept")||(prolong=="prolong-decline"))
-			+b.prolong
-				+header("Запрос на продление крайнего срока:")
-				+e.wrap
-					+date-field()
-					+e.BUTTON.send.btn-fill-blue.btn Отправить
-		if (role=="executer")&&(prolong=="prolong")
-			+e.prolongue-sent 
-				p Отправлен запрос на увеличение срока до 14.08.2023
-		+e.tags 
-			+assignment_tag("ТЕГ1")
-			+assignment_tag("ТЕГ1")
-			+assignment_tag("ТЕГДЛИННЫЙ")
-			+assignment_tag("ТЕГДЛИННЫЙ")
-			+assignment_tag("ТЕГ1")
-			+assignment_tag("ТЕГ1")
-			+assignment_add()
-		+e.progress-circles 
-			- for (i = 0; i < days; i++)
-				+e.circle(style=`opacity: calc( (${i} + 1) / ${days});`)
+		+e.wrap.scrollbar-vertical
+			if (role=="author")&&(prolong=="prolong")
+				+b.prolong
+					+header("Запрос на продление крайнего срока:")
+					+e.wrap--accept
+						+date-field()
+						+e.BUTTON.accept.btn-fill-blue.btn 
+							+icon("accept")
+						+e.BUTTON.decline.btn-fill-red.btn
+							+icon("close-cross")
+			+e.requests-solutions
+				+e.request-info
+					+e.P.role Исполнитель
+					+e.creator-wrap
+						+e.creator
+							+creator("Викторовский Валентин Георгqweapsjdpaos", "Эксперт", "Отдел автоматизации производства в условиях крайнего севера")
+						if role=="executer"
+							+e.BUTTON.add-chat.clean-btn
+								img(src="img/svg/add-chat.svg")
+					+e.P.role Автор
+					+e.creator-wrap
+						+e.creator
+							+creator("Викторовский Валентин Георгиевич", "Эксперт", "Отдел автоматизации производства в условиях крайнего севера")
+						if role=="author"
+							+e.BUTTON.add-chat.clean-btn
+								img(src="img/svg/add-chat.svg")
+					+assignment-request("incoming", bigtext, "15.08.2022 14:48", true, false, "14.09.2022", request_terms, bigtext, prolong)
+					if (role=="author")&&((solution_status=="waits")||(solution_status=="accepted"))||(role=="executer")&&(solution_status=="accepted")
+						+assignment-solution("incoming", bigtext, "15.08.2022 14:48", true, false)
+						if (role=="author")&&(solution_status=="waits")
+							+e.decision
+								+e.BUTTON.decline.btn-grey.btn Отклонить
+								+e.BUTTON.decline.btn-fill-blue.btn Принять
+					+assignment-solution-decline("incoming", bigtext, "15.08.2022 14:48", true, false)
+					if (role=="executer")&&(solution_status=="sent")
+						+assignment-solution("incoming", bigtext, "15.08.2022 14:48", true, true)
+			if (role=="executer")&&((solution_status=="needs")||(solution_status=="decline-edit"))
+				+e.needs-solution
+					+header("Текст решения:", true)
+					input(type='textarea', class="form-control")
+					+e.BUTTON.send.btn-fill-blue.btn.btn-full-width Отправить решение
+			+e.planned-terms!=`<span>Планируемые сроки:</span> ${start}  - ${end}` 
+			+real_labor_costs(3, 4)
+			+check_list2(role)
+			if (role=="executer")&&((!prolong)||(prolong=="prolong-accept")||(prolong=="prolong-decline"))
+				+b.prolong
+					+header("Запрос на продление крайнего срока:")
+					+e.wrap
+						+date-field()
+						+e.BUTTON.send.btn-fill-blue.btn Отправить
+			if (role=="executer")&&(prolong=="prolong")
+				+e.prolongue-sent 
+					p Отправлен запрос на увеличение срока до 14.08.2023
+			+e.tags 
+				+assignment_tag("Тэг1")
+				+assignment_tag("Тэг1")
+				+assignment_tag("ТэгдлинныйТэгдлинныйТэгдлинныйТэгдлинный")
+				+assignment_tag("Тэгдлинный")
+				+assignment_tag("Тэгдлинный")
+				+assignment_tag("Тэгдлинный")
+				+assignment_add()
+		- let a = day/days*100
+		+e.progress-bar(style=`width: ${a}%`)
+			+e.progress-circles 
+				- for (i = 0; i < day; i++)
+						+e.circle(style=`opacity: calc( (${i} + 1) / ${days});`)
 
 mixin date-field()
 	+b.input
@@ -94,7 +107,7 @@ mixin assignment_priority(priority)
 		+e.IMG.icon(src=`img/svg/${priority}.svg`)
 		+e.P.text(class=`--${priority}`)=(priority=="not-urgent" ? "Незначительный" : "Другое")
 
-mixin creator(name, role, position, department)
+mixin creator(name, role, department)
 	+b.creator 
 		+e.avatar 
 			img(src="img/@2x/slide-25.jpg")
@@ -102,7 +115,6 @@ mixin creator(name, role, position, department)
 			+e.P.name=name
 			+e.info 
 				+e.SPAN.role=`${role}`
-				+e.SPAN.position=`${position}`
 				+e.SPAN.department=`${department}`
 
 
@@ -110,7 +122,8 @@ mixin assignment-request(status, text, date, my_request, another_request, terms,
 	+b.message(class=(status=="incoming" ? "--incoming" : "--sent"))
 		+e.content
 			+request(my_request, another_request, terms, request_status, prolong_status)
-			+e.text!=text
+			if text
+				+e.text!=text
 			if description
 				+e.description=description
 			+e.date=date
@@ -121,13 +134,25 @@ mixin assignment-solution(status, text, date, solution, editable)
 			+solution(status, false, editable)
 			+e.text!=text
 
-mixin check_list2()
+mixin assignment-solution-decline(status, description, date, solution, editable)
+	+b.message(class=(status=="incoming" ? "--incoming" : "--sent"))
+		+e.content
+			+e.wrap-solution
+				+solution-decline()
+			+e.description=description
+			+e.date=date
+
+mixin solution-decline()
+	+b.solution-decline
+		p Комментарий по отклоненному решению
+
+mixin check_list2(observer)
 	+b.check-list 
-		+checkbox-line-unchange("Сформировать ЧТЗ", "12.08.2022")
-		+checkbox-line-unchange("Составить договор")
-		+checkbox-line-unchange("Согласовать текст договора с юристом, передать новому прожект менеджеру для ознакомления")
-		+checkbox-line-unchange("Отправить всем участникам")
-		+checkbox-line-unchange("Сформировать ЧТЗ")
+		+checkbox-line-unchange("Сформировать ЧТЗ", "12.08.2022", observer)
+		+checkbox-line-unchange("Составить договор", "", observer)
+		+checkbox-line-unchange("Согласовать текст договора с юристом, передать новому прожект менеджеру для ознакомления", "", observer)
+		+checkbox-line-unchange("Отправить всем участникам", "", observer)
+		+checkbox-line-unchange("Сформировать ЧТЗ", "", observer)
 
 mixin real_labor_costs(num, max, width=num/max*100)
 	+b.real-labor-costs 

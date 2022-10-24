@@ -20,13 +20,18 @@
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 16px;
-		padding-top: 24px;
 		color: var(--main-grey);
+		.message__text + & {
+			padding-top: 24px;
+		}
 		&::after {
 			content: "подробнее...";
 			color: var(--heavy-blue);
 			display: block;
 		}
+	}
+	&__wrap-solution {
+		width: 100%;
 	}
 	&__chip-body {
 		&-solution, &-private, &-request {

@@ -160,6 +160,11 @@
 	line-height: 19px;
 	color: #ffffff;
 	background: #0096eb;
+	&:hover, &:active, &:focus {
+		background: #0096eb;
+		border: 2px solid #0096eb;
+		color: #ffffff;
+	}
 }
 
 .attachments-position {

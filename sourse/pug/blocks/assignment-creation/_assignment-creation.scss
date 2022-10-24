@@ -251,7 +251,10 @@
 			font-weight: 400;
 			font-size: 16px;
 			line-height: 18px;
-			color: var(--main-grey);
+			&::placeholder {
+				color: var(--main-grey);
+			}
+			// color: var(--main-grey);
 		}
 		&--deadline {
 			text-align: center;

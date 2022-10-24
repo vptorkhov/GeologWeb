@@ -1,7 +1,7 @@
 .assignment-status {
 	display: flex;
 	justify-content: space-between;
-	width: 94px;
+	// width: 94px;
 	height: 22px;
 	color: #ffffff;
 	padding: 3px 8px 5px;
@@ -15,7 +15,7 @@
 		padding: 3px 6px;
 		font-size: 12px;
 		line-height: 14px;
-		width: 82px;
+		// width: 82px;
 	}
 	&--ready {
 		background-color: var(--main-green);
@@ -41,21 +41,64 @@
 .assignment-tag {
 	display: flex;
 	align-items: center;
+	position: relative;
 	gap: 4px;
 	color: var(--main-grey);
 	background-color: #F2F4F5;
 	padding: 4px 8px;
 	border-radius: 4px;
+	max-width: 207px;
 	font-style: normal;
-	white-space: nowrap;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 16px;
 	&__close {
 		margin-top: -4px;
 	}
-	P {
+	&__title {
+		filter: drop-shadow(0px 4px 4px rgba(0, 32, 51, 0.04)) drop-shadow(0px 8px 24px rgba(0, 32, 51, 0.12));
+		padding: 8px 8px 0 8px;
+		width: 100%;
+		text-transform: none;
+		background: #FFFFFF;
+		border-radius: 4px;
+		color: black;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 100%;
+		display: flex;
+		text-align: center;
+		display: none;
+		position: absolute;
+		bottom: 32px;
+		left: 0;
+		white-space: pre-wrap;
+		white-space: -moz-pre-wrap;
+		white-space: -pre-wrap;
+		white-space: -o-pre-wrap; 
+		word-wrap: break-word;
+		&::after {
+			content: '';
+			background-image: url('/img/svg/triangle.svg');
+			position: absolute;
+			width: 100%;
+			background-position: center center;
+			background-repeat: no-repeat;
+			height: 6px;
+			bottom: -6px;
+			left: 0;
+		}
+	}
+	&__name {
 		text-transform: uppercase;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis; 
+		max-width: 167px;
+	}
+	&__name:hover &__title {
+			display: block;
 	}
 	@media screen and (max-width: 1040px) {
 		padding: 3px 6px;

@@ -119,8 +119,8 @@ mixin checkbox-line(text, date)
 		+e.BUTTON.menu 
 			img(src="img/svg/menu-small.svg")
 
-mixin checkbox-line-unchange(text, date) 
-	+b.checkbox-line
+mixin checkbox-line-unchange(text, date, observer) 
+	+b(class=(observer=="observer" ? "checkbox-line-observer" : "checkbox-line"))
 		+checkbox-square()
 		+e.text
 			+e.check-list-text=text
