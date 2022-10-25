@@ -204,7 +204,48 @@
 	&__prolong {
 		width: 24px;
 		height: 24px;
+		// margin-right: 8px;
+	}
+	&__prolong-block {
 		margin-right: 8px;
+		position: relative;
+	}
+	&__prolong-block:hover &__prolong-info {
+		display: block;
+	}
+	&__prolong-info {
+		filter: drop-shadow(0px 4px 4px rgba(0, 32, 51, 0.04)) drop-shadow(0px 8px 24px rgba(0, 32, 51, 0.12));
+		padding: 8px 8px 0 8px;
+		width: 257px;
+		text-transform: none;
+		background: #FFFFFF;
+		border-radius: 4px;
+		color: black;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 100%;
+		text-align: center;
+		display: none;
+		position: absolute;
+		bottom: 32px;
+		left: -116px;
+		white-space: pre-wrap;
+		white-space: -moz-pre-wrap;
+		white-space: -pre-wrap;
+		white-space: -o-pre-wrap; 
+		word-wrap: break-word;
+		&::after {
+			content: '';
+			background-image: url('/img/svg/triangle.svg');
+			position: absolute;
+			width: 100%;
+			background-position: center center;
+			background-repeat: no-repeat;
+			height: 6px;
+			bottom: -6px;
+			left: 0;
+		}
 	}
 	&__enter-chat {
 		font-style: normal;

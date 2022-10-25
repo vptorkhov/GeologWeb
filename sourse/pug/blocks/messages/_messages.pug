@@ -94,7 +94,9 @@ mixin request(my_request, another_request, terms, status, prolong_status)
 		+request_body("Запрос №1", my_request) 
 		+e.right
 			if prolong_status
-				+e.IMG.prolong(src=`img/svg/${prolong_status}.svg`)
+				+e.prolong-block
+					+e.IMG.prolong(src=`img/svg/${prolong_status}.svg`)
+					+e.prolong-info Ифнормация о продлении
 			if terms
 				+e.P.request-date(class=(status=="has-solution" ? "--has-solution" : status=="no-solution" ? "--no-solution" : status=="two-days" ? "--two-days" : status=="deadline" ? "--deadline" : "--closed"))=`До ${terms}`
 

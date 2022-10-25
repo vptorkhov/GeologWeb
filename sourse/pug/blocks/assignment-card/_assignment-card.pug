@@ -22,26 +22,26 @@ mixin assignment_card(day, days, work_status, prioity, role, start, end, solutio
 					+e.creator-wrap
 						+e.creator
 							+creator("Викторовский Валентин Георгqweapsjdpaos", "Эксперт", "Отдел автоматизации производства в условиях крайнего севера")
-						if role=="executer"
+						if role=="executer" || role=="observer"
 							+e.BUTTON.add-chat.clean-btn
 								img(src="img/svg/add-chat.svg")
 					+e.P.role Автор
 					+e.creator-wrap
 						+e.creator
 							+creator("Викторовский Валентин Георгиевич", "Эксперт", "Отдел автоматизации производства в условиях крайнего севера")
-						if role=="author"
+						if role=="author" || role=="observer"
 							+e.BUTTON.add-chat.clean-btn
 								img(src="img/svg/add-chat.svg")
-					+assignment-request("incoming", bigtext, "15.08.2022 14:48", true, false, "14.09.2022", request_terms, bigtext, prolong)
+					+assignment-message("request", bigtext, "15.08.2022 14:48", bigtext, false, true, false, "14.09.2022", request_terms, prolong)
 					if (role=="author")&&((solution_status=="waits")||(solution_status=="accepted"))||(role=="executer")&&(solution_status=="accepted")
-						+assignment-solution("incoming", bigtext, "15.08.2022 14:48", true, false)
+						+assignment-message("solution", bigtext, "15.08.2022 14:48", false, false)
 						if (role=="author")&&(solution_status=="waits")
 							+e.decision
 								+e.BUTTON.decline.btn-grey.btn Отклонить
 								+e.BUTTON.decline.btn-fill-blue.btn Принять
-					+assignment-solution-decline("incoming", bigtext, "15.08.2022 14:48", true, false)
+					+assignment-message("decline", false, "15.08.2022 14:48", bigtext)
 					if (role=="executer")&&(solution_status=="sent")
-						+assignment-solution("incoming", bigtext, "15.08.2022 14:48", true, true)
+						+assignment-message("solution", bigtext, "15.08.2022 14:48", false, true)
 			if (role=="executer")&&((solution_status=="needs")||(solution_status=="decline-edit"))
 				+e.needs-solution
 					+header("Текст решения:", true)
@@ -118,6 +118,22 @@ mixin creator(name, role, department)
 				+e.SPAN.department=`${department}`
 
 
+mixin assignment-message(type, text, date, description, editable, my_request, another_request, terms, request_status, prolong_status)
+	+b.message--incoming
+		+e.content
+			if type=="request"
+				+request(my_request, another_request, terms, request_status, prolong_status)
+			else if type=="solution"
+				+solution(true, false, editable)
+			else
+				+e.wrap-solution
+					+solution-decline()
+			if text
+				+e.text!=text
+			if description
+				+e.description=description
+			+e.date=date
+
 mixin assignment-request(status, text, date, my_request, another_request, terms, request_status, description, prolong_status)
 	+b.message(class=(status=="incoming" ? "--incoming" : "--sent"))
 		+e.content
@@ -128,19 +144,19 @@ mixin assignment-request(status, text, date, my_request, another_request, terms,
 				+e.description=description
 			+e.date=date
 
-mixin assignment-solution(status, text, date, solution, editable)
-	+b.message(class=(status=="incoming" ? "--incoming" : "--sent"))
-		+e.content
-			+solution(status, false, editable)
-			+e.text!=text
+//- mixin assignment-solution(status, text, date, solution, editable)
+//- 	+b.message(class=(status=="incoming" ? "--incoming" : "--sent"))
+//- 		+e.content
+//- 			+solution(true, false, editable)
+//- 			+e.text!=text
 
-mixin assignment-solution-decline(status, description, date, solution, editable)
-	+b.message(class=(status=="incoming" ? "--incoming" : "--sent"))
-		+e.content
-			+e.wrap-solution
-				+solution-decline()
-			+e.description=description
-			+e.date=date
+//- mixin assignment-solution-decline(status, description, date, solution, editable)
+//- 	+b.message(class=(status=="incoming" ? "--incoming" : "--sent"))
+//- 		+e.content
+//- 			+e.wrap-solution
+//- 				+solution-decline()
+//- 			+e.description=description
+//- 			+e.date=date
 
 mixin solution-decline()
 	+b.solution-decline
