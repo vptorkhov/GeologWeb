@@ -1,0 +1,17 @@
+.filter-on-board {
+	display: flex;
+	align-items: center;
+	margin-left: 16px;
+	svg, img {
+		width: 16px;
+		height: 10px;
+	}
+	svg {
+		margin-right: 12px;
+	}
+	&__text {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+	}
+}

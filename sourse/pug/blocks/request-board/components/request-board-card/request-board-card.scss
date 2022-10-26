@@ -1,0 +1,36 @@
+.request-board-card {
+	width: 100%;
+	margin-bottom: 20px;
+	.assignment-card {
+		box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.08);
+		max-width: none;
+		height: min-content;
+		&.deadline {
+			border: 1px solid #EB3333;
+		}
+	}
+}
+.ht0 {
+	 grid-row-end: span 2; 
+}
+.ht1 { 
+	grid-row-end: span 3; 
+}
+.ht2 { 
+	grid-row-end: span 4; 
+}
+.ht3 { 
+	grid-row-end: span 5; 
+}
+.ht4 { 
+	grid-row-end: span 6; 
+}
+.ht5 { 
+	grid-row-end: span 7; 
+}
+.ht6 { 
+	grid-row-end: span 8; 
+}
+.ht7 { 
+	grid-row-end: span 9; 
+}

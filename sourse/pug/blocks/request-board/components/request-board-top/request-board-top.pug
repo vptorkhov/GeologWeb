@@ -1,0 +1,17 @@
+include ../search-field/search-field.pug
+include ../../../kanban-board/components/filter-on-board/filter-on-board.pug
+
+mixin request_board_top()
+	+b.request-board-top
+		p Запросы
+		+e.search-wrap
+			+search_field()
+		+e.wrap
+			+b.tabs 
+				+e.BUTTON.tab
+					+e.P.text Доступные
+				+e.BUTTON.tab.active
+					+e.P.text Входящие
+				+e.BUTTON.tab
+					+e.P.text Исходящие
+			+filter_on_board()

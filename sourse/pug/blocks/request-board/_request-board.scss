@@ -1,0 +1,17 @@
+.request-board {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #ECF1F4;
+	padding: 0 21px;
+	&__board {
+		flex-grow: 1;
+		overflow: auto;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__section {
+		width: calc(50% - 10px);
+	}
+}

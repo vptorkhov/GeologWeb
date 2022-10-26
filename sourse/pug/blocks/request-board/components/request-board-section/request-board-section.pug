@@ -1,0 +1,33 @@
+include ../round-filter-chip/round-filter-chip.pug
+include ../request-board-card/request-board-card.pug
+//- include ../../../assignment-card/_assignment-card.pug
+
+mixin request_board_section(solution_status, header, chengable)
+	+b.request-board-section
+		+e.top
+			+e.P.header=header
+			if solution_status=='none'
+				+e.sort
+					+round_filter_chip( "Все")
+					+round_filter_chip( "Просрочено")
+					+round_filter_chip( "Сегодня")
+					+round_filter_chip( "На этой неделе")
+		+e.sorting
+			+e.BUTTON.time.clean-btn
+				+e.P.day Сегодня
+				//- svg 
+				//- 	image(href="/img/svg/sort.svg")
+			+e.BUTTON.sort-direction.clean-btn 
+				svg 
+					image(href="/img/svg/sort.svg")
+				+e.P.sort-title Дата создания по убыванию
+				+icon("accordeon-arrow")
+		+e.cards.scrollbar-vertical
+			+b.card-wrap(style="grid-row-end: span 653")
+				+request_board_card(9, 15, "opened", "critical", "executer", "15.08.22 14:00", "15.08.22 14:00", "needs", false, "deadline", chengable)
+			+b.card-wrap(style="grid-row-end: span 712")
+				+request_board_card(9, 30, "in-process", "important", "author", "15.08.22 14:00", "15.08.22 14:00", "waits")
+			+b.card-wrap(style="grid-row-end: span 653")
+				+request_board_card(9, 15, "opened", "critical", "executer", "15.08.22 14:00", "15.08.22 14:00", "needs", false, "no-solution", chengable)
+			+b.card-wrap(style="grid-row-end: span 712")
+				+request_board_card(9, 30, "in-process", "important", "author", "15.08.22 14:00", "15.08.22 14:00", "waits")

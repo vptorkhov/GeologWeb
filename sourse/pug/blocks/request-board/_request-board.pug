@@ -1,0 +1,13 @@
+include ./components/request-board-top/request-board-top.pug
+include ./components/request-board-section/request-board-section.pug
+
+
+mixin request_board()
+	+b.request-board
+		+request_board_top()
+		+e.board.scrollbar-vertical
+			+e.section
+				+request_board_section("none", "Без решения")
+			+e.section
+				+request_board_section("has", "С решением", true)
+		+e.BUTTON.

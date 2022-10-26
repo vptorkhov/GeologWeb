@@ -1,0 +1,52 @@
+include ../../../assignment-statuses/_assignment-statuses.pug
+include ../../../assignment-card/_assignment-card.pug
+
+mixin request_board_card(day, days, work_status, priority, role, start, end, solution_status, prolong, request_terms, changeble)
+	+b.request-board-card
+		+b.assignment-card(class=(request_terms=="deadline" ? "deadline" : ""))
+			+b.assignment-card-top
+				+e.info 
+					+e.IMG.icon(src=`img/svg/arrow-circle.svg`)
+					+e.status
+						if work_status=="opened"
+							+assignment_opened(changeble)
+						else if work_status=="closed"
+							+assignment_closed(changeble)
+						else if work_status=="ready"
+							+assignment_ready(changeble)
+						else 
+							+assignment_in-process(change)
+					+assignment_priority(priority)
+				+e.name
+					+icon("active")
+					+e.P.text Название проекты в несколько строк проекты в несколько строк 
+			+e.requests-solutions
+				+e.request-info
+					+e.creator-wrap
+						+e.creator
+							+creator("Викторовский Валентин Георгqweapsjdpaos", "Эксперт", "Отдел автоматизации производства в условиях крайнего севера")
+						+e.BUTTON.add-chat.clean-btn
+							img(src="img/svg/add-chat.svg")
+					+assignment-message("request", bigtext, "15.08.2022 14:48", false, false, true, false, "14.09.2022", request_terms, prolong)
+					+assignment-message("solution", bigtext, "15.08.2022 14:48", false, changeble)
+					if (role=="author")&&(solution_status=="waits")
+						+e.decision
+							+e.BUTTON.decline.btn-grey.btn Отклонить
+							+e.BUTTON.decline.btn-fill-blue.btn Принять
+			+e.planned-terms!=`<span>Планируемые сроки:</span> ${start}  - ${end}` 
+			+b.real-labor-costs 
+				+e.top
+					+e.planned-terms!=`<span>Фактические трудозатраты:</span> 54 ч. 40 мин` 
+			+e.tags 
+				+assignment_tag("Тэг1")
+				+assignment_tag("Тэг1")
+				+assignment_tag("ТэгдлинныйТэгдлинныйТэгдлинныйТэгдлинный")
+				+assignment_tag("Тэгдлинный")
+				+assignment_tag("Тэгдлинный")
+				+assignment_tag("Тэгдлинный")
+				+assignment_add()
+			- let a = day/days*100
+			+e.progress-bar(style=`width: ${a}%`)
+				+e.progress-circles 
+					- for (i = 0; i < day; i++)
+							+e.circle(style=`opacity: calc( (${i} + 1) / ${days});`)

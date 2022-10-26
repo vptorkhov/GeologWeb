@@ -1,0 +1,14 @@
+extends ../layout/main.pug
+include ../blocks/request-board/_request-board.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+	- let bigtext=`Длинное название задачи в супермного букв длинное название задачи`
+	- let text = `Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отобра жения контента в несколлько строк`
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	.page(style="height: 100vh; width: 100vw")
+		+request_board()
