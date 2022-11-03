@@ -1,0 +1,45 @@
+.working-mode-headers, .working-mode-request {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #CCD9E0;
+	min-width: 0;
+	 & > *{
+		padding-right: 10px;
+	}
+	&__requests {
+		width: 10.2%;
+		min-width: 68px;
+	}
+	&__request-created {
+		width: 11%;
+		min-width: 108px;
+	}
+	&__author {
+		width: 28%;
+		min-width: 229px;
+	}
+	&__solution {
+		width: 9.4%;
+		min-width: 112px;
+	}
+	&__status {
+		width: 13.6%;
+		min-width: 122px;
+	}
+	&__change-reason {
+		width: 27.8%;
+		min-width: 0;
+	}
+	&__author-wrap {
+		width: 90%;
+		display: flex;
+	}
+}
+.working-mode-headers {
+	padding: 17px 24px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--main-grey);
+	white-space: nowrap;
+}

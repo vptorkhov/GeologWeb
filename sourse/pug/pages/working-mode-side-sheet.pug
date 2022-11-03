@@ -1,0 +1,24 @@
+extends ../layout/main.pug
+include ../blocks/working-mode-side-sheet/_working-mode-side-sheet.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	.p-sm-5(style="background-color: grey; height: 100vh; display: flex; justify-content: center;")
+		+working_mode_side_sheet("sent", "accepted")
+	.p-sm-5(style="background-color: grey; height: 100vh; display: flex; justify-content: center;")
+		+working_mode_side_sheet("sent", "rejected")
+	.p-sm-5(style="background-color: grey; height: 100vh; display: flex; justify-content: center;")
+		+working_mode_side_sheet("sent", "no_decision")
+	.p-sm-5(style="background-color: grey; height: 100vh; display: flex; justify-content: center;")
+		+working_mode_side_sheet("sent", "canceled")
+	.p-sm-5(style="background-color: grey; height: 100vh; display: flex; justify-content: center;")
+		+working_mode_side_sheet("incoming", "accepted")
+	.p-sm-5(style="background-color: grey; height: 100vh; display: flex; justify-content: center;")
+		+working_mode_side_sheet("incoming", "rejected")
+	.p-sm-5(style="background-color: grey; height: 100vh; display: flex; justify-content: center;")
+		+working_mode_side_sheet("incoming", "no_decision")

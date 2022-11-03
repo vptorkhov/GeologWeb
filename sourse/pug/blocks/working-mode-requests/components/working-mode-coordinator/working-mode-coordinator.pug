@@ -1,0 +1,16 @@
+mixin working_mode_coordinator(name, role, department, more, status)
+	+b.creator.working-mode-coordinator
+		+e.avatar 
+			img(src="img/@2x/slide-25.jpg")
+			if status == "accepted"
+				+e.SVG.status--accepted 
+					image(href="img/svg/accepted.svg")
+			if status == "rejected"
+				+e.SVG.status--declined
+					image(href="img/svg/declined.svg")
+		+e.name-and-position 
+			+e.P.name=name
+			+e.info 
+				+e.SPAN.role=`${role}`
+				+e.SPAN.department=`${department}`
+		+e.more=`+` + `${more}`

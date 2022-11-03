@@ -1,0 +1,21 @@
+.dark-theme {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #ffffff;
+	border-radius: 12px;
+	padding: 40px;
+	.icon {
+		height: 16px;
+		fill: var(--heavy-blue);
+	}
+	.switch input {
+		border: 1px solid var(--survey-blue);
+		background-image: url("/img/svg/blue-switch.svg");
+		&:checked {
+			background-color: var(--survey-blue);
+			border-color: var(--survey-blue);
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjgiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=);
+		}
+	}
+}

@@ -1,0 +1,29 @@
+include ../decision/decision.pug
+include ../../../assignment-card/_assignment-card.pug
+include ../working-mode-coordinator/working-mode-coordinator.pug
+include ../working-status/working-status.pug
+
+mixin working_mode_request(type, request_number, date, time, decision, status, start, end, reason_text)
+	+b.working-mode-request
+		+e.requests 
+			+e.P.request-number.bold-text=`Запрос №${request_number}`
+		+e.request-created 
+			+e.P.date.bold-text=date
+			+e.P.time=time
+		+e.author 
+			+e.author-wrap
+				if type == "incoming"
+					+working_mode_coordinator("Гаврилов Антон Анатолиевич", "Руководитель проекта", "Отдел автоматизации", 5)
+				else
+					+working_mode_coordinator("Гаврилов Антон Анатолиевич", "Руководитель проекта", "Отдел автоматизации", 5)
+					+working_mode_coordinator("Гаврилов Антон Анатолиевич", "Руководитель проекта", "Отдел автоматизации", 5, "accepted")
+					+working_mode_coordinator("Гаврилов Антон Анатолиевич", "Руководитель проекта", "Отдел автоматизации", 5, "rejected")
+					+working_mode_coordinator("Гаврилов Антон Анатолиевич", "Руководитель проекта", "Отдел автоматизации", 5)
+					+working_mode_coordinator("Гаврилов Антон Анатолиевич", "Руководитель проекта", "Отдел автоматизации", 5)
+		+e.solution 
+			+decision(decision)
+		+e.status 
+			+working_status(status)
+			+e.time=`с ${start} по ${end}`
+		+e.change-reason
+			+e.reason-text=reason_text

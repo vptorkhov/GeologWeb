@@ -192,8 +192,12 @@
 	}
 	&__calendar {
 		position: absolute;
-		top: 11px;
+		top: calc(50% - 14px);
 		left: 12px;
+		img {
+			width: 16px;
+			height: 16px;
+		}
 	}
 	&__clock {
 		position: absolute;
@@ -236,6 +240,7 @@
 		align-items: center;
 		input {
 			border: none;
+			text-align: center;
 			width: 145px;
 			background-color: transparent;
 			&:active, &:focus {

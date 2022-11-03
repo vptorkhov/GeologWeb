@@ -1,0 +1,57 @@
+include ../assignment-creation/_assignment-creation.pug
+include ../edit-assignment/_edit-assignment.pug
+include ../private-chat-info/_private-chat-info.pug
+include ../privat-chat-creation/_privat-chat-creation.pug
+include ./components/addressee.pug
+
+mixin working_mode_warn_collegues(type)
+	+b.create-chat.working-mode-warn-collegues 
+		+e.top 
+			+e.P.title Предупредить коллег
+		+b.assignment-creation-content
+			+e.wrap.container-mb24
+				+header("Текст сообщения", true)
+				+input2("", 'textarea')
+			+b.tabs.container-mb24
+				+e.BUTTON.tab(class=(type=="tasks" ? "active" : ""))
+					+e.P.text Задачи (5)
+				+e.BUTTON.tab(class=(type=="personal" ? "active" : ""))
+					+e.P.text Персональные (1)
+				+e.BUTTON.tab(class=(type=="group-chats" ? "active" : ""))
+					+e.P.text Групповые чаты (5)
+			+b.participants-search-block.container-mb24
+				+participants_search()
+			+e.choose-addressee
+				p.grey-header-uppercase Выберите адресаты (11)
+				button.clean-btn Сбросить
+			+e.addressee-list.scrollbar-vertical
+				if type=="tasks"
+					+addressee("tasks", "Название задачи", "Кластер", "Чона")
+					+addressee("tasks", "Название задачи", "Кластер", "Чона")
+					+addressee("tasks", "Название задачи", "Кластер", "Чона")
+					+addressee("tasks", "Название задачи", "Кластер", "Чона")
+					+addressee("tasks", "Название задачи", "Кластер", "Чона")
+					+addressee("tasks", "Название задачи", "Кластер", "Чона")
+					+addressee("tasks", "Название задачи", "Кластер", "Чона")
+				else if type=="personal"
+					+addressee("personal", "Название задачи", "Кластер", "Чона")
+					+addressee("personal", "Название задачи", "Кластер", "Чона")
+					+addressee("personal", "Название задачи", "Кластер", "Чона")
+					+addressee("personal", "Название задачи", "Кластер", "Чона")
+					+addressee("personal", "Название задачи", "Кластер", "Чона")
+					+addressee("personal", "Название задачи", "Кластер", "Чона")
+					+addressee("personal", "Название задачи", "Кластер", "Чона")
+				else
+					+addressee("group-chats", "Групповой чат")
+					+addressee("group-chats", "Групповой чат")
+					+addressee("group-chats", "Групповой чат")
+					+addressee("group-chats", "Групповой чат")
+					+addressee("group-chats", "Групповой чат")
+					+addressee("group-chats", "Групповой чат")
+					+addressee("group-chats", "Групповой чат")
+		+e.main-content.scrollbar-vertical
+			+e.bottom-buttons 
+				+e.BUTTON.cancel.btn-secondary.btn Назад
+				+e.BUTTON.next.btn-fill.btn Далее
+
+

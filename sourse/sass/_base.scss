@@ -4,6 +4,7 @@
 	--secondary-grey: #b3bcc2;
 	--grey-blue: #ecf1f4;
 	--pale-grey: #b2c6d2;
+	--stripe: #F2F4F5;
 	--main-black: #001a29;
 	--notify-blue: #56b9f2;
 	--heavy-blue: #0071b2;
@@ -14,6 +15,7 @@
 	--icon-primary: #264152;
 	--survey-blue: #0096eb;
 	--main-black: #001a29;
+	--border: #CCD9E0;
 	// --light-blue: #0096EB;
 	--link-minor: #206C97;
 }
@@ -545,7 +547,7 @@ iframe {
 }
 
 .btn-full-width {
-	width: 100%;
+	width: 100% !important;
 }
 .btn-secondary {
 	background-color: transparent !important;
@@ -593,6 +595,31 @@ iframe {
 		background-color: #f0f2f3 !important;
 	}
 }
+.btn-delete {
+	background-color: #FDEFEF !important;
+	--bs-btn-color: var(--main-red);
+	--bs-btn-border-color: #FDEFEF;
+	--bs-btn-hover-border-color: #FDEFEF;
+	--bs-btn-hover-bg: #FDEFEF;
+	--bs-btn-hover-color: var(--main-red);
+	--bs-btn-active-border-color: #FDEFEF;
+	--bs-btn-active-bg: #FDEFEF;
+	--bs-btn-active-color: var(--main-red);
+}
+
+.btn-outline {
+	padding: 13px 0 12px !important;
+	background-color: #ffffff !important;
+	--bs-btn-color: var(--survey-blue);
+	--bs-btn-border-color: var(--survey-blue);
+	--bs-btn-hover-border-color: var(--survey-blue);
+	--bs-btn-hover-bg: #ffffff;
+	--bs-btn-hover-color: var(--survey-blue);
+	--bs-btn-active-border-color: var(--survey-blue);
+	--bs-btn-active-bg: #ffffff;
+	--bs-btn-active-color: var(--survey-blue);
+}
+
 .btn-grey {
 	background-color: var(--main-grey) !important;
 	--bs-btn-color: #ffffff;

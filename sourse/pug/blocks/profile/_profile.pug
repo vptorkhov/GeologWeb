@@ -1,0 +1,19 @@
+include ../person-card/_person-card.pug
+include ./components/request-tabs/request-tabs.pug
+include ./components/notifications-settings/notifications-settings.pug
+include ./components/dark-theme/dark-theme.pug
+
+mixin profile(collegue)
+	+b.profile
+		if collegue
+			+e.top 
+				+e.A.back.clean-btn(href="#")
+					+icon("side-sheet-arrow")
+				+e.P.header Профиль коллеги
+		+e.board
+			+e.person-card
+				+person_card()
+			+e.tabs
+				+request_tabs()
+				+notifications_settings()
+				+dark_theme()

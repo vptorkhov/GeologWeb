@@ -1,0 +1,22 @@
+.decision {
+	padding: 4px 8px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	border-radius: 4px;
+	width: min-content;
+	white-space: nowrap;
+	color: #FFFFFF;
+	&--no_decision {
+		background-color: var(--pale-grey);
+	}
+	&--rejected {
+		background-color: var(--main-red);
+	}
+	&--accepted {
+		background-color: var(--main-green);
+	}
+	&--canceled {
+		background-color: var(--main-orange);
+	}
+}

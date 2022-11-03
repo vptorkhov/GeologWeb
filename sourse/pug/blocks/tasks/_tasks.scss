@@ -100,6 +100,7 @@
 	border-radius: 8px;
 	&__tab {
 		text-align: center;
+		white-space: nowrap;
 		flex-grow: 1;
 		padding: 8px 11px 8px 12px;
 		@media screen and (max-width: 744px) {

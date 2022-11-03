@@ -1,0 +1,19 @@
+.working-mode-rejection-reason {
+	height:  min-content;
+	.assignment-creation-content {
+		&__wrap {
+			border-bottom: 1px solid #e5ecef;
+			padding-bottom: 24px;
+		}
+		.form-control[name=textarea] {
+			height: 106px !important;
+		}	
+	}
+	.create-chat__bottom-buttons {
+		padding: 26px 24px 16px;
+	}
+	.create-chat__next {
+		padding: 15px 22px 14px;
+		width: auto;
+	}
+}

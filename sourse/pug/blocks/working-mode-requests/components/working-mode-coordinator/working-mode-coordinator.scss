@@ -1,0 +1,118 @@
+.working-mode-coordinator {
+	&.creator {
+		position: relative;
+		.creator__avatar {
+			height: 40px;
+			width: 40px;
+			img {
+				height: 40px;
+			}
+		}
+		.creator__more {
+			display: none;
+			position: absolute;
+			top: 12px;
+			left: 11px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 16px;
+			color: #f2f4f5;
+		}
+		.creator__status {
+			position: absolute;
+			top: calc(50% + 10px);
+			left: 24px;
+			width: 16px;
+			height: 16px;
+			image {
+				width: 16px;
+				height: 16px;
+			}
+		}
+		margin-left: -16px;
+		.creator__name-and-position {
+			display: none;
+		}
+		&:first-child {
+			margin-left: 0;
+			filter: none;
+		}
+		&:nth-child(5) {
+			.creator__status {
+				display: none;
+			}
+			img {
+				filter: blur(4px);
+			}
+			.creator__more {
+				display: block;
+			}
+			.creator__avatar {
+				border: 1px solid #ffffff;
+				backdrop-filter: blur(2.5px);
+				box-shadow: 1px 4px 4px 0px rgba(51, 50, 50, 0.32);
+			}
+		}
+		&:only-child {
+			margin: 0;
+			.creator__name-and-position {
+				display: block;
+			}
+			.creator__avatar {
+				height: 35px;
+				width: 35px;
+			}
+			.creator__status {
+				top: calc(50% + 9px);
+				left: 21px;
+				width: 14px;
+				height: 14px;
+				image {
+					width: 14px;
+					height: 14px;
+				}
+			}
+		}
+	}
+}
+// &__avatar {
+// 	height: 32px;
+// 	width: 32px;
+// 	position: relative;
+// 	overflow: hidden;
+// 	border-radius: 35px;
+// 	margin-left: -8px;
+// 	background-color: #ffffff;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	&:first-child {
+// 		margin-left: 0;
+// 	}
+// 	&:last-child {
+// 		img {
+// 			filter: blur(4px);
+// 		}
+// 		.task-card__more {
+// 			display: block;
+// 		}
+// 	}
+// 	img {
+// 		display: block;
+// 		border-radius: 35px;
+// 		height: 30px;
+// 		width: 30px;
+// 	}
+// }
+// &__more {
+// 	display: none;
+// 	position: absolute;
+// 	top: 9px;
+// 	left: 8px;
+// 	font-style: normal;
+// 	font-weight: 500;
+// 	font-size: 12px;
+// 	line-height: 120%;
+// 	color: #F2F4F5;
+// }

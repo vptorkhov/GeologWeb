@@ -1,0 +1,41 @@
+.profile {
+	display: flex;
+	flex-direction: column;
+	background: #ECF1F4;
+	padding: 20px;
+	border-radius: 12px 0px 0px 0px;
+	height: 100%;
+	&__top {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		.icon {
+			width: 18px;
+			height: 12px;
+			fill: var(--survey-blue);
+			margin-right: 11px;
+			margin-bottom: 2px;
+		}
+	}
+	&__board {
+		display: flex;
+		justify-content: space-between;
+		flex-grow: 1;
+	}
+	&__header {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 28px;
+	}
+	&__person-card {
+		width: 40%;
+		height: 100%;
+	}
+	&__tabs {
+		width: calc(60% - 20px);
+		height: 100%;
+		& > * {
+			margin-bottom: 24px;
+		}
+	}
+}

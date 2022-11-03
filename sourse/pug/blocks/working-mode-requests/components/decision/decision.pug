@@ -1,0 +1,10 @@
+mixin decision(decision)
+	+b.decision(class=(`--${decision}`))
+		if decision=="no_decision"
+			+e.text Без решения
+		if decision=="rejected"
+			+e.text Отклонен
+		if decision=="accepted"
+			+e.text Одобрен
+		if decision=="canceled"
+			+e.text Отменен

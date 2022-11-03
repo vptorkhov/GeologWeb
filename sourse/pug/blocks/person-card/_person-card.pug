@@ -1,31 +1,39 @@
-mixin person_card()
+mixin person_card(collegue)
 	+b.person-card
-		+e.photo
-			img(src="img/@2x/slide-25.jpg")
-		+e.info 
-			+e.P.fio Гаврилов Антон <br>Борисович
-			+e.personal-chat 
-				img(src="img/svg/add-chat.svg")
-				p Пероснальный чат
-			.container-mb16
-				p.side-sheet__online Был(а) в сети 12 минут назад
-			.container-mb24
-				+e.P.status В отпуске с 12.06.2020 по 12.07.2020
-			.container-mb24
-				+person-info("Должность", "Начальник отдела ИТАТ ООО “ГПН-ГЕО”")
-			.container-mb24
-				+person-info("Руководитель", "Константинопольский Константин Константинович ")
-			.container-mb24
-				+person-info("Отдел", "ИТАТ ООО “ГПН-ГЕО”")
-			.container-mb24
-				+person-info("Организация ", "ПАО “Газпром”")
-			.container-mb24
-				+person-info("Рабочий телефон", "+7 (812) 449-70-33  доб. (061) 4455")
-			.container-mb24
-				+person-info("Мобильный телефон", "+7 (911) 942-43-41")
-			.container-mb24
-				+person-info("E-mail", "Gavrilov.AB@gazprom-neft.ru")
+		+e.top.container-mb32
+			+e.photo
+				img(src="img/@2x/slide-25.jpg")
+			+e.info 
+				+e.fio-block.container-mb8
+					+e.P.fio Гаврилов Антон Борисович
+					if collegue
+						+e.BUTTON.personal-chat.clean-btn 
+							svg
+								image(href="img/svg/add-chat.svg")
+				.container-mb8
+					+e.P.online Был(а) в сети 12 минут назад
+				.container-mb24
+					+e.P.status В отпуске с 12.06.2020 по 12.07.2020
+		.container-mb24
+			+e.post.grey-header Должность 
+			+e.post-info.bold-description Начальник отдела ИТАТ ООО “ГПН-ГЕО”
+		.container-mb24
+			+e.supervisor.grey-header Руководитель 
+			+e.supervisor-info.bold-description Константинопольский Константин Константинович
+		.container-mb24
+			+e.department.grey-header Отдел 
+			+e.department-info.bold-description ИТАТ ООО “ГПН-ГЕО”
+		.container-mb24
+			+e.organization.grey-header Организация 
+			+e.organization-info.bold-description ПАО “Газпром”
+		.container-mb24
+			+e.phone.grey-header Рабочий телефон 
+			+e.phone-info.bold-description +7 (812) 449-70-33  доб. (061) 4455
+		.container-mb24
+			+e.mobile-phone.grey-header Мобильный телефон
+			+e.mobile-phone-info.bold-description +7 (911) 942-43-41
+		.container-mb24
+			+e.email.grey-header E-mail
+			+e.email-info.bold-description Gavrilov.AB@gazprom-neft.ru
 
-mixin person-info(category, info)
-	p.project-info__category=category
-	p.project-info__info=info
+

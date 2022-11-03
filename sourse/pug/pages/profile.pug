@@ -1,0 +1,16 @@
+extends ../layout/main.pug
+include ../blocks/profile/_profile.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+	- let bigtext = `<a class='private-chat-create' href='#'>@Андрей Паин</a>, необходимо прикрепить файлы по итогам проведенного исследования `
+	- let question = 'Запакеровались на глубине 1754.2 м. Что делаем дальше?'
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	.page(style="width: 100%; height: 100vh;")
+		+profile()
+	.page(style="width: 100%; height: 100vh; margin-top: 30px")
+		+profile(true)

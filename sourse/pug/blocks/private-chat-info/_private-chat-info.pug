@@ -1,5 +1,6 @@
 include ../privat-chat-creation/_privat-chat-creation.pug
 include ../chat-info/_chat-info.pug
+include ../assignment-card/_assignment-card.pug
 
 mixin privat_chat_info(from)
 	+b.side-sheet 
@@ -86,30 +87,30 @@ mixin private_chat_info_bottom(participants_amount)
 mixin privat_chat_participants_list()
 	+b.privat-chat-participants-list.scrollbar-vertical
 		+privat_chat_participant(false)
-		+privat_chat_participant(true)
-		+privat_chat_participant(true)
-		+privat_chat_participant(true)
-		+privat_chat_participant(true)
-		+privat_chat_participant(true)
-		+privat_chat_participant(true)
-		+privat_chat_participant(true)
-		+privat_chat_participant(true)
-		+privat_chat_participant(true)
-		+privat_chat_participant(true)
-		+privat_chat_participant(true)
-		+privat_chat_participant(true)
-		+privat_chat_participant(true)
-		+privat_chat_participant(true)
-		+privat_chat_participant(true)
-		+privat_chat_participant(true)
+		+privat_chat_participant(false)
+		+privat_chat_participant(false)
+		+privat_chat_participant(false)
+		+privat_chat_participant(false)
+		+privat_chat_participant(false)
+		+privat_chat_participant(false)
+		+privat_chat_participant(false)
+		+privat_chat_participant(false)
+		+privat_chat_participant(false)
+		+privat_chat_participant(false)
+		+privat_chat_participant(false)
+		+privat_chat_participant(false)
+		+privat_chat_participant(false)
+		+privat_chat_participant(false)
+		+privat_chat_participant(false)
+		+privat_chat_participant(false)
 
 
 
-mixin privat_chat_participant(notadmin)
+mixin privat_chat_participant(delete_btn)
 	+b.privat-chat-participant
-		+sender('Антон Гаврилов', 'Руководитель проекта')
+		+creator('Антон Гаврилов', 'Руководитель проекта', "Автоматизация производства")
 		//- +e.BUTTON.add-chat.btn
 		//- 	img(src="img/svg/add-chat.svg")
-		//- if notadmin
-		//- 	+e.BUTTON.delete.btn
-		//- 		+icon("delete")
+		if delete_btn
+			+e.BUTTON.delete.btn
+				+icon("delete")

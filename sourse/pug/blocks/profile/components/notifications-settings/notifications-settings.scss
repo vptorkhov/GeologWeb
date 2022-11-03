@@ -1,0 +1,13 @@
+.notifications-settings {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #F5F9FC;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.08);
+	border-radius: 12px;
+	padding: 40px;
+	.icon {
+		height: 16px;
+		fill: var(--heavy-blue);
+	}
+}

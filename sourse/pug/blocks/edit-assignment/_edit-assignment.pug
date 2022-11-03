@@ -143,3 +143,36 @@ mixin edit-checkbox()
 			+e.BUTTON.save Сохранить
 			+e.BUTTON.close
 				img(src="img/svg/close-cross.svg")
+
+mixin date_input()
+	+b.input
+		+e.planned-terms
+			input(placeholder="ДД.ММ.ГГГ ЧЧ:ММ", type='text')
+			.dash
+			input(placeholder="ДД.ММ.ГГГ ЧЧ:ММ", type='text')
+		+e.BUTTON.calendar 
+			img(src="img/svg/calendar.svg")
+		+e.BUTTON.close 
+			img(src="img/svg/close-cross.svg")
+
+mixin date_input2()
+	+b.input
+		+e.planned-terms
+			input(placeholder="ДД.ММ.ГГГ", type='text')
+			.dash
+			input(placeholder="ДД.ММ.ГГГ", type='text')
+		+e.BUTTON.calendar 
+			img(src="img/svg/calendar.svg")
+		+e.BUTTON.close 
+			img(src="img/svg/close-cross.svg")
+
+mixin date_input3()
+	+b.input
+		+e.planned-terms
+			input(placeholder="ЧЧ:ММ", type='text')
+			.dash
+			input(placeholder="ЧЧ:ММ", type='text')
+		+e.BUTTON.calendar 
+			img(src="img/svg/clock.svg")
+		+e.BUTTON.close 
+			img(src="img/svg/close-cross.svg")

@@ -1,0 +1,14 @@
+include ../private-chat-info/_private-chat-info.pug
+
+mixin working_mode_rejection_reason()
+	+b.create-chat.working-mode-rejection-reason
+		+e.top 
+			+e.P.title Причина отклонения
+			+e.BUTTON.close
+				+icon('close-cross')
+		+b.assignment-creation-content
+			+e.wrap
+				+header("Причина отклонения", false)
+				+input2("", 'textarea')
+		+e.bottom-buttons
+			+e.BUTTON.next.btn-fill.btn Отправить

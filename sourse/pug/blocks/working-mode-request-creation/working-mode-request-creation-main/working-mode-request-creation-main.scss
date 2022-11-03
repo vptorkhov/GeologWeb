@@ -1,0 +1,44 @@
+.create-chat {
+	.input {
+		&__planned-terms {
+			input {
+				color: var(--main-black);
+				&::placeholder {
+					color: var(--main-black);
+				}
+			}
+		}
+	}
+}
+.assignment-creation-content {
+	display: flex;
+	flex-direction: column;
+	&__coordinating {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.icon {
+			width: 24px;
+			height: 24px;
+		}
+	}
+	&__coordinating-list {
+		flex-grow: 1;
+		overflow: auto;
+	}
+	.creator__name-and-position {
+		width: 100%;
+	}
+}
+.working-mode-request-creation-main,
+.working-mode-request-creation-add {
+	.create-chat__bottom-buttons {
+		padding: 24px;
+	}
+	.assignment-creation-content__coordinating-list {
+		border-bottom: 1px solid #f2f4f5;
+	}
+	.assignment-creation-content__wrap {
+		margin-bottom: 16px;
+	}
+}

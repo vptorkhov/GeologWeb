@@ -1,0 +1,46 @@
+include ../working-mode-requests/components/working-mode-coordinator/working-mode-coordinator.pug
+include ../working-mode-requests/components/decision/decision.pug
+include ../working-mode-requests/components/working-status/working-status.pug
+include ../messages/_messages.pug
+
+mixin working_mode_side_sheet(status, decision)
+	+b.working-mode-side-sheet
+		+e.top
+			+decision(decision)
+			+e.BUTTON.close.clean-btn 
+				+icon("close-cross")
+		+e.creation-date Запрос создан 19.06.2022 14:00
+		+e.request-number.bold-header Запрос №4569
+		+e.buttons
+			if ((status=="sent") && (decision=="accepted"))
+				+e.BUTTON.warn-colleagues.btn.btn-fill.btn-full-width Предупредить коллег
+			if (status=="sent" || ((status=="incoming") && (decision=="no_decision")))
+				+e.two-buttons
+					if ((status=="sent") && (decision=="no_decision" || decision=="accepted"))
+						+e.BUTTON.cancel-request.btn.btn-outline Отменить запрос
+					if (status=="sent")
+						+e.BUTTON.delete.btn.btn-delete
+							+icon("delete") 
+							p Удалить запрос
+					if ((status=="incoming") && (decision=="no_decision"))
+						+e.BUTTON.reject.btn.btn-outline Отклонить
+						+e.BUTTON.approve.btn.btn-fill Одобрить
+		+e.status
+			+working_status("Работаю из дома")
+			p с 11.09.22 03:30 по 17.09.22 03:30
+		+e.reason 
+			+e.reason-header.grey-header-uppercase Причина изменения
+			+e.reason-text.small-text Указанного в полях "Период изменения" при создании запроса. кнопку "Отправить" - отображается только после выбора одной или нескольких переписок в поле "Адресат" 
+		if (status == "incoming")
+			+e.author
+				+e.header.grey-header-uppercase Автор запроса
+				+e.author-wrap
+					+working_mode_coordinator("Гаврилов Антон Анатолиевич", "Руководитель проекта", "Отдел автоматизации производства в условиях крайнего севера  в условиях крайнего севера", false, false)
+		if (status == "sent") || (status == "incoming" && decision=="rejected")
+			+e.coordinators
+				+e.header.grey-header-uppercase Согласующие
+				+e.coordinators-list.scrollbar-vertical
+					+e.author-wrap
+						+working_mode_coordinator("Гаврилов Антон Анатолиевич", "Руководитель проекта", "Отдел автоматизации производства в условиях крайнего севера  в условиях крайнего севера", false, decision)
+					if (decision == "rejected")
+						+message("incoming", "Ппакеровались на глубине 1754.2 м. Подвижность по оценочному замеру составила 0.35 мД/сП. Приступили к прокачке.", "03.08.2022 14:24")

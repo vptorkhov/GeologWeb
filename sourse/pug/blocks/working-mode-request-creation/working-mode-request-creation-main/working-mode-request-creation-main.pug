@@ -1,0 +1,41 @@
+include ../../assignment-creation/_assignment-creation.pug
+include ../../edit-assignment/_edit-assignment.pug
+include ../../private-chat-info/_private-chat-info.pug
+
+mixin working_mode_request_creation_main(filled)
+	+b.create-chat.working-mode-request-creation-main
+		+e.top 
+			+e.P.title Новый запрос на изменение статуса
+			+e.BUTTON.close
+				+icon('close-cross')
+		+b.assignment-creation-content
+			+e.wrap 
+				+header("Статус", true)
+				+input2("Работаю из дома", 'select')
+			+e.wrap 
+				+header("Период изменения", true)
+				+date_input2()
+			+e.wrap 
+				+header("Время изменения", true)
+				+date_input3()
+			+e.wrap
+				+header("Причина изменения", true)
+				+input2("", 'textarea')
+			+e.coordinating 
+				+e.P.coordinating-title.grey-header-uppercase Согласующие
+				+e.BUTTON.add.btn 
+					+icon("add-circle")
+					p Добавить
+			+e.coordinating-list.scrollbar-vertical
+				+privat_chat_participant(true)
+				+privat_chat_participant(true)
+				+privat_chat_participant(true)
+				+privat_chat_participant(true)
+				+privat_chat_participant(true)
+				+privat_chat_participant(true)
+				+privat_chat_participant(true)
+		+e.bottom-buttons
+			if filled
+				+e.BUTTON.next.btn-fill.btn.btn-full-width Отправить
+			else
+				+e.BUTTON.next.btn-fill.btn.btn-full-width.disabled Отправить

@@ -1,0 +1,26 @@
+include ../../assignment-creation/_assignment-creation.pug
+include ../../edit-assignment/_edit-assignment.pug
+include ../../private-chat-info/_private-chat-info.pug
+include ../../privat-chat-creation/_privat-chat-creation.pug
+
+mixin working_mode_request_creation_add()
+	+b.create-chat.working-mode-request-creation-add
+		+e.top 
+			+e.P.title Согласующие
+			+e.BUTTON.back.clean-btn
+				+icon("side-sheet-arrow")
+				p Назад
+		+e.search-wrap
+			+b.participants-search-block
+				+participants_search()
+				+e.BUTTON.decline 
+					p Отмена
+		+e.contacts-list
+			p.grey-header-uppercase.container-mb16 Контакты
+			+e.selected-contacts
+				+privat_chat_participant(true)
+				+privat_chat_participant(true)
+			+e.alphabet-list.scrollbar-vertical
+				+letter_name_match2('A')
+		+e.bottom-buttons
+				+e.BUTTON.next.btn-fill.btn.btn-full-width Добавить

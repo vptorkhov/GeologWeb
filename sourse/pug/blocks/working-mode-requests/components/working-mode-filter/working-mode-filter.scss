@@ -1,0 +1,34 @@
+.auto-height {
+	height: auto !important;
+}
+.mt-24 {
+	margin-top: 24px;
+}
+.working-mode {
+	max-width: 468px;
+	.input {
+		background-color: #ffffff;
+	}
+	@media (max-width: 744px) {
+		.filter-requests-top-nav {
+			padding: 24px 21px 16px 20px;
+			&__title {
+				font-style: normal;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 28px;
+				color: var(--main-grey);
+			}
+		}
+
+	}
+}
+.filter-requests {
+	&__buttons-wrap--rm {
+		padding-top: 0 !important;
+		border: none;
+		& > * {
+			width: calc(50% - 10px) !important;
+		}
+	}
+}

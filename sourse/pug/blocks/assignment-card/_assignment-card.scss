@@ -77,7 +77,7 @@
 	}
 	&__prolongue-sent {
 		padding: 8px 17px;
-		background-color: #ECF1F4;
+		background-color: #ecf1f4;
 		border-radius: 12px;
 		font-weight: 500;
 		font-size: 14px;
@@ -128,7 +128,8 @@
 		align-items: center;
 		margin-left: auto;
 	}
-	&__menu, &__close {
+	&__menu,
+	&__close {
 		background-color: transparent;
 		padding: 0;
 		border: 0;
@@ -186,6 +187,10 @@
 		font-size: 12px;
 		line-height: 14px;
 		color: var(--main-grey);
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 	}
 	&__role {
 		// color: #09B37B;
@@ -201,7 +206,7 @@
 			top: 3px;
 			width: 1px;
 			height: 12px;
-			background-color: #CCD9E0;
+			background-color: #ccd9e0;
 		}
 	}
 	&__position {
@@ -230,7 +235,7 @@
 		min-width: 24px;
 		min-height: 24px;
 		border-radius: 4px;
-		background: #DEF0FB;
+		background: #def0fb;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -291,7 +296,7 @@
 		position: relative;
 		width: 78.5%;
 		height: 8px;
-		background: #CFE8F7;
+		background: #cfe8f7;
 		border-radius: 8px;
 	}
 	&__progress {
@@ -306,7 +311,7 @@
 		min-width: 24px;
 		min-height: 24px;
 		border-radius: 4px;
-		background: #DEF0FB;
+		background: #def0fb;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -349,7 +354,8 @@
 			}
 		}
 	}
-	&__accept, &__decline {
+	&__accept,
+	&__decline {
 		width: 48px;
 		border: none;
 	}
@@ -361,7 +367,7 @@
 		font-weight: 400;
 		font-size: 12px;
 		line-height: 14px;
-		color: #4D5F69;
+		color: #4d5f69;
 		p + p {
 			font-size: 13px;
 			line-height: 18px;
@@ -380,7 +386,7 @@
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 14px;
-	color: #4D5F69;
+	color: #4d5f69;
 	p + p {
 		font-size: 13px;
 		line-height: 18px;
@@ -400,6 +406,6 @@
 	font-size: 12px;
 	line-height: 14px;
 	color: white;
-	background-color: #F38B00;
+	background-color: #f38b00;
 	width: max-content;
 }

@@ -1,0 +1,18 @@
+mixin request_tabs()
+	+b.request-tabs
+		+e.title Запросы
+		+e.A.tab(href="#")
+			+e.tab-title.bold-description Запросы на добавление нового исследования в cправочник
+			+e.amount-and-arrow 
+				+e.amount 15
+				+icon("accordeon-arrow")
+		+e.A.tab(href="#")
+			+e.tab-title.bold-description Входящие запросы на изменение режима работы
+			+e.amount-and-arrow 
+				+e.amount 15
+				+icon("accordeon-arrow")
+		+e.A.tab(href="#")
+			+e.tab-title.bold-description Исходящие запросы на изменение режима работы
+			+e.amount-and-arrow 
+				+e.amount 15
+				+icon("accordeon-arrow")

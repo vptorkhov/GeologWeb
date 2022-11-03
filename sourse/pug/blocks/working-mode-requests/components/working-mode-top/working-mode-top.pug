@@ -1,0 +1,18 @@
+mixin working_mode_top(name)
+	+b.working-mode-top
+		+e.navigation
+			+e.BUTTON.back.clean-btn
+				+icon("side-sheet-arrow")
+			+e.P.reports=name
+		+e.settings 
+			+b.tabs 
+				+e.BUTTON.tab
+					+e.P.text Все
+				+e.BUTTON.tab
+					+e.P.text Без решения
+				+e.BUTTON.tab.active
+					+e.P.text Решение получено
+			+e.BUTTON.filter.clean-btn 
+					+e.SVG.document 
+						image(href="/img/svg/filters.svg")
+						+e.P.text Фильтр

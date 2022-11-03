@@ -1,0 +1,22 @@
+include ../../working-mode-requests/components/working-mode-coordinator/working-mode-coordinator.pug
+
+mixin addressee(type, name, first_info, second_info)
+	+b.addressee
+		+e.variant
+			if type == "tasks"
+				+e.task 
+					p.creator__name=name
+					div.creator__info
+						span.creator__role.uppercase=first_info
+						span.creator__department.uppercase=second_info
+			else if type == "personal"
+				+e.wrap
+					+working_mode_coordinator(name, first_info, second_info)
+			else 
+				+e.gruop 
+					+e.gruop-avatar
+						svg 
+							image(href="img/svg/group.svg")
+					p.creator__name=name
+			+e.checkbox
+				+in-c("checkbox")

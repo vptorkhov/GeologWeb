@@ -1,0 +1,126 @@
+.working-mode-side-sheet {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 417px;
+	padding: 20px 20px 0;
+	background: #ffffff;
+	box-shadow: 0px 10px 30px rgba(33, 92, 126, 0.3);
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 8px;
+		.icon {
+			fill: var(--main-grey);
+			width: 14px;
+			height: 14px;
+		}
+	}
+	&__creation-date {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: var(--main-grey);
+		margin-bottom: 16px;
+	}
+	&__request-number {
+		margin-bottom: 16px;
+	}
+	&__buttons {
+		.btn {
+			padding: 15px 0px 14px;
+		}
+		& > * {
+			margin-bottom: 16px;
+		}
+	}
+	&__two-buttons {
+		display: flex;
+		align-items: center;
+		& > * {
+			flex-grow: 1;
+			&:first-child {
+				margin-right: 16px;
+			}
+			&:only-child {
+				margin: 0;
+			}
+		}
+	}
+	&__delete {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: none;
+		.icon {
+			width: 16px;
+			height: 16px;
+			margin-right: 14px;
+		}
+	}
+	&__approve,
+	&__warn-colleagues {
+		padding: 13px 0px 12px !important;
+	}
+	&__status {
+		margin-bottom: 16px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: var(--main-black);
+		& > * {
+			margin-bottom: 8px;
+		}
+	}
+	&__reason-header {
+		margin-bottom: 4px;
+	}
+	&__reason {
+		margin-bottom: 16px;
+	}
+	&__header {
+		margin-bottom: 14px;
+	}
+	&__author {
+		margin-bottom: 16px;
+	}
+	&__coordinators {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		overflow: auto;
+		& > * {
+			margin-bottom: 14px;
+		}
+	}
+	&__coordinators-list {
+		flex-grow: 1;
+		overflow: auto;
+		& > * {
+			margin-bottom: 14px;
+		}
+	}
+	.message {
+		background-color: var(--grey-blue);
+	}
+}
+.bold-header {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+}
+.grey-header-uppercase {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--secondary-grey);
+	text-transform: uppercase;
+}
+.small-text {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--main-black);
+}

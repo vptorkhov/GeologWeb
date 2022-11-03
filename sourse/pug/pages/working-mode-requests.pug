@@ -1,0 +1,21 @@
+extends ../layout/main.pug
+include ../blocks/working-mode-requests/_working-mode-requests.pug
+include ../blocks/working-mode-requests/components/working-mode-filter/working-mode-filter.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+	- let bigtext=`Длинное название задачи в супермного букв длинное название задачи`
+	- let text = `Длинное описание поручения в одну или несколько строк №12 до 21.12.2022 для наглядности отобра жения контента в несколлько строк`
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	.page(style="height: 100vh; width: 100vw;")
+		+working_mode_requests("Исходящие запросы на изменение режима работы", "sent")
+	.page(style="height: 100vh; width: 100vw; margin-top: 40px")
+		+working_mode_requests("Входящие запросы на изменение режима работы", "incoming")
+	.page(style="height: 50vh; width: 100vw; margin-top: 40px")
+		+working_mode_filter(true)
+	.page(style="height: 50vh; width: 100vw; margin-top: 40px")
+		+working_mode_filter(false)

@@ -1,0 +1,40 @@
+.addressee {
+	&__variant {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__checkbox {
+		height: 16px;
+		.form-check-input {
+			margin: 0 !important;
+			border-radius: 2px;
+		}
+		.form-check-label, .custom-input__text {
+			display: none;
+		}
+	}
+	&__gruop-avatar {
+		background: #ecf1f4;
+		width: 35px;
+		height: 35px;
+		min-width: 35px;
+		min-height: 35px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+	}
+	&__gruop  {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+}
+.uppercase {
+	text-transform: uppercase;
+}

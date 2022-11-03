@@ -1,0 +1,11 @@
+mixin working_mode_headers(type)
+	+b.working-mode-headers
+		+e.requests Запросы
+		+e.request-created Запрос создан
+		if type == "sent"
+			+e.author Согласующие
+		else
+			+e.author Автор запроса
+		+e.solution Решение
+		+e.status Статус
+		+e.change-reason Причина изменения

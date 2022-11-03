@@ -1,0 +1,31 @@
+.working-mode-request {
+	padding: 12px 24px;
+	&__time {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		color: var(--main-grey);
+		margin-top: 4px;
+		min-width: 0;
+	}
+	&__reason-text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		color: var(--main-black);
+		max-width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.bold-text {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--main-black);
+}

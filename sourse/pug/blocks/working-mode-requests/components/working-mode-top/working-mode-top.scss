@@ -1,0 +1,45 @@
+.working-mode-top {
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__navigation {
+		display: flex;
+		align-items: center;
+		.icon {
+			width: 18px;
+			height: 12px;
+			fill: var(--survey-blue);
+			margin-right: 11px;
+			margin-bottom: 2px;
+		}
+	}
+	&__reports {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 28px;
+	}
+	&__settings {
+		display: flex;
+		align-items: center;
+		svg, image {
+			width: 24px;
+			height: 24px;
+			margin-right: 8px;
+		}
+	}
+	&__filter {
+		display: flex;
+		align-items: center;
+		margin-left: 32px;
+		svg, image {
+			width: 16px;
+			height: 16px;
+		}
+	}
+	&__text {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+	}
+}
