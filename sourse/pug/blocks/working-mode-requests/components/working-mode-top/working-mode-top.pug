@@ -1,4 +1,4 @@
-mixin working_mode_top(name)
+mixin working_mode_top(name, type)
 	+b.working-mode-top
 		+e.navigation
 			+e.BUTTON.back.clean-btn
@@ -12,7 +12,8 @@ mixin working_mode_top(name)
 					+e.P.text Без решения
 				+e.BUTTON.tab.active
 					+e.P.text Решение получено
-			+e.BUTTON.filter.clean-btn 
-					+e.SVG.document 
-						image(href="/img/svg/filters.svg")
-						+e.P.text Фильтр
+			if type == "sent"
+				+e.BUTTON.filter.clean-btn 
+						+e.SVG.document 
+							image(href="/img/svg/filters.svg")
+							+e.P.text Фильтр

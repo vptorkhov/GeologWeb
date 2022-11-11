@@ -147,9 +147,9 @@ mixin edit-checkbox()
 mixin date_input()
 	+b.input
 		+e.planned-terms
-			input(placeholder="ДД.ММ.ГГГ ЧЧ:ММ", type='text')
+			input(placeholder="ДД.ММ.ГГГГ ЧЧ:ММ", type='text')
 			.dash
-			input(placeholder="ДД.ММ.ГГГ ЧЧ:ММ", type='text')
+			input(placeholder="ДД.ММ.ГГГГ ЧЧ:ММ", type='text')
 		+e.BUTTON.calendar 
 			img(src="img/svg/calendar.svg")
 		+e.BUTTON.close 
@@ -158,9 +158,9 @@ mixin date_input()
 mixin date_input2()
 	+b.input
 		+e.planned-terms
-			input(placeholder="ДД.ММ.ГГГ", type='text')
+			input(placeholder="ДД.ММ.ГГГГ", type='text')
 			.dash
-			input(placeholder="ДД.ММ.ГГГ", type='text')
+			input(placeholder="ДД.ММ.ГГГГ", type='text')
 		+e.BUTTON.calendar 
 			img(src="img/svg/calendar.svg")
 		+e.BUTTON.close 
@@ -174,5 +174,20 @@ mixin date_input3()
 			input(placeholder="ЧЧ:ММ", type='text')
 		+e.BUTTON.calendar 
 			img(src="img/svg/clock.svg")
+		+e.BUTTON.close 
+			img(src="img/svg/close-cross.svg")
+
+mixin date_input4()
+	+b.input
+		+e.planned-terms--period
+			+e.wrapper
+				input(placeholder="ДД.ММ.ГГГГ", type='text')
+				input(placeholder="ЧЧ:ММ", type='text')
+			.dash
+			+e.wrapper
+				input(placeholder="ДД.ММ.ГГГГ", type='text')
+				input(placeholder="ЧЧ:ММ", type='text')
+		+e.BUTTON.calendar 
+			img(src="img/svg/calendar.svg")
 		+e.BUTTON.close 
 			img(src="img/svg/close-cross.svg")

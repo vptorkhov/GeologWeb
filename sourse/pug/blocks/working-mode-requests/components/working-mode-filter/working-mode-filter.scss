@@ -26,6 +26,7 @@
 .filter-requests {
 	&__buttons-wrap--rm {
 		padding-top: 0 !important;
+		padding-bottom: 30px !important;
 		border: none;
 		& > * {
 			width: calc(50% - 10px) !important;

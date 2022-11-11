@@ -1,19 +1,18 @@
 include ../../../filter-requests/_filter-requests.pug
 include ../../../edit-assignment/_edit-assignment.pug
 
-mixin working_mode_filter(sent)
+mixin working_mode_filter()
 	+b.filter-requests--window.auto-height.working-mode
 		+filter_requests_top_nav_window("Фильтр по запросам")
 		+e.content--window.mt-24
-			if sent
-				+e.filter-position-wrap
-					+filter-position("Решение")
 			+e.filter-position-wrap
-				+header("Начало", false)
-				+date_input()
-			+e.filter-position-wrap
-				+header("Конец", false)
-				+date_input()
+				+filter-position("Решение")
+			//- +e.filter-position-wrap
+			//- 	+header("Начало", false)
+			//- 	+date_input()
+			//- +e.filter-position-wrap
+			//- 	+header("Конец", false)
+			//- 	+date_input()
 		+e.bottom-buttons 
 			+e.buttons-wrap--rm
 				+e.BUTTON.reset.btn-grey.btn Сбросить

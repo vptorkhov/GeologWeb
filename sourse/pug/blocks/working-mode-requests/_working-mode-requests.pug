@@ -4,7 +4,7 @@ include ./components/working-mode-request/working-mode-request.pug
 
 mixin working_mode_requests(name, type)
 	+b.working-mode-requests
-		+working_mode_top(name)
+		+working_mode_top(name, type)
 		+e.table
 			+working_mode_headers(type)
 			+e.requests-wrap.scrollbar-vertical 

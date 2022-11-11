@@ -6,7 +6,9 @@
 		flex-grow: 1;
 	}
 	.create-chat__main-content {
-		flex-grow: 0;
+		flex-grow: unset;
+		height: 100px;
+		min-height: 100px;
 	}
 }
 .assignment-creation-content {

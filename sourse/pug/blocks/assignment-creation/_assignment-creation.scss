@@ -247,6 +247,28 @@
 				outline: none !important;
 			} 
 		}
+		// &--period {
+		// 	& input:nth-child(3n+1) {
+		// 		width: 98px;
+		// 	}
+		// 	& input:nth-child(3n+2) {
+		// 		width: 56px;
+		// 	}
+		// }
+	}
+	&__wrapper {
+		input {
+			padding: 0;
+		}
+		input::placeholder {
+			color: var(--main-grey) !important;
+		}
+		& input:first-child {
+			width: 90px;
+		}
+		& input:last-child {
+			width: 56px;
+		}
 	}
 	.form-control {
 		&, &--deadline {

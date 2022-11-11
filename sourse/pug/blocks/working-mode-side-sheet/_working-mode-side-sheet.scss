@@ -40,12 +40,13 @@
 		display: flex;
 		align-items: center;
 		& > * {
-			flex-grow: 1;
+			width: calc(50% - 8px);
 			&:first-child {
 				margin-right: 16px;
 			}
 			&:only-child {
 				margin: 0;
+				width: 100%;
 			}
 		}
 	}
