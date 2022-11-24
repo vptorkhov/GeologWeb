@@ -1,0 +1,13 @@
+mixin wide_popup_table_headers(type)
+	+b.wide-popup-table-headers
+		+e.name Название
+		if type=="clasters"
+			+e.second-three Тип кластера
+		else if type=="projects"
+			+e.second-four Кластер
+			+e.third-four Статус
+		else if type=="license-areas"
+			+e.second-three Проект
+		else 
+			+e.second-three Лицензионный участок
+		+e.action Действия

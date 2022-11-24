@@ -1,0 +1,33 @@
+.modal-window-top {
+	padding: 12px 20px;
+	border-bottom: 1px solid #f2f4f5;
+	position: relative;
+	height: 48px;
+	min-height: 48px;
+}
+.modal-window-top__title {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--main-black);
+	text-align: center;
+}
+.modal-window-top__close {
+	position: absolute;
+	top: 12px;
+	right: 20px;
+	width: 24px;
+	height: 24px;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.modal-window-top__close .icon {
+	height: 14px;
+	width: 14px;
+	color: #667985;
+}

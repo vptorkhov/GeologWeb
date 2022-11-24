@@ -1,0 +1,23 @@
+include ./components/modal-window-top/modal-window-top.pug
+include ./components/wide-popup-content/wide-popup-content.pug
+
+mixin wide_popup(isEmpty, type)
+	+b.wide-popup
+		if type=="clasters"
+			+modal_window_top("Кластеры")
+		else if type=="projects"
+			+modal_window_top("Проекты")
+		else if type=="license-areas"
+			+modal_window_top("Лицензионные участки")
+		else
+			+modal_window_top("Скважины")
+		if !isEmpty
+			+wide_popup_content(type)
+		else 
+			+e.empy-plug
+				+e.container
+					svg 
+						image(href="/img/svg/empty-plug.svg")
+					p Здесь пока ничего нет, чтобы создать кластер, нажмите на “+”
+					+e.BUTTON.btn
+						+icon('plus')

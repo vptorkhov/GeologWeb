@@ -1,0 +1,15 @@
+include ../../../request-board/components/search-field/search-field.pug
+include ../wide-popup-table/wide-popup-table.pug
+
+mixin wide_popup_content(type)
+	+b.wide-popup-content
+		+e.search-and-tabs
+			+search_field()
+			if type=="projects"
+				+b.tabs 
+					+e.BUTTON.tab.active
+						+e.P.text Активные
+					+e.BUTTON.tab
+						+e.P.text Архив
+		+e.table
+			+wide_popup_table(type)

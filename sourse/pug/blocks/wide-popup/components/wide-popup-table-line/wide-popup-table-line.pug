@@ -1,0 +1,12 @@
+mixin wide_popup_table_line(type, name, second_column, third_column)
+	+b.wide-popup-table-line
+		+e.name=name
+		if type!="projects"
+			+e.second-three=second_column
+		else
+			+e.second-four=second_column
+			+e.third-four=third_column
+		+e.action
+			+e.BUTTON.edit.clean-btn 
+				svg
+					image(href="img/svg/edit.svg")

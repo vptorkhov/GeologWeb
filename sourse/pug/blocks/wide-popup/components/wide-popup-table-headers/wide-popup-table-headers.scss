@@ -1,0 +1,37 @@
+.wide-popup-table-headers,
+.wide-popup-table-line {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #ccd9e0;
+	& > * {
+		padding: 12px 24px;
+	}
+	&__name {
+		width: 45.5%;
+		// min-width: 45.5%;
+	}
+	&__second-three {
+		width: 42.9%;
+		// min-width: 42.9%;
+	}
+	&__second-four {
+		width: 21.9%;
+		// min-width: 21.9%;
+	}
+	&__third-four {
+		width: 21%;
+		// min-width: 21%;
+	}
+	&__action {
+		flex-grow: 1;
+		padding-left: 0;
+		padding-right: 0;
+		text-align: center;
+	}
+}
+.wide-popup-table-headers {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--main-grey);
+}

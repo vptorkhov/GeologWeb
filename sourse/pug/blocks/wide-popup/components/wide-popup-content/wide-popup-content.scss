@@ -1,0 +1,21 @@
+.wide-popup-content {
+	padding: 20px 24px;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	&__search-and-tabs {
+		display: flex;
+		align-items: center;
+		margin-bottom: 25px;
+		.tabs {
+			margin-left: 16px;
+			min-width: 264px;
+			height: 40px;
+		}
+	}
+	&__table {
+		flex-grow: 1;
+		overflow: auto;
+	}
+}

@@ -1,0 +1,9 @@
+.wide-popup-table {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	&__lines-wrap {
+		flex-grow: 1;
+		overflow: auto;
+	}
+}

@@ -1,0 +1,13 @@
+include ../wide-popup-table-headers/wide-popup-table-headers.pug
+include ../wide-popup-table-line/wide-popup-table-line.pug
+
+mixin wide_popup_table(type) 
+	+b.wide-popup-table
+		+wide_popup_table_headers(type)
+		+e.lines-wrap.scrollbar-vertical
+			+wide_popup_table_line(type, "Название проекта", "Кластер", "Активный")
+			+wide_popup_table_line(type, "Название проекта", "Кластер", "Активный")
+			+wide_popup_table_line(type, "Название проекта", "Кластер", "Активный")
+			+wide_popup_table_line(type, "Название проекта", "Кластер", "Активный")
+			+wide_popup_table_line(type, "Название проекта", "Кластер", "Активный")
+			
